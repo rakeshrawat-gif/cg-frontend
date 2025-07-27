@@ -1,0 +1,207 @@
+  .mapfilter-sec{
+    margin-bottom: 100px;
+  }
+  .contacttabs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 10px;
+    background: transparent;
+    justify-content: space-between;
+  }
+
+  .contacttabs button {
+    color: #4C4F54;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+  }
+
+  .contacttabs button img{
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+  }
+
+  .contacttabs button.active {
+    color: #4C4F54;
+    border-color: var(--greenclr);
+  }
+
+  .mapfiltercontrols {
+    display: flex;
+    padding: 0;
+    background: transparent;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+    width: 200px;
+  }
+
+  .custom-select-country {
+    border-radius: 6px;
+    cursor: pointer;
+    background: white;
+  }
+
+  .selected-option {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  
+  .dropdown-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .custom-select-country.open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .selected-option img {
+    width: 20px;
+    height: 14px;
+  }
+
+  .select-options {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #ccc;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 8px;
+  }
+
+  .select-options li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .select-options li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .select-options li > img {
+    width: 20px;
+  }
+
+  .selected-option, .filter-btn{
+    border: 1px solid #4C4F54;
+    padding: 5px 16px;
+    font-size: 15px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 30px;
+  }
+
+  #map {
+    height: 350px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .locitem-card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 16px;
+    padding: 40px 0 0 0;
+  }
+
+  .loc-card {
+    background: var(--card-bg-skyblu);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px 8px;
+    height: auto;
+  }
+
+  .loc-card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 20px;
+  }
+
+  .loc-card-header .direction {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: .3s;
+    font-weight: 400;
+  }
+  .loc-card-header .direction:hover{
+    color: var(--greenclr);
+    transition: .3s;
+  }
+  .loc-card-header .direction>img{
+    width: 12px;
+    margin-left: 6px;
+  }
+
+  .loc-card-desc {
+    background: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--comn-heading-color);
+    height: auto;
+  }
+  .loc-card-desc h4{
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+  }
+
+  .loc-card-desc p{
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .loc-card-desc p img{
+    width: 18px;
+    margin-right: 10px;
+    position: relative;
+    top: 6px;
+  }
+ 
+
+  @media (max-width: 600px) {
+    .mapfiltercontrols {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .locitem-card-grid {
+      padding: 16px 0;
+    }
+
+    .custom-select-wrapper {
+      width: 100%;
+    }
+  }
