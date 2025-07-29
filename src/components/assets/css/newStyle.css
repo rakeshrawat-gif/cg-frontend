@@ -34,10 +34,11 @@
 }
 
 .aboutFirstSec {
-  background-image: url('../images/about/abt-bg-image-dotted.png');
+  background: #ffffff;
+  background-image: url('../images/comonttlbg.png');
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: top;
+  background-size: 80%;
+  background-position: top right;
 }
 
 .abt-section {
@@ -549,6 +550,157 @@
   background-color: #005bab;
 }
 
+.video-wrapper {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  /* or use padding-bottom method for older browsers */
+  background: linear-gradient(to bottom right, #4f46e5, #ec4899);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+  .aboutYears {
+    font-size: 64px;
+    text-align: left;
+  }
+
+  .aboutForce,
+  .abt-title {
+    font-size: 36px;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .flex_div {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .firstDiv,
+  .secondDiv {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .bgwhiteBox {
+    padding: 100px 20px 20px 20px;
+  }
+
+  .abt-section .abt-title {
+    text-align: center;
+  }
+
+  .abtFinTitle {
+    font-size: 72px;
+    text-align: center;
+  }
+
+  .abtSpanTitle {
+    font-size: 48px;
+    display: block;
+    text-align: center;
+  }
+
+  .finance-tile {
+    flex-basis: calc(48% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutYears {
+    font-size: 42px;
+  }
+
+  .aboutForce,
+  .abt-title {
+    font-size: 28px;
+  }
+
+  .abt-title {
+    margin-bottom: 20px;
+  }
+
+  .abtFinTitle {
+    font-size: 48px;
+  }
+
+  .abtSpanTitle {
+    font-size: 32px;
+  }
+
+  .leaderFlexMob {
+    padding-top: 70px;
+  }
+
+  .bgwhiteBox {
+    padding: 120px 15px 20px 15px;
+  }
+
+  .abtMsgChairman,
+  .abtChairman-name,
+  .abtDesignation {
+    font-size: 16px;
+  }
+
+  .abtPara-text {
+    font-size: 14px;
+  }
+
+  .leader-img {
+    max-width: 150px;
+  }
+
+  .journey-title {
+    font-size: 28px !important;
+    text-align: center;
+  }
+
+  .journey-slide {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .slide-left,
+  .slide-right {
+    width: 100% !important;
+  }
+
+  .divider {
+    display: none !important;
+  }
+
+  .financial-stats-section {
+    padding: 2rem 0;
+  }
+
+  .slide-text h3 {
+    font-size: 18px;
+  }
+
+  .slide-text a {
+    font-size: 12px;
+  }
+
+  .finance-tile {
+    flex-basis: calc(50% - 10px);
+  }
+
+}
+
+
 /* ==================================       END About Page CSS    =================================== */
 
 /* ==================================       Home Page CSS    =================================== */
@@ -633,3 +785,42 @@
 }
 
 /* ==================================       END Home Page CSS    =================================== */
+/* ==================================    Leadership Page CSS    =================================== */
+
+.leadershipSec .contacttabs {
+  justify-content: flex-start;
+}
+
+.custom-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.custom-flex-wrapper .box {
+  width: calc(33.333% - 21.33px);
+  max-width: 380px;
+  /* margin-bottom: 40px; */
+}
+
+.tabcontent {
+  padding: 50px 0;
+}
+
+/* ✅ Tablet - 2 columns */
+@media (max-width: 991px) {
+  .custom-flex-wrapper .box {
+    width: calc(50% - 16px);
+    /* 2 columns */
+  }
+}
+
+/* ✅ Mobile - 1 column */
+@media (max-width: 575px) {
+  .custom-flex-wrapper .box {
+    width: 100%;
+  }
+}
+
+/* ==================================       END Leadership Page CSS    =================================== */
