@@ -4,6 +4,7 @@ import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper/module
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { FaChevronLeft, FaChevronRight, FaPlay } from 'react-icons/fa';
+import bannerImg from "../components/assets/images/about/aboutBg.png";
 import videoPlCimg from '../components/assets/images/about/abt-video-placeholder.png';
 import vellayanImg from '../components/assets/images/about/velleyan-subbiah.png';
 import amarImg from '../components/assets/images/about/amar-kaul.png';
@@ -85,13 +86,22 @@ const About = () => {
 
     return (
         <main className="bg-white font-['Roboto']">
-            {/* Hero Section */}
-            {/* <section className="bg-[url('/image-10.png')] bg-cover bg-center h-[60vh] md:h-screen relative flex items-end">
-                <div className="absolute inset-0 bg-black opacity-40" />
-                <div className="cust-container container mx-auto px-4 pb-10 md:pb-20 relative">
-                    <div className="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-4">
-                        <img src="/logo.svg" alt="Company Logo" className="h-8 w-auto" />
-                        <span className=" text-sm">Company Introduction</span>
+            {/* Banner Section */}
+            <section className="inner-comoonbanner">
+                <div className="comonban">
+                    <img src={bannerImg} alt="Leadership and Top Management" />
+                </div>
+            </section>
+
+            {/* Breadcrumb */}
+            {/* <section className="commonfrst-sec">
+                <div className="cust-container">
+                    <div className="breadcr-inner">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="#">About CG</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">Company Overview  </li>
+                        </ol>
                     </div>
                 </div>
             </section> */}
@@ -99,6 +109,13 @@ const About = () => {
             {/* Innovation Section */}
             <section className="sectionAbt aboutFirstSec">
                 <div className="cust-container">
+                    <div className="breadcr-inner">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="#">About CG</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">Company Overview  </li>
+                        </ol>
+                    </div>
                     <h1 className="aboutYears">88+ Years of</h1>
                     <h2 className="aboutYears colorsYrs">Innovation and Impact</h2>
                     <div className='flex_div'>
@@ -117,8 +134,8 @@ const About = () => {
                             </p>
                         </div>
                         <div className="secondDiv relative">
-                            <div className="bg-gradient-to-br from-indigo-600 to-pink-500 rounded-lg aspect-video flex items-center justify-center">
-                                <img src={videoPlCimg} alt="" />
+                            <div className="video-wrapper">
+                                <img src={videoPlCimg} alt="Video Placeholder" class="video-image" />
                             </div>
                             {/* <button className="absolute -top-4 -right-4 bg-blue-600 p-3 rounded-full shadow-lg text-white">
                                 <FaPlay />
@@ -135,7 +152,7 @@ const About = () => {
                     <div className="leaderPara-div">
                         <div className="flex_div">
                             {/* Leader 1 */}
-                            <div className="firstDiv">
+                            <div className="firstDiv leaderFlexMob">
                                 <img
                                     src={vellayanImg}
                                     alt="Leader 1"
@@ -159,7 +176,7 @@ const About = () => {
                             </div>
 
                             {/* Leader 2 */}
-                            <div className="secondDiv">
+                            <div className="secondDiv leaderFlexMob">
                                 <img
                                     src={amarImg}
                                     alt="Leader 2"

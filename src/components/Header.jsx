@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 import headerLogo from '../components/assets/images/headerlogo.svg';
 import headIcon1 from '../components/assets/images/headicn/about/icn1.svg';
 import headIcon2 from '../components/assets/images/headicn/about/icn2.svg';
@@ -193,9 +194,9 @@ const Header = () => {
                 {/* Desktop Header */}
                 <nav className="navbar navbar-expand-xl navbar-light" id="desktopheader">
                     <div className="head-logo">
-                        <a className="navbar-brand" href="#">
+                        <Link className="navbar-brand" to="/">
                             <img src={headerLogo} alt="Company Logo" />
-                        </a>
+                        </Link>
                         <div className="head-mob-menusrch-icn">
                             <button
                                 className="navbar-toggler"
@@ -219,93 +220,93 @@ const Header = () => {
                                     onMouseEnter={() => handleDropdownHover('about', true)}
                                     onMouseLeave={() => handleDropdownHover('about', false)}
                                 >
-                                    <a
+                                    <Link 
                                         className={`nav-link dropdown-toggle ${activeSingleDropdown === 'about' ? 'active' : ''}`}
-                                        href="#"
+                                        to="/about_cg"
                                         id="single-first-dropdown"
                                         role="button"
                                         aria-haspopup="true"
                                         aria-expanded={activeSingleDropdown === 'about' ? 'true' : 'false'}
                                     >
                                         About CG
-                                    </a>
+                                    </Link>
                                     <div className={`dropdown-menu p-0 ${activeSingleDropdown === 'about' ? 'show' : ''}`} aria-labelledby="single-first-dropdown">
                                         {/* Desktop View */}
                                         <ul className="singl-drdwn single-dropdown-menu mega-menu desktop-view" aria-labelledby="single-first-dropdown">
                                             <li>
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon2} alt="" />
                                                         <span>Company Overview</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="/our_leadership">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon2} alt="" />
                                                         <span>Leadership and Top Management</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="/subsidiaries_jv">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon3} alt="" />
                                                         <span>Subsidiaries and Joint Ventures</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <ul className="submenu single-dropdown-menu">
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Board Members</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Policies</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon4} alt="" />
                                                         <span>Our Purpose and Values</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon5} alt="" />
                                                         <span>Sectors We Serve</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon6} alt="" />
                                                         <span>ESG</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={headIcon7} alt="" />
                                                         <span>Technology + R&D</span>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                         <div className="mobile-accordion-menu">
@@ -323,9 +324,9 @@ const Header = () => {
                                                     High Voltage
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['high-voltage-mobile'] ? 'block' : 'none' }}>
-                                                    <a href="#">SF6 Circuit Breaker</a>
-                                                    <a href="#">GIS & Dead Tank Breaker</a>
-                                                    <a href="#">Condenser Bushings</a>
+                                                    <Link to="#">SF6 Circuit Breaker</Link>
+                                                    <Link to="#">GIS & Dead Tank Breaker</Link>
+                                                    <Link to="#">Condenser Bushings</Link>
                                                 </div>
                                                 <div
                                                     className={`accordion-toggle ${openMobileAccordions['medium-voltage-mobile'] ? 'open' : ''}`}
@@ -344,15 +345,15 @@ const Header = () => {
                                     onMouseEnter={() => handleMegaMenuCategoryHover('megatransformers')} // Default to first category on hover
                                     onMouseLeave={() => { setActiveSolutionCategory(null); setActiveSolutionSubCategory(null); }}
                                 >
-                                    <a className="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button">
+                                    <Link className="nav-link dropdown-toggle" to="#" id="solutionsDropdown" role="button">
                                         Solutions
-                                    </a>
+                                    </Link>
                                     <div className={`dropdown-menu megamenucustom p-0 ${activeSolutionCategory ? 'show' : ''}`} aria-labelledby="solutionsDropdown">
                                         <div className="mega-menu desktop-view">
                                             <div className="menu-column" id="menucolfrst">
-                                                <a
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megatransformers' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megatransformers"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megatransformers')}
                                                 >
@@ -361,10 +362,10 @@ const Header = () => {
                                                         <span>Transformers</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
-                                                <a
+                                                </Link>
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megaswitchgears' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megaswitchgears"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megaswitchgears')}
                                                 >
@@ -373,10 +374,10 @@ const Header = () => {
                                                         <span>Switchgears</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
-                                                <a
+                                                </Link>
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megamotors' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megamotors"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megamotors')}
                                                 >
@@ -385,10 +386,10 @@ const Header = () => {
                                                         <span>Motors</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
-                                                <a
+                                                </Link>
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megadriveautomation' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megadriveautomation"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megadriveautomation')}
                                                 >
@@ -397,10 +398,10 @@ const Header = () => {
                                                         <span>Drives & Automation</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
-                                                <a
+                                                </Link>
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megaconsumerproduct' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megaconsumerproduct"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megaconsumerproduct')}
                                                 >
@@ -409,10 +410,10 @@ const Header = () => {
                                                         <span>Consumer Products</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
-                                                <a
+                                                </Link>
+                                                <Link
                                                     className={`submenu-item ${activeSolutionCategory === 'megarailways' ? 'active' : ''}`}
-                                                    href="javascript:;"
+                                                    to="javascript:;"
                                                     data-target="#megarailways"
                                                     onMouseEnter={() => handleMegaMenuCategoryHover('megarailways')}
                                                 >
@@ -421,16 +422,16 @@ const Header = () => {
                                                         <span>Railways</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="menu-column" id="menucolsecnd">
                                                 <div id="megatransformers" className={`level2-content ${activeSolutionCategory === 'megatransformers' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Transformers <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Transformers <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#megatransformarSub1' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#megatransformarSub1"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#megatransformarSub1')}
                                                     >
@@ -438,10 +439,10 @@ const Header = () => {
                                                             <span>Transformer 1</span>
                                                             <i className="fas fa-angle-right"></i>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#megatransformarSub2' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#megatransformarSub2"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#megatransformarSub2')}
                                                     >
@@ -449,465 +450,465 @@ const Header = () => {
                                                             <span>Transformer 2</span>
                                                             <i className="fas fa-angle-right"></i>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div id="megaswitchgears" className={`level2-content ${activeSolutionCategory === 'megaswitchgears' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Switchgears <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Switchgears <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#mediumvoltageproductsSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#mediumvoltageproductsSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#mediumvoltageproductsSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Medium Voltage Products</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#powerqualsoluSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#powerqualsoluSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#powerqualsoluSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Power Quality Solutions</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#relaysautomationSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#relaysautomationSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#relaysautomationSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Relays and Automation</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#highvoltageSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#highvoltageSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#highvoltageSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>High Voltage & Extra High Voltage</span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div id="megamotors" className={`level2-content ${activeSolutionCategory === 'megamotors' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Motors <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Motors <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#mediumvoltageproductsSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#mediumvoltageproductsSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#mediumvoltageproductsSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Mega Motor 1</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#powerqualsoluSub' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#powerqualsoluSub"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#powerqualsoluSub')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Mega Motor 2</span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div id="megadriveautomation" className={`level2-content ${activeSolutionCategory === 'megadriveautomation' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Drives & Automation <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Drives & Automation <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#driveandautomationSub1' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#driveandautomationSub1"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#driveandautomationSub1')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Drive 1</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#driveandautomationSub2' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#driveandautomationSub2"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#driveandautomationSub2')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Drive 2</span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div id="megaconsumerproduct" className={`level2-content ${activeSolutionCategory === 'megaconsumerproduct' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Consumer Products <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Consumer Products <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#consuProductSub1' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#consuProductSub1"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#consuProductSub1')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Product 1</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#consuProductSub2' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#consuProductSub2"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#consuProductSub2')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Product 2</span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <div id="megarailways" className={`level2-content ${activeSolutionCategory === 'megarailways' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Railways <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Railways <img src={diagonArrow} alt="" /></Link>
                                                     </div>
-                                                    <a
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#railwaySub1' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#railwaySub1"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#railwaySub1')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Railway 1</span>
                                                         </div>
-                                                    </a>
-                                                    <a
+                                                    </Link>
+                                                    <Link
                                                         className={`submenu-item ${activeSolutionSubCategory === '#railwaySub2' ? 'active' : ''}`}
-                                                        href="javascript:;"
+                                                        to="javascript:;"
                                                         data-target="#railwaySub2"
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#railwaySub2')}
                                                     >
                                                         <div className="magamenu-inner">
                                                             <span>Railway 2</span>
                                                         </div>
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                             <div className="menu-column" id="menucolthrd">
                                                 <div id="megatransformarSub1" className={`level3-content ${activeSolutionSubCategory === '#megatransformarSub1' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Transformer 1 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Transformer 1 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Power Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Power Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Surge Arrester</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Surge Arrester</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="megatransformarSub2" className={`level3-content ${activeSolutionSubCategory === '#megatransformarSub2' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Transformer 2 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Transformer 2 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">SF6 Circuit Breaker</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Surge Arrester</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">SF6 Circuit Breaker</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Surge Arrester</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="mediumvoltageproductsSub" className={`level3-content ${activeSolutionSubCategory === '#mediumvoltageproductsSub' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Medium Voltage Products <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Medium Voltage Products <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">SF6 Circuit Breaker</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">SF6 Circuit Breaker</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="powerqualsoluSub" className={`level3-content ${activeSolutionSubCategory === '#powerqualsoluSub' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Power Quality Solutions<img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Power Quality Solutions<img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Surge Arrester</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Surge Arrester</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="relaysautomationSub" className={`level3-content ${activeSolutionSubCategory === '#relaysautomationSub' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Relays and Automation <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Relays and Automation <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Surge Arrester</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Surge Arrester</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="highvoltageSub" className={`level3-content ${activeSolutionSubCategory === '#highvoltageSub' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">High Voltage & Extra High Voltage <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">High Voltage & Extra High Voltage <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="driveandautomationSub1" className={`level3-content ${activeSolutionSubCategory === '#driveandautomationSub1' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Drive 1 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Drive 1 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">Disconnector</Link></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="driveandautomationSub2" className={`level3-content ${activeSolutionSubCategory === '#driveandautomationSub2' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Drive 2 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Drive 2 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="consuProductSub1" className={`level3-content ${activeSolutionSubCategory === '#consuProductSub1' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Product 1 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Product 1 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="consuProductSub2" className={`level3-content ${activeSolutionSubCategory === '#consuProductSub2' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Product 2 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Product 2 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="railwaySub1" className={`level3-content ${activeSolutionSubCategory === '#railwaySub1' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Railway 1 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Railway 1 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div id="railwaySub2" className={`level3-content ${activeSolutionSubCategory === '#railwaySub2' ? 'active' : ''}`}>
                                                     <div className="megainner-head">
-                                                        <a href="javascript:;">Railway 2 <img src={diagonArrow} alt="" /></a>
+                                                        <Link to="javascript:;">Railway 2 <img src={diagonArrow} alt="" /></Link>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Instrument Transformer</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Current Transformer</a></li>
-                                                                <li><a href="javascript:;">Capacitive Voltage Transformer</a></li>
-                                                                <li><a href="javascript:;">Inductive Voltage Transformer</a></li>
+                                                                <li><Link to="javascript:;">Current Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Capacitive Voltage Transformer</Link></li>
+                                                                <li><Link to="javascript:;">Inductive Voltage Transformer</Link></li>
                                                             </ul>
                                                         </li>
-                                                        <li className="thirdlevel-menu-item"><a href="javascript:;">GIS & Dead Tank Breaker</a></li>
+                                                        <li className="thirdlevel-menu-item"><Link to="javascript:;">GIS & Dead Tank Breaker</Link></li>
                                                         <li className="thirdlevel-menu-item">
-                                                            <a href="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</a>
+                                                            <Link to="javascript:;" onClick={handleThirdLevelToggle}>Condenser Bushings</Link>
                                                             <i className="fas fa-angle-down"></i>
                                                             <ul className="thlev-dropdown-submenu">
-                                                                <li><a href="javascript:;">Condenser Bushings</a></li>
-                                                                <li><a href="javascript:;">Bushings Condenser</a></li>
+                                                                <li><Link to="javascript:;">Condenser Bushings</Link></li>
+                                                                <li><Link to="javascript:;">Bushings Condenser</Link></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -929,9 +930,9 @@ const Header = () => {
                                                     High Voltage
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['solutions-high-voltage'] ? 'block' : 'none' }}>
-                                                    <a href="#">SF6 Circuit Breaker</a>
-                                                    <a href="#">GIS & Dead Tank Breaker</a>
-                                                    <a href="#">Condenser Bushings</a>
+                                                    <Link to="#">SF6 Circuit Breaker</Link>
+                                                    <Link to="#">GIS & Dead Tank Breaker</Link>
+                                                    <Link to="#">Condenser Bushings</Link>
                                                 </div>
                                                 <div
                                                     className={`accordion-toggle ${openMobileAccordions['solutions-medium-voltage'] ? 'open' : ''}`}
@@ -940,8 +941,8 @@ const Header = () => {
                                                     Medium Voltage
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['solutions-medium-voltage'] ? 'block' : 'none' }}>
-                                                    <a href="#">MV Switchgear 1</a>
-                                                    <a href="#">MV Switchgear 2</a>
+                                                    <Link to="#">MV Switchgear 1</Link>
+                                                    <Link to="#">MV Switchgear 2</Link>
                                                 </div>
                                             </div>
                                             <div
@@ -958,8 +959,8 @@ const Header = () => {
                                                     Motor Drive
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['solutions-motor-drive'] ? 'block' : 'none' }}>
-                                                    <a href="#">Drive Type A</a>
-                                                    <a href="#">Drive Type B</a>
+                                                    <Link to="#">Drive Type A</Link>
+                                                    <Link to="#">Drive Type B</Link>
                                                 </div>
                                             </div>
                                             <div
@@ -976,8 +977,8 @@ const Header = () => {
                                                     Power Transformer
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['solutions-power-transformer'] ? 'block' : 'none' }}>
-                                                    <a href="#">PT Product 1</a>
-                                                    <a href="#">PT Product 2</a>
+                                                    <Link to="#">PT Product 1</Link>
+                                                    <Link to="#">PT Product 2</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -985,14 +986,14 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <Link className="nav-link" to="#">
                                         Consumer Durables
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <Link className="nav-link" to="#">
                                         Investors
-                                    </a>
+                                    </Link>
                                 </li>
 
                                 {/* Careers Dropdown */}
@@ -1001,117 +1002,117 @@ const Header = () => {
                                     onMouseEnter={() => handleDropdownHover('careers', true)}
                                     onMouseLeave={() => handleDropdownHover('careers', false)}
                                 >
-                                    <a
+                                    <Link
                                         className={`nav-link dropdown-toggle ${activeSingleDropdown === 'careers' ? 'active' : ''}`}
-                                        href="#"
+                                        to="#"
                                         id="single-second-dropdown"
                                         role="button"
                                         aria-haspopup="true"
                                         aria-expanded={activeSingleDropdown === 'careers' ? 'true' : 'false'}
                                     >
                                         Careers
-                                    </a>
+                                    </Link>
                                     <div className={`dropdown-menu p-0 ${activeSingleDropdown === 'careers' ? 'show' : ''}`} aria-labelledby="single-second-dropdown">
                                         {/* Desktop View */}
                                         <ul className="singl-drdwn single-dropdown-menu mega-menu desktop-view" aria-labelledby="single-second-dropdown">
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={careerIcon2} alt="" />
                                                         <span>Life at CG</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <ul className="submenu single-dropdown-menu">
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Board Members</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Policies</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={careerIcon2} alt="" />
                                                         <span>Open Positions</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <ul className="submenu single-dropdown-menu">
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Board Members</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Policies</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={careerIcon3} alt="" />
                                                         <span>Subsidiaries and Joint Ventures</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <ul className="submenu single-dropdown-menu">
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Board Members</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a className="dropdown-item" href="#">
+                                                        <Link className="dropdown-item" to="#">
                                                             <div className="single-dr-inner">
                                                                 <img src={headIcon4} alt="" />
                                                                 <span>Policies</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={careerIcon4} alt="" />
                                                         <span>Power of Women at CG</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="has-submenu">
-                                                <a className="dropdown-item" href="#">
+                                                <Link className="dropdown-item" to="#">
                                                     <div className="single-dr-inner">
                                                         <img src={careerIcon5} alt="" />
                                                         <span>Growth as a Leader at CG</span>
                                                         <i className="fas fa-angle-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                         <div className="mobile-accordion-menu">
@@ -1129,9 +1130,9 @@ const Header = () => {
                                                     High Voltage
                                                 </div>
                                                 <div className="accordion-content" style={{ display: openMobileAccordions['careers-high-voltage-mobile'] ? 'block' : 'none' }}>
-                                                    <a href="#">SF6 Circuit Breaker</a>
-                                                    <a href="#">GIS & Dead Tank Breaker</a>
-                                                    <a href="#">Condenser Bushings</a>
+                                                    <Link to="#">SF6 Circuit Breaker</Link>
+                                                    <Link to="#">GIS & Dead Tank Breaker</Link>
+                                                    <Link to="#">Condenser Bushings</Link>
                                                 </div>
                                                 <div
                                                     className={`accordion-toggle ${openMobileAccordions['careers-medium-voltage-mobile'] ? 'open' : ''}`}
@@ -1146,17 +1147,17 @@ const Header = () => {
 
                                 {/* Search */}
                                 <li className="nav-item desktopsrchtwh">
-                                    <a className="nav-link" href="#" id="desk-searchToggle" onClick={toggleSearchBar}>
+                                    <Link className="nav-link" to="#" id="desk-searchToggle" onClick={toggleSearchBar}>
                                         <span>
                                             <i className="fas fa-search"></i>
                                         </span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 {/* Contact */}
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <Link className="nav-link" to="/worldwide_contact">
                                         <span className="curvebtn contactheadbtn">Contact Us</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -1166,15 +1167,15 @@ const Header = () => {
                 {/* Mobile Header */}
                 <nav className="navbar navbar-expand-xl navbar-light" id="mobileheader">
                     <div className="head-logo">
-                        <a className="navbar-brand" href="javascript:;">
+                        <Link className="navbar-brand" to="javascript:;">
                             <img src={headerLogo} alt="" />
-                        </a>
+                        </Link>
                         <div className="head-mob-menusrch-icn">
-                            <a className="mobsrchtwh" href="#" id="mob-searchToggle" onClick={toggleSearchBar}>
+                            <Link className="mobsrchtwh" to="#" id="mob-searchToggle" onClick={toggleSearchBar}>
                                 <span>
                                     <i className="fas fa-search"></i>
                                 </span>
-                            </a>
+                            </Link>
                             <button
                                 className="navbar-toggler"
                                 type="button"
@@ -1193,78 +1194,78 @@ const Header = () => {
                     <div className={`collapse navbar-collapse mobile-menu ${isMobileNavOpen ? 'show' : ''}`} id="mainNav">
                         <ul>
                             <li className="has-children">
-                                <a href="#" onClick={handleMobileMultiLevelToggle}>About CG</a>
+                                <Link to="/about_cg" onClick={handleMobileMultiLevelToggle}>About CG</Link>
                                 <ul className="submenu">
-                                    <li><a href="javasceipt:;">Company Overview</a></li>
-                                    <li><a href="javasceipt:;">Leadership and Top Management</a></li>
+                                    <li><Link to="javasceipt:;">Company Overview</Link></li>
+                                    <li><Link to="/our_leadership">Leadership and Top Management</Link></li>
                                     <li className="has-children">
-                                        <a href="#" onClick={handleMobileMultiLevelToggle}>Subsidiaries and Joint Ventures</a>
+                                        <Link to="/subsidiaries_jv" onClick={handleMobileMultiLevelToggle}>Subsidiaries and Joint Ventures</Link>
                                         <ul className="submenu">
-                                            <li><a href="javascript:;">Board Members</a></li>
-                                            <li><a href="javascript:;">Policies</a></li>
+                                            <li><Link to="javascript:;">Board Members</Link></li>
+                                            <li><Link to="javascript:;">Policies</Link></li>
                                         </ul>
                                     </li>
-                                    <li><a href="javascript:;">Our Purpose and Values</a></li>
-                                    <li><a href="javascript:;">Sectors We Serve</a></li>
-                                    <li><a href="javascript:;">ESG</a></li>
-                                    <li><a href="javascript:;">Technology + R&D</a></li>
+                                    <li><Link to="javascript:;">Our Purpose and Values</Link></li>
+                                    <li><Link to="javascript:;">Sectors We Serve</Link></li>
+                                    <li><Link to="javascript:;">ESG</Link></li>
+                                    <li><Link to="javascript:;">Technology + R&D</Link></li>
                                 </ul>
                             </li>
                             <li className="has-children">
-                                <a href="#" onClick={handleMobileMultiLevelToggle}>Solutions</a>
+                                <Link to="#" onClick={handleMobileMultiLevelToggle}>Solutions</Link>
                                 <ul className="submenu">
                                     <li className="has-children">
-                                        <a href="#" onClick={handleMobileMultiLevelToggle}>Transformers</a>
+                                        <Link to="#" onClick={handleMobileMultiLevelToggle}>Transformers</Link>
                                         <ul className="submenu">
                                             <li className="has-children">
-                                                <a href="#" onClick={handleMobileMultiLevelToggle}>Transformer 1</a>
+                                                <Link to="#" onClick={handleMobileMultiLevelToggle}>Transformer 1</Link>
                                                 <ul className="submenu">
                                                     <li className="has-children">
-                                                        <a href="#" onClick={handleMobileMultiLevelToggle}>Instrument Transformer</a>
+                                                        <Link to="#" onClick={handleMobileMultiLevelToggle}>Instrument Transformer</Link>
                                                         <i className="fas fa-angle-down"></i>
                                                         <ul className="submenu">
-                                                            <li><a href="#">Current Transformer</a></li>
-                                                            <li><a href="#">Capacitive Voltage Transformer</a></li>
-                                                            <li><a href="#">Inductive Voltage Transformer</a></li>
-                                                            <li><a href="#">Power Voltage Transformer</a></li>
+                                                            <li><Link to="#">Current Transformer</Link></li>
+                                                            <li><Link to="#">Capacitive Voltage Transformer</Link></li>
+                                                            <li><Link to="#">Inductive Voltage Transformer</Link></li>
+                                                            <li><Link to="#">Power Voltage Transformer</Link></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#">Surge Arrester</a></li>
-                                                    <li><a href="#">Disconnector</a></li>
-                                                    <li><a href="#">GIS & Dead Tank Breaker</a></li>
+                                                    <li><Link to="#">Surge Arrester</Link></li>
+                                                    <li><Link to="#">Disconnector</Link></li>
+                                                    <li><Link to="#">GIS & Dead Tank Breaker</Link></li>
                                                     <li className="has-children">
-                                                        <a href="#" onClick={handleMobileMultiLevelToggle}>Condenser Bushings</a>
+                                                        <Link to="#" onClick={handleMobileMultiLevelToggle}>Condenser Bushings</Link>
                                                         <i className="fas fa-angle-down"></i>
                                                         <ul className="submenu">
-                                                            <li><a href="#">Condenser Bushings</a></li>
-                                                            <li><a href="#">Bushings Condenser</a></li>
+                                                            <li><Link to="#">Condenser Bushings</Link></li>
+                                                            <li><Link to="#">Bushings Condenser</Link></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="javascript:;">Transformer 2</a></li>
+                                            <li><Link to="javascript:;">Transformer 2</Link></li>
                                         </ul>
                                     </li>
-                                    <li><a href="javasceipt:;">Switchgears</a></li>
-                                    <li><a href="javasceipt:;">Motors</a></li>
-                                    <li><a href="javasceipt:;">Drives & Automation</a></li>
-                                    <li><a href="javasceipt:;">Consumer Products</a></li>
-                                    <li><a href="javasceipt:;">Railways</a></li>
+                                    <li><Link to="javasceipt:;">Switchgears</Link></li>
+                                    <li><Link to="javasceipt:;">Motors</Link></li>
+                                    <li><Link to="javasceipt:;">Drives & Automation</Link></li>
+                                    <li><Link to="javasceipt:;">Consumer Products</Link></li>
+                                    <li><Link to="javasceipt:;">Railways</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Consumer Durables</a></li>
-                            <li><a href="#">Investors</a></li>
+                            <li><Link to="#">Consumer Durables</Link></li>
+                            <li><Link to="#">Investors</Link></li>
                             <li className="has-children">
-                                <a href="#" onClick={handleMobileMultiLevelToggle}>Careers</a>
+                                <Link to="#" onClick={handleMobileMultiLevelToggle}>Careers</Link>
                                 <ul className="submenu">
-                                    <li><a href="javasceipt:;">Life at CG</a></li>
-                                    <li><a href="javasceipt:;">Open Positions</a></li>
-                                    <li><a href="javascript:;">Campus Programs</a></li>
-                                    <li><a href="javascript:;">Power of Women at CG</a></li>
-                                    <li><a href="javascript:;">Growth as a Leader at CG</a></li>
+                                    <li><Link to="javasceipt:;">Life at CG</Link></li>
+                                    <li><Link to="javasceipt:;">Open Positions</Link></li>
+                                    <li><Link to="javascript:;">Campus Programs</Link></li>
+                                    <li><Link to="javascript:;">Power of Women at CG</Link></li>
+                                    <li><Link to="javascript:;">Growth as a Leader at CG</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><Link to="/worldwide_contact">Contact Us</Link></li>
                         </ul>
                     </div>
                 </nav>
