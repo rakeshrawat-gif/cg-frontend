@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import headerLogo from "../components/assets/images/headerlogo.svg";
 import headIcon1 from "../components/assets/images/headicn/about/icn1.svg";
 import headIcon2 from "../components/assets/images/headicn/about/icn2.svg";
@@ -30,6 +30,8 @@ const Header = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const headerRef = useRef(null);
   const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
+
+  const location = useLocation();
 
   useEffect(() => {
     const adjustDropdowns = () => {
@@ -80,6 +82,11 @@ const Header = () => {
     setIsMobileNavOpen((prevState) => !prevState);
     if (!isMobileNavOpen) setIsSearchBarOpen(false);
   };
+
+  useEffect(() => {
+    setIsMobileNavOpen(false);
+    setIsSearchBarOpen(false);
+  }, [location]);
 
   const handleDropdownHover = (dropdownName, isHovering) => {
     if (!isDesktop) return;
@@ -2187,7 +2194,7 @@ const Header = () => {
         {/* Mobile Header */}
         <nav className="navbar navbar-expand-xl navbar-light" id="mobileheader">
           <div className="head-logo">
-            <Link className="navbar-brand" to="javascript:;">
+            <Link className="navbar-brand" to="/">
               <img src={headerLogo} alt="" />
             </Link>
             <div className="head-mob-menusrch-icn">
@@ -2259,10 +2266,10 @@ const Header = () => {
                     <Link to="javascript:;">Sectors We Serve</Link>
                   </li>
                   <li>
-                    <Link to="javascript:;">ESG</Link>
+                    <Link to="/ESG">ESG</Link>
                   </li>
                   <li>
-                    <Link to="javascript:;">Technology + R&D</Link>
+                    <Link to="/tehcnology">Technology + R&D</Link>
                   </li>
                 </ul>
               </li>
@@ -2356,7 +2363,7 @@ const Header = () => {
                 <Link to="#">Consumer Durables</Link>
               </li>
               <li>
-                <Link to="#">Investors</Link>
+                <Link to="/investor">Investors</Link>
               </li>
               <li className="has-children">
                 <Link to="#" onClick={handleMobileMultiLevelToggle}>

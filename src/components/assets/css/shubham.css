@@ -1,5 +1,8 @@
 /* Technology R&D */
 
+.comonban>img{
+    width: 100%;
+}
 
  .tech-wrapper {
   max-width: 1250px;
@@ -79,6 +82,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.tech-text-title{
+    padding-top: 79px;
 }
 /* Technology R&D  END*/
 
@@ -187,17 +194,18 @@
   z-index: 999;
 }
 
-.modal-content {
+.modal-content-sm {
+ top:48px;
   position: relative;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
-  width:900px;
-  /* width: 100%; */
+  width: 770px;
+ 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content img {
+.modal-content-sm img {
   width: 100%;
   height: auto;
   display: block;
@@ -400,7 +408,7 @@
   flex-wrap: wrap;
 }
 
-.green-card {
+.green-card-sm {
   background: #5C9132;
   color: #fff;
   padding: 30px;
@@ -426,7 +434,7 @@ margin-top: 20px;
   justify-content: center;
 }
 
-.swiper-wrapper {
+.swiper-wrapper-sm {
   flex-basis: 660px;
   max-width: 660px;
   position: relative;
@@ -459,22 +467,17 @@ margin-top: 20px;
   display: flex;
 }
 
-.swiper-nav {
-  /* display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  position: absolute;
-  bottom: -40px;
-  right: 10px; */
+.swiper-nav-sm {
+ 
       display: flex;
     justify-content: left;
     gap: 10px;
     position: absolute;
-    bottom: -188px;
+    bottom: -10px;
     right: 555px;
 }
 
-.swiper-nav button {
+.swiper-nav-sm button {
   background: #fff;
   border: 1px solid #969696;
   padding: 12px 12px;
@@ -769,7 +772,7 @@ background-color: white;
   font-family: "Segoe UI", sans-serif;
 }
 
-.dropdown-toggle {
+.dropdown-toggle-sm {
   padding: 10px 15px;
   border: 2px solid #0063c6;
   border-radius: 30px;
@@ -782,7 +785,7 @@ background-color: white;
   color: #4C4F54;
 }
 
-.dropdown-toggle img {
+.dropdown-toggle-sm img {
   width: 14px;
 }
 
@@ -798,9 +801,10 @@ background-color: white;
   padding: 10px 0;
   max-height: 400px;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
-.dropdown-item {
+.dropdown-item-sm {
   padding: 12px 20px;
   font-size: 14px;
   color: #4C4F54;
@@ -810,11 +814,11 @@ background-color: white;
   cursor: pointer;
 }
 
-.dropdown-item:hover {
+.dropdown-item-sm:hover {
   background-color: #f1f6fb;
 }
 
-.dropdown-item.selected {
+.dropdown-item-sm.selected {
   background-color: #eaf3fc;
   font-weight: 600;
 }

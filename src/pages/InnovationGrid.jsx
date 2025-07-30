@@ -82,7 +82,10 @@ const InnovationGrid = () => {
 
       {selectedCard && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="modal-content-sm"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className="modal-close" onClick={closeModal}>
               ✖
             </button>

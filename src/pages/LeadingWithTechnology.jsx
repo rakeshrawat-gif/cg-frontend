@@ -1,7 +1,7 @@
 import trainImg from "../components/assets/images/technologyR&D/train.png";
 import machineImg from "../components/assets/images/technologyR&D/machine.png";
 import InnovationGrid from "./InnovationGrid";
-import bannerImg from "../components/assets/images/technologyR&D/R&D.png";
+import bannerImg from "../components/assets/images/technologyR&D/R&D1.png";
 
 const LeadingWithTechnology = () => {
   return (
@@ -12,7 +12,7 @@ const LeadingWithTechnology = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
-      <div className="tech-wrapper">
+      <div className="tech-wrapper commonfrst-sec">
         <div className="breadcrumb">
           Home &nbsp;|&nbsp; About CG &nbsp;|&nbsp;{" "}
           <span>Technology + R&D</span>

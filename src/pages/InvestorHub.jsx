@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import downArrow from "../components/assets/images/Investors/Vector.png";
+import downArrow from "../components/assets/images/Investors/down.png";
+import UpArrow from "../components/assets/images/Investors/up.png";
 import checkArrow from "../components/assets/images/Investors/Check.png";
+import bannerImg from "../components/assets/images/Investors/inv.png";
 
 const InvestorHub = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +48,12 @@ const InvestorHub = () => {
   }, []);
   return (
     <>
-      <section className="tech-wrapper">
+      <section className="inner-comoonbanner">
+        <div className="comonban">
+          <img src={bannerImg} alt="Leadership and Top Management" />
+        </div>
+      </section>
+      <section className="tech-wrapper commonfrst-sec">
         <div className="breadcrumb">
           Home &nbsp;|&nbsp; <span> Investors </span>
         </div>
@@ -55,16 +62,19 @@ const InvestorHub = () => {
 
         <div className="dropdown-container">
           <div className="custom-dropdown-wrapper" ref={dropdownRef}>
-            <div className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
+            <div
+              className="dropdown-toggle-sm"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <span>{selected}</span>
-              <img src={isOpen ? downArrow : downArrow} alt="toggle" />
+              <img src={isOpen ? UpArrow : downArrow} alt="toggle" />
             </div>
             {isOpen && (
               <ul className="dropdown-list">
                 {options.map((option, idx) => (
                   <li
                     key={idx}
-                    className={`dropdown-item ${
+                    className={`dropdown-item-sm ${
                       selected === option ? "selected" : ""
                     }`}
                     onClick={() => handleSelect(option)}

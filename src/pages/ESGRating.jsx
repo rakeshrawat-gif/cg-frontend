@@ -69,7 +69,7 @@ const ESGRating = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
-      <section className="tech-wrapper">
+      <section className="tech-wrapper commonfrst-sec">
         <div className="breadcrumb">
           Home &nbsp;|&nbsp; About CG &nbsp;|&nbsp; <span> ESG </span>
         </div>
@@ -85,25 +85,6 @@ const ESGRating = () => {
         </p>
       </section>
 
-      {/* <section className="cards-wrapper">
-        <h2 className="esg-heading">CG’s ESG Ratings</h2>
-        <div className="esg-card-grid">
-          {esgCards.map((card, index) => (
-            <div className={`esg-card ${card.className}`} key={index}>
-              <div className="img-wrapper">
-                <img src={card.image} alt={card.title} className="esg-logo" />
-              </div>
-              <div className="card-content">
-                <h3 className="esg-title">{card.title}</h3>
-                <p className="esg-description">{card.description}</p>
-                <a href={card.link} className="esg-link">
-                  Know more <img src={arrow} className="arrow-icon" />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
       <section className="esg-bg-wrapper">
         <div className="cards-wrapper">
           <h2 className="esg-heading">CG’s ESG Ratings</h2>

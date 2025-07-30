@@ -13,7 +13,7 @@ import arrow from "../components/assets/images/ESG/Icon.png";
 import swip1Img from "../components/assets/images/ESG/sw1.jpg";
 import swip2Img from "../components/assets/images/ESG/sw2.jpg";
 import swip3Img from "../components/assets/images/ESG/sw3.jpg";
-import bannerImg from "../components/assets/images/ESG/ESG1.png";
+import bannerImg from "../components/assets/images/ESG/ESG3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -122,11 +122,6 @@ const Enviormental = () => {
     ],
   };
 
-  //   const swipdata = [
-  //     { image: ClimateImg, caption: "Heading Placeholder" },
-  //     { image: ProductImg, caption: "Heading Placeholder" },
-  //     { image: InnovationImg, caption: "Heading Placeholder" },
-  //   ];
   const swipdata = [
     {
       image: swip1Img,
@@ -144,7 +139,7 @@ const Enviormental = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     },
     {
-      image: ClimateImg,
+      image: swip3Img,
       caption: "Heading Placeholder",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ",
     },
@@ -157,7 +152,8 @@ const Enviormental = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
-      <section className="tech-wrapper">
+
+      <section className="tech-wrapper commonfrst-sec">
         <div className="breadcrumb">
           Home &nbsp;|&nbsp; About CG &nbsp;|&nbsp; <span> ESG </span>
         </div>
@@ -203,39 +199,7 @@ const Enviormental = () => {
         </div>
 
         {/* Cards */}
-        {/* <div className="cards-container">
-          <div className="env-card">
-            <img src={ClimateImg} alt="climate" />
-            <h3>Climate Actions</h3>
-            <ul>
-              <li>
-                Managing GHG emissions (Scope 1, 2, and 3) and energy intensity
-              </li>
-              <li>Adoption of renewable energy sources</li>
-              <li>Energy efficiency initiatives</li>
-            </ul>
-          </div>
-          <div className="env-card">
-            <img src={ProductImg} alt="product" />
-            <h3>Product Stewardship</h3>
-            <ul>
-              <li>Designing sustainable, regulation-compliant products</li>
-              <li>Lifecycle impact management and responsible sourcing</li>
-              <li>Customer grievance redressal mechanisms</li>
-            </ul>
-          </div>
-          <div className="env-card">
-            <img src={InnovationImg} alt="innovation" />
-            <h3>Innovation Management</h3>
-            <ul>
-              <li>Sustainability-focused product innovation</li>
-              <li>
-                Integration of clean technologies and high-efficiency designs
-              </li>
-              <li>Patent filings and R&D initiatives</li>
-            </ul>
-          </div>
-        </div> */}
+
         <div className="cards-container">
           {tabContent[activeTab].map((card, idx) => (
             <div className="env-card" key={idx}>
@@ -273,121 +237,6 @@ const Enviormental = () => {
 
       {/* Swiper  */}
 
-      {/* <section className="greener-everyday tech-wrapper">
-        <h1 className="materiality-title">Greener Everyday</h1>
-        <p className="materiality-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        </p>
-
-        <div className="swiper-wrapper">
-          <Swiper
-            modules={[Navigation]}
-            slidesPerView={3}
-            spaceBetween={20}
-            navigation={{
-              nextEl: ".next-btn",
-              prevEl: ".prev-btn",
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            
-            <SwiperSlide>
-              <div className="green-card">
-                <h3>Heading Placeholder</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla
-                </p>
-              </div>
-            </SwiperSlide>
-
-            
-            {swipdata.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="image-card">
-                  <img src={item.image} alt={`slide-${index}`} />
-                  <div className="caption">
-                    {item.caption || "Heading Placeholder"}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          
-          <div className="swiper-nav">
-            <button className="prev-btn">←</button>
-            <button className="next-btn">→</button>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <section className="greener-everyday tech-wrapper">
-        <h1 className="materiality-title">Greener Everyday</h1>
-        <p className="materiality-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        </p>
-
-        <div className="greener-layout">
-          <div className="green-card">
-            <h3>Heading Placeholder</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua...
-            </p>
-          </div>
-
-          <div className="swiper-wrapper">
-            <Swiper
-              modules={[Navigation]}
-              slidesPerView={2}
-              spaceBetween={20}
-              navigation={{
-                nextEl: ".next-btn",
-                prevEl: ".prev-btn",
-              }}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-              }}
-            >
-              {swipdata.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="image-card">
-                    <img src={item.image} alt={`slide-${index}`} />
-                    <div className="caption">{item.caption}</div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            <div className="swiper-nav">
-              <button className="prev-btn">
-                <img src={leftIcn} alt="" />
-              </button>
-              <button className="next-btn">
-                <img src={rightIcn} alt="" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className="greener-everyday tech-wrapper">
         <h1 className="materiality-title">Greener Everyday</h1>
         <p className="materiality-desc">
@@ -400,7 +249,7 @@ const Enviormental = () => {
 
         <div className="greener-layout">
           {/* Green Card shows active slide's content */}
-          <div className="green-card">
+          <div className="green-card-sm">
             <img
               src={swipdata[activeIndex].image}
               alt="green"
@@ -412,7 +261,7 @@ const Enviormental = () => {
             </div>
           </div>
 
-          <div className="swiper-wrapper">
+          <div className="swiper-wrapper-sm">
             <Swiper
               modules={[Navigation]}
               slidesPerView={2}
@@ -428,14 +277,6 @@ const Enviormental = () => {
                 768: { slidesPerView: 2 },
               }}
             >
-              {/* {swipdata.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="image-card">
-                    <img src={item.image} alt={`slide-${index}`} />
-                    <div className="caption">{item.caption}</div>
-                  </div>
-                </SwiperSlide>
-              ))} */}
               {swipdata
                 .filter((_, index) => index !== activeIndex)
                 .map((item, index) => (
@@ -448,7 +289,7 @@ const Enviormental = () => {
                 ))}
             </Swiper>
 
-            <div className="swiper-nav">
+            <div className="swiper-nav-sm">
               <button className="prev-btn">
                 <img src={leftIcn} alt="prev" />
               </button>
