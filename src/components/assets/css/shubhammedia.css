@@ -1,0 +1,213 @@
+/* =================== TECH SECTION =================== */
+@media only screen and (max-width: 1200px) {
+  .tech-subtitle {
+    width: 100%;
+  }
+
+  .tech-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tech-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tech-text,
+  .tech-image {
+    flex: 1 1 100%;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .green-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .green-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .green-card-text {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .swiper-wrapper {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .image-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-nav {
+    bottom: -60px;
+    right: 0;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tech-title {
+    font-size: 32px;
+  }
+
+  .tech-subtitle {
+    font-size: 14px;
+  }
+
+  .tech-text {
+    font-size: 14px;
+  }
+
+   .materiality-title {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .materiality-desc {
+    width: 100%;
+    font-size: 15px;
+  }
+   .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .materiality-footer{
+    width: 100%;
+  }
+   .green-card {
+    padding: 16px;
+  }
+
+  .green-card-text h3 {
+    font-size: 20px;
+  }
+
+  .green-card-text p {
+    font-size: 14px;
+  }
+
+  .swiper-nav button {
+    padding: 8px;
+  }
+  .env-card{
+    width: 99%;
+  }
+  .contact-table,
+  .calendar-table table {
+    font-size: 13px;
+    width: 100% !important;
+  }
+
+  .contact-table td,
+  .contact-table th,
+  .calendar-table td,
+  .calendar-table th {
+    padding: 10px;
+  }
+
+  .calendar-table th {
+    font-size: 16px;
+  }
+
+  .calendar-table td {
+    font-size: 14px;
+  }
+
+  .colored-td {
+    font-size: 14px;
+  }
+}
+
+/* =================== INNOVATION SECTION =================== */
+@media only screen and (max-width: 1240px) {
+  .subtitle {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-description {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .innovation-header h2 {
+    font-size: 32px;
+  }
+
+  .view-all-link {
+    font-size: 16px;
+  }
+
+  .modal-description {
+    padding: 12px 16px;
+  }
+
+  .modal-description img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-description .separator {
+    margin: 4px 0;
+  }
+
+  .card {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    height: 200px;
+  }
+
+  .modal-close {
+    font-size: 20px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .modal-description img {
+    width: 18px;
+    height: 18px;
+  }
+}
