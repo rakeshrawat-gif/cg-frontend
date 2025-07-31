@@ -3,6 +3,18 @@ import downArrow from "../components/assets/images/Investors/down.png";
 import UpArrow from "../components/assets/images/Investors/up.png";
 import checkArrow from "../components/assets/images/Investors/Check.png";
 import bannerImg from "../components/assets/images/Investors/inv.png";
+import InvestorRelationsHome from "../components/InvestorSections/InvestorRelationsHome.jsx";
+import InfoUnderRegulation46 from "../components/InvestorSections/InfoUnderRegulation46.jsx";
+import QualifiedInstitutionPlacements from "../components/InvestorSections/QualifiedInstitutionPlacements.jsx";
+import SchemeOfArrangement from "../components/InvestorSections/SchemeOfArrangement.jsx";
+import Financials from "../components/InvestorSections/Financials.jsx";
+import CGShares from "../components/InvestorSections/CGShares";
+import StockExchangeDisclosures from "../components/InvestorSections/StockExchangeDisclosures.jsx";
+import AnalystsInteractions from "../components/InvestorSections/AnalystsInteractions.jsx";
+import Policies from "../components/InvestorSections/Policies.jsx";
+import CGCares from "../components/InvestorSections/CGCares.jsx";
+import Dividend from "../components/InvestorSections/Dividend.jsx";
+import UnclaimedDividendShares from "../components/InvestorSections/UnclaimedDividendShares.jsx";
 
 const InvestorHub = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +36,21 @@ const InvestorHub = () => {
     "Dividend",
     "Unclaimed Dividend and Shares",
   ];
+
+  const sectionComponentMap = {
+    "Investor Realtions Home": InvestorRelationsHome,
+    "Info Under Regulation 46": InfoUnderRegulation46,
+    "Qualified Institution Placements": QualifiedInstitutionPlacements,
+    "Scheme of Arrangement": SchemeOfArrangement,
+    "Financials": Financials,
+    "CG Shares": CGShares,
+    "Stock Exchange Disclosures": StockExchangeDisclosures,
+    "Analysts Interactions": AnalystsInteractions,
+    "Policies": Policies,
+    "CG Cares (CSR)": CGCares,
+    "Dividend": Dividend,
+    "Unclaimed Dividend and Shares": UnclaimedDividendShares,
+  };
 
   const tabOptions = [
     "Investor Relations",
@@ -74,9 +101,8 @@ const InvestorHub = () => {
                 {options.map((option, idx) => (
                   <li
                     key={idx}
-                    className={`dropdown-item-sm ${
-                      selected === option ? "selected" : ""
-                    }`}
+                    className={`dropdown-item-sm ${selected === option ? "selected" : ""
+                      }`}
                     onClick={() => handleSelect(option)}
                   >
                     {option}
@@ -94,7 +120,7 @@ const InvestorHub = () => {
           </div>
         </div>
 
-        <div className="tab-section">
+        {/* <div className="tab-section">
           {tabOptions.map((tab, index) => (
             <button
               key={index}
@@ -221,7 +247,42 @@ const InvestorHub = () => {
               </table>
             </div>
           )}
-        </div>
+        </div> */}
+        {selected === "Investor Realtions Home" ? (
+          <>
+            <div className="tab-section">
+              {tabOptions.map((tab, index) => (
+                <button
+                  key={index}
+                  className={`tab ${selectedTab === tab ? "active" : ""}`}
+                  onClick={() => setSelectedTab(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+
+            <div className="tab-content">
+              {selectedTab === "Investor Relations" && <InvestorRelationsHome />}
+              {selectedTab === "Registrar And Transfer Agents" && (
+                <p>Registrar content here</p>
+              )}
+              {selectedTab === "Materiality Contacts" && (
+                <p>Materiality contact info here</p>
+              )}
+              {selectedTab === "Calender of Events" && (
+                <p>Calendar of Events content here</p>
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="tab-content">
+            {sectionComponentMap[selected]
+              ? React.createElement(sectionComponentMap[selected])
+              : <p>Please select a valid section.</p>}
+          </div>
+        )}
+
       </section>
     </>
   );
