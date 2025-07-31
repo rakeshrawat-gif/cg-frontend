@@ -12,6 +12,7 @@ import aboutBgImg from '../components/assets/images/about/abt-bg-image-dotted.pn
 import journeyImg from '../components/assets/images/about/abt-slider-journey-1.png';
 import abtSlideImg from '../components/assets/images/about/abt-slider-1.png';
 import abtSlideImg2 from '../components/assets/images/about/abt-slider-2.jpg';
+import TimelineSlider from "../components/TimelineSlider";
 
 const journeyData = [
     {
@@ -205,92 +206,17 @@ const About = () => {
             </section>
 
             {/* Timeline Slider */}
-            {/* <section className="py-16 text-center">
-                <div className="container mx-auto px-4 overflow-hidden">
-                    <h2 className="text-4xl font-bold text-gray-800">CG Through the Years</h2>
-                    <p className=" mt-2">
-                        From a pioneering start in 1878 to becoming a global name in electrical
-                        solutions, CG's journey is one of innovation, expansion, and transformation.
-                    </p>
-
-                    <div className="mt-12 px-4">
-                        <Swiper
-                            modules={[Navigation]}
-                            navigation={{
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            }}
-                            spaceBetween={30}
-                            slidesPerView={1}
-                        >
-                            {[
-                                {
-                                    year: '1979',
-                                    img: '/timeline.jpg',
-                                    title: 'Two Strong Pillars',
-                                    desc: 'Founded as REB Crompton & Co., setting the foundation for a pioneering legacy in electrical engineering.'
-                                },
-                            ].map((item, idx) => (
-                                <SwiperSlide key={idx}>
-                                    <div className="flex flex-col items-center justify-center">
-                                        <img src={item.img} alt="timeline" className="w-72 rounded-lg shadow-lg" />
-                                        <div className="mt-4">
-                                            <h3 className="font-bold text-xl text-blue-600">{item.year}</h3>
-                                            <p className="text-lg font-semibold text-gray-800">{item.title}</p>
-                                            <p className="text-sm ">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                        <div className="flex justify-between items-center mt-4 px-4">
-                            <button className="swiper-button-prev text-gray-800"><FaChevronLeft size={20} /></button>
-                            <button className="swiper-button-next text-gray-800"><FaChevronRight size={20} /></button>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <section className="journey-section">
                 <div className="cust-container">
-                    <h2 className="journey-title">Our Journey Through the Years</h2>
-
-                    <div className="journey-swiper-wrapper">
-                        <button ref={prevRef} className="swiper-nav prev">←</button>
-                        <Swiper
-                            ref={swiperRef}
-                            modules={[Navigation]}
-                            loop={false}
-                            slidesPerView={1}
-                            spaceBetween={30}
-                        >
-                            {journeyData.map((item, idx) => (
-                                <SwiperSlide key={idx}>
-                                    <div className="journey-slide">
-                                        <div className="slide-left">
-                                            <img src={item.img} alt={item.title} />
-                                        </div>
-                                        <div className="divider" />
-                                        <div className="slide-right">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.desc}</p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                        <button ref={nextRef} className="swiper-nav next">→</button>
-                    </div>
-                    <div className="journey-years-bar">
-                        <div className="wave-line" />
-                        <div className="years-circles">
-                            {journeyData.map((item, idx) => (
-                                <div className="year-indicator" key={idx}>
-                                    <span className={`dot ${idx === 0 ? "active" : ""}`}></span>
-                                    <p>{item.year}</p>
-                                </div>
-                            ))}
+                    <div className="common-heading-sec">
+                        <div className="comon-head-inner">
+                            <h2>CG Through the Years</h2>
+                            <p>From a pioneering start in 1878 to becoming a global name in electrical solutions,
+                                CG's journey is one of innovation, expansion, and transformation.</p>
                         </div>
                     </div>
+
+                    <TimelineSlider />
                 </div>
             </section>
 
@@ -298,7 +224,7 @@ const About = () => {
             <section class="financial-stats-section">
                 <div class="cust-container">
                     <h2 class="abtFinTitle">
-                        Financial <span class="abtSpanTitle">Numbers</span>
+                        <span class="outlined-text">Impact</span> <span class="abtSpanTitle">numbers</span>
                     </h2>
 
                     <div class="financial-masonry">
