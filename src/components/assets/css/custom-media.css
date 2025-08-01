@@ -188,6 +188,13 @@
   .card {
     height: 250px;
   }
+  .swiper-nav-sm{
+    display: none;
+  }
+  .view-report img{
+   width: 30px;
+  }
+  
 }
 
 @media only screen and (max-width: 480px) {
