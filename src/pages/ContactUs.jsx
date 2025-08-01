@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "../components/assets/css/contactus.css"; // adjust path if needed
+
 import "../components/assets/css/style.css";
+import "../components/assets/css/contactus.css"; // adjust path if needed
 
 const ContactUs = () => {
   return (
