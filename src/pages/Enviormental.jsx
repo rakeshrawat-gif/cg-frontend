@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import ClimateImg from "../components/assets/images/ESG/env1.png";
-import ProductImg from "../components/assets/images/ESG/env2.png";
-import InnovationImg from "../components/assets/images/ESG/env3.png";
-import HumanImg from "../components/assets/images/ESG/env4.png";
-import HumanRightImg from "../components/assets/images/ESG/env5.png";
-import InnovationmgtImg from "../components/assets/images/ESG/env6.png";
-import corporateImg from "../components/assets/images/ESG/env7.png";
-import ResponsibleImg from "../components/assets/images/ESG/env8.png";
-import CRMImg from "../components/assets/images/ESG/env9.png";
+import ClimateImg from "../components/assets/images/ESG/env1.jpg";
+import ProductImg from "../components/assets/images/ESG/env2.jpg";
+import InnovationImg from "../components/assets/images/ESG/env3.jpg";
+import HumanImg from "../components/assets/images/ESG/env4.jpg";
+import HumanRightImg from "../components/assets/images/ESG/env5.jpg";
+import InnovationmgtImg from "../components/assets/images/ESG/env6.jpg";
+import corporateImg from "../components/assets/images/ESG/env7.jpg";
+import ResponsibleImg from "../components/assets/images/ESG/env8.jpg";
+import CRMImg from "../components/assets/images/ESG/env9.jpg";
 import arrow from "../components/assets/images/ESG/Icon.png";
 import swip1Img from "../components/assets/images/ESG/sw1.jpg";
 import swip2Img from "../components/assets/images/ESG/sw2.jpg";
@@ -152,8 +152,37 @@ const Enviormental = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
+      <section className="commonfrst-sec">
+        <div className="cust-container">
+          <div className="breadcr-inner">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
+                <a href="#">Home</a>
+              </li>
+              <li className="breadcrumb-item">
+                <a href="#">About CG</a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+                ESG
+              </li>
+            </ol>
+          </div>
 
-      <section className="tech-wrapper commonfrst-sec">
+          <div className="common-heading-sec">
+            <div className="comon-head-inner">
+              <h2>Environmental, Social, and Governance (ESG)</h2>
+              <p>
+                At CG, sustainability is embedded into the very fabric of our
+                operations. Our approach is driven by purpose-led innovation,
+                responsible value creation, and a deep commitment to
+                environmental stewardship and social progress.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="tech-wrapper commonfrst-sec">
         <div className="breadcrumb">
           Home &nbsp;|&nbsp; About CG &nbsp;|&nbsp; <span> ESG </span>
         </div>
@@ -167,71 +196,78 @@ const Enviormental = () => {
           responsible value creation, and a deep commitment to environmental
           stewardship and social progress.
         </p>
-      </section>
+      </section> */}
 
-      <section className="tech-wrapper">
-        <h1 className="materiality-title">Materiality at CG</h1>
-        <p className="materiality-desc">
-          At CG, our sustainability strategy is guided by material ESG issues
-          that have the greatest impact on our stakeholders, the environment,
-          and long-term business success. Our materiality approach aligns with
-          global frameworks and ensures focus on climate action, corporate
-          governance, ethical supply chains, and more.
-        </p>
-        <p className="materiality-desc">
-          In FY 2022–23, we conducted a structured Materiality Assessment to
-          identify and prioritize ESG topics critical to our business and
-          stakeholders. Each topic is reviewed through a financial,
-          environmental, and social lens, helping us manage risks and unlock
-          opportunities for sustainable growth.
-        </p>
-
-        <div className="tabs">
-          {tabList.map((tab) => (
-            <button
-              key={tab}
-              className={`tab-button ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+      <section className="common-heading-sec">
+        <div className="cust-container">
+          <div className="comon-head-inner">
+            <h2>Materiality at CG</h2>
+            <p>
+              At CG, our sustainability strategy is guided by material ESG
+              issues that have the greatest impact on our stakeholders, the
+              environment, and long-term business success. Our materiality
+              approach aligns with global frameworks and ensures focus on
+              climate action, corporate governance, ethical supply chains, and
+              more.
+            </p>
+            <p>
+              In FY 2022–23, we conducted a structured Materiality Assessment to
+              identify and prioritize ESG topics critical to our business and
+              stakeholders. Each topic is reviewed through a financial,
+              environmental, and social lens, helping us manage risks and unlock
+              opportunities for sustainable growth.
+            </p>
+          </div>
         </div>
 
-        {/* Cards */}
+        <div className="cust-container">
+          <div className="tabs">
+            {tabList.map((tab) => (
+              <button
+                key={tab}
+                className={`tab-button ${activeTab === tab ? "active" : ""}`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
 
-        <div className="cards-container">
-          {tabContent[activeTab].map((card, idx) => (
-            <div className="env-card" key={idx}>
-              <img src={card.image} alt={card.title} />
-              <h3>{card.title}</h3>
-              <ul>
-                {card.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          {/* Cards */}
 
-        <div className="materiality-footer">
-          <p>
-            Materiality at CG is not just a compliance exercise, it’s a
-            strategic imperative that helps us future-proof our business while
-            creating long-term value for all stakeholders. We remain committed
-            to evolving our ESG priorities in step with global standards and
-            stakeholder expectations.
-          </p>
-          <p>
-            Our next step: a Double Materiality Assessment that will further
-            integrate sustainability into everything we do.
-          </p>
-          <a href="#" className="view-report">
-            View Report
-            <span>
-              <img src={arrow} alt="arrow" />
-            </span>
-          </a>
+          <div className="cards-container">
+            {tabContent[activeTab].map((card, idx) => (
+              <div className="env-card" key={idx}>
+                <img src={card.image} alt={card.title} />
+                <h3>{card.title}</h3>
+                <ul>
+                  {card.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="materiality-footer">
+            <p>
+              Materiality at CG is not just a compliance exercise, it’s a
+              strategic imperative that helps us future-proof our business while
+              creating long-term value for all stakeholders. We remain committed
+              to evolving our ESG priorities in step with global standards and
+              stakeholder expectations.
+            </p>
+            <p>
+              Our next step: a Double Materiality Assessment that will further
+              integrate sustainability into everything we do.
+            </p>
+            <a href="#" className="view-report">
+              View Report
+              <span>
+                <img src={arrow} alt="arrow" />
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 

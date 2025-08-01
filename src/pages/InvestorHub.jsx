@@ -42,13 +42,13 @@ const InvestorHub = () => {
     "Info Under Regulation 46": InfoUnderRegulation46,
     "Qualified Institution Placements": QualifiedInstitutionPlacements,
     "Scheme of Arrangement": SchemeOfArrangement,
-    "Financials": Financials,
+    Financials: Financials,
     "CG Shares": CGShares,
     "Stock Exchange Disclosures": StockExchangeDisclosures,
     "Analysts Interactions": AnalystsInteractions,
-    "Policies": Policies,
+    Policies: Policies,
     "CG Cares (CSR)": CGCares,
-    "Dividend": Dividend,
+    Dividend: Dividend,
     "Unclaimed Dividend and Shares": UnclaimedDividendShares,
   };
 
@@ -80,13 +80,31 @@ const InvestorHub = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
-      <section className="tech-wrapper commonfrst-sec">
-        <div className="breadcrumb">
-          Home &nbsp;|&nbsp; <span> Investors </span>
+
+      <section className="commonfrst-sec">
+        <div className="cust-container">
+          <div className="breadcr-inner">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
+                <a href="#">Home</a>
+              </li>
+              <li className="breadcrumb-item">
+                <a href="#">About CG</a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+                Investors
+              </li>
+            </ol>
+          </div>
+
+          <div className="common-heading-sec">
+            <div className="comon-head-inner">
+              <h2>CG Investor Information Hub</h2>
+            </div>
+          </div>
         </div>
-
-        <h1 className="tech-title">CG Investor Information Hub</h1>
-
+      </section>
+      <section className="tech-wrapper ">
         <div className="dropdown-container">
           <div className="custom-dropdown-wrapper" ref={dropdownRef}>
             <div
@@ -101,8 +119,9 @@ const InvestorHub = () => {
                 {options.map((option, idx) => (
                   <li
                     key={idx}
-                    className={`dropdown-item-sm ${selected === option ? "selected" : ""
-                      }`}
+                    className={`dropdown-item-sm ${
+                      selected === option ? "selected" : ""
+                    }`}
                     onClick={() => handleSelect(option)}
                   >
                     {option}
@@ -120,7 +139,7 @@ const InvestorHub = () => {
           </div>
         </div>
 
-        {/* <div className="tab-section">
+        <div className="tab-section">
           {tabOptions.map((tab, index) => (
             <button
               key={index}
@@ -247,8 +266,8 @@ const InvestorHub = () => {
               </table>
             </div>
           )}
-        </div> */}
-        {selected === "Investor Realtions Home" ? (
+        </div>
+        {/* {selected === "Investor Realtions Home" ? (
           <>
             <div className="tab-section">
               {tabOptions.map((tab, index) => (
@@ -263,7 +282,9 @@ const InvestorHub = () => {
             </div>
 
             <div className="tab-content">
-              {selectedTab === "Investor Relations" && <InvestorRelationsHome />}
+              {selectedTab === "Investor Relations" && (
+                <InvestorRelationsHome />
+              )}
               {selectedTab === "Registrar And Transfer Agents" && (
                 <p>Registrar content here</p>
               )}
@@ -277,12 +298,13 @@ const InvestorHub = () => {
           </>
         ) : (
           <div className="tab-content">
-            {sectionComponentMap[selected]
-              ? React.createElement(sectionComponentMap[selected])
-              : <p>Please select a valid section.</p>}
+            {sectionComponentMap[selected] ? (
+              React.createElement(sectionComponentMap[selected])
+            ) : (
+              <p>Please select a valid section.</p>
+            )}
           </div>
-        )}
-
+        )} */}
       </section>
     </>
   );

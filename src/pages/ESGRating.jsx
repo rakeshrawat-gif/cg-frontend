@@ -69,25 +69,42 @@ const ESGRating = () => {
           <img src={bannerImg} alt="Leadership and Top Management" />
         </div>
       </section>
-      <section className="tech-wrapper commonfrst-sec">
-        <div className="breadcrumb">
-          Home &nbsp;|&nbsp; About CG &nbsp;|&nbsp; <span> ESG </span>
-        </div>
 
-        <h1 className="tech-title">
-          Environmental, Social, and Governance (ESG)
-        </h1>
-        <p className="tech-subtitle">
-          At CG, sustainability is embedded into the very fabric of our
-          operations. Our approach is driven by purpose-led innovation,
-          responsible value creation, and a deep commitment to environmental
-          stewardship and social progress.
-        </p>
+      <section className="commonfrst-sec">
+        <div className="cust-container">
+          <div className="breadcr-inner">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
+                <a href="#">Home</a>
+              </li>
+              <li className="breadcrumb-item">
+                <a href="#">ESG</a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+                ESG
+              </li>
+            </ol>
+          </div>
+
+          <div className="common-heading-sec">
+            <div className="comon-head-inner">
+              <h2>Environmental, Social, and Governance (ESG)</h2>
+              <p>
+                At CG, sustainability is embedded into the very fabric of our
+                operations. Our approach is driven by purpose-led innovation,
+                responsible value creation, and a deep commitment to
+                environmental stewardship and social progress.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="esg-bg-wrapper">
         <div className="cards-wrapper">
-          <h2 className="esg-heading">CG’s ESG Ratings</h2>
+          <div className="comon-head-inner">
+            <h2>CG’s ESG Ratings</h2>
+          </div>
           <div className="esg-card-grid">
             {esgCards.map((card, index) => (
               <div className={`esg-card ${card.className}`} key={index}>

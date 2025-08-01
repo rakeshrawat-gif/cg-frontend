@@ -20,8 +20,8 @@ const AppRoutes = () => {
       <Route path="/our_leadership" element={<Leadership />} />
       <Route path="/subsidiaries_jv" element={<SubsidiariesJointVentures />} />
       <Route path="/tehcnology" element={<LeadingWithTechnology />} />
-      <Route path="/ESG" element={<Enviormental />} />
-      <Route path="/ESG2" element={<ESGRating />} />
+      <Route path="/esg" element={<Enviormental />} />
+      <Route path="/esg2" element={<ESGRating />} />
       <Route path="/investor" element={<InvestorHub />} />
     </Routes>
   );

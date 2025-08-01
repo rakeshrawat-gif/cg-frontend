@@ -358,7 +358,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/ESG">
+                        <Link className="dropdown-item" to="/esg">
                           <div className="single-dr-inner">
                             <img src={headIcon6} alt="" />
                             <span>ESG</span>
@@ -2266,7 +2266,7 @@ const Header = () => {
                     <Link to="javascript:;">Sectors We Serve</Link>
                   </li>
                   <li>
-                    <Link to="/ESG">ESG</Link>
+                    <Link to="/esg">ESG</Link>
                   </li>
                   <li>
                     <Link to="/tehcnology">Technology + R&D</Link>

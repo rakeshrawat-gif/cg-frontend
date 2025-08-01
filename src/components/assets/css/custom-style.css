@@ -388,16 +388,16 @@
 }
 
 .view-report {
-  display: inline-flex;
+  /* display: inline-flex; */
   font-weight: 700;
   color: #4C4F54;
-  text-decoration: none;
+  text-decoration: none !important;
   margin-top: 16px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.view-report span {
-  margin-left: 6px;
+.view-report img {
+  margin-left: 5px;
 }
 
 .greener-layout {
@@ -733,7 +733,7 @@ background-color: white;
 .tech-wrapper {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0px 20px;
   font-family: "Segoe UI", sans-serif;
   color: #333;
 }
@@ -883,6 +883,7 @@ background-color: white;
   margin-top: 10px;
   font-size: 15px;
   border: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
 .contact-table th {
@@ -911,6 +912,7 @@ background-color: white;
   margin-top: 40px;
   font-size: 14px;
   border: 1px solid #96969680;
+  margin-bottom: 20px;
 }
 
 
