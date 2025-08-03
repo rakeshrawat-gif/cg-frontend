@@ -10,6 +10,9 @@ import LeadingWithTechnology from "../pages/LeadingWithTechnology";
 import Enviormental from "../pages/Enviormental";
 import ESGRating from "../pages/ESGRating";
 import InvestorHub from "../pages/InvestorHub";
+import SubsidariAndJointVenture from '../pages/SubsidiariesJointVentures';
+import SectorWeServe from '../pages/SectorWeServe';
+import SwitchGear from '../pages/Switchgear';
 
 const AppRoutes = () => {
   return (
@@ -23,6 +26,8 @@ const AppRoutes = () => {
       <Route path="/esg" element={<Enviormental />} />
       <Route path="/esg2" element={<ESGRating />} />
       <Route path="/investor" element={<InvestorHub />} />
+      <Route path="/sector-we-serve" element={<SectorWeServe />} />
+      <Route path="/switchgear" element={<SwitchGear />} />
     </Routes>
   );
 };
