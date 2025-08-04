@@ -194,6 +194,36 @@
   .view-report img{
    width: 30px;
   }
+
+   .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-link {
+    margin-top: 8px;
+  }
+  .scheme-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scheme-actions {
+    margin-top: 10px;
+  }
+
+  .financial-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-actions {
+    margin-top: 8px;
+  }
+
+  .item-title {
+    font-size: 14px;
+  }
   
 }
 
@@ -216,5 +246,30 @@
   .modal-description img {
     width: 18px;
     height: 18px;
+  }
+  .info-title {
+    font-size: 14px;
+  }
+
+  .know-more {
+    font-size: 13px;
+  }
+
+  .arrow-icon {
+    width: 8px;
+    height: 8px;
+  }
+
+   .scheme-title {
+    font-size: 14px;
+  }
+
+  .action-link {
+    font-size: 13px;
+  }
+
+  .action-link img {
+    width: 12px;
+    height: 12px;
   }
 }

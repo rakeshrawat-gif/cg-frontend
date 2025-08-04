@@ -730,12 +730,13 @@ background-color: white;
 /*=================== Investor==================== */
 
 
-.tech-wrapper {
+.tech-wrapper-invs{
   max-width: 1250px;
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 0px 20px;
   font-family: "Segoe UI", sans-serif;
   color: #333;
+  margin-bottom: 90px;
 }
 
 .breadcrumb {
@@ -941,6 +942,183 @@ background-color: white;
 }
 
 /* calender table end */
+
+
+/* Info Under Regulation 46 */
+
+.info-regulation-wrapper {
+  border-top: 1px solid #969696;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #969696;
+  align-items: center;
+}
+
+.info-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color:#4C4F54;
+}
+
+.know-more {
+  color: #005CAB;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow-icon {
+  width: 10px;
+  height: 10px;
+}
+
+/* Info Under Regulation 46 END */
+
+
+/* ====Scheme of Arrangement==== */
+
+.scheme-wrapper {
+  padding: 0 15px;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+.scheme-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #969696;
+  padding: 14px 0;
+  gap: 10px;
+}
+
+.scheme-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4C4F54;
+}
+
+/* .scheme-title.highlighted {
+  color: #0056b3;
+} */
+
+.scheme-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #4C4F54;
+  text-decoration: none !important;
+}
+
+.action-link img {
+  width: 17px;
+  height: 14px;
+  color:#4C4F54;
+  
+}
+/* Scheme of Arrangement ENd */
+
+
+/* ===Financials==== */
+.financials-wrapper {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.quick-links-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.financial-section {
+  border-bottom: 1px solid #969696;
+}
+
+.financial-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+.arrow-icon {
+  width: 14px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.financial-content {
+  background-color: #F2F7FB;
+  padding: 15px;
+}
+
+.year-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.financial-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #ccc;
+}
+
+.item-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.item-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none !important;
+}
+
+.action-link img {
+  width: 14px;
+  height: 14px;
+}
+/* ===Financials END==== */
 
 
 
