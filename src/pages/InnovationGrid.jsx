@@ -68,9 +68,9 @@ const InnovationGrid = () => {
         solutions that drive meaningful impact in the real world.
       </p>
 
-      <div className="grid">
+      <div className="inv-grid">
         {projectData.map((item, index) => (
-          <div className="card" key={index} onClick={() => openModal(item)}>
+          <div className="inv-card" key={index} onClick={() => openModal(item)}>
             <img src={item.image} alt={item.title} />
             <div className="card-overlay">
               <img src={LocationIcn} alt="location" className="location-icon" />
