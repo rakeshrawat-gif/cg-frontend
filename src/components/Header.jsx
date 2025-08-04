@@ -1116,7 +1116,7 @@ const Header = () => {
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="/consumer-durable">
                                     Consumer Durables
                                 </a>
                             </li>
@@ -1381,7 +1381,7 @@ const Header = () => {
                                 <li><a href="">Railways</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Consumer Durables</a></li>
+                        <li><a href="/consumer-durable">Consumer Durables</a></li>
                         <li><a href="/investor">Investors</a></li>
                         <li className="has-children">
                             <a href="#" onClick={handleMobileMultiLevelToggle}>Careers</a>
