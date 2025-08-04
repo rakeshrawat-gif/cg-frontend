@@ -12,6 +12,8 @@ import drivesIcon from "../components/assets/images/contact/drivesautomationicn.
 import consumerIcon from "../components/assets/images/contact/consumer-productsicn.svg";
 import railwaysIcon from "../components/assets/images/contact/railwaysicn.svg";
 
+import '../components/assets/css/contactus.css';
+
 const categoryIcons = {
   Transformers: transformersIcon,
   Switchgears: switchgearIcon,
