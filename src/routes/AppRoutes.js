@@ -10,9 +10,11 @@ import LeadingWithTechnology from "../pages/LeadingWithTechnology";
 import Enviormental from "../pages/Enviormental";
 import ESGRating from "../pages/ESGRating";
 import InvestorHub from "../pages/InvestorHub";
-import SubsidariAndJointVenture from '../pages/SubsidiariesJointVentures';
 import SectorWeServe from '../pages/SectorWeServe';
 import SwitchGear from '../pages/Switchgear';
+import AboutOurPurposeAndValue from '../pages/AboutOurPurposeAndValue';
+import CgInTheNews from '../pages/CgInTheNews';
+import ConsumerDurable from '../pages/ConsumerDurable';
 
 const AppRoutes = () => {
   return (
@@ -28,6 +30,10 @@ const AppRoutes = () => {
       <Route path="/investor" element={<InvestorHub />} />
       <Route path="/sector-we-serve" element={<SectorWeServe />} />
       <Route path="/switchgear" element={<SwitchGear />} />
+      <Route path="/about-our-purpose-and-value" element={<AboutOurPurposeAndValue />} />
+      <Route path="/cg-in-the-news" element={<CgInTheNews />} />
+      <Route path="/consumer-durable" element={<ConsumerDurable />} />
+      
     </Routes>
   );
 };

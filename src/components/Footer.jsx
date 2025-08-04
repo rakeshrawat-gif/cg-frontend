@@ -75,7 +75,7 @@ const Footer = () => {
                   <li><a href="#">Company Overview</a></li>
                   <li><a href="#">Leadership & Top Management</a></li>
                   <li><a href="/subsidiaries-joint-ventures">Subsidiaries & Joint Ventures</a></li>
-                  <li><a href="#">Our Purpose & Values</a></li>
+                  <li><a href="/about-our-purpose-and-value">Our Purpose & Values</a></li>
                   <li><a href="/sector-we-serve">Sectors We Serve</a></li>
                   <li><a href="#">ESG</a></li>
                   <li><a href="#">Technology + R&D</a></li>
@@ -103,7 +103,7 @@ const Footer = () => {
                     <li><a href="#">Case Studies</a></li>
                     <li><a href="#">Investors</a></li>
                     <li><a href="#">Policies</a></li>
-                    <li><a href="#">CG in the News</a></li>
+                    <li><a href="/cg-in-the-news">CG in the News</a></li>
                     <li><a href="#">Disclaimer</a></li>
                 </ul>
               </div>

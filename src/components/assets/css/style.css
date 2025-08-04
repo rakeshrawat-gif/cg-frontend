@@ -1272,6 +1272,7 @@ header #desktopheader .head-menuitems{
     .news-image {
       height: 180px;
       width: 100%;
+      background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       position: relative;
@@ -2125,9 +2126,11 @@ header #desktopheader .head-menuitems{
       margin-bottom: 0;
     }
     .stackcard-consumer .card-content{
+      background-repeat: no-repeat;
       background-size: cover !important;
       display: flex;
       align-items: center;
+      flex-direction: row;
     }
     .stackcard-consumer .card-content .card-contentdesc h4{
       font-size: 45px;
