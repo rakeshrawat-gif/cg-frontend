@@ -15,6 +15,7 @@ import Policies from "../components/InvestorSections/Policies.jsx";
 import CGCares from "../components/InvestorSections/CGCares.jsx";
 import Dividend from "../components/InvestorSections/Dividend.jsx";
 import UnclaimedDividendShares from "../components/InvestorSections/UnclaimedDividendShares.jsx";
+import FAQs from "../components/InvestorSections/FAQs.jsx";
 
 const InvestorHub = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const InvestorHub = () => {
     "CG Cares (CSR)",
     "Dividend",
     "Unclaimed Dividend and Shares",
+    "FAQs",
   ];
 
   const sectionComponentMap = {
@@ -50,6 +52,7 @@ const InvestorHub = () => {
     "CG Cares (CSR)": CGCares,
     Dividend: Dividend,
     "Unclaimed Dividend and Shares": UnclaimedDividendShares,
+    FAQs: FAQs,
   };
 
   const tabOptions = [
@@ -59,20 +62,76 @@ const InvestorHub = () => {
     "Calender of Events",
   ];
 
+  // const headingMap = {
+  //   "Investor Realtions Home": "CG Investor Information Hub",
+  //   "Info Under Regulation 46":
+  //     "Information under Regulation 46 SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+  //   "Qualified Institution Placements": "Qualified Institution Placements",
+  //   "Scheme of Arrangement": "Scheme of Arrangement",
+  //   Financials: "Financials",
+  //   "CG Shares": "CG Shares",
+  //   "Stock Exchange Disclosures": "Stock Exchange Disclosures",
+  //   "Analysts Interactions": "Analysts Interactions",
+  //   Policies: "Policies",
+  //   "CG Cares (CSR)": "CG Cares (CSR)",
+  //   Dividend: "Dividend",
+  //   "Unclaimed Dividend and Shares": "Unclaimed Dividend and Shares",
+  // };
   const headingMap = {
-    "Investor Realtions Home": "CG Investor Information Hub",
-    "Info Under Regulation 46":
-      "Information under Regulation 46 SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-    "Qualified Institution Placements": "Qualified Institution Placements",
-    "Scheme of Arrangement": "Scheme of Arrangement",
-    Financials: "Financials",
-    "CG Shares": "CG Shares",
-    "Stock Exchange Disclosures": "Stock Exchange Disclosures",
-    "Analysts Interactions": "Analysts Interactions",
-    Policies: "Policies",
-    "CG Cares (CSR)": "CG Cares (CSR)",
-    Dividend: "Dividend",
-    "Unclaimed Dividend and Shares": "Unclaimed Dividend and Shares",
+    "Investor Realtions Home": {
+      title: "CG Investor Information Hub",
+      description: "",
+    },
+    "Info Under Regulation 46": {
+      title:
+        "Information under Regulation 46 SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+      description: "",
+    },
+    "Qualified Institution Placements": {
+      title: "Qualified Institution Placements",
+      description: "",
+    },
+    "Scheme of Arrangement": {
+      title: "Scheme of Arrangement",
+      description: "",
+    },
+    Financials: {
+      title: "Financials",
+      description:
+        "Get in-depth insights into our financials, including income statements, balance sheets, and cash flow reports.",
+    },
+    "CG Shares": {
+      title: "Shared Related Information",
+      description: "Find information related to our shares and stock codes.",
+    },
+    "Stock Exchange Disclosures": {
+      title: "Stock Exchange Disclosures",
+      description: "",
+    },
+    "Analysts Interactions": {
+      title: "Analysts Interactions",
+      description: "",
+    },
+    Policies: {
+      title: "Policies",
+      description: "",
+    },
+    "CG Cares (CSR)": {
+      title: "CG Cares (CSR)",
+      description: "",
+    },
+    Dividend: {
+      title: "Dividend",
+      description: "",
+    },
+    "Unclaimed Dividend and Shares": {
+      title: "Unclaimed Dividend and Shares",
+      description: "",
+    },
+    FAQs: {
+      title: "FAQ's",
+      description: "",
+    },
   };
 
   const handleSelect = (option) => {
@@ -116,7 +175,10 @@ const InvestorHub = () => {
           <div className="common-heading-sec">
             <div className="comon-head-inner">
               {/* <h2>CG Investor Information Hub</h2> */}
-              <h2>{headingMap[selected]}</h2>
+              <h2>{headingMap[selected]?.title}</h2>
+              {headingMap[selected]?.description && (
+                <p>{headingMap[selected].description}</p>
+              )}
             </div>
           </div>
         </div>

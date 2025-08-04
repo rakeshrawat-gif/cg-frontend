@@ -129,13 +129,13 @@
  width: 1240px;
 }
 
-.grid {
+.inv-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.card {
+.inv-card {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -147,7 +147,7 @@
   height: 380px;
 }
 
-.card img {
+.inv-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -201,7 +201,7 @@
   border-radius: 20px;
   overflow: hidden;
   width: 770px;
- 
+  margin: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -301,14 +301,14 @@
 }
 
 /* Tabs */
-.tabs {
+.env-tabs {
   display: flex;
   gap: 16px;
   margin: 32px 0;
   flex-wrap: wrap;
 }
 
-.tab-button {
+.env-tab-button {
   padding: 10px 20px;
   border-radius: 32px;
   background: #f4f4f4;
@@ -320,11 +320,11 @@
   transition: background 0.3s ease;
 }
 
-.tab-button:hover {
+.env-tab-button:hover {
   background: #e0e0e0;
 }
 
-.tab-button.active {
+.env-tab-button.active {
     border: 1px solid #005CAB;
   background: #fff;
   color: #005CAB;
@@ -603,7 +603,7 @@ background-color: white;
   margin-top: 20px;
   color: #005CAB;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 14px;
   display: inline-flex;
   align-items: center;
@@ -620,7 +620,7 @@ background-color: white;
 
 .reports-wrapper {
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px 60px;
 }
 
@@ -638,7 +638,7 @@ background-color: white;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.3s ease;
   
 }
@@ -851,7 +851,7 @@ background-color: white;
   margin-bottom: 20px;
 }
 
-.tab {
+.relation-tab {
   padding: 10px 20px;
   border: none;
   background: none;
@@ -864,11 +864,11 @@ background-color: white;
   font-weight: 700;
 }
 
-.tab.active {
+.relation-tab.active {
   color: #7BC143;
 }
 
-.tab.active::after {
+.relation-tab.active::after {
   content: "";
   position: absolute;
   top: -1px;
@@ -967,7 +967,7 @@ background-color: white;
   color:#4C4F54;
 }
 
-.know-more {
+.info-know-more {
   color: #005CAB;
   font-size: 14px;
   font-weight: 700;
@@ -1063,24 +1063,25 @@ background-color: white;
   color: #222;
 }
 
-.arrow-icon {
-  width: 14px;
+.fn-arrow-icon {
+  width: 20px;
   transition: transform 0.3s ease;
 }
 
-.arrow-icon.rotated {
+.fn-arrow-icon.rotated {
   transform: rotate(180deg);
 }
 
 .financial-content {
   background-color: #F2F7FB;
   padding: 15px;
+  border-top:1px solid #005CAB;
 }
 
 .year-select {
   padding: 6px 10px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #005CAB;
   margin-bottom: 15px;
   font-size: 14px;
 }
@@ -1090,14 +1091,14 @@ background-color: white;
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .item-title {
   flex: 1;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4C4F54;
 }
 
 .item-actions {
@@ -1110,7 +1111,7 @@ background-color: white;
   align-items: center;
   gap: 6px;
   font-size: 14px;
-  color: #007bff;
+  /* color: #007bff; */
   text-decoration: none !important;
 }
 
@@ -1119,6 +1120,239 @@ background-color: white;
   height: 14px;
 }
 /* ===Financials END==== */
+
+
+/* ===== Shares===== */
+.shares-wrapper {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+shares
+.shares-links-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.shares-section {
+  border-bottom: 1px solid #969696;
+}
+
+.shares-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+.sh-arrow-icon {
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sh-arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.shares-content {
+  background-color: #F2F7FB;
+  padding: 15px;
+  border-top:1px solid #005CAB;
+}
+
+.shares-year-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #005CAB;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.shares-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.sh-item-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4C4F54;
+}
+
+.sh-item-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.sh-action-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #4C4F54;
+  text-decoration: none !important;
+}
+
+.sh-action-link img {
+  width: 14px;
+  height: 14px;
+}
+/* ===== Shares END===== */
+
+/* ====FAQ's===== */
+.faq-container {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+
+ .faq-tab-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+
+
+.faq-tabs {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  flex: 1;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+}
+
+
+.faq-tabs::-webkit-scrollbar {
+  display: none; 
+}
+
+
+.scroll-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10;
+}
+
+
+.scroll-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.scroll-btn.left {
+  margin-right: 8px;
+}
+
+
+.scroll-btn.right {
+  margin-left: 8px;
+}
+
+.faq-tab {
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4C4F54;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.faq-tab.active {
+  color: #007bff;
+  border-top: 3px solid #7BC143;
+}
+
+/* Highlight style applied to open accordion item */
+.faq-item.highlighted {
+  background: #f0f7ff;
+  padding: 16px 20px;
+  border-top: 1px solid #007bff;
+  border-radius: 4px;
+}
+.faq-accordion .faq-item.highlighted {
+  border-top: 1px solid #007bff;
+}
+
+/* Remove default highlight-box spacing inside accordion */
+.faq-highlight-box {
+  background: none;
+  padding: 0;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.faq-highlight-box h4 {
+  margin-bottom: 8px;
+  color: #003b75;
+  font-size: 15px;
+}
+
+.faq-highlight-answer {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Accordion base style */
+.faq-accordion .faq-item {
+  border-top: 1px solid #ddd;
+  padding: 18px 22px;
+}
+
+.faq-question {
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  padding: 9px;
+  color: #4C4F54;
+}
+
+.accordion-icon {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.accordion-icon-img {
+  width: 12px; 
+  height: 12px;
+  
+  margin-left: 8px;
+}
+
+.faq-answer {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #4C4F54;
+  padding-left:9px
+}
+
+/* ====FAQ's END===== */
+
+
+
 
 
 

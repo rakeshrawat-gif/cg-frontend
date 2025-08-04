@@ -16,7 +16,7 @@ const InvestorRelationsHome = () => {
         {tabOptions.map((tab, index) => (
           <button
             key={index}
-            className={`tab ${selectedTab === tab ? "active" : ""}`}
+            className={`relation-tab ${selectedTab === tab ? "active" : ""}`}
             onClick={() => setSelectedTab(tab)}
           >
             {tab}

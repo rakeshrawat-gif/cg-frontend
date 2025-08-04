@@ -221,11 +221,13 @@ const Enviormental = () => {
         </div>
 
         <div className="cust-container">
-          <div className="tabs">
+          <div className="env-tabs">
             {tabList.map((tab) => (
               <button
                 key={tab}
-                className={`tab-button ${activeTab === tab ? "active" : ""}`}
+                className={`env-tab-button ${
+                  activeTab === tab ? "active" : ""
+                }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}

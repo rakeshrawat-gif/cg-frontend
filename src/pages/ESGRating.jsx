@@ -124,7 +124,7 @@ const ESGRating = () => {
         </div>
       </section>
 
-      <section className="reports-wrapper tech-wrapper">
+      <section className="reports-wrapper">
         <div className="reports-list">
           {reports.map((report, idx) => (
             <a

@@ -67,7 +67,7 @@ const Financials = () => {
             <img
               src={downArrow}
               alt="Toggle"
-              className={`arrow-icon ${
+              className={`fn-arrow-icon ${
                 openSection === section ? "rotated" : ""
               }`}
             />

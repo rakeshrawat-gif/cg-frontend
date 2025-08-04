@@ -27,9 +27,9 @@ const InfoUnderRegulation46 = () => {
         <div className="info-row" key={index}>
           <div className="info-title">{item}</div>
           <div className="info-link">
-            <a href="#" className="know-more">
+            <a href="#" className="info-know-more">
               Know more
-              <img src={arrowIcon} alt="arrow" className="arrow-icon" />
+              <img src={arrowIcon} alt="arrow" className="info-arrow-icon" />
             </a>
           </div>
         </div>
