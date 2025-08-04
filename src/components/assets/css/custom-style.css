@@ -1220,7 +1220,7 @@ shares
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }
 
 
