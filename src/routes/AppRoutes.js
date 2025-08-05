@@ -15,6 +15,7 @@ import SwitchGear from '../pages/Switchgear';
 import AboutOurPurposeAndValue from '../pages/AboutOurPurposeAndValue';
 import CgInTheNews from '../pages/CgInTheNews';
 import ConsumerDurable from '../pages/ConsumerDurable';
+import ProductDisplay from '../pages/ProductDisplay';
 
 const AppRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const AppRoutes = () => {
       <Route path="/about-our-purpose-and-value" element={<AboutOurPurposeAndValue />} />
       <Route path="/cg-in-the-news" element={<CgInTheNews />} />
       <Route path="/consumer-durable" element={<ConsumerDurable />} />
+      <Route path="/product-detail" element={<ProductDisplay />} />
       
     </Routes>
   );
