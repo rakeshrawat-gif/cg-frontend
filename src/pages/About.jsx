@@ -90,7 +90,7 @@ const About = () => {
             {/* Banner Section */}
             <section className="inner-comoonbanner">
                 <div className="comonban">
-                    <img src={bannerImg} alt="Leadership and Top Management" />
+                    <img src={bannerImg} alt="About CG" />
                 </div>
             </section>
 
@@ -118,7 +118,7 @@ const About = () => {
                         </ol>
                     </div>
                     <h1 className="aboutYears">88+ Years of</h1>
-                    <h2 className="aboutYears colorsYrs">Innovation and Impact</h2>
+                    <h2 className="aboutYears colorsYrs"><span>Innovation</span> and <span>Impact</span></h2>
                     <div className='flex_div'>
                         <div className='firstDiv'>
                             <h3 className="abt-title">The Force That <br />Inspires Tomorrow</h3>

@@ -19,9 +19,19 @@
   letter-spacing: 0.5px;
 }
 
-.colorsYrs {
+.aboutYears span {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 92px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
   color: var(--primary, #005CAB);
 }
+
+/* .colorsYrs {
+  color: var(--primary, #005CAB);
+} */
 
 .aboutForce {
   color: var(--grey-1, #4C4F54);
@@ -39,6 +49,10 @@
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: top right;
+}
+
+.aboutFirstSec .breadcrumb, .commonfrst-sec .breadcrumb {
+  background-color: transparent;
 }
 
 .abt-section {
@@ -457,6 +471,7 @@
 }
 
 .manufacturing-swiper-wrapper .swiper-slide {
+.manufacturing-swiper-wrapper .swiper-slide {
   transform: scale(0.75);
   transition: transform 0.3s ease;
   opacity: 0.7;
@@ -532,7 +547,6 @@
   /* pointer-events: auto; */
   background: #ffffff;
   color: #2c2929;
-  /* border-radius: 50%; */
   width: 40px;
   height: 40px;
   font-size: 20px;
@@ -1057,6 +1071,15 @@
   padding: 50px 0;
 }
 
+.text-center .imgHover:hover {
+  border: 5px solid #7BC143;
+  cursor: pointer;
+}
+
+.leadershipSec {
+    margin-bottom: 10px !important;
+}
+
 /* ✅ Tablet - 2 columns */
 @media (max-width: 991px) {
   .custom-flex-wrapper .box {
@@ -1077,8 +1100,8 @@
 /* ==================================       Investor Qualified Page CSS    =================================== */
 
 /* QualifiedInstitutionPlacements.css */
-.placement-tabs button {
-  margin: 10px;
+/* .placement-tabs button {
+  margin: 0px 30px 30px 0px;
   padding: 8px 16px;
   border: 1px solid #000;
   background: transparent;
@@ -1090,12 +1113,85 @@
   color: #fff;
 }
 
+.placement-content button {
+  text-align: center;
+} */
+.placementTabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 10px;
+  background: transparent;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.placementTabs button {
+  color: #4C4F54;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-top: 3px solid transparent;
+}
+
+.placementTabs button.active {
+  color: #4C4F54;
+  border-color: var(--greenclr);
+  background: #18181805;
+  padding: 10px;
+}
+
+
 .disclaimer-button {
   background: transparent;
-  border: 2px solid black;
-  color: #004785;
-  padding: 10px 20px;
-  cursor: pointer;
+  width: 404px;
+  height: 50px;
+  opacity: 1;
+  border-width: 1px;
+  gap: 10px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  color: #005CAB;
+}
+
+.placement-content .popPara {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  vertical-align: middle;
+
+}
+
+.placement-content .titlePopup {
+  text-align: left;
+}
+
+.paraFirstQualify {
+  font-weight: 700;
+  font-style: Bold;
+}
+
+.paraLastQualify {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  vertical-align: middle;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
 }
 
 .popup-overlay {
@@ -1108,30 +1204,88 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .popup-box {
+  position: relative;
   background: #fff;
-  padding: 30px;
+  padding: 50px 40px;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 750px;
   width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popuBtnDiv {
   text-align: center;
 }
 
+.popup-box .popupPara {
+  color: #4C4F54;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.titlePopup {
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  letter-spacing: -1.9%;
+  vertical-align: middle;
+  color: #4C4F54;
+}
+
 .popup-actions button {
+  background: transparent;
+  color: #005CAB;
+  font-weight: 600;
   margin: 10px;
   padding: 10px 20px;
   cursor: pointer;
+  width: 176;
+  height: 50;
+  opacity: 1;
+  border-width: 1px;
+  gap: 10px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+}
+
+.popTitle {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  letter-spacing: -1.9%;
+  vertical-align: middle;
+
 }
 
 .popup-close {
   position: absolute;
   top: 10px;
   right: 15px;
-  background: none;
-  border: none;
+  background: white;
+  border: 0px solid green;
   font-size: 20px;
+  width: 35px;
+  height: 35px;
+  line-height: 27px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  color: #333;
 }
 
 /* ==================================       END Investor Qualified Page CSS    =================================== */
