@@ -806,6 +806,45 @@
     .stackcard-consumer .card-content{
       justify-content: center;
     }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner {
+      padding: 20px 5px;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner{
+      position: relative;
+      border-radius: 0;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner::after{
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-color: #f2f9ff;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner::before{
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-color: #f2f9ff;
+    }
+    .commcntabui .nav-tabs{
+      justify-content: space-between;
+      width: 100%;
+    }
+    .commcntabui.tabbotborder .nav-tabs .nav-link{
+      font-size: 14px;
+      padding: 8px 0px;
+    }
+    .pdpul ul li, .product-display-tabs th, .product-display-tabs td{
+      font-size: 14px;
+    }
+    div#pdpdetailTabContent {
+        padding-left: 0px;
+    }
 }
 
 @media only screen and (max-width: 426px) {

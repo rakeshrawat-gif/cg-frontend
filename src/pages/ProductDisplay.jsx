@@ -1,0 +1,222 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs } from "swiper/modules";
+
+import banner from "../components/assets/images/swibaner.jpg";
+import proi1 from "../components/assets/images/productdetail/proi1.jpg";
+import proi2 from "../components/assets/images/productdetail/proi2.jpg";
+import downloadicn from "../components/assets/images/productdetail/downloadicn.svg";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+const ProductDisplay = () => {
+
+    const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
+    const mainSwiperRef = useRef(null);
+
+    const goNext = () => {
+        if (mainSwiperRef.current) {
+            mainSwiperRef.current.swiper.slideNext();
+        }
+    };
+
+    const goPrev = () => {
+        if (mainSwiperRef.current) {
+            mainSwiperRef.current.swiper.slidePrev();
+        }
+    };
+
+   
+    const [activeTab, setActiveTab] = useState("tab1");
+    const handleTabClick = (tabId) => {
+        setActiveTab(tabId);
+    };
+
+    return (
+        <>
+
+            <section className="inner-comoonbanner">
+                <div className="comonban">
+                    <img src={banner} alt="" />
+                </div>
+            </section>
+            <section className="commonfrst-sec">
+                <div className="cust-container">
+                    <div className="breadcr-inner">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="#">Switchgears</a></li>
+                            <li className="breadcrumb-item"><a href="#">High Voltage & Extra High Voltage</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">SF6 Circuit Breaker</li>
+                        </ol>
+                    </div>
+
+                    <div className="common-heading-sec">
+                        <div className="comon-head-inner">
+                            <h2>AIS (SF₆) Circuit Breaker – Up to 800 kV</h2>
+                        </div>
+                    </div>
+
+
+                    <div className="ais-circuit-breaker-inner">
+                        <div className="ais-circuitbreaker-swiper">
+                                {/* Navigation buttons */}
+                                <div className="ais-navbar">
+                                    <div className="swiper-button-prev" onClick={goPrev}></div>
+                                    <div className="swiper-button-next" onClick={goNext}></div>
+                                </div>
+
+                                {/* Main Swiper */}
+                                <Swiper
+                                    ref={mainSwiperRef}
+                                    modules={[Navigation, Thumbs]}
+                                    loop={true}
+                                    navigation={false} // Navigation handled manually
+                                    thumbs={{ swiper: thumbsSwiper }}
+                                    className="swiper ais-circuit-slider"
+                                >
+                                    <SwiperSlide><img src={proi1} alt="Image 1" /></SwiperSlide>
+                                    <SwiperSlide><img src={proi2} alt="Image 2" /></SwiperSlide>
+                                    <SwiperSlide><img src={proi1} alt="Image 3" /></SwiperSlide>
+                                </Swiper>
+
+                                {/* Thumbnail Swiper */}
+                                <Swiper
+                                    onSwiper={setThumbsSwiper}
+                                    spaceBetween={10}
+                                    slidesPerView={3}
+                                    watchSlidesProgress={true}
+                                    modules={[Thumbs]}
+                                    className="swiper thumbs-slider"
+                                >
+                                    <SwiperSlide><img src={proi1} alt="Thumb 1" /></SwiperSlide>
+                                    <SwiperSlide><img src={proi2} alt="Thumb 2" /></SwiperSlide>
+                                    <SwiperSlide><img src={proi1} alt="Thumb 3" /></SwiperSlide>
+                                </Swiper>
+                                </div>
+                        <div className="ais-circuit-desc-outer commcntabui">
+                            <div className="ais-circuit-desc-inner">
+                                <p>The SF₆-insulated Dead Tank Breaker (DTB) from CG is designed for reliable high-voltage performance in a wide range of environmental conditions. Our DTBs have been successfully deployed by utilities across diverse climates in Latin America and Africa.</p>
+                                <p>These breakers are engineered to meet rigorous National and International standards for Quality, Environmental Management, and Occupational Health & Safety, including ISO 9001:2015, ISO 14001, and ISO 18001.</p>
+                                <p>Their performance and reliability have been validated through comprehensive type testing at internationally recognised laboratories such as VEIKI-VNL in Hungary. Tests include short-circuit making and breaking, switching operations, dielectric withstand (power frequency), lightning impulse, and partial discharge testing — all in accordance with IEC 62271-100.</p>
+
+                                <div className="download-icncta">
+                                    <button href="javascript:;"><img src={downloadicn} alt=""/>Download Certificate/Brochure</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="product-display-tabs comntbmargn">
+                <div className="cust-container">
+                    {/* <!-- Tabs --> */}
+                    <div className="tabs-container commcntabui tabbotborder d-flex">
+                        <ul className="nav nav-tabs" id="pdpdetailTab" role="tablist">
+                            <li className="nav-item">
+                                <a className={`nav-link ${activeTab === "tab1" ? "active" : ""}`}
+                                onClick={() => handleTabClick("tab1")}>
+                                    Key Features</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activeTab === "tab2" ? "active" : ""}`}
+                                onClick={() => handleTabClick("tab2")}>Advantages</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${ activeTab === "tab3" ? "active" : ""}`}
+                                onClick={() => handleTabClick("tab3")}>Specifications</a>
+                            </li>
+                        </ul>
+                        {/* <!-- <div className="download-icncta">
+                            <button href="javascript:;"><img src="images/subjoinven/downloadicn.svg" alt="">Download Logos</button>
+                        </div> --> */}
+                    </div>
+
+                    {/* <!-- Tab Content --> */}
+                    <div className="tab-content comccontabcontent" id="pdpdetailTabContent">
+                        {/* <!-- Keyfeatrre Tab --> */}
+                        {activeTab === "tab1" && 
+                            <div className="keyfeature pdpul">
+                                <ul>
+                                    <li>Fully compliant with IEC standards</li>
+                                    <li>Up to three current transformer (CT) cores per phase</li>
+                                    <li>Aluminium enclosures for reduced losses, corrosion resistance, and lightweight construction</li>
+                                    <li>Low maintenance requirements, ensuring high availability and long service life</li>
+                                </ul>
+                            </div>
+                        }
+                        
+
+                        {/* <!-- Advantage Tab --> */}
+                        {activeTab === "tab2" && 
+                            <div className="keyfeature pdpul">
+                                <ul>
+                                    <li>Space-saving, compact design</li>
+                                    <li>Enhanced sustainability</li>
+                                    <li>Lower maintenance costs</li>
+                                    <li>High reliability under demanding conditions</li>
+                                </ul>
+                            </div>
+                        }
+                        
+
+                        {/* <!-- Specification Tab --> */}
+                        {activeTab === "tab3" && 
+                            <div className="keyfeature table-wrapper pdpul">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Rating</th>
+                                            <th>Unit</th>
+                                            <th>72.5 kV DTB</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Rating">Type Designation</td>
+                                            <td data-label="Unit">-</td>
+                                            <td data-label="72.5 kV DTB">DTB72-40</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Applicable Standard</td>
+                                            <td data-label="Unit">-</td>
+                                            <td data-label="72.5 kV DTB">IEC 62271-100</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Highest System Voltage</td>
+                                            <td data-label="Unit">kV</td>
+                                            <td data-label="72.5 kV DTB">72.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Frequency</td>
+                                            <td data-label="Unit">Hz</td>
+                                            <td data-label="72.5 kV DTB">50</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Normal Current</td>
+                                            <td data-label="Unit">A</td>
+                                            <td data-label="72.5 kV DTB">3150</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Power Frequency Withstand Voltage (1 min)</td>
+                                            <td data-label="Unit">kV</td>
+                                            <td data-label="72.5 kV DTB">140</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+
+}
+
+export default ProductDisplay;

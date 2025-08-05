@@ -2062,6 +2062,10 @@ header #desktopheader .head-menuitems{
         border-bottom-color: var(--greenclr);
         transition: .3s;
     }
+
+    .ais-circuitbreaker-swiper .swiper-button-prev:after, .ais-circuitbreaker-swiper .swiper-button-next:after{
+      font-size: 16px !important;
+    }
    
 /* ==================End Product display page===================== */
 
