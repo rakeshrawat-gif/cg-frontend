@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import aboutSlide1 from '../components/assets/images/about/abt-slider-journey-1.png';
 import aboutSlide2 from '../components/assets/images/about/abt-slider-journey-1.png';
+import WaveSvg1 from '../components/assets/images/about/wave-svg1.svg';
+import WaveSvg2 from '../components/assets/images/about/wave-svg2.svg';
 // import "./TimelineSlider.css";
 
 const contentData = [
@@ -16,7 +18,8 @@ const contentData = [
         title: "Our Beginning in England",
         desc: "Founded as REB Crompton & Co., setting the foundation for a pioneering legacy in electrical engineering.",
         color: "#005CAB",
-        wave: "green"
+        wave: "green",
+        // wave: `${WaveSvg1}`
     },
     {
         year: "2005",

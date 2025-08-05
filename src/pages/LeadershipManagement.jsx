@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import bannerImg from "../components/assets/images/leadership/leadership.png";
 import boardIcons from "../components/assets/images/leadership/bordDirector.svg";
 import leaderIcons from "../components/assets/images/leadership/leadershipTeam.svg";
-import amarImg from "../components/assets/images/leadership/amar.png"
+import amarImg from "../components/assets/images/leadership/amar-kaul.jpg";
 import sushilImg from "../components/assets/images/leadership/sushil.png";
 import maraisImg from "../components/assets/images/leadership/Marais-Nel.png";
 import sriramImg from "../components/assets/images/leadership/sriram.png";
@@ -193,7 +193,7 @@ const Leadership = () => {
                                     className="box text-center"
                                 >
                                     <div
-                                        className="image"
+                                        className="image imgHover"
                                         style={{
                                             height: "420px",
                                             width: "100%",
@@ -201,7 +201,8 @@ const Leadership = () => {
                                             backgroundImage: `url(${person.image_url})`,
                                             backgroundSize: "cover",
                                             backgroundPosition: "center",
-                                            margin: "0 auto 12px"
+                                            margin: "0 auto 12px",
+                                            borderRadius: "20px"
                                         }}
                                     ></div>
                                     <h4 className="text-[#005CAB] font-[400] text-[16px] leading-[120%] tracking-[0.5px] font-helvetica">
