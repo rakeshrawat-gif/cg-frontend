@@ -470,7 +470,7 @@
   position: relative;
 }
 
-.manufacturing-swiper-wrapper .swiper-slide {
+/* .manufacturing-swiper-wrapper .swiper-slide { */
 .manufacturing-swiper-wrapper .swiper-slide {
   transform: scale(0.75);
   transition: transform 0.3s ease;
