@@ -307,6 +307,7 @@ section.stackcard-sec {
             background-position: top right 50px; */
             display: flex;
             justify-content: flex-end;
+            flex-direction: row-reverse;
             width: 100%;
     }
    

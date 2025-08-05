@@ -8,7 +8,7 @@ import diagolanArrow from '../components/assets/images/headicn/solution/diagolan
 import SolutionForBus1 from '../components/assets/images/home/sfbim1.jpg';
 import SolutionForBus2 from '../components/assets/images/home/sfbim2.jpg';
 import SolutionForBus3 from '../components/assets/images/home/sfbim3.jpg';
-import transFgreen from '../components/assets/images/home/sfbim3.jpg';
+import transFgreen from '../components/assets/images/home/transfgreen.svg';
 import switchFgreen from '../components/assets/images/home/switchgreen.svg';
 import leftArrow from '../components/assets/images/leftarow.svg';
 import rightArrow from '../components/assets/images/rightarow.svg';
@@ -171,16 +171,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="swiper-item-slider">
-          <div className="solutionforbus-navbar rmbmob">
-            <div className="comon-head-inner desktop">
-              <h2>Solutions for<br />Your Business</h2>
-              <p>As a global leader in engineering solutions, CG empowers customers to efficiently harness power and enhance industrial productivity with a focus on sustainability.</p>
-            </div>
-            <div className="switchgear-swiper-nav">
-              <div className="swiper-button-prev"><img src={leftArrow} alt="Previous" /></div>
-              <div className="swiper-button-next"><img src={rightArrow} alt="Next" /></div>
-            </div>
-          </div>
+          
           <Swiper
             modules={[Navigation]}
             slidesPerView="auto"
@@ -210,7 +201,7 @@ const Homepage = () => {
                   </div>
                   <h5>Transformers</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
@@ -225,7 +216,7 @@ const Homepage = () => {
                   </div>
                   <h5>Switchgears</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
@@ -240,7 +231,7 @@ const Homepage = () => {
                   </div>
                   <h5>Motors</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
@@ -255,7 +246,7 @@ const Homepage = () => {
                   </div>
                   <h5>Transformers</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
@@ -270,7 +261,7 @@ const Homepage = () => {
                   </div>
                   <h5>Switchgears</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
@@ -285,12 +276,21 @@ const Homepage = () => {
                   </div>
                   <h5>Motors</h5>
                   <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="javascript:;">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
-
+            <div className="solutionforbus-navbar rmbmob">
+              <div className="comon-head-inner desktop">
+                <h2>Solutions for<br />Your Business</h2>
+                <p>As a global leader in engineering solutions, CG empowers customers to efficiently harness power and enhance industrial productivity with a focus on sustainability.</p>
+              </div>
+              <div className="switchgear-swiper-nav">
+                <div className="swiper-button-prev"><img src={leftArrow} alt="Previous" /></div>
+                <div className="swiper-button-next"><img src={rightArrow} alt="Next" /></div>
+              </div>
+            </div>
         </div>
       </section>
 
@@ -359,14 +359,14 @@ const Homepage = () => {
                   <div className="news-title"><h4><a href="javascriprt:;">CG bags Rs 641 crore order from PGCIL</a></h4></div>
                 </div>
                 <div className="news-icon">
-                  <a href="javascript:;"><img src={cgWithdigArrow} alt="" /></a>
+                  <a href="/"><img src={cgWithdigArrow} alt="" /></a>
                 </div>
               </div>
             </div>
             <div className="news-card">
               <div className="news-image" style={{ backgroundImage: `url(${cgImg3})` }}>
                 <span className="news-badge">News</span>
-                <div className="news-icon"><a href="javascript:;"><img src={cgWithdigArrow} alt="" /></a></div>
+                <div className="news-icon"><a href="/"><img src={cgWithdigArrow} alt="" /></a></div>
               </div>
               <div className="news-content">
                 <div className="news-date">22 January 2025</div>
@@ -379,12 +379,12 @@ const Homepage = () => {
             <div className="news-card">
               <div className="news-image" style={{ backgroundImage: `url(${cgImg2})` }}>
                 <span className="news-badge">News</span>
-                <div className="news-icon"><a href="javascript:;"><img src={cgWithdigArrow} alt="" /></a></div>
+                <div className="news-icon"><a href="/"><img src={cgWithdigArrow} alt="" /></a></div>
               </div>
               <div className="news-content">
                 <div className="news-date">27 November 2024</div>
                 <div className="news-title">
-                  <h4><a href="javascript:;">CG Arm wins Rs 600 cr 'KAVACH' order from Indian Railways</a></h4>
+                  <h4><a href="/">CG Arm wins Rs 600 cr 'KAVACH' order from Indian Railways</a></h4>
                   <p>Shares of CG Power and Industrial Solutions surged up to 2.63 per cent at Rs 754.80 per</p>
                 </div>
               </div>

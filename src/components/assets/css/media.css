@@ -293,16 +293,20 @@
       background-position: top left;
   }
   .solutionforbus-navbar.rmbmob{
-    padding: 30px;
-    background: none;
-    background-color: transparent;
+        padding: 20px;
+        background: none;
+        background-color: transparent;
+        margin-bottom: 50px;
   }
   .solutionforbus-navbar .switchgear-swiper-nav {
     position: absolute;
     width: 120px;
-    bottom: -18px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .solutionforbus-navbar .switchgear-swiper-nav{
+    position: relative;
   }
   /* end solu sec */
   .stackcard-consumer .stack-card-item .card-content .card-contentdesc {
@@ -532,9 +536,7 @@
               margin: 0;
         padding: 25px 0 0 0;
     }
-        .acrossborder-sec.comntbmargn {
-        margin-top: 0;
-    }
+    
     .solutionforbus-sec.comntbmargn{
       margin-bottom: 20px;
     }
@@ -682,8 +684,11 @@
   }
   .solutionforbusswiper {
         background-size: 122%;
-        background-position: top right -180px;
+        background-position: top 10px right -180px;
     }
+    .solutionforbus-navbar .comon-head-inner>p {
+    width: 100%;
+}
   .commonfrst-sec ol.breadcrumb{
     margin-bottom: 25px;
   }
