@@ -307,6 +307,7 @@ section.stackcard-sec {
             background-position: top right 50px; */
             display: flex;
             justify-content: flex-end;
+            flex-direction: row-reverse;
             width: 100%;
     }
    
@@ -2062,6 +2063,10 @@ header #desktopheader .head-menuitems{
         background-color: transparent;
         border-bottom-color: var(--greenclr);
         transition: .3s;
+    }
+
+    .ais-circuitbreaker-swiper .swiper-button-prev:after, .ais-circuitbreaker-swiper .swiper-button-next:after{
+      font-size: 16px !important;
     }
    
 /* ==================End Product display page===================== */

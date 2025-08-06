@@ -346,21 +346,23 @@
     background-size: cover;
     background-position: top left;
   }
-
-  .solutionforbus-navbar.rmbmob {
-    padding: 30px;
-    background: none;
-    background-color: transparent;
+  .solutionforbus-navbar.rmbmob{
+        padding: 20px;
+        background: none;
+        background-color: transparent;
+        margin-bottom: 50px;
   }
 
   .solutionforbus-navbar .switchgear-swiper-nav {
     position: absolute;
     width: 120px;
-    bottom: -18px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
+  .solutionforbus-navbar .switchgear-swiper-nav{
+    position: relative;
+  }
   /* end solu sec */
   .stackcard-consumer .stack-card-item .card-content .card-contentdesc {
     width: 100%;
@@ -617,45 +619,33 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-  }
-
-  .acrossborer-item.paddlr {
-    padding: 0;
-    margin-bottom: 0;
-  }
-
-  .acrossborer-item p>br {
-    display: none;
-  }
-
-  .acrossborer-item {
-    margin-bottom: 20px !important;
-  }
-
-  .news-card:first-child,
-  .news-card {
-    width: 60%;
-  }
-
-  .cgnews-sec-head .dsktop {
-    display: none;
-  }
-
-  .cgnews-sec-head.mobile {
-    display: block;
-    margin: 0;
-    padding: 25px 0 0 0;
-  }
-
-  .acrossborder-sec.comntbmargn {
-    margin-top: 0;
-  }
-
-  .solutionforbus-sec.comntbmargn {
-    margin-bottom: 20px;
-  }
-
-  .green-card {
+}
+.acrossborer-item.paddlr{
+      padding: 0;
+  margin-bottom: 0;
+}
+.acrossborer-item p>br{
+  display: none;
+}
+.acrossborer-item{
+  margin-bottom: 20px !important;
+}
+.news-card:first-child, .news-card{
+  width: 60%;
+}
+.cgnews-sec-head .dsktop{
+      display: none;
+    }
+    .cgnews-sec-head.mobile{
+      display: block;
+              margin: 0;
+        padding: 25px 0 0 0;
+    }
+    
+    .solutionforbus-sec.comntbmargn{
+      margin-bottom: 20px;
+    }
+    .green-card {
     flex: 1 1 42%;
   }
 
@@ -828,11 +818,13 @@
   }
 
   .solutionforbusswiper {
-    background-size: 122%;
-    background-position: top right -180px;
-  }
-
-  .commonfrst-sec ol.breadcrumb {
+        background-size: 122%;
+        background-position: top 10px right -180px;
+    }
+    .solutionforbus-navbar .comon-head-inner>p {
+    width: 100%;
+}
+  .commonfrst-sec ol.breadcrumb{
     margin-bottom: 25px;
   }
 
@@ -956,28 +948,63 @@
         font-weight: bold;
         text-align: left;
       } */
-  .ais-circuitbreaker-swiper .thumbs-slider .swiper-slide {
-    height: 90px;
-  }
-
-  /* end pdp page */
-  .stackcard-consumer .stack-card-item .card-content {
-    height: 300px;
-  }
-
-  .stackcard-consumer .card-content .card-contentdesc h4 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  .stackcard-consumer .card-content .card-contentdesc p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .stackcard-consumer .card-content {
-    justify-content: center;
-  }
+    .ais-circuitbreaker-swiper .thumbs-slider .swiper-slide {
+        height: 90px;
+    }
+      /* end pdp page */
+      .stackcard-consumer .stack-card-item .card-content {
+        height: 300px;
+    }
+    .stackcard-consumer .card-content .card-contentdesc h4 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .stackcard-consumer .card-content .card-contentdesc p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .stackcard-consumer .card-content{
+      justify-content: center;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner {
+      padding: 20px 5px;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner{
+      position: relative;
+      border-radius: 0;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner::after{
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-color: #f2f9ff;
+    }
+    .ais-circuit-desc-outer .ais-circuit-desc-inner::before{
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-color: #f2f9ff;
+    }
+    .commcntabui .nav-tabs{
+      justify-content: space-between;
+      width: 100%;
+    }
+    .commcntabui.tabbotborder .nav-tabs .nav-link{
+      font-size: 14px;
+      padding: 8px 0px;
+    }
+    .pdpul ul li, .product-display-tabs th, .product-display-tabs td{
+      font-size: 14px;
+    }
+    div#pdpdetailTabContent {
+        padding-left: 0px;
+    }
 }
 
 @media only screen and (max-width: 426px) {
