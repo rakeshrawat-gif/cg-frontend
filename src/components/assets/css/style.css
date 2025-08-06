@@ -499,7 +499,7 @@ header #desktopheader .head-menuitems{
 }
  header .navbar {
       padding: 0 15px;
-      border-radius: 30px;
+      border-radius: 50px;
       background: #ffffff;
       justify-content: space-between;
       z-index: 999;
@@ -1103,7 +1103,8 @@ header #desktopheader .head-menuitems{
       padding: 50px 0;
       background: url(../images/home/solubg.jpg) no-repeat;
       background-size: contain;
-      background-position: top right -150px;
+      /* background-position: top right -150px; */
+      background-position: top right 0px;
     }
     .solutionforbusswiper .swiper-wrapper{
       width: 60%;

@@ -51,7 +51,8 @@
   background-position: top right;
 }
 
-.aboutFirstSec .breadcrumb, .commonfrst-sec .breadcrumb {
+.aboutFirstSec .breadcrumb,
+.commonfrst-sec .breadcrumb {
   background-color: transparent;
 }
 
@@ -1077,7 +1078,7 @@
 }
 
 .leadershipSec {
-    margin-bottom: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 /* ✅ Tablet - 2 columns */
@@ -1289,3 +1290,113 @@
 }
 
 /* ==================================       END Investor Qualified Page CSS    =================================== */
+/* ==================================       Investor CGCare Page CSS    =================================== */
+
+.cg-cares-slider-container {
+  position: relative;
+  padding: 30px 0;
+}
+
+.cg-cares-swiper {
+  width: 100%;
+}
+
+.cg-cares-slide-content {
+  background: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.cg-cares-slide-content img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cg-cares-slider-container .swiper-button-next,
+.cg-cares-slider-container .swiper-button-prev {
+  color: #004785;
+}
+
+.cgcares-doc-row {
+  margin: 50px 0;
+}
+
+.cgCarerow1 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+.cgcares-intro {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+
+}
+
+.cgcares-intro ul,
+.cgcares-committee ul {
+  padding-left: 30px;
+}
+
+.cgCarerow1 h3 {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+.cgcares-title {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 48px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+.cgcares-tabs {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #969696;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.cgcares-tabs .tab {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: transparent;
+  color: #969696;
+  border: 2px solid #969696;
+}
+
+.cgcares-tabs .tab:active {
+  color: #005CAB;
+  border: 2px solid #005CAB;
+}
+
+/* ==================================       END Investor CGCares Page CSS    =================================== */
