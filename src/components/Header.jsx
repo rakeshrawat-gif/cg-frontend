@@ -315,7 +315,7 @@ const Header = () => {
                             >
                                 <a
                                     className={`nav-link dropdown-toggle ${activeSingleDropdown === 'about' ? 'active' : ''}`}
-                                    href="/about_cg"
+                                    href="#"
                                     id="single-first-dropdown"
                                     role="button"
                                     aria-haspopup="true"
@@ -335,7 +335,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li className="has-submenu">
-                                            <a className="dropdown-item" href="/our_leadership">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon2} alt="" />
                                                     <span>Leadership and Top Management</span>
@@ -343,7 +343,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li className="has-submenu">
-                                            <a className="dropdown-item" href="/subsidiaries_jv">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon3} alt="" />
                                                     <span>Subsidiaries and Joint Ventures</span>
@@ -378,7 +378,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="/sector-we-serve">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon5} alt="" />
                                                     <span>Sectors We Serve</span>
@@ -386,7 +386,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="/esg">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon6} alt="" />
                                                     <span>ESG</span>
@@ -394,7 +394,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item" href="/tehcnology">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon7} alt="" />
                                                     <span>Technology + R&D</span>
@@ -1116,12 +1116,12 @@ const Header = () => {
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/consumer-durable">
+                                <a className="nav-link" href="#">
                                     Consumer Durables
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/investor">
+                                <a className="nav-link" href="#">
                                     Investors
                                 </a>
                             </li>
@@ -1200,7 +1200,7 @@ const Header = () => {
                                             </ul>
                                         </li>
                                         <li className="has-submenu">
-                                            <a className="dropdown-item" href="/subsidiaries_jv">
+                                            <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={careerIcon3} alt="" />
                                                     <span>Subsidiaries and Joint Ventures</span>
@@ -1324,21 +1324,21 @@ const Header = () => {
                 <div className={`collapse navbar-collapse mobile-menu ${isMobileNavOpen ? 'show' : ''}`} id="mainNav">
                     <ul>
                         <li className="has-children">
-                            <a href="/about_cg" onClick={handleMobileMultiLevelToggle}>About CG</a>
+                            <a href="#" onClick={handleMobileMultiLevelToggle}>About CG</a>
                             <ul className="submenu">
                                 <li><a href="">Company Overview</a></li>
-                                <li><a href="/our_leadership">Leadership and Top Management</a></li>
+                                <li><a href="#">Leadership and Top Management</a></li>
                                 <li className="has-children">
-                                    <a href="/subsidiaries_jv" onClick={handleMobileMultiLevelToggle}>Subsidiaries and Joint Ventures</a>
+                                    <a href="#" onClick={handleMobileMultiLevelToggle}>Subsidiaries and Joint Ventures</a>
                                     <ul className="submenu">
                                         <li><a href="/">Board Members</a></li>
                                         <li><a href="/">Policies</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/">Our Purpose and Values</a></li>
-                                <li><a href="/sector-we-serve">Sectors We Serve</a></li>
-                                <li><a href="/esg">ESG</a></li>
-                                <li><a href="/tehcnology">Technology + R&D</a></li>
+                                <li><a href="#">Sectors We Serve</a></li>
+                                <li><a href="#">ESG</a></li>
+                                <li><a href="#">Technology + R&D</a></li>
                             </ul>
                         </li>
                         <li className="has-children">
@@ -1381,8 +1381,8 @@ const Header = () => {
                                 <li><a href="">Railways</a></li>
                             </ul>
                         </li>
-                        <li><a href="/consumer-durable">Consumer Durables</a></li>
-                        <li><a href="/investor">Investors</a></li>
+                        <li><a href="#">Consumer Durables</a></li>
+                        <li><a href="#">Investors</a></li>
                         <li className="has-children">
                             <a href="#" onClick={handleMobileMultiLevelToggle}>Careers</a>
                             <ul className="submenu">
