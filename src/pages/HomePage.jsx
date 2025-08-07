@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay, FreeMode } from 'swiper/modules';
+
 import BannerMobSlider from '../components/assets/images/home/bannerslidemob.jpg';
 import BannerHome from '../components/assets/images/home/banner.jpg';
 import diagonalbigarw from '../components/assets/images/home/diagonalbigarw.svg';
@@ -34,12 +35,20 @@ import cgslideIcon8 from '../components/assets/images/home/cicn8.png';
 import cgslideIcon9 from '../components/assets/images/home/cicn9.png';
 import cgslideIcon10 from '../components/assets/images/home/cicn10.png';
 
-// Import Swiper styles
+// Import Swiper stylesy
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+// import "./MarqueeSlider.css"; 
+
 const Homepage = () => {
+
+   const icons = [
+    cgslideIcon1, cgslideIcon2, cgslideIcon3, cgslideIcon4,
+    cgslideIcon5, cgslideIcon6, cgslideIcon7, cgslideIcon8,
+    cgslideIcon9, cgslideIcon10
+  ];
 
   useEffect(() => {
     const parents = document.querySelectorAll(".mobile-menu .has-children > a");
@@ -171,116 +180,115 @@ const Homepage = () => {
           </div>
         </div>
         <div className="swiper-item-slider">
-          
-          <Swiper
-            modules={[Navigation]}
-            slidesPerView="auto"
-            loop={true}
-            spaceBetween={20}
-            centeredSlides={false}
-            navigation={{
-              nextEl: '.solutionforbus-sec .swiper-button-next',
-              prevEl: '.solutionforbus-sec .swiper-button-prev',
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1.5 },
-              676: { slidesPerView: 2.5 },
-              991: { slidesPerView: 2.5 },
-              992: { slidesPerView: 2.5 },
-            }}
-            className="solutionforbusswiper"
-          >
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus1} alt="Transformers" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={transFgreen} alt="Transformer Icon" />
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView="auto"
+              loop={true}
+              spaceBetween={20}
+              centeredSlides={false}
+              navigation={{
+                nextEl: '.solutionforbus-sec .swiper-button-next',
+                prevEl: '.solutionforbus-sec .swiper-button-prev',
+              }}
+              breakpoints={{
+                0: { slidesPerView: 1.5 },
+                676: { slidesPerView: 2.5 },
+                991: { slidesPerView: 2.5 },
+                992: { slidesPerView: 2.5 },
+              }}
+              className="solutionforbusswiper"
+            >
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus1} alt="Transformers" />
                   </div>
-                  <h5>Transformers</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus2} alt="Switchgears" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={switchFgreen} alt="Switchgear Icon" />
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={transFgreen} alt="Transformer Icon" />
+                    </div>
+                    <h5>Transformers</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
-                  <h5>Switchgears</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus3} alt="Motors" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={transFgreen} alt="Motor Icon" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus2} alt="Switchgears" />
                   </div>
-                  <h5>Motors</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus1} alt="Transformers" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={transFgreen} alt="Transformer Icon" />
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={switchFgreen} alt="Switchgear Icon" />
+                    </div>
+                    <h5>Switchgears</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
-                  <h5>Transformers</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus2} alt="Switchgears" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={switchFgreen} alt="Switchgear Icon" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus3} alt="Motors" />
                   </div>
-                  <h5>Switchgears</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="solution-sliditem">
-                <div className="soluitn-img">
-                  <img src={SolutionForBus3} alt="Motors" />
-                </div>
-                <div className="solutin-desc">
-                  <div className="solut-icn">
-                    <img src={transFgreen} alt="Motor Icon" />
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={transFgreen} alt="Motor Icon" />
+                    </div>
+                    <h5>Motors</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
-                  <h5>Motors</h5>
-                  <p>As a global leader in engineering solutions, CG empowers</p>
-                  <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                 </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus1} alt="Transformers" />
+                  </div>
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={transFgreen} alt="Transformer Icon" />
+                    </div>
+                    <h5>Transformers</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus2} alt="Switchgears" />
+                  </div>
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={switchFgreen} alt="Switchgear Icon" />
+                    </div>
+                    <h5>Switchgears</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="solution-sliditem">
+                  <div className="soluitn-img">
+                    <img src={SolutionForBus3} alt="Motors" />
+                  </div>
+                  <div className="solutin-desc">
+                    <div className="solut-icn">
+                      <img src={transFgreen} alt="Motor Icon" />
+                    </div>
+                    <h5>Motors</h5>
+                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
             <div className="solutionforbus-navbar rmbmob">
               <div className="comon-head-inner desktop">
                 <h2>Solutions for<br />Your Business</h2>
@@ -300,7 +308,10 @@ const Homepage = () => {
           <div className="acrossborder-inner text-center">
             <h4>across <span>Borders,</span><br /><span>Beyond</span> limits</h4>
           </div>
-          <div className="acrossborer-globdesc">
+        </div>
+        
+        <div className="acrossborer-globdesc">
+          <div className="cust-container">
             <div className="acrossborder-icntxt">
               <div className="acrossborer-item paddlr d-flex">
                 <div className="acrobor-itemimg d-flex">
@@ -356,7 +367,7 @@ const Homepage = () => {
               <div className="news-content">
                 <div className="newsdesc">
                   <div className="news-date">18 June 2025</div>
-                  <div className="news-title"><h4><a href="javascriprt:;">CG bags Rs 641 crore order from PGCIL</a></h4></div>
+                  <div className="news-title"><h4><a href="javascriprt:;">CG bags Rs 641 crore order <br/> from PGCIL</a></h4></div>
                 </div>
                 <div className="news-icon">
                   <a href="/"><img src={cgWithdigArrow} alt="" /></a>
@@ -433,41 +444,32 @@ const Homepage = () => {
 
       {/* Infinite Carousel Section */}
       <section className="infinite-carousel-sec comntbmargn">
-        <div className="cust-container">
           <div className="comonhead text-center">
             <h5>Trusted by Industries. Chosen by Leaders</h5>
           </div>
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, FreeMode]}
             loop={true}
+            freeMode={true}
+            freeModeMomentum={false}
+            freeModeMomentumRatio={0} 
             slidesPerView="auto"
             spaceBetween={30}
-            speed={1000}
+            speed={1500}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
+              pauseOnMouseEnter: false,
             }}
             allowTouchMove={false}
-            direction="horizontal"
             className="infi-carousel"
           >
-            <SwiperSlide><img src={cgslideIcon1} alt="Icon 1" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon2} alt="Icon 2" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon3} alt="Icon 3" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon4} alt="Icon 4" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon5} alt="Icon 5" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon6} alt="Icon 6" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon7} alt="Icon 7" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon8} alt="Icon 8" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon9} alt="Icon 9" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon10} alt="Icon 10" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon1} alt="Icon 1" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon2} alt="Icon 2" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon3} alt="Icon 3" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon4} alt="Icon 4" /></SwiperSlide>
-            <SwiperSlide><img src={cgslideIcon5} alt="Icon 5" /></SwiperSlide>
+             {[...icons, ...icons].map((icon, index) => (
+              <SwiperSlide key={index}>
+                <img src={icon} alt={`icon-${index}`} />
+              </SwiperSlide>
+            ))}
           </Swiper>
-        </div>
       </section>
     </>
   );

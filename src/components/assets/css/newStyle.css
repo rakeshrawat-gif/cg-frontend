@@ -976,16 +976,19 @@
   position: relative;
   width: 90%;
   padding: 50px 30px;
-  background: url(../images/home/solu-sectbg.png) no-repeat;
-  background-size: contain;
-  background-color: #fff;
+  
+  /* background-color: #fff; */
   z-index: 0;
 }
+.solutionforbus-sec .swiper-item-slider{
+background: url(../images/home/solutionnewbg.png) no-repeat;
+  background-size: contain;
+}
 
-.solutionforbusswiper {
+/* .solutionforbusswiper {
   background-position: top right -120px;
   padding: 50px 0 !important;
-}
+} */
 
 .switchgear-swiper-nav .swiper-button-next,
 .switchgear-swiper-nav .swiper-button-prev {

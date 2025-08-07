@@ -180,7 +180,7 @@
         line-height: 75px;
       }
       .highlight-section-inner .diagonalbgarw {
-          width: 85px;
+          width: 70px;
       }
       .comon-head-inner h2, .comonhead>h5{
         font-size: 42px;
@@ -198,6 +198,9 @@
       /* End home page */
       .outline-heading {
         font-size: 100px;
+      }
+      .news-card:first-child .news-icon>a{
+        left: 50px;
       }
 }
 /* Header css */
@@ -231,6 +234,16 @@
           padding: 0 15px;
     }
     /* End consumer durable */
+    .solutionforbusswiper{
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: url(../images/home/solubg.jpg) no-repeat;
+    background-size: cover;
+    background-position: top right 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+    
 }
     
 @media only screen and (max-width: 992px){
@@ -250,7 +263,7 @@
       line-height: 42px;
   }
   .news-card:first-child .news-icon>a{
-    left: 55px;
+    left: 45px;
   }
   .acrossborer-item>h4 {
     font-size: 44px;
@@ -271,13 +284,7 @@
     display: block;
     padding-left: 15px;
   }
-  .solutionforbusswiper{
-    flex-wrap: wrap;
-    flex-direction: column;
-    background: url(../images/home/solubg.jpg) no-repeat;
-    background-size: 58%;
-        background-position: top right -18px;
-  }
+  
   .solutionforbusswiper .swiper-wrapper, .solutionforbusswiper .solutionforbus-navbar {
     width: 100%;
   }
@@ -296,7 +303,8 @@
         padding: 20px;
         background: none;
         background-color: transparent;
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 0;
   }
   .solutionforbus-navbar .switchgear-swiper-nav {
     position: absolute;
@@ -319,6 +327,15 @@
     font-size: 20px;
     line-height: 28px;
         width: 100%;
+  }
+  .acrossborer-globdesc{
+    background-size: cover;
+  }
+  .switchgr-newprodsec .slider-container{
+    padding: 0;
+  }
+  .switchgr-newprodsec .carousel-wrapper .newprodc-navbar{
+    display: none;
   }
 
 }
@@ -387,9 +404,7 @@
     .highlight-section-inner .diagonalbgarw {
         width: 40px;
     }
-    .solutionforbusswiper{
-              background-size: 75%;
-    }
+    
     .acrossborder-icntxt .acrossborer-item .acrobor-itemimg>img {
         width: 34px;
     }
@@ -413,9 +428,6 @@
     .news-card:first-child .news-icon>a {
         left: 20px;
     }
-    .green-right {
-    flex: 1 1 auto;
-}
 }
 @media only screen and (max-width: 768px) {
 
@@ -490,7 +502,7 @@
         grid-template-areas:
         "img"
         "text";
-        height: 560px;
+        height: 460px;
 }
 .card-content .card-contentdesc p {
     line-height: 25px;
@@ -541,7 +553,8 @@
       margin-bottom: 20px;
     }
     .green-card {
-    flex: 1 1 42%;
+    flex:unset;
+    width: 100%;
     }
   .green-container {
         flex-direction: column;
@@ -550,6 +563,8 @@
 
       .green-right {
         text-align: center;
+        width: 100%;
+        padding-left: 0;
       }
 
       .green-cards {
@@ -682,10 +697,7 @@
   .highlight-section-inner{
     align-items: flex-end;
   }
-  .solutionforbusswiper {
-        background-size: 122%;
-        background-position: top 10px right -180px;
-    }
+ 
     .solutionforbus-navbar .comon-head-inner>p {
     width: 100%;
 }
@@ -841,7 +853,7 @@
       width: 100%;
     }
     .commcntabui.tabbotborder .nav-tabs .nav-link{
-      font-size: 14px;
+      font-size: 15px;
       padding: 8px 0px;
     }
     .pdpul ul li, .product-display-tabs th, .product-display-tabs td{
@@ -849,6 +861,61 @@
     }
     div#pdpdetailTabContent {
         padding-left: 0px;
+    }
+    .solutionforbusswiper{
+      padding: 30px 0 !important;
+    }
+    .solutionforbusswiper .swiper-wrapper{
+      padding-left: 20px;
+    }
+    .acrossborder-sec{
+      padding-top: 0px;
+    }
+    .acrossborder-sec.comntbmargn {
+        margin-top: 0;
+    }
+        .news-card:first-child, .news-card {
+        width: 70%;
+    }
+    .news-icon>a{
+      width: 35px;
+      height: 35px;
+    }
+    .news-card:first-child .news-icon>a {
+        left: 10px;
+    }
+    .green-card {
+        width: 45%;
+    }
+    .green-card .greencardimg>img {
+      width: 45px;
+      height: 45px;
+    }
+    .green-card h4{
+      font-size: 15px;
+    }
+    .green-card a{
+      font-size: 14px;
+    }
+    .blue-highlight{
+      margin-right: 0;
+    }
+    .switchgr-newprodsec .card-slide .new-prod-img, .switchgr-newprodsec .card-slide .slide-text{
+      width: 100%;
+    }
+    .switchgr-newprodsec .card-slide .slide-text {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .switchgr-newprodsec .swiper-slide {
+      padding: 15px;
+    }
+    .switchgr-newprodsec .slide-text h3 {
+      font-size: 20px;
+    }
+    .switchgr-newprodsec .slide-text p {
+      font-size: 14px;
+              margin: 0;
     }
 }
 
@@ -865,10 +932,7 @@
     .home-banner-carousl-sec .slide-content a {
         margin-top: 75px;
     }
-     .solutionforbusswiper {
-        background-size: 140%;
-            padding: 50px 0 50px 30px;
-     }
+   
      .solutionforbusswiper  .swiper-wrapper .swiper-slide.swiper-slide-prev{
       opacity: 0;
       transition: opacity .3s;
@@ -877,14 +941,14 @@
               left: 45%;
      }
          .comon-head-inner h2, .comonhead>h5 {
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 28px;
+        line-height: 34px;
     }
     #stack-cards-ul {
-        grid-template-rows: repeat(var(--numcards), 680px);
+        grid-template-rows: repeat(var(--numcards), 550px);
     }
   .stack-card-item .card-content{
-    height: 680px;
+    height: 550px;
   }
   .solution-sliditem .solutin-desc .solut-icn{
     right: 15px;
@@ -970,7 +1034,28 @@
     } */
    
   /* end sector we serve */
+  .infinite-carousel-sec .comonhead{
+    padding: 0 15px 40px 15px;
+  }
+  .highlight-text {
+        font-size: 58px;
+        line-height: 62px;
+    }
 }
+@media only screen and (max-width: 390px) {
+    .highlight-text {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    .acrossborder-inner>h4 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .news-card:first-child, .news-card {
+        width: 80%;
+    }
+}
+
 @media only screen and (max-width: 376px) {
       .home-banner-carousl-sec .slide-content h1 {
         font-size: 28px;
@@ -983,24 +1068,42 @@
           font-size: 14px;
     }
       .highlight-text {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 50px;
+        line-height: 60px;
     }
       #stack-cards-ul {
-        grid-template-rows: repeat(var(--numcards), 790px);
+        grid-template-rows: repeat(var(--numcards), 570px);
     }
   .stack-card-item .card-content{
-    height: 790px;
+    height: 570px;
   }
-  .solutionforbusswiper {
-        background-size: 150%;
-  }
-  
-}
 
+}
+@media only screen and (max-width: 360px) {
+    .highlight-text {
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+@media only screen and (max-width: 346px) {
+    .highlight-text {
+        font-size: 45px;
+        line-height: 60px;
+    }
+        .green-card h4 {
+        font-size: 12px;
+    }
+    .green-card a {
+        font-size: 12px;
+    }
+}
 @media only screen and (max-width:321px) {
-    .solutionforbusswiper {
-        background-size: 157%;
-                padding: 35px 0 50px 30px;
+      .highlight-text {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .acrossborder-inner>h4 {
+        font-size: 34px;
+        line-height: 42px;
     }
 }

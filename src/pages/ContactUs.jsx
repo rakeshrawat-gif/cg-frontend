@@ -12,6 +12,12 @@ import drivesIcon from "../components/assets/images/contact/drivesautomationicn.
 import consumerIcon from "../components/assets/images/contact/consumer-productsicn.svg";
 import railwaysIcon from "../components/assets/images/contact/railwaysicn.svg";
 
+import indiaflag from "../components/assets/images/contact/indiaflag.svg";
+import germanflag from "../components/assets/images/contact/germanflag.svg";
+import netherflag from "../components/assets/images/contact/netherflag.svg";
+import swedenflag from "../components/assets/images/contact/swedenflag.svg";
+import mideastafricaflag from "../components/assets/images/contact/mideastafricaflag.svg";
+
 import '../components/assets/css/contactus.css';
 
 const categoryIcons = {
@@ -24,9 +30,11 @@ const categoryIcons = {
 };
 
 const countries = [
-  { name: "India", flag: "https://flagcdn.com/in.svg" },
-  { name: "USA", flag: "https://flagcdn.com/us.svg" },
-  { name: "Germany", flag: "https://flagcdn.com/de.svg" },
+  { name: "India", flag: indiaflag },
+  { name: "Germany", flag: germanflag },
+  { name: "The Netherlands", flag: netherflag },
+  { name: "Sweden", flag: swedenflag },
+  { name: "Middle East and Africa", flag: mideastafricaflag },
 ];
 
 const locations = [
@@ -43,11 +51,11 @@ const locations = [
   {
     title: "Sales Office – ",
     category: "Switchgears",
-    jobtitle: "-",
+    jobtitle: "Distribution Transformer & Power Transformer Division",
     country: "India",
-    address: "-",
-    phone: "-",
-    email: "-",
+    address: "CG Power and Industrial Solutions Limited Unit No. 123, 2nd Floor, Tower A, The Corenthum Tower, Sector 62, Noida-201301, Uttar Pradesh, India.",
+    phone: "+91 9654443350, +91 8373902334",
+    email: "sundeep.sharotri@cgglobal.com, jaiprakash.sharma@cgglobal.com",
     coords: [28.5355, 77.3910],
   },
   {
