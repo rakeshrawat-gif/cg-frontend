@@ -17,6 +17,7 @@ import AboutOurPurposeAndValue from '../pages/AboutOurPurposeAndValue';
 import CgInTheNews from '../pages/CgInTheNews';
 import ConsumerDurable from '../pages/ConsumerDurable';
 import ProductDisplay from '../pages/ProductDisplay';
+import Test from '../pages/test';
 
 const AppRoutes = () => {
   return (
@@ -38,6 +39,7 @@ const AppRoutes = () => {
       <Route path="/cg-in-the-news" element={<CgInTheNews />} />
       <Route path="/consumer-durable" element={<ConsumerDurable />} />
       <Route path="/product-detail" element={<ProductDisplay />} />
+      <Route path="/test" element={<Test />} />
       
     </Routes>
     </>

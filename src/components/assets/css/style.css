@@ -131,7 +131,7 @@ section.stackcard-sec {
     grid-template-rows: auto;
     align-items: stretch;
     padding: 20px;
-    height: 420px;
+    height: 340px;
 }
 .stack-card-item .card-content .card-contentdesc {
     padding: 15px 15px 15px 30px;
@@ -200,6 +200,139 @@ section.stackcard-sec {
         transition: .3s;
         color: var(--greenclr);
     }
+
+    /* news product sec */
+    .switchgr-newprodsec .slider-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  box-sizing: border-box;
+}
+
+.switchgr-newprodsec  .swiper-wrapper-custom {
+  position: relative;
+}
+
+.switchgr-newprodsec .card-slide {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--card-bg-skyblu);
+  background-image: url(../images/switchgear/newprodbg.png);
+  background-size: contain;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  box-shadow: 9px 8px 7px 5px rgb(137 137 137 / 10%);
+}
+.switchgr-newprodsec  .card-slide .new-prod-img{
+  width: 40%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.switchgr-newprodsec  .card-slide .slide-text{
+  width: 60%;
+  padding-left: 30px;
+}
+.switchgr-newprodsec  .swiper-slide{
+  padding: 20px;
+
+}
+
+.switchgr-newprodsec  .card-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.switchgr-newprodsec .slide-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.switchgr-newprodsec .slide-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.switchgr-newprodsec .slide-text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px
+}
+
+/* Center navigation arrows vertically */
+.switchgr-newprodsec .carousel-wrapper {
+    position: relative;
+}
+.switchgr-newprodsec .carousel-wrapper .newprodc-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translate(0, -45%);
+}
+.switchgr-newprodsec .swiper-button-prev,
+.switchgr-newprodsec .swiper-button-next {
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Pagination Dots */
+.switchgr-newprodsec .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.switchgr-newprodsec .custom-nav {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+.switchgr-newprodsec .custom-nav>img{
+  width: 14px;
+}
+.switchgr-newprodsec .custom-nav:hover {
+  color: #0066cc;
+}
+
+.switchgr-newprodsec .prev {
+  margin-right: 10px;
+}
+
+.switchgr-newprodsec .next {
+  margin-left: 10px;
+}
+
+.switchgr-newprodsec .custom-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.switchgr-newprodsec .custom-pagination .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  margin: 0 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.switchgr-newprodsec .custom-pagination .swiper-pagination-bullet-active {
+  background: #0066cc;
+}
+
+    /* end new product sec */
 /* end card stack on switchgear page*/
 
 
@@ -404,22 +537,22 @@ section.stackcard-sec {
 }
 
 .social-icons a {
-  width: 42px;
+  /* width: 42px;
   height: 42px;
-  background: #e1e8f3;
-  color: #000;
+  background: #e1e8f3; */
+  color: var(--card-bg-skyblu);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 16px;
-  transform: .3s;
+  font-size: 24px;
+  transition: .3s;
 }
-.social-icons a:hover{
+/* .social-icons a:hover{
   transition: .3s;
   color: var(--card-bg-skyblu);
-}
+} */
 
 .parent-logo {
   width: 94px;
@@ -500,15 +633,15 @@ header #desktopheader .head-menuitems{
 }
  header .navbar {
       padding: 0 15px;
-      border-radius: 50px;
+      border-radius: 40px;
       background: #ffffff;
       justify-content: space-between;
       z-index: 999;
-          box-shadow: 0 2px 15px rgb(0 0 0 / 6%);
+      box-shadow: 0 2px 15px rgb(0 0 0 / 6%);
     }
     .head-logo a{
       display: block;
-          padding-left: 5px;
+      padding: 0 0 0 5px;
     }
     .head-logo a>img{
       width: 225px;
@@ -517,7 +650,7 @@ header #desktopheader .head-menuitems{
       content: none;
     }
     header .nav-item .nav-link{
-      padding: 20px 14px 20px !important;
+      padding: 16px 10px 16px !important;
     }
     header .nav-item #searchToggle span{
       background: #EFEFEF;
@@ -542,6 +675,7 @@ header #desktopheader .head-menuitems{
     #navbarNav .nav-item .nav-link.dropdown-toggle.active, #navbarNav .nav-item .nav-link:hover{
       border-color: var(--card-bg-skyblu);
       color: var(--card-bg-skyblu) !important;
+      font-weight: 600;
     }
     #navbarNav .nav-item:nth-last-child(-n+2) .nav-link:hover{
       border-color: transparent;
@@ -896,6 +1030,9 @@ header #desktopheader .head-menuitems{
         border: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        overflow: hidden;
       }
 
       .mega-menu.desktop-view {
@@ -1101,11 +1238,10 @@ header #desktopheader .head-menuitems{
       display: flex;
       flex-direction: row-reverse;
       max-width: 100% !important;
-      padding: 50px 0;
-      background: url(../images/home/solubg.jpg) no-repeat;
+      padding: 50px 0 !important;
+      background: url(../images/home/bluebg.jpg) no-repeat;
       background-size: contain;
-      /* background-position: top right -150px; */
-      background-position: top right 0px;
+      background-position: top right -100px;
     }
     .solutionforbusswiper .swiper-wrapper{
       width: 60%;
@@ -1190,7 +1326,7 @@ header #desktopheader .head-menuitems{
 
     /* Across globe */
     .acrossborder-sec{
-      background: url(../images/home/globbg.jpg) no-repeat;
+      background: url(../images/home/globebg.png) no-repeat;
       background-size: cover;
       padding: 50px 0 0;
     }
@@ -1215,7 +1351,7 @@ header #desktopheader .head-menuitems{
     .acrossborer-globdesc{
       position: relative;
       background: url(../images/home/planet.png) no-repeat;
-      background-size: cover;
+      background-size: 110%;
       padding: 100px 0px 50px;
       background-position: top center;
     }
@@ -1224,6 +1360,7 @@ header #desktopheader .head-menuitems{
       width: 100%;
       display: flex;
       justify-content: center;
+      padding: 0 75px;
     }
     .acrossborer-item.paddlr{
       padding: 0 40px;
@@ -1300,8 +1437,8 @@ header #desktopheader .head-menuitems{
       right: 10px;
       background: var(--greenclr);
       color: white;
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -1396,6 +1533,7 @@ header #desktopheader .head-menuitems{
       display: flex;
       flex-wrap: nowrap;
       align-items: flex-end;
+      justify-content: space-between;
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -1440,33 +1578,31 @@ header #desktopheader .head-menuitems{
     /* enginerring section */
     .enginnering-green-section {
       /* background: linear-gradient(90deg, #E7FFD3, #CEF0B4); */
-      background: url(../images/home/enginbg.jpg) no-repeat;
+      background: url(../images/home/homeeneggrenbg.jpg) no-repeat;
       background-size: cover;
       padding: 40px 0px;
     }
 
     .green-container {
-      max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
     .green-left {
-      flex: 1 1 300px;
-      text-align: center;
+     width: 40%;
     }
 
     .green-left img {
-      max-width: 100%;
+      width: 90%;
       height: auto;
     }
 
     .green-right {
-      flex: 1 1 500px;
+      width: 60%;
+      padding-left: 22px;
     }
 
     .green-right p {
@@ -1486,14 +1622,17 @@ header #desktopheader .head-menuitems{
       flex: 1 1 200px;
       background-color: transparent;
       border: 2px solid var(--greenclr);
-      border-radius: 10px;
+      border-radius: 20px;
       padding: 20px 15px;
       text-align: center;
       transition: all 0.3s ease;
     }
 
     .green-card:hover {
+      background-color: var(--greenclr);
       box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
+      transition: all 0.3s ease;
+      color: #fff;
     }
     .green-card .greencardimg{
       margin-bottom: 20px;
@@ -1502,6 +1641,9 @@ header #desktopheader .head-menuitems{
       width: 80px;
       height: 80px;
     }
+    .green-card:hover .greencardimg>img, .green-card:hover a>img{
+          filter: brightness(0) invert(1);
+    }
 
     .green-card h4 {
       color: #7BC143;
@@ -1509,12 +1651,15 @@ header #desktopheader .head-menuitems{
       font-size: 18px;
       font-weight: 700;
     }
+    .green-card:hover h4, .green-card:hover a{
+      color: #fff;
+    }
 
     .green-card a {
       text-decoration: none;
       color: #7BC143;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 15px;
+      font-weight: 600;
     }
     .green-card a>img{
       width: 10px;
@@ -1553,6 +1698,11 @@ header #desktopheader .head-menuitems{
       object-fit: contain;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
+    .infi-carousel .swiper-wrapper {
+        -webkit-transition-timing-function:linear!important; 
+        -o-transition-timing-function:linear!important;
+        transition-timing-function:linear!important; 
+      }
     .infinite-carousel-sec .infi-carousel{
       position: relative;
     }
@@ -1560,7 +1710,9 @@ header #desktopheader .head-menuitems{
       content: '';
       position: absolute;
       z-index: 2;
-      background:linear-gradient(45deg, white, transparent);
+      /* background:linear-gradient(45deg, white, transparent); */
+      background: url(../images/home/infibgleft.png) no-repeat;
+      background-size: cover;
       left: 0;
       top: 0;
       width: 100px;
@@ -1570,8 +1722,10 @@ header #desktopheader .head-menuitems{
       content: '';
       position: absolute;
       z-index: 2;
-      background:linear-gradient(45deg, white, transparent);
-      right: 0;
+      /* background:linear-gradient(45deg, white, transparent); */
+      background: url(../images/home/infibgright.png) no-repeat;
+      background-size: cover;
+      right: -4px;
       top: 0;
       width: 100px;
       height: 100%;
@@ -1899,6 +2053,7 @@ header #desktopheader .head-menuitems{
 .ais-circuit-breaker-inner {
     display: flex;
     align-items: center;
+    margin-top: 40px;
 }
 .ais-circuit-breaker-inner .ais-circuitbreaker-swiper{
   width: 45%;
@@ -1995,6 +2150,10 @@ header #desktopheader .head-menuitems{
   font-size: 15px;
   color: var(--comn-heading-color);
   margin-bottom: 10px;
+}
+.product-display-tabs{
+  padding-top: 20px;
+  margin-bottom: 50px;
 }
 .product-display-tabs .table-wrapper {
       max-width: 900px;

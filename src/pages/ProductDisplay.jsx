@@ -112,7 +112,7 @@ const ProductDisplay = () => {
                 </div>
             </section>
 
-            <section className="product-display-tabs comntbmargn">
+            <section className="product-display-tabs">
                 <div className="cust-container">
                     {/* <!-- Tabs --> */}
                     <div className="tabs-container commcntabui tabbotborder d-flex">
@@ -120,12 +120,9 @@ const ProductDisplay = () => {
                             <li className="nav-item">
                                 <a className={`nav-link ${activeTab === "tab1" ? "active" : ""}`}
                                 onClick={() => handleTabClick("tab1")}>
-                                    Key Features</a>
+                                    Why Choose CG’s SF6 Circuit Breaker?</a>
                             </li>
-                            <li className="nav-item">
-                                <a className={`nav-link ${activeTab === "tab2" ? "active" : ""}`}
-                                onClick={() => handleTabClick("tab2")}>Advantages</a>
-                            </li>
+
                             <li className="nav-item">
                                 <a className={`nav-link ${ activeTab === "tab3" ? "active" : ""}`}
                                 onClick={() => handleTabClick("tab3")}>Specifications</a>
@@ -142,26 +139,28 @@ const ProductDisplay = () => {
                         {activeTab === "tab1" && 
                             <div className="keyfeature pdpul">
                                 <ul>
-                                    <li>Fully compliant with IEC standards</li>
-                                    <li>Up to three current transformer (CT) cores per phase</li>
-                                    <li>Aluminium enclosures for reduced losses, corrosion resistance, and lightweight construction</li>
-                                    <li>Low maintenance requirements, ensuring high availability and long service life</li>
+                                    <li><b>Multi-Core Capability:</b> Up to three CT cores per phase for versatile measurement and protection</li>
+                                    <li><b>Lightweight Durability:</b> Aluminium enclosures reduce losses, resist corrosion, and minimise weight</li>
+                                    <li><b>Low Maintenance:</b> Minimal servicing needs ensure high availability and extended lifespan</li>
+                                    <li><b>Compact Design:</b> Space-efficient construction ideal for limited installations</li>
+                                    <li><b>Sustainable Build:</b> Materials and design support enhanced environmental performance</li>
                                 </ul>
                             </div>
                         }
                         
 
                         {/* <!-- Advantage Tab --> */}
-                        {activeTab === "tab2" && 
+                        {/* {activeTab === "tab2" && 
                             <div className="keyfeature pdpul">
                                 <ul>
-                                    <li>Space-saving, compact design</li>
-                                    <li>Enhanced sustainability</li>
-                                    <li>Lower maintenance costs</li>
-                                    <li>High reliability under demanding conditions</li>
+                                    <li><b>Multi-Core Capability:</b> Up to three CT cores per phase for versatile measurement and protection</li>
+                                    <li><b>Lightweight Durability:</b> Aluminium enclosures reduce losses, resist corrosion, and minimise weight</li>
+                                    <li><b>Low Maintenance:</b> Minimal servicing needs ensure high availability and extended lifespan</li>
+                                    <li><b>Compact Design:</b> Space-efficient construction ideal for limited installations</li>
+                                    <li><b>Sustainable Build:</b> Materials and design support enhanced environmental performance</li>
                                 </ul>
                             </div>
-                        }
+                        } */}
                         
 
                         {/* <!-- Specification Tab --> */}

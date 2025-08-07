@@ -8,9 +8,12 @@ import card2 from "../components/assets/images/switchgear/card2.jpg";
 import card3 from "../components/assets/images/switchgear/card3.jpg";
 import card4 from "../components/assets/images/switchgear/card4.jpg";
 import sliuser from "../components/assets/images/switchgear/sliuser.jpg";
+import newproduct from "../components/assets/images/switchgear/newproduct.jpg";
 
 import leftarow from "../components/assets/images/switchgear/leftarow.svg";
 import rightarow from "../components/assets/images/switchgear/rightarow.svg";
+import newproLeftarw from "../components/assets/images/switchgear/newpro-leftarw.svg";
+import righnewproRightarwtarow from "../components/assets/images/switchgear/newpro-rightarw.svg";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -21,30 +24,45 @@ const Switchgear = () => {
 
     const switchGearCards = [
         {title:'MEDIUM VOLTAGE (MV) SWITCHGEAR', desc:[
-            {detail:'Our Medium Voltage (MV) switchgear range includes AIS (Indoor & Outdoor), MV GIS, Ring Main Units, Vacuum Interrupters, Compact Substations, Numerical Protection Relays, Auto-Reclosers, Vacuum Contactors, Lightning Arresters, and Isolators. CGPISL manufactures these products at two dedicated facilities in Nasik and Aurangabad, Maharashtra, India.'},
-            {detail:'Built with advanced protection, control, and automation features, our MV switchgear enhances system stability while minimizing downtime.'}
+            {detail:'Our Medium Voltage (MV) switchgear range includes AIS (Indoor & Outdoor), MV GIS, RMUs, Vacuum Interrupters, Compact Substations, Relays, Reclosers, Contactors, Arresters, and Isolators. Designed with advanced protection, control, and automation, it ensures system stability and reduces downtime.'}
         ],
         slink:'', img:card1
         },
         {title:'POWER QUALITY SOLUTIONS', desc:[
-            {detail:'Our Power Quality Solutions are designed to enhance the efficiency, stability, and reliability of electrical systems by mitigating power disturbances and improving voltage profiles.'},
-            {detail:'We offer a comprehensive range of solutions to help industries maintain compliance with grid standards, reduce penalties, and ensure uninterrupted, high-quality power for critical operations.'}
+            {detail:'Our Power Quality Solutions improve efficiency, stability, and reliability by mitigating disturbances and enhancing voltage profiles. We offer comprehensive solutions to ensure grid compliance, reduce penalties, and deliver uninterrupted, high-quality power for critical operations.'}
         ],
         slink:'', img:card2
         },
         {title:'RELAYS AND AUTOMATION', desc:[
-            {detail:'Our Relays and Automation solutions are built to enhance the protection, control, and operational efficiency of power distribution systems. Designed for both reliability and intelligence, these products play a critical role in ensuring safe and efficient electrical network performance.'},
-            {detail:'These solutions support digital transformation in power systems, ensuring smarter grid management and improved uptime.'}
+            {detail:'Our Relays and Automation solutions enhance protection, control, and efficiency in power distribution systems with reliable, intelligent design.They enable digital transformation for smarter grid management, ensuring safe operations and improved uptime.'}
         ],
         slink:'', img:card3
         },
          {title:'HIGH VOLTAGE & EXTRA HIGH VOLTAGE', desc:[
-            {detail:'We offer a comprehensive range of High Voltage (HV) and Extra High Voltage (EHV) equipment engineered to ensure safety, reliability, and performance in critical power transmission and distribution networks. Our solutions are designed for applications ranging from 33kV to 800kV, supporting grid stability and operational excellence.'},
-            {detail:'These offerings are built to meet stringent international standards and support modern grid requirements with high reliability, minimal maintenance, and extended service life.'}
+            {detail:'We offer a comprehensive range of HV and EHV equipment (33kV to 800kV) designed for safety, reliability, and performance in critical transmission and distribution networks.Engineered to meet global standards, these solutions ensure grid stability, low maintenance, and long service life.'}
         ],
         slink:'', img:card4
         },
-    ]
+    ];
+    const slideData = [
+        {
+            img: newproduct,
+            heading: "Heading Placeholder",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ",
+        },
+        {
+            img: newproduct,
+            heading: "Second Slide",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ",
+        },
+        {
+            img: newproduct,
+            heading: "Third Slide",
+            desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        },
+    ];
+
+    const swiperRef = useRef(null);
       
    return (
     <>
@@ -99,7 +117,7 @@ const Switchgear = () => {
     
    </section>
 
-   <section className="swiperslider-sec">
+   <section className="swiperslider-sec comntbmargn pb-0">
         <div className="cust-container">
             <div className="common-heading-sec">
                 <div className="comon-head-inner">
@@ -188,7 +206,59 @@ const Switchgear = () => {
         </div>
 
         
-      </section>
+    </section>
+
+    <section className="switchgr-newprodsec comntbmargn">
+        <div className="cust-container">
+            <div className="common-heading-sec">
+                <div className="comon-head-inner">
+                    <h2>New Products Developed</h2>
+                    {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> */}
+                </div>
+            </div>
+            <div className="carousel-wrapper">
+                <div className="slider-container">
+                    <Swiper
+                    modules={[Pagination, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    loop={true}
+                    //   autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    //   }}
+                    pagination={{ el: ".custom-pagination",clickable: true }}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    className="newcardsec-carousel"
+                    >
+                    {slideData.map((slide, idx) => (
+                        <SwiperSlide key={idx}>
+                        <div className="card-slide">
+                            <div className="new-prod-img">
+                                <img src={slide.img} alt="slide" />
+                            </div>
+                            
+                            <div className="slide-text">
+                                <h3>{slide.heading}</h3>
+                                <p>{slide.desc}</p>
+                            </div>
+                        </div>
+                        </SwiperSlide>
+                    ))}
+                    {/* External pagination container */}
+                        <div className="custom-pagination"></div>
+                    </Swiper>
+                </div>
+                
+
+                <div className="newprodc-navbar">
+                    <button className="custom-nav prev" onClick={() => swiperRef.current?.slidePrev()}> <img src={newproLeftarw} alt="" /> </button>
+                    <button className="custom-nav next" onClick={() => swiperRef.current?.slideNext()}> <img src={righnewproRightarwtarow} alt="" /> </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
     </>
   );
 };
