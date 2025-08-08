@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import closeIcn from "../assets/images/Investors/close.png";
 import openIcn from "../assets/images/Investors/plus.png";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import leftArrow from "../assets/images/Investors/leftarrow.png";
 import rightArrow from "../assets/images/Investors/rightarrow.png";
 
@@ -45,7 +46,7 @@ const faqData = {
         a: "No, only one address can be registered for each folio.",
       },
       {
-        q: "How do I confirm that my address change has been effected?",
+        q: "I have intimated my change of address but how do I confirm that the same has been effected?",
         a: "You will receive confirmation within 15 days or can contact our Investor Services team.",
       },
     ],
@@ -110,13 +111,23 @@ const FAQs = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const [openIndex, setOpenIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const tabRef = useRef();
 
-  // Update on resize to check mobile screen
+  const updateScrollButtons = () => {
+    if (tabRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = tabRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
+      updateScrollButtons();
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -130,8 +141,33 @@ const FAQs = () => {
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       });
+      setTimeout(updateScrollButtons, 300); // Update after scroll finishes
     }
   };
+
+  useEffect(() => {
+    updateScrollButtons();
+  }, [tabs]);
+
+  // Update on resize to check mobile screen
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // const scrollTabs = (direction) => {
+  //   const scrollAmount = 150;
+  //   if (tabRef.current) {
+  //     tabRef.current.scrollBy({
+  //       left: direction === "left" ? -scrollAmount : scrollAmount,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
 
   const handleAccordion = (i) => {
     setOpenIndex(openIndex === i ? null : i);
@@ -140,7 +176,7 @@ const FAQs = () => {
   const current = faqData[activeTab];
 
   return (
-    <div className="faq-container">
+    <div className="cust-container">
       {/* <div className="faq-tab-wrapper">
         <button className="scroll-btn left" onClick={() => scrollTabs("left")}>
           <img src={leftArrow} alt="Left" />
@@ -166,8 +202,7 @@ const FAQs = () => {
           <img src={rightArrow} alt="Right" />
         </button>
       </div> */}
-      <div className="faq-tab-wrapper">
-        {/*  Hide arrows on mobile */}
+      {/* <div className="faq-tab-wrapper">
         {!isMobile && (
           <button
             className="scroll-btn left"
@@ -198,6 +233,42 @@ const FAQs = () => {
             onClick={() => scrollTabs("right")}
           >
             <img src={rightArrow} alt="Right" />
+          </button>
+        )}
+      </div> */}
+      <div className="faq-tab-wrapper">
+        {!isMobile && (
+          <button
+            className={`scroll-btn left ${canScrollLeft ? "active" : "inactive"}`}
+            onClick={() => scrollTabs("left")}
+            disabled={!canScrollLeft}
+          >
+            <FaChevronLeft size={20} />
+          </button>
+        )}
+
+        <div className="faq-tabs" ref={tabRef} onScroll={updateScrollButtons}>
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`faq-tab ${tab === activeTab ? "active" : ""}`}
+              onClick={() => {
+                setActiveTab(tab);
+                setOpenIndex(null);
+              }}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {!isMobile && (
+          <button
+            className={`scroll-btn right ${canScrollRight ? "active" : "inactive"}`}
+            onClick={() => scrollTabs("right")}
+            disabled={!canScrollRight}
+          >
+            <FaChevronRight size={20} />
           </button>
         )}
       </div>
