@@ -205,6 +205,31 @@ const ProductDisplay = () => {
                                             <td data-label="Unit">kV</td>
                                             <td data-label="72.5 kV DTB">140</td>
                                         </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Lightning Impulse Withstand Voltage</td>
+                                            <td data-label="Unit">kVp</td>
+                                            <td data-label="72.5 kV DTB">325</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Short Circuit Breaking Current (3 sec)</td>
+                                            <td data-label="Unit">kA</td>
+                                            <td data-label="72.5 kV DTB">40</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Peak Withstand Current</td>
+                                            <td data-label="Unit">kAp</td>
+                                            <td data-label="72.5 kV DTB">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Rated Break Time</td>
+                                            <td data-label="Unit">ms</td>
+                                            <td data-label="72.5 kV DTB">60</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Rating">Ambient Temperature</td>
+                                            <td data-label="Unit">°C</td>
+                                            <td data-label="72.5 kV DTB">40</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

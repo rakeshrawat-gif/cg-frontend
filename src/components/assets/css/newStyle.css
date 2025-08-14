@@ -975,7 +975,7 @@
 
 .solutionforbus-navbar {
   position: relative;
-  width: 90%;
+  width: 40%;
   padding: 50px 30px;
   
   /* background-color: #fff; */
@@ -1017,7 +1017,7 @@ background: url(../images/home/solutionnewbg.png) no-repeat;
   z-index: 99;
 }
 
-.single-dropdown-menu {
+/* .single-dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1029,7 +1029,7 @@ background: url(../images/home/solutionnewbg.png) no-repeat;
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
-}
+} */
 
 .nav-item.dropdown.dropend:hover .single-dropdown-menu {
   right: 0;

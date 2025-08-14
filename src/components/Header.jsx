@@ -9,16 +9,21 @@ import headIcon4 from '../components/assets/images/headicn/about/icn4.svg';
 import headIcon5 from '../components/assets/images/headicn/about/icn5.svg';
 import headIcon6 from '../components/assets/images/headicn/about/icn6.svg';
 import headIcon7 from '../components/assets/images/headicn/about/icn7.svg';
+import compnyovervw from '../components/assets/images/headicn/about/compnyovervw.svg';   
 import headSIcon1 from '../components/assets/images/headicn/solution/sicn1.svg';
 import headSIcon3 from '../components/assets/images/headicn/solution/sicn3.svg';
 import headSIcon4 from '../components/assets/images/headicn/solution/sicn4.svg';
 import headSIcon5 from '../components/assets/images/headicn/solution/sicn5.svg';
 import headSIcon6 from '../components/assets/images/headicn/solution/sicn6.svg';
 import diagonArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
-import careerIcon2 from '../components/assets/images/headicn/career/cicn2.svg';
-import careerIcon3 from '../components/assets/images/headicn/career/cicn3.svg';
-import careerIcon4 from '../components/assets/images/headicn/career/cicn4.svg';
-import careerIcon5 from '../components/assets/images/headicn/career/cicn5.svg';
+import swicthgeargren from '../components/assets/images/headicn/solution/swicthgeargren.svg';
+
+
+import whycg from '../components/assets/images/headicn/career/whycg.svg';
+import lifeatcg from '../components/assets/images/headicn/career/lifeatcg.svg';
+import exploreroles from '../components/assets/images/headicn/career/exploreroles.svg';
+import learingandgrwth from '../components/assets/images/headicn/career/learingandgrwth.svg';
+
 
 // import '.././components/assets/js/cust.js';
 
@@ -33,6 +38,7 @@ const Header = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const headerRef = useRef(null);
   const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
+  const [activeAboutSubmenu, setActiveAboutSubmenu] = useState(null);
 
   const location = useLocation();
 
@@ -329,7 +335,7 @@ const Header = () => {
                                         <li>
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
-                                                    <img src={headIcon2} alt="" />
+                                                    <img src={compnyovervw} alt="" />
                                                     <span>Company Overview</span>
                                                 </div>
                                             </a>
@@ -338,7 +344,7 @@ const Header = () => {
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon2} alt="" />
-                                                    <span>Leadership and Top Management</span>
+                                                    <span>Leadership</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -347,10 +353,10 @@ const Header = () => {
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon3} alt="" />
                                                     <span>Subsidiaries and Joint Ventures</span>
-                                                    <i className="fas fa-angle-right"></i>
+                                                    {/* <i className="fas fa-angle-right"></i> */}
                                                 </div>
                                             </a>
-                                            <ul className="submenu single-dropdown-menu">
+                                            {/* <ul className="submenu single-dropdown-menu">
                                                 <li>
                                                     <a className="dropdown-item" href="#">
                                                         <div className="single-dr-inner">
@@ -367,16 +373,16 @@ const Header = () => {
                                                         </div>
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
                                                     <img src={headIcon4} alt="" />
                                                     <span>Our Purpose and Values</span>
                                                 </div>
                                             </a>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
@@ -435,10 +441,16 @@ const Header = () => {
                             <li
                                 className="nav-item dropdown position-static"
                                 id="solutionsDropdownContainer"
-                                onMouseEnter={() => handleMegaMenuCategoryHover('megatransformers')} // Default to first category on hover
-                                onMouseLeave={() => { setActiveSolutionCategory(null); setActiveSolutionSubCategory(null); }}
+                                onMouseEnter={() => {
+                                    handleDropdownHover('solutions', true);
+                                    handleMegaMenuCategoryHover('megatransformers');
+                                }}
+                                onMouseLeave={() => {
+                                    handleDropdownHover('solutions', false);
+                                    setActiveSolutionCategory(null); setActiveSolutionSubCategory(null);
+                                }}
                             >
-                                <a className="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button">
+                                <a className={`nav-link dropdown-toggle ${activeSingleDropdown === 'solutions' ? 'active' : ''}`} href="#" id="solutionsDropdown" role="button">
                                     Solutions
                                 </a>
                                 <div className={`dropdown-menu megamenucustom p-0 ${activeSolutionCategory ? 'show' : ''}`} aria-labelledby="solutionsDropdown">
@@ -463,7 +475,7 @@ const Header = () => {
                                                 onMouseEnter={() => handleMegaMenuCategoryHover('megaswitchgears')}
                                             >
                                                 <div className="magamenu-inner">
-                                                    <img src={headSIcon3} alt="" />
+                                                    <img src={swicthgeargren} alt="" />
                                                     <span>Switchgears</span>
                                                     <i className="fas fa-angle-right"></i>
                                                 </div>
@@ -492,7 +504,7 @@ const Header = () => {
                                                     <i className="fas fa-angle-right"></i>
                                                 </div>
                                             </a>
-                                            <a
+                                            {/* <a
                                                 className={`submenu-item ${activeSolutionCategory === 'megaconsumerproduct' ? 'active' : ''}`}
                                                 href="/"
                                                 data-target="#megaconsumerproduct"
@@ -503,7 +515,7 @@ const Header = () => {
                                                     <span>Consumer Products</span>
                                                     <i className="fas fa-angle-right"></i>
                                                 </div>
-                                            </a>
+                                            </a> */}
                                             <a
                                                 className={`submenu-item ${activeSolutionCategory === 'megarailways' ? 'active' : ''}`}
                                                 href="/"
@@ -1148,12 +1160,39 @@ const Header = () => {
                                         <li className="has-submenu">
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
-                                                    <img src={careerIcon2} alt="" />
+                                                    <img src={whycg} alt="" />
+                                                    <span>Why CG?</span>
+                                                    {/* <i className="fas fa-angle-right"></i> */}
+                                                </div>
+                                            </a>
+                                            {/* <ul className="submenu single-dropdown-menu">
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                        <div className="single-dr-inner">
+                                                            <img src={headIcon4} alt="" />
+                                                            <span>Board Members</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="#">
+                                                        <div className="single-dr-inner">
+                                                            <img src={headIcon4} alt="" />
+                                                            <span>Policies</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul> */}
+                                        </li>
+                                        <li className="has-submenu">
+                                            <a className="dropdown-item" href="#">
+                                                <div className="single-dr-inner">
+                                                    <img src={lifeatcg} alt="" />
                                                     <span>Life at CG</span>
-                                                    <i className="fas fa-angle-right"></i>
+                                                    {/* <i className="fas fa-angle-right"></i> */}
                                                 </div>
                                             </a>
-                                            <ul className="submenu single-dropdown-menu">
+                                            {/* <ul className="submenu single-dropdown-menu">
                                                 <li>
                                                     <a className="dropdown-item" href="#">
                                                         <div className="single-dr-inner">
@@ -1170,17 +1209,17 @@ const Header = () => {
                                                         </div>
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </li>
                                         <li className="has-submenu">
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
-                                                    <img src={careerIcon2} alt="" />
-                                                    <span>Open Positions</span>
-                                                    <i className="fas fa-angle-right"></i>
+                                                    <img src={exploreroles} alt="" />
+                                                    <span>Explore Roles</span>
+                                                    {/* <i className="fas fa-angle-right"></i> */}
                                                 </div>
                                             </a>
-                                            <ul className="submenu single-dropdown-menu">
+                                            {/* <ul className="submenu single-dropdown-menu">
                                                 <li>
                                                     <a className="dropdown-item" href="#">
                                                         <div className="single-dr-inner">
@@ -1197,50 +1236,14 @@ const Header = () => {
                                                         </div>
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </li>
                                         <li className="has-submenu">
                                             <a className="dropdown-item" href="#">
                                                 <div className="single-dr-inner">
-                                                    <img src={careerIcon3} alt="" />
-                                                    <span>Subsidiaries and Joint Ventures</span>
-                                                    <i className="fas fa-angle-right"></i>
-                                                </div>
-                                            </a>
-                                            <ul className="submenu single-dropdown-menu">
-                                                <li>
-                                                    <a className="dropdown-item" href="#">
-                                                        <div className="single-dr-inner">
-                                                            <img src={headIcon4} alt="" />
-                                                            <span>Board Members</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="dropdown-item" href="#">
-                                                        <div className="single-dr-inner">
-                                                            <img src={headIcon4} alt="" />
-                                                            <span>Policies</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="has-submenu">
-                                            <a className="dropdown-item" href="#">
-                                                <div className="single-dr-inner">
-                                                    <img src={careerIcon4} alt="" />
-                                                    <span>Power of Women at CG</span>
-                                                    <i className="fas fa-angle-right"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li className="has-submenu">
-                                            <a className="dropdown-item" href="#">
-                                                <div className="single-dr-inner">
-                                                    <img src={careerIcon5} alt="" />
-                                                    <span>Growth as a Leader at CG</span>
-                                                    <i className="fas fa-angle-right"></i>
+                                                    <img src={learingandgrwth} alt="" />
+                                                    <span>Learning and Growth</span>
+                                                    {/* <i className="fas fa-angle-right"></i> */}
                                                 </div>
                                             </a>
                                         </li>
@@ -1327,15 +1330,17 @@ const Header = () => {
                             <a href="#" onClick={handleMobileMultiLevelToggle}>About CG</a>
                             <ul className="submenu">
                                 <li><a href="">Company Overview</a></li>
-                                <li><a href="#">Leadership and Top Management</a></li>
-                                <li className="has-children">
+                                <li><a href="#">Leadership</a></li>
+                                {/* <li className="has-children">
                                     <a href="#" onClick={handleMobileMultiLevelToggle}>Subsidiaries and Joint Ventures</a>
                                     <ul className="submenu">
                                         <li><a href="/">Board Members</a></li>
                                         <li><a href="/">Policies</a></li>
                                     </ul>
+                                </li> */}
+                                <li>
+                                    <a href="#">Subsidiaries and Joint Ventures</a>
                                 </li>
-                                <li><a href="/">Our Purpose and Values</a></li>
                                 <li><a href="#">Sectors We Serve</a></li>
                                 <li><a href="#">ESG</a></li>
                                 <li><a href="#">Technology + R&D</a></li>
@@ -1377,7 +1382,6 @@ const Header = () => {
                                 <li><a href="/switchgear">Switchgears</a></li>
                                 <li><a href="">Motors</a></li>
                                 <li><a href="">Drives & Automation</a></li>
-                                <li><a href="">Consumer Products</a></li>
                                 <li><a href="">Railways</a></li>
                             </ul>
                         </li>
@@ -1386,11 +1390,10 @@ const Header = () => {
                         <li className="has-children">
                             <a href="#" onClick={handleMobileMultiLevelToggle}>Careers</a>
                             <ul className="submenu">
+                                <li><a href="">Why CG?</a></li>
                                 <li><a href="">Life at CG</a></li>
-                                <li><a href="">Open Positions</a></li>
-                                <li><a href="/">Campus Programs</a></li>
-                                <li><a href="/">Power of Women at CG</a></li>
-                                <li><a href="/">Growth as a Leader at CG</a></li>
+                                <li><a href="/">Explore Roles</a></li>
+                                <li><a href="/">Learning and Growth</a></li>
                             </ul>
                         </li>
                         <li><a href="/worldwide_contact">Contact Us</a></li>

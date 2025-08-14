@@ -120,7 +120,7 @@ section.stackcard-sec {
     box-shadow: none;
 }
 .stack-card-item .card-content {
-    box-shadow: 0 .2em 1em #0000001a, 0 1em 1em #0000001a;
+    box-shadow: 7px 0em 1em 2px #0000001a, 0 1em 1em #00000036;
     background: var(--card-bg-skyblu);
     color: #fff;
     border-radius: 30px;
@@ -202,11 +202,14 @@ section.stackcard-sec {
     }
 
     /* news product sec */
+    .switchgr-newprodsec.comntbmargn{
+      margin-bottom: 40px;
+    }
     .switchgr-newprodsec .slider-container {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 20px 0px;
   box-sizing: border-box;
 }
 
@@ -220,21 +223,21 @@ section.stackcard-sec {
   justify-content: center;
   background: var(--card-bg-skyblu);
   background-image: url(../images/switchgear/newprodbg.png);
-  background-size: contain;
+  background-size: cover;
   color: white;
-  border-radius: 20px;
+  border-radius: 40px;
   padding: 20px;
   overflow: hidden;
   flex-wrap: wrap;
-  box-shadow: 9px 8px 7px 5px rgb(137 137 137 / 10%);
+  box-shadow: 9px 8px 7px 5px rgb(137 137 137 / 30%);
 }
 .switchgr-newprodsec  .card-slide .new-prod-img{
-  width: 40%;
-  border-radius: 16px;
+  width: 45%;
+  border-radius: 32px;
   overflow: hidden;
 }
 .switchgr-newprodsec  .card-slide .slide-text{
-  width: 60%;
+  width: 55%;
   padding-left: 30px;
 }
 .switchgr-newprodsec  .swiper-slide{
@@ -300,7 +303,7 @@ section.stackcard-sec {
   line-height: 1;
 }
 .switchgr-newprodsec .custom-nav>img{
-  width: 14px;
+  width: 20px;
 }
 .switchgr-newprodsec .custom-nav:hover {
   color: #0066cc;
@@ -316,7 +319,7 @@ section.stackcard-sec {
 
 .switchgr-newprodsec .custom-pagination {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .switchgr-newprodsec .custom-pagination .swiper-pagination-bullet {
@@ -345,9 +348,9 @@ section.stackcard-sec {
       width: 100%;
       /* max-width: 1440px; */
       padding: 100px 0 100px 300px  !important;
-      background: url(../images/swipbg.jpg) no-repeat;
-      background-size: 65%;
-      background-position: top right 50px;
+      background: url(../images/swipbgpd.jpg) no-repeat;
+      background-size: 68%;
+      background-position: top right 0px;
     }
 
     .switchgear-swiper::after{
@@ -368,7 +371,7 @@ section.stackcard-sec {
     .switchgear-swiper .swiper-slide {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 25px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -457,7 +460,108 @@ section.stackcard-sec {
 .swiperquot-img>img{
     width: 250px;
 }
-/* End swiper slider on switchgear page */
+
+/* ====swiper slider of waste/water management== */
+.product-display-tabs.certificationtab-sec{
+  margin-bottom: 120px;
+}
+.tabs-container.commcntabui.awmanagmenttabs{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.wastemgmt-tab{
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+.wastemgmt-colone{
+  width: 400px;
+  border: 1px solid #DEDEDE;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  box-shadow: -4px 4px 7px 5px rgb(137 137 137 / 20%);
+}
+.wastemgmt-navbar{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0%, -45%);
+    padding: 0 35px;
+}
+.wastemgmt-navbar button{
+    background-color: #ffffff8c;
+    border: 1px solid #969696;
+    outline: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.wastemgmt-navbar button:hover{
+  transition: .3s;
+  background: var(--greenclr);
+  border-color: var(--greenclr);
+}
+.wastemgmt-navbar button:hover img{
+      filter: brightness(0) invert(1);
+}
+.wastemgmt-navbar button img{
+  width: 8px;
+}
+.wastemgmt-img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.wastemgmtinner .wastemgmt-img>img{
+    width: 100%;
+    border: 1px solid #DEDEDE;
+}
+ .wastemgmt-title h5{
+  margin: 15px 0 0 0;
+  font-weight: 700;
+  color: var(--card-bg-skyblu);
+  font-size: 20px;
+}
+.wastemgmt-coltwo  .wastemgmt-title h5{
+  margin-top: 20px;
+}
+.commcntabui.awmanagmenttabs .nav-tabs{
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.commcntabui.awmanagmenttabs .nav-tabs .nav-link {
+    font-size: 16px;
+    border: 2px solid #969696;
+    color: #969696;
+    font-weight: 400;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.commcntabui.awmanagmenttabs .nav-tabs .nav-link:hover{
+  border: 2px solid #969696;
+    color: #969696;
+}
+.commcntabui.awmanagmenttabs .nav-link.active:hover, .commcntabui.awmanagmenttabs .nav-link.active {
+    border-color: var(--card-bg-skyblu);
+    color: var(--card-bg-skyblu);
+}
+.wastemgmt-coltwo .wastemgmt-navbar{
+  padding: 0px 54px;
+}
+/* ====End swiper slider of waste/water management== */
+
+/* =================End swiper slider on switchgear page ================*/
 
 
 /* Footer start */
@@ -631,6 +735,9 @@ header #desktopheader .head-logo{
 header #desktopheader .head-menuitems{
   width: 70%;
 }
+.head-menuitems ul.navbar-nav{
+  gap: 8px;
+}
  header .navbar {
       padding: 0 15px;
       border-radius: 40px;
@@ -675,7 +782,6 @@ header #desktopheader .head-menuitems{
     #navbarNav .nav-item .nav-link.dropdown-toggle.active, #navbarNav .nav-item .nav-link:hover{
       border-color: var(--card-bg-skyblu);
       color: var(--card-bg-skyblu) !important;
-      font-weight: 600;
     }
     #navbarNav .nav-item:nth-last-child(-n+2) .nav-link:hover{
       border-color: transparent;
@@ -702,6 +808,11 @@ header #desktopheader .head-menuitems{
   font-size: 16px;
   font-weight: 400;
 }
+#navbarNav .desktopsrchtwh>a>span {
+    padding: 10px 10px;
+    background: #EFEFEF;
+    border-radius: 50%;
+  }
 /* Rotate icon when open */
 .accordion-toggle.open::after {
   transform: rotate(180deg);
@@ -733,8 +844,13 @@ header #desktopheader .head-menuitems{
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid rgba(0, 0, 0, .15);
-        border-radius: .25rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
         padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
     }
     .single-dropdown-menu li a, .mega-menu .menu-column a{
       font-size: 14px;
@@ -1032,6 +1148,11 @@ header #desktopheader .head-menuitems{
         border-top-right-radius: 0;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
+        /* overflow: hidden; */
+      }
+      .dropdown-menu.megamenucustom{
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
         overflow: hidden;
       }
 
@@ -1124,7 +1245,6 @@ header #desktopheader .head-menuitems{
       padding-top: 80px;
     }
 
-
     .home-banner-carousl-sec .slide-content hr{
       width: 399px; border: 1px solid #fff; margin: 2rem auto;
     }
@@ -1150,6 +1270,30 @@ header #desktopheader .head-menuitems{
           font-weight: 700;
           font-size: 16px;
           text-decoration: none;
+    }
+    .home-banner-carousl-sec .homeswipernav{
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+          max-width: 1250px;
+          margin: 0 auto;
+          left: 50%;
+          width: 100%;
+          transform: translate(-50%, -50%);
+    }
+    .home-banner-carousl-sec .homeswipernav .swiper-button-next, .home-banner-carousl-sec .homeswipernav .swiper-button-prev{
+      background: transparent;
+    }
+    .home-banner-carousl-sec .homeswipernav .swiper-button-next::after, .home-banner-carousl-sec .homeswipernav .swiper-button-prev::after{
+      font-size: 30px;
+      font-weight: 700;
+      color: #969696;
+    }
+    .home-banner-carousl-sec .homeswipernav .swiper-button-next{
+      right: 20px;
+    }
+    .home-banner-carousl-sec .homeswipernav .swiper-button-prev{
+      left: 20px;
     }
 
     /* Optional: overlay background */
@@ -1197,6 +1341,12 @@ header #desktopheader .head-menuitems{
       display: flex;
       align-items: center;
     }
+    .highlight-text .mobileshowtxt{
+      display: none;
+    }
+    .highlight-text .desktopshowtxt{
+      display: inline-block;
+    }
 
     .blue-highlight {
       background-color: var(--card-bg-skyblu);
@@ -1207,7 +1357,6 @@ header #desktopheader .head-menuitems{
       display: inline-block;
       left: 0;
       margin-right: 10px;
-      position: relative;
       position: relative;
     }
     .blue-highlight::before{
@@ -1237,11 +1386,11 @@ header #desktopheader .head-menuitems{
     .solutionforbusswiper{
       display: flex;
       flex-direction: row-reverse;
-      max-width: 100% !important;
-      padding: 50px 0 !important;
+      width: 60% !important;
+      padding: 85px 0 50px !important;
       background: url(../images/home/bluebg.jpg) no-repeat;
-      background-size: contain;
-      background-position: top right -100px;
+      background-size: cover;
+      background-position: top right -240px;
     }
     .solutionforbusswiper .swiper-wrapper{
       width: 60%;
@@ -1274,7 +1423,7 @@ header #desktopheader .head-menuitems{
     .solution-sliditem {
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 12px 14px rgb(0 0 0 / 6%);
+        box-shadow: 0 12px 14px rgb(0 0 0 / 32%);
     }
     .solution-sliditem .soluitn-img>img{
       width: 100%;
@@ -1286,7 +1435,7 @@ header #desktopheader .head-menuitems{
     }
     .solution-sliditem .solutin-desc .solut-icn{
       position: absolute;
-      right: 15px;
+      right: 0;
       top: -32px;
       background: #fff;
       padding: 18px;
@@ -1351,8 +1500,8 @@ header #desktopheader .head-menuitems{
     .acrossborer-globdesc{
       position: relative;
       background: url(../images/home/planet.png) no-repeat;
-      background-size: 110%;
-      padding: 100px 0px 50px;
+      background-size: cover;
+      padding: 140px 0px 50px;
       background-position: top center;
     }
     .acrossborder-icntxt {
@@ -1360,7 +1509,7 @@ header #desktopheader .head-menuitems{
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 0 75px;
+      padding: 0 65px;
     }
     .acrossborer-item.paddlr{
       padding: 0 40px;
@@ -1379,7 +1528,7 @@ header #desktopheader .head-menuitems{
     }
     .acrossborer-item>h4{
       font-weight: 700;
-      font-size: 50px;
+      font-size: 55px;
       margin: 0 10px;
     }
     .acrossborer-item>p{
@@ -1400,8 +1549,8 @@ header #desktopheader .head-menuitems{
     .news-card {
       display: inline-block;
       background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
+      /* border-radius: 16px;
+      overflow: hidden; */
       width: 25%;
       flex: 0 0 auto;
       position: relative;
@@ -1458,7 +1607,7 @@ header #desktopheader .head-menuitems{
     }
 
     .news-content {
-      padding: 1rem 0;
+      padding: 1rem 0 0;
     }
 
     .news-date {
@@ -1509,6 +1658,9 @@ header #desktopheader .head-menuitems{
       background-size: cover;
       background-repeat: no-repeat;
       position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 3.5px;
     }
     .news-section.cg-inthe-news-sec .news-card{
       width: 32%;
@@ -1698,7 +1850,7 @@ header #desktopheader .head-menuitems{
       object-fit: contain;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
-    .infi-carousel .swiper-wrapper {
+    .infi-carousel .swiper-wrapper, .solutionforbusswiper .swiper-wrapper{
         -webkit-transition-timing-function:linear!important; 
         -o-transition-timing-function:linear!important;
         transition-timing-function:linear!important; 
@@ -1741,6 +1893,7 @@ header #desktopheader .head-menuitems{
       margin-bottom: 20px;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 4px;
     }
 
     .commcntabui .nav-tabs {
@@ -2156,7 +2309,7 @@ header #desktopheader .head-menuitems{
   margin-bottom: 50px;
 }
 .product-display-tabs .table-wrapper {
-      max-width: 900px;
+      max-width: 910px;
       margin-left: 0;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -2175,7 +2328,7 @@ header #desktopheader .head-menuitems{
     }
 
     .product-display-tabs th, .product-display-tabs td {
-      padding: 14px 16px;
+      padding: 18px 16px;
       text-align: left;
       border-bottom: 1px solid #ddd;
       font-weight: 100;
@@ -2187,28 +2340,32 @@ header #desktopheader .head-menuitems{
     }
 
     .product-display-tabs th:first-child, .product-display-tabs td:first-child {
-      width: 55%;
+      width: 50%;
+      padding-left: 50px;
+    }
+    .product-display-tabs th:nth-child(2), .product-display-tabs td:nth-child(2){
+      text-align: center;
     }
 
     .product-display-tabs th:nth-child(2), .product-display-tabs td:nth-child(2), .product-display-tabs td:nth-child(3) {
-      width: 20%;
+      width: 25%;
     }
 
     div#pdpdetailTabContent {
       padding-left: 15px;
     }
     .tabs-container.tabbotborder{
-      border-bottom: 1px solid #969696;
+      border-bottom: 2px solid #969696;
     }
      .commcntabui.tabbotborder .nav-tabs .nav-link {
         font-size: 16px;
         border: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: 4px solid transparent;
         color: var(--comn-heading-color);
         font-weight: 700;
         border-radius: 0;
         transition: .3s;
-
+        margin-bottom: -5.5px;
         position: relative;
         flex: 1;
         text-align: center;
