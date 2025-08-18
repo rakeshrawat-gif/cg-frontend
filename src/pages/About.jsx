@@ -12,6 +12,7 @@ import aboutBgImg from '../components/assets/images/about/abt-bg-image-dotted.pn
 import journeyImg from '../components/assets/images/about/abt-slider-journey-1.png';
 import abtSlideImg from '../components/assets/images/about/abt-slider-1.png';
 import abtSlideImg2 from '../components/assets/images/about/abt-slider-2.jpg';
+import upArrow from '../components/assets/images/about/upArrow.svg';
 import TimelineSlider from "../components/TimelineSlider";
 
 const journeyData = [
@@ -146,13 +147,31 @@ const About = () => {
                 </div>
             </section>
 
+            <section className="ourPurpose">
+                <div className='cust-container'>
+                    <h2 class="desktopView abtFinTitle">
+                        <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                    </h2>
+                    <h2 class="mobileView abtFinTitle">
+                        <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                    </h2>
+                    <p className="purposeSubtitle">Transforming your needs into smart solutions
+                        for an enhanced quality of life.
+                    </p>
+                    <p className="purposePara">
+                        At CG, our purpose is to transform your needs into smart solutions that enhance everyday life.
+                        Guided by our EDGE operating rhythm and core values, we drive performance, foster innovation,
+                        and build a culture rooted in respect, ownership, and customer centricity.
+                    </p>
+                </div>
+            </section>
+
             {/* Leadership Section */}
-            <section className="abt-section">
+            {/* <section className="abt-section">
                 <div className='cust-container'>
                     <h2 className='abt-title'>Word From Our Leaders</h2>
                     <div className="leaderPara-div">
                         <div className="flex_div">
-                            {/* Leader 1 */}
                             <div className="firstDiv leaderFlexMob">
                                 <img
                                     src={vellayanImg}
@@ -176,7 +195,6 @@ const About = () => {
                                 </div>
                             </div>
 
-                            {/* Leader 2 */}
                             <div className="secondDiv leaderFlexMob">
                                 <img
                                     src={amarImg}
@@ -203,7 +221,131 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+            </section> */}
+            {/* Leadership Section */}
+            <section className="abt-section">
+                <div className='cust-container'>
+                    <h2 className='abt-title'>Word From Our Leaders</h2>
+                    <div className="leaderPara-div">
+                        {/* Mobile slider */}
+                        <div className="leader-slider mobileLeadView">
+                            <Swiper
+                                modules={[Pagination]}
+                                pagination={{ clickable: true }}
+                                slidesPerView={1}
+                                spaceBetween={20}
+                            >
+                                {[
+                                    {
+                                        img: vellayanImg,
+                                        heading: "Message from the Chairman",
+                                        text: `<p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`,
+                                        name: "Vellayan Subbiah",
+                                        role: "Chairman"
+                                    },
+                                    {
+                                        img: amarImg,
+                                        heading: "Message from the Vice Chairman",
+                                        text: `<p className="abtPara-text">With a legacy spanning more than 86 years, we stand as a significant player in
+                                        the industrial machinery sector, dedicated to championing innovation and excellence.
+                                        Our diverse portfolio, with Industrial Motors, Drives & Automations, Railway Products,
+                                        Commercial Products, Transformers, and Switchgears, underscore our commitment to pioneering
+                                        solutions that drive India's growth story forward.At CG, we are steadfast in our dedication
+                                        to Environmental, Social, and Governance (ESG) principles and we continually strive for
+                                        sustainable practices and positive societal impact. Our commitment to Corporate Social
+                                        Responsibility (CSR) is integral to our operations, reflecting our broader mission to
+                                        contribute meaningfully to the communities we serve. Discover more about how we are
+                                        shaping a brighter future not only for India but also beyond.</p>`,
+                                        name: "Amar Kaul",
+                                        role: "Managing Director & CEO, CG Power and Industrial Solutions Limited"
+                                    }
+                                ].map((leader, i) => (
+                                    <SwiperSlide key={i}>
+                                        <div className="leaderFlexMob">
+                                            <img src={leader.img} className="leader-img" alt={leader.name} />
+                                            <div className="bgwhiteBox">
+                                                <h3 className="abtMsgChairman">{leader.heading}</h3>
+                                                <div
+                                                    className="abtPara-text"
+                                                    dangerouslySetInnerHTML={{ __html: leader.text }}
+                                                />
+                                                <div className="abtChairman-name">{leader.name}</div>
+                                                <div className="abtDesignation">{leader.role}</div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+
+                        {/* Desktop layout */}
+                        <div className="flex_div deskLeadView">
+                            <div className="firstDiv leaderFlexMob">
+                                <img
+                                    src={vellayanImg}
+                                    alt="Leader 1"
+                                    className="leader-img"
+                                />
+                                <div className='bgwhiteBox'>
+                                    <h3 className="abtMsgChairman mb-4">Message from the Chairman</h3>
+                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                    <div className="leaderNameWrap">
+                                        <div className="abtChairman-name">Vellayan Subbiah</div>
+                                        <div className="abtDesignation">Chairman</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="secondDiv leaderFlexMob">
+                                <img
+                                    src={amarImg}
+                                    alt="Leader 2"
+                                    className="leader-img"
+                                />
+                                <div className='bgwhiteBox'>
+                                    <h3 className="abtMsgChairman">Message from the Vice Chairman</h3>
+                                    <p className="abtPara-text">With a legacy spanning more than 86 years, we stand as a significant player in
+                                        the industrial machinery sector, dedicated to championing innovation and excellence.
+                                        Our diverse portfolio, with Industrial Motors, Drives & Automations, Railway Products,
+                                        Commercial Products, Transformers, and Switchgears, underscore our commitment to pioneering
+                                        solutions that drive India's growth story forward.At CG, we are steadfast in our dedication
+                                        to Environmental, Social, and Governance (ESG) principles and we continually strive for
+                                        sustainable practices and positive societal impact. Our commitment to Corporate Social
+                                        Responsibility (CSR) is integral to our operations, reflecting our broader mission to
+                                        contribute meaningfully to the communities we serve. Discover more about how we are
+                                        shaping a brighter future not only for India but also beyond.
+                                    </p>
+                                    <div className="leaderNameWrap">
+                                        <div className="abtChairman-name">Amar Kaul</div>
+                                        <div className="abtDesignation">Managing Director & CEO,
+                                            CG Power and Industrial Solutions Limited</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
 
             {/* Timeline Slider */}
             <section className="journey-section">
@@ -215,15 +357,14 @@ const About = () => {
                                 CG's journey is one of innovation, expansion, and transformation.</p>
                         </div>
                     </div>
-
-                    <TimelineSlider />
                 </div>
+                <TimelineSlider />
             </section>
 
             {/* Financial Stats */}
-            <section class="financial-stats-section">
+            <section class="financial-stats-section finaSectionBg">
                 <div class="cust-container">
-                    <h2 class="abtFinTitle">
+                    {/* <h2 class="abtFinTitle">
                         <span class="outlined-text">Impact</span> <span class="abtSpanTitle">numbers</span>
                     </h2>
 
@@ -264,6 +405,71 @@ const About = () => {
                             <p class="small">ROCE</p>
                             <p class="big-number">33%</p>
                         </div>
+                    </div> */}
+                    <div className="fBlockFin">
+                        <div className="fLeftBlock">
+                            <h2 class="abtFinTitle">
+                                <span class="outlined-text">Impact</span><span class="abtSpanTitle">numbers</span>
+                            </h2>
+                        </div>
+                        <div className="fRightBlock">
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>Standalone Revenue</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>₹9,329 Cr <span>($1.06B)</span></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>Consolidated Revenue</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>₹9,909 Cr <span>($1.13B)</span></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>Unexecuted Order Book</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>₹10,631 Cr <span>($1.21B)</span></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>Order Intake Reached</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>₹13,526 Cr <span>($1.6B)</span></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>(PBT) Growth</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>17% <img src={upArrow} alt="" /></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>Revenue Growth YoY</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>23% <img src={upArrow} alt="" /></p>
+                                </div>
+                            </div>
+                            <div className="ftextPriceBlock">
+                                <div className="fTextBlock">
+                                    <p>ROCE</p>
+                                </div>
+                                <div className="fPriceBlock">
+                                    <p>33%</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -286,23 +492,27 @@ const About = () => {
                             modules={[Autoplay, Pagination, Navigation]}
                             effect="coverflow"
                             centeredSlides={true}
-                            initialSlide={2.2}
-                            pagination={{ clickable: true }}
+                            initialSlide={0}
+                            pagination={{
+                                clickable: true,
+                                el: ".swiper-custom-pagination",
+                            }}
                             loop={true}
+                            loopedSlides={3}
                             slidesPerView={1}
                             coverflowEffect={{
                                 rotate: 0,
-                                stretch: 80,
-                                depth: 100,
-                                modifier: 1,
+                                stretch: -100,
+                                depth: 200,
+                                modifier: 1.2,
                                 slideShadows: false,
                             }}
-                            direction="horizontal"
+                            // direction="horizontal"
                             grabCursor={false}
                             spaceBetween={10}
                             navigation={{
-                                nextEl: ".swiper-button-next",
-                                prevEl: ".swiper-button-prev",
+                                nextEl: ".swiper-custom-next",
+                                prevEl: ".swiper-custom-prev",
                             }}
                             breakpoints={{
                                 768: {
@@ -316,11 +526,11 @@ const About = () => {
                                     },
                                 },
                                 1024: {
-                                    slidesPerView: 2.2,
+                                    slidesPerView: 2.1,
                                     spaceBetween: 40,
                                 },
                                 1280: {
-                                    slidesPerView: 2.2,
+                                    slidesPerView: 2.1,
                                     spaceBetween: 50,
                                 },
                             }}

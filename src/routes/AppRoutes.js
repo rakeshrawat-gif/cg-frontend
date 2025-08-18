@@ -18,6 +18,7 @@ import CgInTheNews from '../pages/CgInTheNews';
 import ConsumerDurable from '../pages/ConsumerDurable';
 import ProductDisplay from '../pages/ProductDisplay';
 import Test from '../pages/test';
+import ProductListing from "../pages/ProductListing";
 
 const AppRoutes = () => {
   return (
@@ -34,14 +35,15 @@ const AppRoutes = () => {
         <Route path="/esg2" element={<ESGRating />} />
         <Route path="/investor" element={<InvestorHub />} />
         <Route path="/sector-we-serve" element={<SectorWeServe />} />
-      <Route path="/switchgear" element={<SwitchGear />} />
-      <Route path="/about-our-purpose-and-value" element={<AboutOurPurposeAndValue />} />
-      <Route path="/cg-in-the-news" element={<CgInTheNews />} />
-      <Route path="/consumer-durable" element={<ConsumerDurable />} />
-      <Route path="/product-detail" element={<ProductDisplay />} />
-      <Route path="/test" element={<Test />} />
-      
-    </Routes>
+        <Route path="/switchgear" element={<SwitchGear />} />
+        <Route path="/about-our-purpose-and-value" element={<AboutOurPurposeAndValue />} />
+        <Route path="/cg-in-the-news" element={<CgInTheNews />} />
+        <Route path="/consumer-durable" element={<ConsumerDurable />} />
+        <Route path="/product-detail" element={<ProductDisplay />} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/product_listing" element={<ProductListing />} />
+
+      </Routes>
     </>
   );
 };

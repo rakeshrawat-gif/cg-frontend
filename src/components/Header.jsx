@@ -40,206 +40,206 @@ const Header = () => {
   const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
   const [activeAboutSubmenu, setActiveAboutSubmenu] = useState(null);
 
-  const location = useLocation();
+    const location = useLocation();
 
-  useEffect(() => {
-    const adjustDropdowns = () => {
-      const dropdowns = document.querySelectorAll(".single-dropdown-menu");
-      dropdowns.forEach((menu) => {
-        const rect = menu.getBoundingClientRect();
-        if (rect.right > window.innerWidth) {
-          menu.style.left = "auto";
-          menu.style.right = "0";
+    useEffect(() => {
+        const adjustDropdowns = () => {
+            const dropdowns = document.querySelectorAll(".single-dropdown-menu");
+            dropdowns.forEach((menu) => {
+                const rect = menu.getBoundingClientRect();
+                if (rect.right > window.innerWidth) {
+                    menu.style.left = "auto";
+                    menu.style.right = "0";
+                }
+            });
+        };
+
+        window.addEventListener("resize", adjustDropdowns);
+        adjustDropdowns();
+
+        const toggleMobileNav = () => {
+            setIsMobileNavOpen(prevState => !prevState);
+            if (!isMobileNavOpen) setIsSearchBarOpen(false);
+        };
+
+        return () => {
+            window.removeEventListener("resize", adjustDropdowns);
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+            if (window.innerWidth < 768) {
+                setActiveSolutionCategory(null);
+                setActiveSolutionSubCategory(null);
+                setActiveSingleDropdown(null);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (headerRef.current) {
+            const height = headerRef.current.offsetHeight;
+            setHeaderDynamicHeight(height);
         }
-      });
+    }, [isMobileNavOpen, isDesktop]);
+
+    const toggleSearchBar = (e) => {
+        e.preventDefault();
+        setIsSearchBarOpen((prevState) => !prevState);
     };
 
-    window.addEventListener("resize", adjustDropdowns);
-    adjustDropdowns();
-   
     const toggleMobileNav = () => {
-        setIsMobileNavOpen(prevState => !prevState);
+        setIsMobileNavOpen((prevState) => !prevState);
         if (!isMobileNavOpen) setIsSearchBarOpen(false);
     };
 
-    return () => {
-      window.removeEventListener("resize", adjustDropdowns);
+    useEffect(() => {
+        setIsMobileNavOpen(false);
+        setIsSearchBarOpen(false);
+    }, [location]);
+
+    const handleDropdownHover = (dropdownName, isHovering) => {
+        if (!isDesktop) return;
+        setActiveSingleDropdown(isHovering ? dropdownName : null);
     };
-  }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-      if (window.innerWidth < 768) {
-        setActiveSolutionCategory(null);
-        setActiveSolutionSubCategory(null);
-        setActiveSingleDropdown(null);
-      }
+    const handleMegaMenuCategoryHover = (categoryId) => {
+        if (!isDesktop) return;
+        setActiveSolutionCategory(categoryId);
+        const firstSubCategoryElement = document
+            .getElementById(categoryId)
+            ?.querySelector(".submenu-item");
+        if (firstSubCategoryElement) {
+            const target = firstSubCategoryElement.getAttribute("data-target");
+            setActiveSolutionSubCategory(target);
+        } else {
+            setActiveSolutionSubCategory(null);
+        }
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
-  useEffect(() => {
-    if (headerRef.current) {
-      const height = headerRef.current.offsetHeight;
-      setHeaderDynamicHeight(height);
-    }
-  }, [isMobileNavOpen, isDesktop]);
+    const handleMegaMenuSubCategoryHover = (subCategoryId) => {
+        if (!isDesktop) return;
+        setActiveSolutionSubCategory(subCategoryId);
+    };
 
-  const toggleSearchBar = (e) => {
-    e.preventDefault();
-    setIsSearchBarOpen((prevState) => !prevState);
-  };
+    const toggleMobileAccordion = (id) => {
+        setOpenMobileAccordions((prevState) => ({
+            ...prevState,
+            [id]: !prevState[id],
+        }));
+    };
 
-  const toggleMobileNav = () => {
-    setIsMobileNavOpen((prevState) => !prevState);
-    if (!isMobileNavOpen) setIsSearchBarOpen(false);
-  };
+    useEffect(() => {
+        document
+            .querySelectorAll(".menu-column .submenu-item .fa-chevron-right")
+            .forEach((el) => el.remove());
 
-  useEffect(() => {
-    setIsMobileNavOpen(false);
-    setIsSearchBarOpen(false);
-  }, [location]);
-
-  const handleDropdownHover = (dropdownName, isHovering) => {
-    if (!isDesktop) return;
-    setActiveSingleDropdown(isHovering ? dropdownName : null);
-  };
-
-  const handleMegaMenuCategoryHover = (categoryId) => {
-    if (!isDesktop) return;
-    setActiveSolutionCategory(categoryId);
-    const firstSubCategoryElement = document
-      .getElementById(categoryId)
-      ?.querySelector(".submenu-item");
-    if (firstSubCategoryElement) {
-      const target = firstSubCategoryElement.getAttribute("data-target");
-      setActiveSolutionSubCategory(target);
-    } else {
-      setActiveSolutionSubCategory(null);
-    }
-  };
-
-  const handleMegaMenuSubCategoryHover = (subCategoryId) => {
-    if (!isDesktop) return;
-    setActiveSolutionSubCategory(subCategoryId);
-  };
-
-  const toggleMobileAccordion = (id) => {
-    setOpenMobileAccordions((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }));
-  };
-
-  useEffect(() => {
-    document
-      .querySelectorAll(".menu-column .submenu-item .fa-chevron-right")
-      .forEach((el) => el.remove());
-
-    if (isDesktop) {
-      document
-        .querySelectorAll(".menu-column:first-child .submenu-item")
-        .forEach((item) => {
-          const targetId = item.getAttribute("data-target");
-          if (
-            targetId &&
+        if (isDesktop) {
             document
-              .getElementById(targetId)
-              ?.classList.contains("level2-content")
-          ) {
-            const arrow = document.createElement("i");
-            arrow.className = "fas fa-chevron-right ml-auto";
-            item.appendChild(arrow);
-          }
-        });
+                .querySelectorAll(".menu-column:first-child .submenu-item")
+                .forEach((item) => {
+                    const targetId = item.getAttribute("data-target");
+                    if (
+                        targetId &&
+                        document
+                            .getElementById(targetId)
+                            ?.classList.contains("level2-content")
+                    ) {
+                        const arrow = document.createElement("i");
+                        arrow.className = "fas fa-chevron-right ml-auto";
+                        item.appendChild(arrow);
+                    }
+                });
 
-      document
-        .querySelectorAll(".menu-column:nth-child(2) .submenu-item")
-        .forEach((item) => {
-          const targetId = item.getAttribute("data-target");
-          if (
-            targetId &&
             document
-              .getElementById(targetId)
-              ?.classList.contains("level3-content")
-          ) {
-            const arrow = document.createElement("i");
-            arrow.className = "fas fa-chevron-right ml-auto";
-            item.appendChild(arrow);
-          }
-        });
-    }
-  }, [isDesktop, activeSolutionCategory, activeSolutionSubCategory]);
-  useEffect(() => {
-    if (!isDesktop) {
-      document
-        .querySelectorAll(".mobile-accordion-menu .accordion-toggle")
-        .forEach((toggle) => {
-          const nextContent = toggle.nextElementSibling;
-          if (
-            nextContent &&
-            nextContent.classList.contains("accordion-content")
-          ) {
-            toggle.classList.add("has-content");
-          } else {
-            toggle.classList.remove("has-content");
-          }
-        });
-    }
-  }, [isDesktop, openMobileAccordions]);
-
-  const handleMobileMultiLevelToggle = (e) => {
-    e.preventDefault();
-    const parentLi = e.currentTarget.parentElement;
-    parentLi.classList.toggle("open");
-    const submenu = parentLi.querySelector(".submenu");
-    if (submenu) {
-      submenu.style.display =
-        submenu.style.display === "block" ? "none" : "block";
-
-      Array.from(parentLi.parentNode.children).forEach((sibling) => {
-        if (
-          sibling !== parentLi &&
-          sibling.classList.contains("has-children")
-        ) {
-          sibling.classList.remove("open");
-          const siblingSubmenu = sibling.querySelector(".submenu");
-          if (siblingSubmenu) {
-            siblingSubmenu.style.display = "none";
-          }
+                .querySelectorAll(".menu-column:nth-child(2) .submenu-item")
+                .forEach((item) => {
+                    const targetId = item.getAttribute("data-target");
+                    if (
+                        targetId &&
+                        document
+                            .getElementById(targetId)
+                            ?.classList.contains("level3-content")
+                    ) {
+                        const arrow = document.createElement("i");
+                        arrow.className = "fas fa-chevron-right ml-auto";
+                        item.appendChild(arrow);
+                    }
+                });
         }
-      });
-    }
-  };
-
-  const handleThirdLevelToggle = (e) => {
-    const item = e.currentTarget.parentElement;
-    const submenu = item.querySelector(".thlev-dropdown-submenu");
-
-    if (submenu) {
-      e.preventDefault();
-      item.classList.toggle("active");
-      submenu.style.display =
-        submenu.style.display === "block" ? "none" : "block";
-
-      Array.from(item.parentNode.children).forEach((sibling) => {
-        if (
-          sibling !== item &&
-          sibling.classList.contains("thirdlevel-menu-item")
-        ) {
-          sibling.classList.remove("active");
-          const siblingSubmenu = sibling.querySelector(
-            ".thlev-dropdown-submenu"
-          );
-          if (siblingSubmenu) {
-            siblingSubmenu.style.display = "none";
-          }
+    }, [isDesktop, activeSolutionCategory, activeSolutionSubCategory]);
+    useEffect(() => {
+        if (!isDesktop) {
+            document
+                .querySelectorAll(".mobile-accordion-menu .accordion-toggle")
+                .forEach((toggle) => {
+                    const nextContent = toggle.nextElementSibling;
+                    if (
+                        nextContent &&
+                        nextContent.classList.contains("accordion-content")
+                    ) {
+                        toggle.classList.add("has-content");
+                    } else {
+                        toggle.classList.remove("has-content");
+                    }
+                });
         }
-      });
-    }
-  };
+    }, [isDesktop, openMobileAccordions]);
+
+    const handleMobileMultiLevelToggle = (e) => {
+        e.preventDefault();
+        const parentLi = e.currentTarget.parentElement;
+        parentLi.classList.toggle("open");
+        const submenu = parentLi.querySelector(".submenu");
+        if (submenu) {
+            submenu.style.display =
+                submenu.style.display === "block" ? "none" : "block";
+
+            Array.from(parentLi.parentNode.children).forEach((sibling) => {
+                if (
+                    sibling !== parentLi &&
+                    sibling.classList.contains("has-children")
+                ) {
+                    sibling.classList.remove("open");
+                    const siblingSubmenu = sibling.querySelector(".submenu");
+                    if (siblingSubmenu) {
+                        siblingSubmenu.style.display = "none";
+                    }
+                }
+            });
+        }
+    };
+
+    const handleThirdLevelToggle = (e) => {
+        const item = e.currentTarget.parentElement;
+        const submenu = item.querySelector(".thlev-dropdown-submenu");
+
+        if (submenu) {
+            e.preventDefault();
+            item.classList.toggle("active");
+            submenu.style.display =
+                submenu.style.display === "block" ? "none" : "block";
+
+            Array.from(item.parentNode.children).forEach((sibling) => {
+                if (
+                    sibling !== item &&
+                    sibling.classList.contains("thirdlevel-menu-item")
+                ) {
+                    sibling.classList.remove("active");
+                    const siblingSubmenu = sibling.querySelector(
+                        ".thlev-dropdown-submenu"
+                    );
+                    if (siblingSubmenu) {
+                        siblingSubmenu.style.display = "none";
+                    }
+                }
+            });
+        }
+    };
 
 
     // const handleMobileMultiLevelToggle = (e) => {
@@ -284,32 +284,32 @@ const Header = () => {
     // };
 
 
-    
-    
+
+
 
     return (
-    <header id="custhead" ref={headerRef} className={isMobileNavOpen ? 'header-mobile-expanded' : ''}>
-        <div className="cust-container">
-            {/* Desktop Header */}
-            <nav className="navbar navbar-expand-xl navbar-light" id="desktopheader">
-                <div className="head-logo">
-                    <a className="navbar-brand" href="/">
-                        <img src={headerLogo} alt="Company Logo" />
-                    </a>
-                    <div className="head-mob-menusrch-icn">
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-target="#navbarNav"
-                            aria-controls="navbarNav"
-                            aria-expanded={isMobileNavOpen ? 'true' : 'false'}
-                            aria-label="Toggle navigation"
-                            onClick={toggleMobileNav}
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+        <header id="custhead" ref={headerRef} className={isMobileNavOpen ? 'header-mobile-expanded' : ''}>
+            <div className="cust-container">
+                {/* Desktop Header */}
+                <nav className="navbar navbar-expand-xl navbar-light" id="desktopheader">
+                    <div className="head-logo">
+                        <a className="navbar-brand" href="/">
+                            <img src={headerLogo} alt="Company Logo" />
+                        </a>
+                        <div className="head-mob-menusrch-icn">
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-target="#navbarNav"
+                                aria-controls="navbarNav"
+                                aria-expanded={isMobileNavOpen ? 'true' : 'false'}
+                                aria-label="Toggle navigation"
+                                onClick={toggleMobileNav}
+                            >
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </div>
-                </div>
 
                 <div className="head-menuitems">
                     <div className={`collapse navbar-collapse justify-content-end ${isMobileNavOpen ? 'show' : ''}`} id="navbarNav">
@@ -1127,16 +1127,16 @@ const Header = () => {
                                 </div>
                             </li>
 
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Consumer Durables
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Investors
-                                </a>
-                            </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Consumer Durables
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                        Investors
+                                    </a>
+                                </li>
 
                             {/* Careers Dropdown */}
                             <li
@@ -1278,51 +1278,51 @@ const Header = () => {
                                 </div>
                             </li>
 
-                            {/* Search */}
-                            <li className="nav-item desktopsrchtwh">
-                                <a className="nav-link" href="#" id="desk-searchToggle" onClick={toggleSearchBar}>
-                                    <span>
-                                        <i className="fas fa-search"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {/* Contact */}
-                            <li className="nav-item">
-                                <a className="nav-link" href="/worldwide_contact">
-                                    <span className="curvebtn contactheadbtn">Contact Us</span>
-                                </a>
-                            </li>
-                        </ul>
+                                {/* Search */}
+                                <li className="nav-item desktopsrchtwh">
+                                    <a className="nav-link" href="#" id="desk-searchToggle" onClick={toggleSearchBar}>
+                                        <span>
+                                            <i className="fas fa-search"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                {/* Contact */}
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/worldwide_contact">
+                                        <span className="curvebtn contactheadbtn">Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
 
-            {/* Mobile Header */}
-            <nav className="navbar navbar-expand-xl navbar-light" id="mobileheader">
-                <div className="head-logo">
-                    <a className="navbar-brand" href="/">
-                        <img src={headerLogo} alt="" />
-                    </a>
-                    <div className="head-mob-menusrch-icn">
-                        <a className="mobsrchtwh" href="#" id="mob-searchToggle" onClick={toggleSearchBar}>
-                            <span>
-                                <i className="fas fa-search"></i>
-                            </span>
+                {/* Mobile Header */}
+                <nav className="navbar navbar-expand-xl navbar-light" id="mobileheader">
+                    <div className="head-logo">
+                        <a className="navbar-brand" href="/">
+                            <img src={headerLogo} alt="" />
                         </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-target="#mainNav"
-                            id="menuToggle"
-                            aria-controls="mainNav"
-                            aria-expanded={isMobileNavOpen ? 'true' : 'false'}
-                            aria-label="Toggle navigation"
-                            onClick={toggleMobileNav}
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+                        <div className="head-mob-menusrch-icn">
+                            <a className="mobsrchtwh" href="#" id="mob-searchToggle" onClick={toggleSearchBar}>
+                                <span>
+                                    <i className="fas fa-search"></i>
+                                </span>
+                            </a>
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-target="#mainNav"
+                                id="menuToggle"
+                                aria-controls="mainNav"
+                                aria-expanded={isMobileNavOpen ? 'true' : 'false'}
+                                aria-label="Toggle navigation"
+                                onClick={toggleMobileNav}
+                            >
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
                     </div>
-                </div>
 
                 <div className={`collapse navbar-collapse mobile-menu ${isMobileNavOpen ? 'show' : ''}`} id="mainNav">
                     <ul>
@@ -1401,19 +1401,19 @@ const Header = () => {
                 </div>
             </nav>
 
-            {/* Search Bar */}
-            <div id="searchBarContainer" style={{ display: isSearchBarOpen ? 'block' : 'none',}}>
-                <div className="cust-container">
-                    <form className="form-inline">
-                        <input name="search" className="form-control mr-2" type="search" placeholder="Search..." aria-label="Search" />
-                        <button className="headsearchbtn curvebtn" type="submit">
-                            Search
-                        </button>
-                    </form>
+                {/* Search Bar */}
+                <div id="searchBarContainer" style={{ display: isSearchBarOpen ? 'block' : 'none', }}>
+                    <div className="cust-container">
+                        <form className="form-inline">
+                            <input name="search" className="form-control mr-2" type="search" placeholder="Search..." aria-label="Search" />
+                            <button className="headsearchbtn curvebtn" type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
     );
 };
 
