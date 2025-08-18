@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import bannerImg from "../components/assets/images/leadership/leadership.png";
 import boardIcons from "../components/assets/images/leadership/bordDirector.svg";
 import leaderIcons from "../components/assets/images/leadership/leadershipTeam.svg";
+import diagolanArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
 import amarImg from "../components/assets/images/leadership/amar-kaul.jpg";
 import sushilImg from "../components/assets/images/leadership/sushil.png";
 import maraisImg from "../components/assets/images/leadership/Marais-Nel.png";
@@ -137,6 +138,30 @@ const sampleData = {
 
 const Leadership = () => {
     const [selectedTab, setSelectedTab] = useState("Board of Directors");
+    const [visibleCounts, setVisibleCounts] = useState({
+        "Board of Directors": 6,
+        "Leadership Team": 6
+    });
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    const handleLoadMore = () => {
+        setVisibleCounts(prev => ({
+            ...prev,
+            [selectedTab]: prev[selectedTab] + 6
+        }));
+    };
+
+    const leadersData = sampleData[selectedTab] || [];
+    const displayedLeaders = isMobile
+        ? leadersData.slice(0, visibleCounts[selectedTab])
+        : leadersData;
 
     return (
         <div>
@@ -186,7 +211,7 @@ const Leadership = () => {
 
                     {/* Grid Content */}
                     <div className="tabcontent">
-                        <div className="custom-flex-wrapper mt-10">
+                        {/* <div className="custom-flex-wrapper mt-10">
                             {sampleData[selectedTab]?.map((person, idx) => (
                                 <div
                                     key={idx}
@@ -195,17 +220,17 @@ const Leadership = () => {
                                     <div
                                         className="image imgHover"
                                         style={{
-                                            height: "420px",
-                                            width: "100%",
-                                            maxWidth: "380px",
+                                            // height: "420px",
+                                            // width: "100%",
+                                            // maxWidth: "380px",
                                             backgroundImage: `url(${person.image_url})`,
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center",
-                                            margin: "0 auto 12px",
-                                            borderRadius: "20px"
+                                            // backgroundSize: "cover",
+                                            // backgroundPosition: "center",
+                                            // margin: "0 auto 12px",
+                                            // borderRadius: "20px"
                                         }}
                                     ></div>
-                                    <h4 className="text-[#005CAB] font-[400] text-[16px] leading-[120%] tracking-[0.5px] font-helvetica">
+                                    <h4 className=" text-[#005CAB] font-[400] text-[16px] leading-[120%] tracking-[0.5px] font-helvetica">
                                         {person.name}
                                     </h4>
                                     <p className="text-[#4C4F54] font-[400] text-[16px] leading-[120%] tracking-[0.5px] font-helvetica">
@@ -213,7 +238,36 @@ const Leadership = () => {
                                     </p>
                                 </div>
                             ))}
+                        </div> */}
+
+                        <div className="custom-flex-wrapper mt-10">
+                            {displayedLeaders.map((person, idx) => (
+                                <div key={idx} className="box text-center leader-box">
+                                    <div
+                                        className="image imgHover leader-image"
+                                        style={{ backgroundImage: `url(${person.image_url})` }}
+                                    ></div>
+                                    <h4 className="leader-name">
+                                        {person.name}
+                                    </h4>
+                                    <p className="leader-designation">
+                                        {person.designation}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
+
+                        {/* Load More for mobile */}
+                        {isMobile && visibleCounts[selectedTab] < leadersData.length && (
+                            <div className="text-center mt-6">
+                                <button
+                                    onClick={handleLoadMore}
+                                    className="btn loadMoreLeader"
+                                >
+                                    Load More <img src={diagolanArrow} alt="" />
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

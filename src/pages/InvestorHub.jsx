@@ -137,6 +137,11 @@ const InvestorHub = () => {
   const handleSelect = (option) => {
     setSelected(option);
     setIsOpen(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
 
   useEffect(() => {
@@ -199,9 +204,8 @@ const InvestorHub = () => {
                 {options.map((option, idx) => (
                   <li
                     key={idx}
-                    className={`dropdown-item-sm ${
-                      selected === option ? "selected" : ""
-                    }`}
+                    className={`dropdown-item-sm ${selected === option ? "selected" : ""
+                      }`}
                     onClick={() => handleSelect(option)}
                   >
                     {option}
