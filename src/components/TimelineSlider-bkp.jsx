@@ -9,8 +9,6 @@ import aboutSlide1 from '../components/assets/images/about/abt-slider-journey-1.
 import aboutSlide2 from '../components/assets/images/about/journey-slider-about2.webp';
 import WaveSvg1 from '../components/assets/images/about/wave-svg1.svg';
 import WaveSvg2 from '../components/assets/images/about/wave-svg2.svg';
-import mobBlueWave from '../components/assets/images/about/mobBlueWave.svg';
-import mobGreenWave from '../components/assets/images/about/mobGreenWave.svg';
 // import "./TimelineSlider.css";
 
 const contentData = [
@@ -52,8 +50,8 @@ const contentData = [
 const TimelineSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const swiperRef = useRef(null);
-    // const greenPathRef = useRef(null);
-    // const bluePathRef = useRef(null);
+    const greenPathRef = useRef(null);
+    const bluePathRef = useRef(null);
     const yearRef = useRef(null);
 
     const updateYear = (index) => {
@@ -65,7 +63,7 @@ const TimelineSlider = () => {
     return (
         <section className="timeline-section">
             <div className="year-bg" ref={yearRef}>{contentData[0].year}</div>
-            <div className="swiper-container-wrapper desktopJourneyView">
+            <div className="swiper-container-wrapper">
 
                 <Swiper
                     ref={swiperRef}
@@ -109,28 +107,6 @@ const TimelineSlider = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-                {/* ✅ Overlay Dots on Waves */}
-                <div className="timeline-dots-overlay">
-                    {contentData.map((item, idx) => {
-                        const isActive = idx === activeIndex;
-                        const isNext = idx === activeIndex + 1 || idx === activeIndex + 2;
-                        const isPrev = idx === activeIndex - 1 || idx === activeIndex - 2;
-
-                        return (
-                            <div
-                                key={idx}
-                                className={`timeline-dot ${item.wave} 
-                                ${isActive ? "active" : ""} 
-                                ${isNext || isPrev ? "nearby" : "hidden"}`}
-                                style={{ left: `${50 + (idx - activeIndex) * 120}px` }} // spacing left/right
-                            >
-                                {item.year}
-                            </div>
-                        );
-                    })}
-                </div>
-
                 <div className="wave-wrapper fixed-wave">
                     <img
                         src={WaveSvg1}
@@ -148,65 +124,7 @@ const TimelineSlider = () => {
                     <div className="swiper-button-next"><FaChevronRight /></div>
                 </div>
             </div>
-
-            <div className="swiper-container-wrapper mobileJourneyView">
-                <Swiper
-                    className="timeline-swiper mobileView"
-                    modules={[Navigation]}
-                    slidesPerView={1}
-                    navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
-                    onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                >
-                    {contentData.map((item, idx) => (
-                        <SwiperSlide key={idx}>
-                            <div className="timeline-slide mobile-layout">
-                                <div className="mobile-top">
-                                    <div className="timeline-center">
-                                        <div className="connector-line" style={{ background: item.color }}></div>
-                                    </div>
-                                    <div className="timeline-right">
-                                        <h2>{item.title}</h2>
-                                        <p>{item.desc}</p>
-                                        <img src={item.img} alt={item.year} className="timeline-img" />
-                                    </div>
-                                </div>
-
-                                {/* Waves & dots below */}
-                                <div className="wave-wrapper fixed-wave">
-                                    <img src={mobGreenWave} alt="Green Wave" className="wave-image green-wave" />
-                                    <img src={mobBlueWave} alt="Blue Wave" className="wave-image blue-wave" />
-                                </div>
-
-                                <div className="timeline-dots-overlay">
-                                    {contentData.map((dot, i) => {
-                                        const isActive = i === activeIndex;
-                                        const isNext = i === activeIndex + 1;
-                                        const isPrev = i === activeIndex - 1;
-                                        return (
-                                            <div
-                                                key={i}
-                                                className={`timeline-dot ${dot.wave} 
-                                                ${isActive ? "active" : ""} 
-                                                ${isNext || isPrev ? "nearby" : "hidden"}`}
-                                                style={{ left: `${50 + (i - activeIndex) * 120}px` }}
-                                            >
-                                                {dot.year}
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-
-                {/* Mobile nav arrows */}
-                <div className="swiper-navigation center-aligned YearsNav">
-                    <div className="swiper-button-prev"><FaChevronLeft /></div>
-                    <div className="swiper-button-next"><FaChevronRight /></div>
-                </div>
-            </div>
-        </section >
+        </section>
     );
 };
 

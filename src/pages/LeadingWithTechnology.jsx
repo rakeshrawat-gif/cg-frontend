@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay, FreeMode } from 'swiper/modules';
 import bannerImg from "../components/assets/images/technologyR&D/R&D1.png";
 import trainImg from "../components/assets/images/technologyR&D/train.png";
 import machineImg from "../components/assets/images/technologyR&D/machine.png";
+
+import caseStudySlide1 from '../components/assets/images/technologyR&D/caseStudy-1.png';
+import caseStudySlide2 from '../components/assets/images/technologyR&D/caseStudy-2.png';
+import caseArrow from '../components/assets/images/technologyR&D/caseArrow.svg';
+import greenArrow from '../components/assets/images/technologyR&D/greenArrow.svg';
+
+import leftArrow from '../components/assets/images/leftarow.svg';
+import rightArrow from '../components/assets/images/rightarow.svg';
+
 import InnovationGrid from "./InnovationGrid";
 
 const LeadingWithTechnology = () => {
@@ -65,7 +76,7 @@ const LeadingWithTechnology = () => {
           {/* Dynamic Sections */}
           {techSections.map((section, idx) => (
             <div
-              className={`tech-row ${section.reverse ? "reverse" : ""}`}
+              className={`tech-row ${section.reverse ? "reverse" : ""} row-${idx}`}
               key={idx}
             >
               <div className="tech-image">
@@ -80,6 +91,145 @@ const LeadingWithTechnology = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      {/* Solutions for Business Section */}
+      <section className="solutionforbus-sec comntbmargn techSection">
+        <div className="solutionforbus-navbar mobile caseStudy-navbar">
+          <div className="caseStudyTit">
+            <div className='titleCase'>
+              <h2>case <img src={caseArrow} alt="" /></h2>
+              <h3>studies</h3>
+            </div>
+          </div>
+        </div>
+        <div className="swiper-item-slider">
+          <Swiper
+            modules={[Autoplay, FreeMode, Navigation]}
+            slidesPerView="auto"
+            loop={true}
+            freeMode={true}
+            freeModeMomentum={false}
+            freeModeMomentumRatio={0}
+            spaceBetween={20}
+            centeredSlides={false}
+            speed={3000}
+            // autoplay={{
+            //   delay: 200,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }}
+
+            navigation={{
+              nextEl: '.solutionforbus-sec .swiper-button-next',
+              prevEl: '.solutionforbus-sec .swiper-button-prev',
+            }}
+
+            breakpoints={{
+              0: { slidesPerView: 1.5 },
+              676: { slidesPerView: 2.5 },
+              991: { slidesPerView: 2.5 },
+              992: { slidesPerView: 2.5 },
+            }}
+            className="caseStudySwiper"
+          // className="solutionforbusswiper caseStudySwiper"
+          >
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide1} alt="Krimpenerwaard pumping station" />
+                  <div className='caseStudyDesc'>
+                    <h3>Krimpenerwaard pumping station</h3>
+                    <p>The Krimpenerwaard pumping station
+                      contributes to dry feet and sufficient ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide2} alt="GMB BioEnergy" />
+                  <div className='caseStudyDesc'>
+                    <h3>GMB BioEnergy</h3>
+                    <p>GMB BioEnergy is a company with leading expertise
+                      and sustainable solutions in the ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide1} alt="GMB BioEnergy" />
+                  <div className='caseStudyDesc'>
+                    <h3>Krimpenerwaard pumping station</h3>
+                    <p>The Krimpenerwaard pumping station
+                      contributes to dry feet and sufficient ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide2} alt="GMB BioEnergy" />
+                  <div className='caseStudyDesc'>
+                    <h3>GMB BioEnergy</h3>
+                    <p>GMB BioEnergy is a company with leading expertise
+                      and sustainable solutions in the ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide1} alt="Krimpenerwaard pumping station" />
+                  <div className='caseStudyDesc'>
+                    <h3>Krimpenerwaard pumping station</h3>
+                    <p>The Krimpenerwaard pumping station
+                      contributes to dry feet and sufficient ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="casestudy-sliditem">
+                <div className="soluitn-img caseStudy-img">
+                  <img src={caseStudySlide2} alt="Krimpenerwaard pumping station" />
+                  <div className='caseStudyDesc'>
+                    <h3>GMB BioEnergy</h3>
+                    <p>GMB BioEnergy is a company with leading expertise
+                      and sustainable solutions in the ...</p>
+                  </div>
+                  <img src={greenArrow} alt="Arrow" className="hover-arrow" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+          </Swiper>
+          <div className="solutionforbus-navbar caseStudy-navbar rmbmob">
+            <div className="comon-head-inner desktop">
+              <h2 class="desktopView abtFinTitle">
+                <span class="caseOutlinedText">case <img src={caseArrow} alt="" /></span> <span class="caseSpanTitle">studies</span>
+              </h2>
+              <h2 class="mobileView abtFinTitle">
+                <span class="caseOutlinedText">case <img src={caseArrow} alt="" /></span> <span class="caseSpanTitle">studies</span>
+              </h2>
+            </div>
+            <div className="switchgear-swiper-nav">
+              <div className="swiper-button-prev"><img src={leftArrow} alt="Previous" /></div>
+              <div className="swiper-button-next"><img src={rightArrow} alt="Next" /></div>
+            </div>
+          </div>
         </div>
       </section>
 

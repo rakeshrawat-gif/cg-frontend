@@ -267,11 +267,11 @@ const Homepage = () => {
               spaceBetween={20}
               centeredSlides={false}
               speed={3000}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
+              // autoplay={{
+              //   delay: 200,
+              //   disableOnInteraction: false,
+              //   pauseOnMouseEnter: true,
+              // }}
               
               navigation={{
                 nextEl: '.solutionforbus-sec .swiper-button-next',

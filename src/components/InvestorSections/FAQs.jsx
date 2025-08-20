@@ -177,136 +177,81 @@ const FAQs = () => {
 
   return (
     <div className="cust-container">
-      {/* <div className="faq-tab-wrapper">
-        <button className="scroll-btn left" onClick={() => scrollTabs("left")}>
-          <img src={leftArrow} alt="Left" />
-        </button>
-        <div className="faq-tabs">
-          {tabs.map((tab) => (
+      <div className="faqSect">
+
+
+        <div className="faq-tab-wrapper">
+          {!isMobile && (
             <button
-              key={tab}
-              className={`faq-tab ${tab === activeTab ? "active" : ""}`}
-              onClick={() => {
-                setActiveTab(tab);
-                setOpenIndex(null);
-              }}
+              className={`scroll-btn left ${canScrollLeft ? "active" : "inactive"}`}
+              onClick={() => scrollTabs("left")}
+              disabled={!canScrollLeft}
             >
-              {tab}
+              <FaChevronLeft size={20} />
             </button>
-          ))}
-        </div>
-        <button
-          className="scroll-btn right"
-          onClick={() => scrollTabs("right")}
-        >
-          <img src={rightArrow} alt="Right" />
-        </button>
-      </div> */}
-      {/* <div className="faq-tab-wrapper">
-        {!isMobile && (
-          <button
-            className="scroll-btn left"
-            onClick={() => scrollTabs("left")}
-          >
-            <img src={leftArrow} alt="Left" />
-          </button>
-        )}
+          )}
 
-        <div className="faq-tabs" ref={tabRef}>
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`faq-tab ${tab === activeTab ? "active" : ""}`}
-              onClick={() => {
-                setActiveTab(tab);
-                setOpenIndex(null);
-              }}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        {!isMobile && (
-          <button
-            className="scroll-btn right"
-            onClick={() => scrollTabs("right")}
-          >
-            <img src={rightArrow} alt="Right" />
-          </button>
-        )}
-      </div> */}
-      <div className="faq-tab-wrapper">
-        {!isMobile && (
-          <button
-            className={`scroll-btn left ${canScrollLeft ? "active" : "inactive"}`}
-            onClick={() => scrollTabs("left")}
-            disabled={!canScrollLeft}
-          >
-            <FaChevronLeft size={20} />
-          </button>
-        )}
-
-        <div className="faq-tabs" ref={tabRef} onScroll={updateScrollButtons}>
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`faq-tab ${tab === activeTab ? "active" : ""}`}
-              onClick={() => {
-                setActiveTab(tab);
-                setOpenIndex(null);
-              }}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        {!isMobile && (
-          <button
-            className={`scroll-btn right ${canScrollRight ? "active" : "inactive"}`}
-            onClick={() => scrollTabs("right")}
-            disabled={!canScrollRight}
-          >
-            <FaChevronRight size={20} />
-          </button>
-        )}
-      </div>
-
-      <div className="faq-accordion">
-        {current.faqs.map((item, i) => (
-          <div
-            key={i}
-            className={`faq-item ${openIndex === i ? "highlighted" : ""}`}
-          >
-            <div
-              className={`faq-question ${openIndex === i ? "open" : ""}`}
-              onClick={() => handleAccordion(i)}
-            >
-              {item.q}
-              <span className="accordion-icon">
-                {/* {openIndex === i ? "−" : "+"} */}
-                <img
-                  src={openIndex === i ? closeIcn : openIcn}
-                  alt={openIndex === i ? "Close" : "Open"}
-                  className="accordion-icon-img"
-                />
-              </span>
-            </div>
-
-            {openIndex === i && (
-              <>
-                <div className="faq-highlight-box">
-                  <h4>{current.highlight.question}</h4>
-                  <div className="faq-highlight-answer">
-                    {current.highlight.answer}
-                  </div>
-                </div>
-                <div className="faq-answer">{item.a}</div>
-              </>
-            )}
+          <div className="faq-tabs" ref={tabRef} onScroll={updateScrollButtons}>
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                className={`faq-tab ${tab === activeTab ? "active" : ""}`}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setOpenIndex(null);
+                }}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
-        ))}
+
+          {!isMobile && (
+            <button
+              className={`scroll-btn right ${canScrollRight ? "active" : "inactive"}`}
+              onClick={() => scrollTabs("right")}
+              disabled={!canScrollRight}
+            >
+              <FaChevronRight size={20} />
+            </button>
+          )}
+        </div>
+
+        <div className="faq-accordion">
+          {current.faqs.map((item, i) => (
+            <div
+              key={i}
+              className={`faq-item ${openIndex === i ? "highlighted" : ""}`}
+            >
+              <div
+                className={`faq-question ${openIndex === i ? "open" : ""}`}
+                onClick={() => handleAccordion(i)}
+              >
+                {item.q}
+                <span className="accordion-icon">
+                  {/* {openIndex === i ? "−" : "+"} */}
+                  <img
+                    src={openIndex === i ? closeIcn : openIcn}
+                    alt={openIndex === i ? "Close" : "Open"}
+                    className="accordion-icon-img"
+                  />
+                </span>
+              </div>
+
+              {openIndex === i && (
+                <>
+                  <div className="faq-highlight-box">
+                    <h4>{current.highlight.question}</h4>
+                    <div className="faq-highlight-answer">
+                      {current.highlight.answer}
+                    </div>
+                  </div>
+                  <div className="faq-answer">{item.a}</div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

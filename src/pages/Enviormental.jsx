@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import ClimateImg from "../components/assets/images/ESG/env1.jpg";
 import ProductImg from "../components/assets/images/ESG/env2.jpg";
 import InnovationImg from "../components/assets/images/ESG/env3.jpg";
@@ -14,15 +17,25 @@ import swip1Img from "../components/assets/images/ESG/sw1.jpg";
 import swip2Img from "../components/assets/images/ESG/sw2.jpg";
 import swip3Img from "../components/assets/images/ESG/sw3.jpg";
 import bannerImg from "../components/assets/images/ESG/ESG3.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-
 import leftIcn from "../components/assets/images/ESG/left.png";
 import rightIcn from "../components/assets/images/ESG/right.png";
+import approachSustain from "../components/assets/images/ESG/approachSustain.svg";
+import rateReport from "../components/assets/images/ESG/rateReport.svg";
+
+const tabs = [
+  {
+    name: "CG’s Approach to Sustainability",
+    icon: approachSustain
+  },
+  {
+    name: "Ratings and Reports",
+    icon: rateReport
+  }
+];
 
 const Enviormental = () => {
+  const [selectedTab, setSelectedTab] = useState("CG’s Approach to Sustainability");
+
   const [activeTab, setActiveTab] = useState("Environmental Stewardship");
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -198,6 +211,32 @@ const Enviormental = () => {
         </p>
       </section> */}
 
+      <section className="mapfilter-sec leadershipSec">
+        <div className="cust-container">
+          {/* Tabs */}
+          <div className="contacttabs">
+            {tabs.map((tab, idx) => (
+              <button
+                key={idx}
+                className={`tab ${selectedTab === tab.name ? "active" : ""}`}
+                onClick={() => setSelectedTab(tab.name)}
+              >
+                <img src={tab.icon} alt={tab.name} className="mr-2 inline-block" />
+                {tab.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Grid Content */}
+          <div className="tabcontent">
+
+            <div className="custom-flex-wrapper mt-10">
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="common-heading-sec">
         <div className="cust-container">
           <div className="comon-head-inner">
@@ -225,9 +264,8 @@ const Enviormental = () => {
             {tabList.map((tab) => (
               <button
                 key={tab}
-                className={`env-tab-button ${
-                  activeTab === tab ? "active" : ""
-                }`}
+                className={`env-tab-button ${activeTab === tab ? "active" : ""
+                  }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}

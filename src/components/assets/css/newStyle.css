@@ -790,7 +790,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 120px;
+  min-width: 30px;
   min-height: 250px;
 }
 
@@ -848,9 +848,7 @@
   text-align: center;
   position: absolute;
   transition: transform 0.3s ease;
-  /* top: 0%; */
   top: 220px;
-  /* bottom: -13%; */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -862,6 +860,19 @@
 
 .timeline-dot.blue {
   background-color: #1f78d1;
+}
+
+.timeline-dot::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px dotted #005CAB;
+  box-sizing: border-box;
+  z-index: -1;
 }
 
 .connector-line {
@@ -974,6 +985,58 @@
   display: none;
 }
 
+.desktopJourneyView {
+  display: block;
+}
+
+.mobileJourneyView {
+  display: none;
+}
+
+/* TRy Slide DOTS Years On Wave */
+.timeline-dots-overlay {
+  position: absolute;
+  bottom: 255px;
+  /* align with your wave */
+  left: 50%;
+  transform: translateX(-4%);
+  width: 100%;
+  height: 100px;
+  /* enough area above waves */
+  z-index: 20;
+  /* put above waves */
+  pointer-events: none;
+}
+
+.timeline-dots-overlay .timeline-dot {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.timeline-dots-overlay .timeline-dot.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+}
+
+.timeline-dots-overlay .timeline-dot.next {
+  opacity: 0.5;
+  filter: blur(0px);
+}
+
+.timeline-dots-overlay .timeline-dot.nearby {
+  opacity: 0.5;
+  filter: blur(0px);
+  transform: scale(0.9);
+}
+
+.timeline-dots-overlay .timeline-dot.hidden {
+  display: none;
+}
+
 /* LeaderShip Management Desktop */
 
 .leader-image {
@@ -987,6 +1050,207 @@
 }
 
 /* ENd Leadership Management CSS */
+
+/* ------ Subsdiaries and Joint Ventures ------ */
+.company-text-box {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  border-radius: 8px;
+  padding: 8px 24px;
+  border: 2px solid #969696;
+}
+
+.company-text-box:hover {
+  background: #005CAB;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: 2px solid #005CAB;
+}
+
+.rowDflex {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ------ END Subsdiaries and Joint Ventures ------ */
+
+/* ----------- About Page Technology R&D ---------- */
+
+.caseStudySwiper {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 60% !important;
+  /* padding: 85px 0 50px !important; */
+  padding: 0px !important;
+  background-size: cover;
+  background-position: top right -240px;
+}
+
+.caseStudySwiper .swiper-item-slider {
+  align-items: flex-start !important;
+}
+
+.techSection {
+  margin: 0 0 80px !important;
+}
+
+.caseStudySwiper .swiper-wrapper {
+  width: 60%;
+}
+
+.caseStudySwiper::after {
+  content: none;
+}
+
+.caseStudy-navbar .switchgear-swiper-nav {
+  position: absolute;
+  width: 120px;
+  bottom: 20px;
+  left: 22px;
+}
+
+.caseStudySwiper .caseStudy-navbar {
+  position: relative;
+  width: 40%;
+  padding: 50px 30px;
+  background-size: contain;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.caseStudySwiper .swiper-button-next,
+.caseStudySwiper .swiper-button-prev {
+  color: #969696;
+  border: 1px solid #969696;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caseStudySwiper .caseStudy-navbar {
+  position: relative;
+  width: 40%;
+  padding: 50px 30px;
+  background-size: contain;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.casestudy-sliditem {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.casestudy-sliditem .soluitn-img>img {
+  width: 100%;
+}
+
+.casestudy-sliditem .hover-arrow {
+  width: auto !important;
+}
+
+.caseOutlinedText {
+  line-height: 0.5;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 125px;
+}
+
+.caseSpanTitle {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 93.5px;
+  letter-spacing: 2.52px;
+  vertical-align: middle;
+}
+
+.caseStudy-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.caseStudyDesc {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 20%);
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.caseStudy-img:hover .caseStudyDesc {
+  opacity: 1;
+}
+
+.hover-arrow {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.caseStudy-img:hover .hover-arrow {
+  opacity: 1;
+}
+
+.caseStudyDesc h3 {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+}
+
+.caseStudyDesc p {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+}
+
+.dropdown-filter {
+  margin-bottom: 50px;
+}
+
+.dropdown-filter select {
+  padding: 10px 40px 10px 15px;
+  border-radius: 30px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  letter-spacing: -1.9%;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/technologyR&D/dropArr.svg") no-repeat right 15px center;
+  background-size: 16px;
+}
+
+/* --------- END About Page Technology R&D ---------- */
 
 @media (max-width: 1024px) {
   .aboutYears {
@@ -1086,9 +1350,98 @@
     display: none;
   }
 
+  /* Timeline Journey Slider */
+
+  .desktopJourneyView {
+    display: none;
+  }
+
+  .mobileJourneyView {
+    display: block;
+  }
+
+  .mobileJourneyView .timeline-slide.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .mobileJourneyView .mobile-top {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .mobileJourneyView .timeline-center {
+    flex: 0 0 30px;
+    position: relative;
+  }
+
+  .mobileJourneyView .timeline-right {
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .mobileJourneyView .timeline-right h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .mobileJourneyView .timeline-right p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .mobileJourneyView .timeline-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+
+  .mobileJourneyView .wave-wrapper {
+    margin-top: 35px;
+    height: 135px;
+    width: 100%;
+    bottom: 0px;
+  }
+
+  .mobileJourneyView .timeline-dots-overlay {
+    bottom: 230px;
+    z-index: 10;
+    left: -10%;
+  }
+
+  .mobileJourneyView .swiper-navigation.center-aligned {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 15px;
+  }
+
+  .mobileJourneyView .swiper-button-prev,
+  .mobileJourneyView .swiper-button-next {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+
+  .journey-section .swiper-button-prev {
+    left: 1%;
+  }
+
+  .journey-section .swiper-button-next {
+    right: 1%;
+  }
+
+  /* END Timeline Journey Slider */
+
   .mobileLeadView .swiper-pagination {
     position: relative;
-    /* below the slider */
     margin-top: 15px;
   }
 
@@ -1116,18 +1469,41 @@
   }
 
   .year-bg {
-    font-size: 120px;
+    font-size: 170px;
+    top: -4%;
   }
 
   .timeline-dot {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 12px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+  }
+
+  .timeline-dots-overlay .timeline-dot.active {
+    left: 52% !important;
+    display: block;
+    top: 170px;
+  }
+
+  .timeline-dots-overlay .timeline-dot.nearby {
+    left: 85% !important;
+    top: 225px;
+  }
+
+  .timeline-dot::after {
+    width: 100px;
+    height: 100px;
   }
 
   .connector-line {
-    height: 60px;
+    height: 425px;
+    top: -30px;
+    left: 100%;
+  }
+
+  .timeline-section {
+    padding: 0px 0px 10px;
   }
 
   .swiper-navigation.center-aligned {
@@ -1224,6 +1600,124 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Subsidiaries Joint ventures */
+  .commcntabui .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .commcntabui .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .commcntabui .nav-tabs .nav-item {
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+
+  .commcntabui .nav-tabs .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .rowDflex .swiper-slide {
+    /* width: auto !important; */
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+
+  .comccontabcontent .company-logo,
+  .company-card .company-logo {
+    height: 100%;
+    width: 180px;
+  }
+
+  .mobsSubjoint .tabs-container.commcntabui {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px;
+    margin-bottom: 0px;
+  }
+
+  .mobSubjointSwiper .swiper-slide {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .mobSubjointSwiper .company-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* END Subsidiaries Joint ventures */
+
+  /* Technology and R&D Mobile */
+
+  .caseStudySwiper {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100% !important;
+    padding: 20px 0 20px !important;
+    background-size: cover;
+    background-position: top right -240px;
+  }
+
+  .caseStudyTit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  .caseStudyTit h2 {
+    line-height: 1;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+    text-stroke: 2px #000;
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 78px;
+    margin-bottom: -10px;
+  }
+
+  .caseStudyTit h3 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 60px;
+    letter-spacing: 2.52px;
+    vertical-align: middle;
+
+  }
+
+  .inv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  .tech-text-title {
+    padding-top: 0px !important;
+  }
+
+  .tech-row {
+    margin-bottom: 10px !important;
+  }
+
+  .tech-row.row-1 {
+    flex-direction: column-reverse;
+  }
+
+  /* END Technology and R&D Mobile */
 }
 
 @media (max-width: 600px) {
@@ -1316,9 +1810,7 @@
 .solutionforbus-navbar {
   position: relative;
   width: 40%;
-  padding: 50px 30px;
-
-  /* background-color: #fff; */
+  padding: 30px 30px;
   z-index: 0;
 }
 
@@ -1528,6 +2020,11 @@
 .placement-content button {
   text-align: center;
 } */
+
+.placement-doc-section {
+  margin-bottom: 80px;
+}
+
 .placementTabs {
   display: flex;
   flex-wrap: wrap;
@@ -1830,6 +2327,10 @@
 
 .scroll-btn.active {
   color: #333;
+}
+
+.faqSect {
+  margin-bottom: 80px;
 }
 
 

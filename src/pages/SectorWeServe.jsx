@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import banner from "../components/assets/images/sectorweserve/secwebaner.jpg";
 import sws1 from "../components/assets/images/sectorweserve/sws1.svg";
 import sws2 from "../components/assets/images/sectorweserve/sws2.svg";
@@ -27,78 +26,118 @@ import sws23 from "../components/assets/images/sectorweserve/sws23.svg";
 import sws24 from "../components/assets/images/sectorweserve/sws24.svg";
 import sws25 from "../components/assets/images/sectorweserve/sws25.svg";
 import sws26 from "../components/assets/images/sectorweserve/sws26.svg";
+import diagolanArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
 
 
 
 const SectorWeServe = () => {
-     
+
     const sectorWeServData = [
-        {img: sws1, title:'Steel and Metals'},
-        {img: sws2, title:'Cement'},
-        {img: sws3, title:'Textiles'},
-        {img: sws4, title:'Fertilizers'},
-        {img: sws5, title:'Chemicals'},
-        {img: sws6, title:'Oil & Gas'},
-        {img: sws7, title:'Sugar'},
-        {img: sws8, title:'Automobile'},
-        {img: sws8, title:'FMCG'},
-        {img: sws10, title:'Electronics'},
-        {img: sws11, title:'Building & Infrastructure'},
-        {img: sws12, title:'Defence'},
-        {img: sws13, title:'Paper'},
-        {img: sws14, title:'Pharmaceuticals'},
-        {img: sws15, title:'Renewables'},
-        {img: sws16, title:'Metro Rail'},
-        {img: sws17, title:'Railways'},
-        {img: sws18, title:'Thermal Power'},
-        {img: sws19, title:'Nuclear Power'},
-        {img: sws20, title:'Mining'},
-        {img: sws21, title:'Data Centers'},
-        {img: sws22, title:'IT & Telecom'},
-        {img: sws23, title:'Green Hydrogen'},
-        {img: sws24, title:'Water & Irrigation'},
-        {img: sws25, title:'Power Transmission & Distribution'},
-        {img: sws26, title:'Port & Shipping'}
+        { img: sws8, title: 'Automobile' },
+        { img: sws11, title: 'Building & Infrastructure' },
+        { img: sws2, title: 'Cement' },
+        { img: sws5, title: 'Chemicals' },
+        { img: sws21, title: 'Data Centers' },
+        { img: sws12, title: 'Defence' },
+        { img: sws10, title: 'Electronics' },
+        { img: sws4, title: 'Fertilizers' },
+        { img: sws8, title: 'FMCG' },
+        { img: sws23, title: 'Green Hydrogen' },
+        { img: sws22, title: 'IT & Telecom' },
+        { img: sws16, title: 'Metro Rail' },
+        { img: sws20, title: 'Mining' },
+        { img: sws19, title: 'Nuclear Power' },
+        { img: sws6, title: 'Oil & Gas' },
+        { img: sws13, title: 'Paper' },
+        { img: sws14, title: 'Pharmaceuticals' },
+        { img: sws26, title: 'Port & Shipping' },
+        { img: sws25, title: 'Power Transmission & Distribution' },
+        { img: sws17, title: 'Railways' },
+        { img: sws15, title: 'Renewables' },
+        { img: sws1, title: 'Steel and Metals' },
+        { img: sws7, title: 'Sugar' },
+        { img: sws3, title: 'Textiles' },
+        { img: sws18, title: 'Thermal Power' },
+        { img: sws24, title: 'Water & Irrigation' },
     ];
 
-  return (
-    <>
-    <section className="inner-comoonbanner">
-      <div className="comonban">
-          <img src={banner} alt="" />
-      </div>
-    </section>
-    <section className="commonfrst-sec">
-        <div className="cust-container">
-            <div className="breadcr-inner">
-                <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="#">Home</a></li>
-                    <li className="breadcrumb-item"><a href="#">About CG</a></li>
-                    <li className="breadcrumb-item active" aria-current="page">Sectors We Serve</li>
-                </ol>
-            </div>
+    const [visibleCount, setVisibleCount] = useState(8);
+    const [isMobile, setIsMobile] = useState(false);
 
-            <div className="common-heading-sec">
-                <div className="comon-head-inner">
-                    <h2>Key Sectors We Serve</h2>
-                    <p>CG serves key sectors with cutting-edge solutions in Switchgears, Transformers, Drive & Automation, Customer durables and Railways. Our technology supports reliable power distribution, industrial efficiency, and modern mobility.</p>
+    // Detect screen size
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // mobile breakpoint
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    // For mobile: show limited items, for desktop: show all
+    const displayedData = isMobile
+        ? sectorWeServData.slice(0, visibleCount)
+        : sectorWeServData;
+
+    return (
+        <>
+            <section className="inner-comoonbanner">
+                <div className="comonban">
+                    <img src={banner} alt="" />
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            <section className="commonfrst-sec">
+                <div className="cust-container">
+                    <div className="breadcr-inner">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="#">About CG</a></li>
+                            <li className="breadcrumb-item active" aria-current="page">Sectors We Serve</li>
+                        </ol>
+                    </div>
 
-    <section className="sectorweserve">
-        <div className="cust-container">
-            <div className="sectorweserve-inner">
-                <div className="grid">
-                    {sectorWeServData.map((item, id) => (
-                        <div className="grid-item" key={id}>
-                            <img src={item.img} alt={item.title} />
-                            <span>{item.title}</span>
+                    <div className="common-heading-sec">
+                        <div className="comon-head-inner">
+                            <h2>Key Sectors We Serve</h2>
+                            {/* <p>CG serves key sectors with cutting-edge solutions in Switchgears, Transformers, Drive & Automation, Customer durables and Railways. Our technology supports reliable power distribution, industrial efficiency, and modern mobility.</p> */}
                         </div>
-                    ))}
+                    </div>
                 </div>
-                {/* <div className="grid">
+            </section>
+
+            <section className="sectorweserve">
+                <div className="cust-container">
+                    <div className="sectorweserve-inner">
+                        <div className="grid">
+                            {displayedData.map((item, id) => (
+                                <div className="grid-item" key={id}>
+                                    <img src={item.img} alt={item.title} />
+                                    <span>{item.title}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Load More button only on mobile */}
+                        {isMobile && visibleCount < sectorWeServData.length && (
+                            <div className="load-more-wrapper" style={{ textAlign: "center", marginTop: "20px" }}>
+                                <button
+                                    className="load-more-btn"
+                                    onClick={() => setVisibleCount(visibleCount + 8)}
+                                    style={{
+                                        fontSize: '20px',
+                                        fontWeight: 'bold',
+                                        padding: "10px 20px",
+                                        background: "transparent",
+                                        color: "#005CAB",
+                                        border: "none",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    Load More <img style={{ marginLeft: '5px' }} src={diagolanArrow} alt="" />
+                                </button>
+                            </div>
+                        )}
+                        {/* <div className="grid">
                     <div className="grid-item">
                         <img src={sws1} alt="Railways" />
                         <span></span>
@@ -204,11 +243,11 @@ const SectorWeServe = () => {
                         <span>Water & Irrigation</span>
                     </div>
                 </div> */}
-            </div>
-        </div>
-    </section>
-    </>
-  );
+                    </div>
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default SectorWeServe;

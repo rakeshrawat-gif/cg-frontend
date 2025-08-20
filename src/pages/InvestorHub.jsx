@@ -46,11 +46,11 @@ const InvestorHub = () => {
     "Scheme of Arrangement": SchemeOfArrangement,
     Financials: Financials,
     "CG Shares": CGShares,
-    "Stock Exchange Disclosures": StockExchangeDisclosures,
-    "Analysts Interactions": AnalystsInteractions,
-    Policies: Policies,
+    // "Stock Exchange Disclosures": StockExchangeDisclosures,
+    // "Analysts Interactions": AnalystsInteractions,
+    // Policies: Policies,
     "CG Cares (CSR)": CGCares,
-    Dividend: Dividend,
+    // Dividend: Dividend,
     "Unclaimed Dividend and Shares": UnclaimedDividendShares,
     FAQs: FAQs,
   };
@@ -189,7 +189,7 @@ const InvestorHub = () => {
         </div>
       </section>
 
-      <section className="tech-wrapper-invs ">
+      <section className="tech-wrapper-invs cust-container">
         <div className="dropdown-container">
           <div className="custom-dropdown-wrapper" ref={dropdownRef}>
             <div
