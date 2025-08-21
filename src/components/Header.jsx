@@ -39,8 +39,8 @@ const Header = () => {
     const headerRef = useRef(null);
     const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
     const [activeAboutSubmenu, setActiveAboutSubmenu] = useState(null);
-    const searchRef = useRef(null);
 
+    const searchRef = useRef(null);
     const location = useLocation();
 
     useEffect(() => {
@@ -92,22 +92,24 @@ const Header = () => {
         e.preventDefault();
         setIsSearchBarOpen((prevState) => !prevState);
     };
-
     useEffect(() => {
         function handleClickOutside(event) {
             if (
                 searchRef.current &&
                 !searchRef.current.contains(event.target) &&
                 !event.target.closest("#desk-searchToggle") &&
-                !event.target.closest("#mob-searchToggle")
+                !event.target.closest("#mob-searchToggle") &&
+                !event.target.closest(".swiper")
             ) {
                 setIsSearchBarOpen(false);
             }
+
         }
 
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
+
 
     const toggleMobileNav = () => {
         setIsMobileNavOpen((prevState) => !prevState);
@@ -468,7 +470,7 @@ const Header = () => {
                                     }}
                                 >
                                     <a className={`nav-link dropdown-toggle ${activeSingleDropdown === 'solutions' ? 'active' : ''}`} href="#" id="solutionsDropdown" role="button">
-                                        Solutions
+                                        Business Solutions
                                     </a>
                                     <div className={`dropdown-menu megamenucustom p-0 ${activeSolutionCategory ? 'show' : ''}`} aria-labelledby="solutionsDropdown">
                                         <div className="mega-menu desktop-view">
@@ -1419,16 +1421,18 @@ const Header = () => {
                 </nav>
 
                 {/* Search Bar */}
-                <div id="searchBarContainer" ref={searchRef} style={{ display: isSearchBarOpen ? 'block' : 'none', }}>
-                    <div className="cust-container">
+                {isSearchBarOpen && (
+                    <div id="searchBarContainer" ref={searchRef} style={{ display: isSearchBarOpen ? 'block' : 'none', }}>
+                        {/* <div className="cust-container"> */}
                         <form className="form-inline">
                             <input name="search" className="form-control mr-2" type="search" placeholder="Search..." aria-label="Search" />
                             <button className="headsearchbtn curvebtn" type="submit">
                                 Search
                             </button>
                         </form>
+                        {/* </div> */}
                     </div>
-                </div>
+                )}
             </div>
         </header>
     );

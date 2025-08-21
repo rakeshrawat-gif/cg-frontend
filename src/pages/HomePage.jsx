@@ -3,6 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay, FreeMode } from 'swiper/modules';
 
 import BannerMobSlider from '../components/assets/images/home/bannerslidemob.jpg';
+import deskhomeban1 from '../components/assets/images/home/homeban1.jpg';
+import deskhomeban2 from '../components/assets/images/home/homeban2.jpg';
+import deskhomeban3 from '../components/assets/images/home/homeban3.jpg';
+import mobhomeban1 from '../components/assets/images/home/mobhomeban1.jpg';
+import mobhomeban2 from '../components/assets/images/home/mobhomeban2.jpg';
+import mobhomeban3 from '../components/assets/images/home/mobhomeban3.jpg';
+
 import BannerHome from '../components/assets/images/home/banner.jpg';
 import diagonalbigarw from '../components/assets/images/home/diagonalbigarw.svg';
 import diagolanArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
@@ -64,6 +71,34 @@ import cgslideIcon25 from '../components/assets/images/home/cicn25.png';
 import cgslideIcon26 from '../components/assets/images/home/cicn26.png';
 import cgslideIcon27 from '../components/assets/images/home/cicn27.png';
 
+import infiicn1 from '../components/assets/images/home/infi/infiic1.png';
+import infiicn2 from '../components/assets/images/home/infi/infiic2.png';
+import infiicn3 from '../components/assets/images/home/infi/infiic3.png';
+import infiicn4 from '../components/assets/images/home/infi/infiic4.png';
+import infiicn5 from '../components/assets/images/home/infi/infiic5.png';
+import infiicn6 from '../components/assets/images/home/infi/infiic6.png';
+import infiicn7 from '../components/assets/images/home/infi/infiic7.png';
+import infiicn8 from '../components/assets/images/home/infi/infiic8.png';
+import infiicn9 from '../components/assets/images/home/infi/infiic9.png';
+import infiicn10 from '../components/assets/images/home/infi/infiic10.png';
+import infiicn11 from '../components/assets/images/home/infi/infiic11.png';
+import infiicn12 from '../components/assets/images/home/infi/infiic12.png';
+import infiicn13 from '../components/assets/images/home/infi/infiic13.png';
+import infiicn14 from '../components/assets/images/home/infi/infiic14.png';
+import infiicn15 from '../components/assets/images/home/infi/infiic15.png';
+import infiicn16 from '../components/assets/images/home/infi/infiic16.png';
+import infiicn17 from '../components/assets/images/home/infi/infiic17.png';
+import infiicn18 from '../components/assets/images/home/infi/infiic18.png';
+import infiicn19 from '../components/assets/images/home/infi/infiic19.png';
+import infiicn20 from '../components/assets/images/home/infi/infiic20.png';
+import infiicn21 from '../components/assets/images/home/infi/infiic21.png';
+import infiicn22 from '../components/assets/images/home/infi/infiic22.png';
+import infiicn23 from '../components/assets/images/home/infi/infiic23.png';
+import infiicn24 from '../components/assets/images/home/infi/infiic24.png';
+import infiicn25 from '../components/assets/images/home/infi/infiic25.png';
+import infiicn26 from '../components/assets/images/home/infi/infiic26.png';
+import infiicn27 from '../components/assets/images/home/infi/infiic27.png';
+
 // Import Swiper stylesy
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -123,10 +158,44 @@ function NumberCounter({ target, duration = 2000, suffix = "", formatK = false }
 
 const Homepage = () => {
 
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.params) {
+      swiperRef.current.params.navigation.prevEl = prevRef.current;
+      swiperRef.current.params.navigation.nextEl = nextRef.current;
+
+      swiperRef.current.navigation.destroy();
+      swiperRef.current.navigation.init();
+      swiperRef.current.navigation.update();
+
+      // Pause autoplay on button click and resume later
+      const handlePrev = () => {
+        swiperRef.current.autoplay.stop();
+        swiperRef.current.slidePrev();
+        setTimeout(() => swiperRef.current.autoplay.start(), 4000); // resume after 4s
+      };
+
+      const handleNext = () => {
+        swiperRef.current.autoplay.stop();
+        swiperRef.current.slideNext();
+        setTimeout(() => swiperRef.current.autoplay.start(), 4000); // resume after 4s
+      };
+
+      prevRef.current.addEventListener("click", handlePrev);
+      nextRef.current.addEventListener("click", handleNext);
+
+      return () => {
+        prevRef.current?.removeEventListener("click", handlePrev);
+        nextRef.current?.removeEventListener("click", handleNext);
+      };
+    }
+  }, []);
+
    const icons = [
-    cgslideIcon1, cgslideIcon2, cgslideIcon3, cgslideIcon4,
-    cgslideIcon5, cgslideIcon6, cgslideIcon7, cgslideIcon8,
-    cgslideIcon9, cgslideIcon10, cgslideIcon11, cgslideIcon12, cgslideIcon13, cgslideIcon14, cgslideIcon15, cgslideIcon16, cgslideIcon17, cgslideIcon18, cgslideIcon19, cgslideIcon20, cgslideIcon21, cgslideIcon22, cgslideIcon23, cgslideIcon24, cgslideIcon25, cgslideIcon26, cgslideIcon27
+   infiicn1, infiicn2, infiicn3, infiicn4, infiicn5, infiicn6, infiicn7, infiicn8, infiicn9, infiicn10, infiicn11, infiicn12, infiicn13, infiicn14, infiicn15, infiicn16, infiicn17, infiicn18, infiicn19, infiicn20, infiicn21, infiicn22, infiicn23, infiicn24, infiicn25, infiicn26, infiicn27
   ];
 
   useEffect(() => {
@@ -150,6 +219,7 @@ const Homepage = () => {
     });
   }, []);
 
+
   return (
     <>
       {/* Home Banner Carousel Section */}
@@ -168,25 +238,25 @@ const Homepage = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // }}
           className="homebanercarousel"
         >
           <SwiperSlide>
             <div className="slide-content">
               <div className="swiperlid-img">
                 <picture>
-                  <source media="(min-width:740px)" srcSet={BannerHome} />
-                  <img src={BannerMobSlider} alt="Banner 1" />
+                  <source media="(min-width:740px)" srcSet={deskhomeban1} />
+                  <img src={mobhomeban1} alt="Banner 1" />
                 </picture>
               </div>
               <div className="slide-content-desc">
-                <h1>Engineering a Smarter, Stronger Tomorrow</h1>
+                <h1>Driving Change with Purpose and Care</h1>
                 <hr />
-                <p>Delivering reliable solutions that move industries and the world - forward.</p>
-                <a href="#" className="homeswiperslidcta">Explore More</a>
+                <p>Delivering solutions that empower businesses and elevate lives</p>
+                <a href="#" className="homeswiperslidcta">Build a Better Future with Us</a>
               </div>
             </div>
           </SwiperSlide>
@@ -194,15 +264,15 @@ const Homepage = () => {
             <div className="slide-content">
               <div className="swiperlid-img">
                 <picture>
-                  <source media="(min-width:740px)" srcSet={BannerHome} />
-                  <img src={BannerMobSlider} alt="Banner 2" />
+                  <source media="(min-width:740px)" srcSet={deskhomeban2} />
+                  <img src={mobhomeban2} alt="Banner 2" />
                 </picture>
               </div>
               <div className="slide-content-desc">
-                <h1>Engineering a Smarter, Stronger Tomorrow</h1>
+                <h1>Smart Choices for Modern Homes</h1>
                 <hr />
-                <p>Delivering reliable solutions that move industries and the world - forward.</p>
-                <a href="#" className="homeswiperslidcta">Explore More</a>
+                <p>Future-ready, energy-efficient solutions that bring lasting comfort.</p>
+                <a href="#" className="homeswiperslidcta">View Products</a>
               </div>
             </div>
           </SwiperSlide>
@@ -210,15 +280,15 @@ const Homepage = () => {
             <div className="slide-content">
               <div className="swiperlid-img">
                 <picture>
-                  <source media="(min-width:740px)" srcSet={BannerHome} />
-                  <img src={BannerMobSlider} alt="Banner 3" />
+                  <source media="(min-width:740px)" srcSet={deskhomeban3} />
+                  <img src={mobhomeban3} alt="Banner 3" />
                 </picture>
               </div>
               <div className="slide-content-desc">
-                <h1>Engineering a Smarter, Stronger Tomorrow</h1>
+                <h1>Sustainability Woven into Every Step</h1>
                 <hr />
-                <p>Delivering reliable solutions that move industries and the world - forward.</p>
-                <a href="#" className="homeswiperslidcta">Explore More</a>
+                <p>Transforming lives through responsible innovation</p>
+                <a href="#" className="homeswiperslidcta">Discover Our Story</a>
               </div>
             </div>
           </SwiperSlide>
@@ -258,34 +328,29 @@ const Homepage = () => {
         </div>
         <div className="swiper-item-slider">
             <Swiper
-              modules={[Autoplay, FreeMode, Navigation]}
-              slidesPerView="auto"
-              loop={true}
-              freeMode={true}
-              freeModeMomentum={false}
-              freeModeMomentumRatio={0} 
-              spaceBetween={20}
-              centeredSlides={false}
-              speed={3000}
-              // autoplay={{
-              //   delay: 200,
-              //   disableOnInteraction: false,
-              //   pauseOnMouseEnter: true,
-              // }}
-              
-              navigation={{
-                nextEl: '.solutionforbus-sec .swiper-button-next',
-                prevEl: '.solutionforbus-sec .swiper-button-prev',
-              }}
-              
-              breakpoints={{
-                0: { slidesPerView: 1.5 },
-                676: { slidesPerView: 2.5 },
-                991: { slidesPerView: 2.5 },
-                992: { slidesPerView: 2.5 },
-              }}
-              className="solutionforbusswiper"
-            >
+                modules={[Autoplay, FreeMode, Navigation]}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                slidesPerView="auto"
+                loop={true}
+                freeMode={true}
+                freeModeMomentum={false}
+                freeModeMomentumRatio={0}
+                spaceBetween={20}
+                centeredSlides={false}
+                speed={3000}
+                autoplay={{
+                  delay: 0,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                breakpoints={{
+                  0: { slidesPerView: 1.5 },
+                  676: { slidesPerView: 2.5 },
+                  991: { slidesPerView: 2.5 },
+                  992: { slidesPerView: 2.5 },
+                }}
+                className="solutionforbusswiper"
+              >
               <SwiperSlide>
                 <div className="solution-sliditem">
                   <div className="soluitn-img">
@@ -384,8 +449,8 @@ const Homepage = () => {
                 <p>As a global leader in engineering solutions, CG empowers customers to efficiently harness power and enhance industrial productivity with a focus on sustainability.</p>
               </div>
               <div className="switchgear-swiper-nav">
-                <div className="swiper-button-prev"><img src={leftArrow} alt="Previous" /></div>
-                <div className="swiper-button-next"><img src={rightArrow} alt="Next" /></div>
+                <div className="swiper-button-prev" ref={prevRef}><img src={leftArrow} alt="Previous" /></div>
+                <div className="swiper-button-next" ref={nextRef}><img src={rightArrow} alt="Next" /></div>
               </div>
             </div>
         </div>
@@ -546,7 +611,7 @@ const Homepage = () => {
             freeMode={true}
             freeModeMomentum={false}
             freeModeMomentumRatio={0} 
-            slidesPerView="auto"
+            slidesPerView={5}
             spaceBetween={30}
             speed={1500}
             autoplay={{
@@ -555,6 +620,17 @@ const Homepage = () => {
               pauseOnMouseEnter: false,
             }}
             allowTouchMove={false}
+             breakpoints={{
+                0: {
+                    slidesPerView: 3
+                },
+                991: {
+                    slidesPerView: 4
+                },
+                992: {
+                    slidesPerView: 4
+                }
+              }}
             className="infi-carousel"
           >
              {[...icons, ...icons].map((icon, index) => (

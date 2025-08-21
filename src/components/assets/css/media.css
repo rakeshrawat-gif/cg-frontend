@@ -30,15 +30,46 @@
   .footer-col.foot-col4 {
     min-width: 16%;
   }
+
 }
+
+@media only screen and (max-width:1220px) {
+   .cust-container {
+    max-width: 100%;
+    margin: 0 20px;
+}
+.home-banner-carousl-sec .homeswipernav .swiper-button-next {
+    right: 30px;
+}
+.home-banner-carousl-sec .homeswipernav .swiper-button-prev {
+    left: 30px;
+}
+.solutionforbus-navbar{
+      padding: 50px 30px 50px 40px;
+}
+.solutionforbus-navbar .switchgear-swiper-nav{
+  left: 40px;
+}
+.green-card h4{
+  font-size: 18px;
+}
+}
+
+ 
 
 @media (min-width: 1202px) {
   .mobile-submenu {
     display: none !important;
   }
+
 }
 
 @media only screen and (max-width:1201px) {
+      .cust-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding:  0 20px;
+    }
   #desktopheader {
     display: none;
   }
@@ -48,7 +79,7 @@
   }
 
   #mobileheader #mainNav {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .navbar-nav {
@@ -78,6 +109,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
   }
 
   .mobile-menu li {
@@ -469,10 +501,15 @@
   .switchgear-swiper::after {
     width: 80px;
     height: 80px;
+    left: 0px;
   }
+  
 
   .switchgear-swiper {
     padding: 100px 0 100px 150px !important;
+  }
+  .switchgear-swiper .switchgear-swiper-nav{
+    left: 0;
   }
 
   #stack-cards-ul {
@@ -644,7 +681,7 @@
 
   /* ======switchgear css =======*/
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 520px);
+    grid-template-rows: repeat(var(--numcards), 545px);
   }
 
   .card-content .card-contentdesc h4 {
@@ -665,7 +702,7 @@
     grid-template-areas:
       "img"
       "text";
-    height: 460px;
+    height: 480px;
   }
 
   .card-content .card-contentdesc p {
@@ -1219,6 +1256,12 @@
   .highlight-text .desktopshowtxt {
     display: none;
   }
+  .infinite-carousel-sec .swiper-slide img{
+    width: 80%;
+  }
+  .swiperslider-sec.comntbmargn {
+    margin-bottom: 65px;
+  }
 }
 
 @media only screen and (max-width: 426px) {
@@ -1253,11 +1296,11 @@
   }
 
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 550px);
+    grid-template-rows: repeat(var(--numcards), 650px);
   }
 
   .stack-card-item .card-content {
-    height: 550px;
+    height: 570px;
   }
 
   .solution-sliditem .solutin-desc .solut-icn {
@@ -1401,11 +1444,11 @@
   }
 
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 570px);
+    grid-template-rows: repeat(var(--numcards), 650px);
   }
 
   .stack-card-item .card-content {
-    height: 570px;
+    height: 590px;
   }
 
   .commcntabui.tabbotborder .nav-tabs .nav-link {

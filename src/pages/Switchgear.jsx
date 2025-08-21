@@ -7,6 +7,8 @@ import card1 from "../components/assets/images/switchgear/card1.jpg";
 import card2 from "../components/assets/images/switchgear/card2.jpg";
 import card3 from "../components/assets/images/switchgear/card3.jpg";
 import card4 from "../components/assets/images/switchgear/card4.jpg";
+import card5 from "../components/assets/images/switchgear/card5.jpg";
+
 import sliuser from "../components/assets/images/switchgear/sliuser.jpg";
 import newproduct from "../components/assets/images/switchgear/newproduct.jpg";
 
@@ -17,10 +19,10 @@ import righnewproRightarwtarow from "../components/assets/images/switchgear/newp
 
 import wmleftarow from "../components/assets/images/switchgear/wm/leftarow.png";
 import wmrightarow from "../components/assets/images/switchgear/wm/rightarow.png";
-import zw1 from "../components/assets/images/switchgear/wm/zwm/zw1.jpg";
-import zw2 from "../components/assets/images/switchgear/wm/zwm/zw2.jpg";
-import zw3 from "../components/assets/images/switchgear/wm/zwm/zw3.jpg";
-import zw4 from "../components/assets/images/switchgear/wm/zwm/zw4.jpg";
+import zw1 from "../components/assets/images/switchgear/wm/zwm/zw11.jpg";
+import zw2 from "../components/assets/images/switchgear/wm/zwm/zw22.jpg";
+import zw3 from "../components/assets/images/switchgear/wm/zwm/zw33.jpg";
+import zw4 from "../components/assets/images/switchgear/wm/zwm/zw44.jpg";
 
 import sigu1 from "../components/assets/images/switchgear/wm/singus/sigu1.jpg";
 import sigu2 from "../components/assets/images/switchgear/wm/singus/sigu2.jpg";
@@ -68,6 +70,12 @@ const Switchgear = () => {
                 { detail: 'We offer a comprehensive range of HV and EHV equipment (33kV to 800kV) designed for safety, reliability, and performance in critical transmission and distribution networks.Engineered to meet global standards, these solutions ensure grid stability, low maintenance, and long service life.' }
             ],
             slink: '', img: card4
+        },
+         {
+            title: 'TURNKEY SOLUTIONS', desc: [
+                { detail: 'At CG, we specialise in turnkey substation projects of up to 765 kV, catering to both large industrial clients and major power utilities. We have established a strong global track record in the complete construction of both AIS (Air-Insulated Substations) and GIS (Gas-Insulated Substations) across numerous countries.' }
+            ],
+            slink: '', img: card5
         },
     ];
     const slideData = [
@@ -165,7 +173,7 @@ const Switchgear = () => {
 
             </section>
 
-            <section className="swiperslider-sec comntbmargn pb-0">
+            <section className="swiperslider-sec addmarginbotm comntbmargn pb-0">
                 <div className="cust-container">
                     <div className="common-heading-sec">
                         <div className="comon-head-inner">
@@ -204,7 +212,7 @@ const Switchgear = () => {
                                     slidesPerView: 1
                                 },
                                 992: {
-                                    slidesPerView: 1.9
+                                    slidesPerView: 1.8
                                 }
                             }}
 
@@ -316,7 +324,7 @@ const Switchgear = () => {
                         </div>
                     </div>
                     {/* <!-- Tabs --> */}
-                    <div className="tabs-container commcntabui awmanagmenttabs d-flex">
+                    {/* <div className="tabs-container commcntabui awmanagmenttabs d-flex">
                         <ul className="nav nav-tabs" id="pdpdetailTab" role="tablist">
                             <li className="nav-item">
                                 <a className={`nav-link ${activeTab === "tab1" ? "active" : ""}`}
@@ -334,11 +342,10 @@ const Switchgear = () => {
                                     onClick={() => handleTabClick("tab3")}>Other Awards and Certifications</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* <!-- Tab Content --> */}
-                    <div className="tab-content comccontabcontent" id="pdpdetailTabContent">
-                        {/* <!-- Waste Management --> */}
+                    {/* <div className="tab-content comccontabcontent" id="pdpdetailTabContent">
                         {activeTab === "tab1" &&
                             <div className="wastemgmt-tab">
                                 <div className="wastemgmt-colone">
@@ -381,9 +388,8 @@ const Switchgear = () => {
                                         <img src={wmrightarow} alt="" />
                                     </button>
                                     </div>
-                                    {/* <div className="wastemgmt-pagination-1"></div> */}
+                                    <div className="wastemgmt-pagination-1"></div>
                                 </div>
-                                {/* Second Slider */}
                                 <div className="wastemgmt-colone wastemgmt-coltwo">
                                     <Swiper
                                     modules={[Pagination, Autoplay]}
@@ -424,13 +430,11 @@ const Switchgear = () => {
                                             <img src={wmrightarow} alt="" />
                                         </button>
                                     </div>
-                                    {/* <div className="wastemgmt-pagination-2"></div> */}
+                                    <div className="wastemgmt-pagination-2"></div>
                                 </div>
                             </div>
                         }
 
-
-                        {/* <!-- Water Management --> */}
                         {activeTab === "tab2" && 
                             <div className="wastemgmt-tab">
                                 <div className="wastemgmt-colone">
@@ -473,13 +477,11 @@ const Switchgear = () => {
                                         <img src={wmrightarow} alt="" />
                                     </button>
                                     </div>
-                                    {/* <div className="wastemgmt-pagination-2"></div> */}
+                                    <div className="wastemgmt-pagination-2"></div>
                                 </div>
                             </div>
                         }
 
-
-                        {/* <!-- Other Awards and Certifications --> */}
                         {activeTab === "tab3" &&
                             <div className="wastemgmt-tab">
                                 <div className="wastemgmt-colone">
@@ -522,11 +524,107 @@ const Switchgear = () => {
                                         <img src={wmrightarow} alt="" />
                                     </button>
                                     </div>
-                                    {/* <div className="wastemgmt-pagination-3"></div> */}
+                                    <div className="wastemgmt-pagination-3"></div>
                                 </div>
                             </div>
                         }
 
+                    </div> */}
+                    <div className="tab-content comccontabcontent" id="pdpdetailTabContent">
+                         <div className="wastemgmt-tab">
+                                <div className="wastemgmt-colone">
+                                    <Swiper
+                                    modules={[Pagination, Autoplay]}
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    loop={true}
+                                    pagination={{
+                                        el: ".wastemgmt-pagination-1",
+                                        clickable: true,
+                                    }}
+                                    onSwiper={(swiper) => (wastemanagement1.current = swiper)}
+                                    autoplay={{
+                                        delay: 3000,
+                                        disableOnInteraction: false,
+                                    }}
+                                    className="wastemgmt-swiper"
+                                    >
+                                    {singleUsearr.map((data, index) => (
+                                        <SwiperSlide key={index}>
+                                        <div className="wastemgmtinner">
+                                            <div className="wastemgmt-img">
+                                            <img src={data.img} alt="" />
+                                            </div>
+                                        </div>
+                                        </SwiperSlide>
+                                    ))}
+                                    </Swiper>
+                                    <div className="wastemgmt-title">
+                                        <h5>Single Use Plastic Free Certification</h5>
+                                    </div>
+                                    <div className="wastemgmt-navbar wmnavbar1">
+                                    <button
+                                        className="custom-nav prev"
+                                        onClick={() => wastemanagement1.current?.slidePrev()}
+                                    >
+                                        <img src={wmleftarow} alt="" />
+                                    </button>
+                                    <button
+                                        className="custom-nav next"
+                                        onClick={() => wastemanagement1.current?.slideNext()}
+                                    >
+                                        <img src={wmrightarow} alt="" />
+                                    </button>
+                                    </div>
+                                    {/* <div className="wastemgmt-pagination-1"></div> */}
+                                </div>
+                                <div className="wastemgmt-colone wastemgmt-coltwo">
+                                    <Swiper
+                                    modules={[Pagination, Autoplay]}
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    loop={true}
+                                    pagination={{
+                                        el: ".wastemgmt-pagination-2",
+                                        clickable: true,
+                                    }}
+                                    onSwiper={(swiper) => (wastemanagement2.current = swiper)}
+                                    autoplay={{
+                                        delay: 3000,
+                                        disableOnInteraction: false,
+                                    }}
+                                    className="wastemgmt-swiper"
+                                    >
+                                    {zeroWastarr.map((data, index) => (
+                                        <SwiperSlide key={index}>
+                                        <div className="wastemgmtinner">
+                                            <div className="wastemgmt-img">
+                                                <img src={data.img} alt="" />
+                                            </div>
+                                        </div>
+                                        </SwiperSlide>
+                                    ))}
+                                    </Swiper>
+                                    <div className="wastemgmt-title">
+                                        <h5>Zero Waste to Landfill Certification</h5>
+                                    </div>
+                                    <div className="wastemgmt-navbar wmnavbar2">
+                                        <button
+                                            className="custom-nav prev"
+                                            onClick={() => wastemanagement2.current?.slidePrev()}
+                                        >
+                                            <img src={wmleftarow} alt="" />
+                                        </button>
+                                        <button
+                                            className="custom-nav next"
+                                            onClick={() => wastemanagement2.current?.slideNext()}
+                                        >
+                                            <img src={wmrightarow} alt="" />
+                                        </button>
+                                    </div>
+                                    {/* <div className="wastemgmt-pagination-2"></div> */}
+                                </div>
+                            </div>
                     </div>
                 </div>
             </section>
