@@ -976,7 +976,7 @@
 .solutionforbus-navbar {
   position: relative;
   width: 40%;
-  padding: 50px 30px;
+  padding: 50px 30px 50px 100px;
   
   /* background-color: #fff; */
   z-index: 0;

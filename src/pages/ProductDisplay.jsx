@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs, Pagination, Autoplay } from "swiper/modules";
 
 import banner from "../components/assets/images/swibaner.jpg";
 import proi1 from "../components/assets/images/productdetail/proi1.jpg";
@@ -72,8 +72,12 @@ const ProductDisplay = () => {
                                 {/* Main Swiper */}
                                 <Swiper
                                     ref={mainSwiperRef}
-                                    modules={[Navigation, Thumbs]}
+                                    modules={[Navigation, Thumbs, Autoplay]}
                                     loop={true}
+                                    autoplay={{
+                                        delay: 3500,
+                                        disableOnInteraction: false,
+                                    }}
                                     navigation={false} // Navigation handled manually
                                     thumbs={{ swiper: thumbsSwiper }}
                                     className="swiper ais-circuit-slider"
@@ -88,8 +92,13 @@ const ProductDisplay = () => {
                                     onSwiper={setThumbsSwiper}
                                     spaceBetween={10}
                                     slidesPerView={3}
+                                    loop={true}
                                     watchSlidesProgress={true}
-                                    modules={[Thumbs]}
+                                    modules={[Thumbs, Autoplay]}
+                                    autoplay={{
+                                        delay: 3500,
+                                        disableOnInteraction: false,
+                                    }}
                                     className="swiper thumbs-slider"
                                 >
                                     <SwiperSlide><img src={proi1} alt="Thumb 1" /></SwiperSlide>

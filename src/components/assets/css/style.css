@@ -12,7 +12,7 @@
     --card-height: 40vw;
     --card-margin: 4vw;
     --card-top-offset: 4em;
-    --numcards: 4;
+    --numcards: 5;
     --outline-width: 0px;
     --greenclr:#7BC143;
 }
@@ -36,10 +36,14 @@ input:focus{
   box-shadow: none !important;
   border-color: #ced4da !important;
 }
-.cust-container {
-    max-width: 1250px;
+/* .cust-container {
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 15px;
+} */
+ .cust-container {
+    max-width: 100%;
+    margin: 0 100px 0 100px;
 }
 .commonfrst-sec{
     padding: 50px 0 40px 0;
@@ -79,11 +83,12 @@ input:focus{
     font-weight: 700;
     font-size: 48px;
     margin-bottom: 20px;
+    line-height: 100%;
 }
 .comon-head-inner p{
     font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 22px;
     color: var(--comn-heading-color);
 }
 
@@ -169,7 +174,7 @@ section.stackcard-sec {
 }
 .card-content .card-contentdesc p{
     font-size: 15px;
-    line-height: 30px;
+    line-height: 22px;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -340,8 +345,11 @@ section.stackcard-sec {
 
 
 /* swiper slider on switchgear page*/
-.swiperslider-sec{
-    padding-bottom: 100px;
+.swiperslider-sec.comntbmargn{
+    margin-bottom: 100px;
+}
+.addmarginbotm{
+  margin-bottom: 100px;
 }
 .switchgear-swiper {
       position: relative;
@@ -349,8 +357,10 @@ section.stackcard-sec {
       /* max-width: 1440px; */
       padding: 100px 0 100px 300px  !important;
       background: url(../images/swipbgpd.jpg) no-repeat;
-      background-size: 68%;
-      background-position: top right 0px;
+      /* background-size: 68%;
+      background-position: top right 0px; */
+          background-size: 78%;
+    background-position: top right -105px;
     }
 
     .switchgear-swiper::after{
@@ -358,7 +368,7 @@ section.stackcard-sec {
         position: absolute;
         background-image: url(../images/Qotes.svg);
         top: 0;
-        left: 0;
+        left: 55px;
         width: 210px;
         height: 210px;
         background-size: 100%;
@@ -372,11 +382,12 @@ section.stackcard-sec {
       background: white;
       border-radius: 12px;
       box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
-      padding: 24px;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       gap: 16px;
       opacity: 0;
+      height: auto;
     }
 
     .switchgear-swiper .swiper-slide.swiper-slide-active, .switchgear-swiper .swiper-slide.swiper-slide-next{
@@ -448,11 +459,11 @@ section.stackcard-sec {
     }
    
     .switchgear-swiper .switchgear-swiper-nav {
-    position: absolute;
-    width: 120px;
-    bottom: 20px;
-    left: 0;
-}
+        position: absolute;
+        width: 120px;
+        bottom: 125px;
+        left: 60px;
+    }
 .swiperquot-img {
     position: relative;
     left: 80px;
@@ -469,10 +480,14 @@ section.stackcard-sec {
   margin-top: 50px;
   margin-bottom: 40px;
 }
+.product-display-tabs div#pdpdetailTabContent{
+  padding-left: 0;
+}
 .wastemgmt-tab{
   display: flex;
   gap: 30px;
   flex-wrap: nowrap;
+  margin-top: 60px;
 }
 .wastemgmt-colone{
   width: 400px;
@@ -481,7 +496,7 @@ section.stackcard-sec {
   text-align: center;
   position: relative;
   padding: 20px;
-  box-shadow: -4px 4px 7px 5px rgb(137 137 137 / 20%);
+  box-shadow: 0px 4px 7px 3px rgb(137 137 137 / 20%);
 }
 .wastemgmt-navbar{
     position: absolute;
@@ -509,8 +524,8 @@ section.stackcard-sec {
 }
 .wastemgmt-navbar button:hover{
   transition: .3s;
-  background: var(--greenclr);
-  border-color: var(--greenclr);
+  background: #7bc1437a;
+  border-color: #7bc1437a;
 }
 .wastemgmt-navbar button:hover img{
       filter: brightness(0) invert(1);
@@ -528,14 +543,12 @@ section.stackcard-sec {
     border: 1px solid #DEDEDE;
 }
  .wastemgmt-title h5{
-  margin: 15px 0 0 0;
+  margin: 20px 0 0 0;
   font-weight: 700;
   color: var(--card-bg-skyblu);
   font-size: 20px;
 }
-.wastemgmt-coltwo  .wastemgmt-title h5{
-  margin-top: 20px;
-}
+
 .commcntabui.awmanagmenttabs .nav-tabs{
   gap: 20px;
   flex-wrap: nowrap;
@@ -556,9 +569,9 @@ section.stackcard-sec {
     border-color: var(--card-bg-skyblu);
     color: var(--card-bg-skyblu);
 }
-.wastemgmt-coltwo .wastemgmt-navbar{
+/* .wastemgmt-coltwo .wastemgmt-navbar{
   padding: 0px 54px;
-}
+} */
 /* ====End swiper slider of waste/water management== */
 
 /* =================End swiper slider on switchgear page ================*/
@@ -585,10 +598,10 @@ section.stackcard-sec {
   /* min-width: 200px; */
 }
 .footer-col.logo-col{
-  min-width: 30%;
+  min-width: 32%;
 }
 .footer-col.foot-col2, .footer-col.foot-col3, .footer-col.foot-col4{
-  min-width: 20%;
+  min-width: 18%;
 }
 .footer-col.foot-colpartner{
   margin-top: 50px;
@@ -730,13 +743,13 @@ header {
     z-index: 9999;
 }
 header #desktopheader .head-logo{
-  width: 30%;
+  width: 25%;
 }
 header #desktopheader .head-menuitems{
-  width: 70%;
+  width: 75%;
 }
 .head-menuitems ul.navbar-nav{
-  gap: 8px;
+  gap: 14px;
 }
  header .navbar {
       padding: 0 15px;
@@ -757,7 +770,7 @@ header #desktopheader .head-menuitems{
       content: none;
     }
     header .nav-item .nav-link{
-      padding: 16px 10px 16px !important;
+      padding: 15px 6px 15px !important;
     }
     header .nav-item #searchToggle span{
       background: #EFEFEF;
@@ -774,7 +787,8 @@ header #desktopheader .head-menuitems{
         border-color: var(--card-bg-skyblu);
     }
     .megamenucustom{
-          left: 120px;
+          /* left: 74px; */
+          left: 6%;
     }
     #navbarNav .nav-item .nav-link{
       border-bottom: 3px solid transparent;
@@ -805,14 +819,32 @@ header #desktopheader .head-menuitems{
 }
 #navbarNav .navbar-nav .nav-item>a{
   color: var(--comn-heading-color);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+}
+#navbarNav .desktopsrchtwh>a{
+  cursor: default;
 }
 #navbarNav .desktopsrchtwh>a>span {
     padding: 10px 10px;
     background: #EFEFEF;
     border-radius: 50%;
-  }
+    cursor: pointer;
+}
+#navbarNav .desktopsrchtwh>a>span, .mobsrchtwh>span{
+  position: relative;
+}
+#navbarNav .desktopsrchtwh>a>span>i::before, .mobsrchtwh>span>i::before{
+  content: '' !important;
+  background: url(../images/headicn/searchicn.svg) no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transform: translate(0, 0);
+}
 /* Rotate icon when open */
 .accordion-toggle.open::after {
   transform: rotate(180deg);
@@ -856,7 +888,7 @@ header #desktopheader .head-menuitems{
       font-size: 14px;
       color: var(--comn-heading-color);
       font-weight: 400;
-      padding: 10px 40px 10px 8px;
+      padding: 8px 40px 8px 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -877,7 +909,7 @@ header #desktopheader .head-menuitems{
       right: 0;
     }
     #menucolsecnd a{
-      padding: 14.5px;
+      padding: 14px;
       padding-left: 5px !important;
     }
     #menucolsecnd a>span{
@@ -1141,7 +1173,8 @@ header #desktopheader .head-menuitems{
       }
 
       .dropdown-menu {
-        width: 1000px;
+        /* width: 920px; */
+        width: 88%;
         padding: 0;
         border: none;
         border-top-left-radius: 0;
@@ -1165,12 +1198,18 @@ header #desktopheader .head-menuitems{
         /* border-right: 1px solid #eee; */
         padding: 20px 15px;
       }
-      .megamenucustom #menucolfrst, .megamenucustom #menucolsecnd{
+      .megamenucustom #menucolfrst{
         width: 30%;
+      }
+      .megamenucustom #menucolsecnd{
+        width: 34%;
+      }
+      .megamenucustom #menucolfrst, .megamenucustom #menucolsecnd{
         background: #fff;
+        padding-bottom: 50px;
       }
       .megamenucustom #menucolthrd{
-        width: 40%;
+        width: 36%;
         background-color: #eff4f8;
         position: relative;
       }
@@ -1179,10 +1218,10 @@ header #desktopheader .head-menuitems{
         content: '';
         background: url(../images/headicn/solution/thirdcolbg.png) no-repeat;
         background-size: 100%;
-        width: 130px;
-        height: 150px;
-        bottom: 30px;
-        right: 30px;
+        width: 110px;
+        height: 125px;
+        bottom: 10px;
+        right: 20px;
       }
 
       .menu-column:last-child {
@@ -1275,7 +1314,7 @@ header #desktopheader .head-menuitems{
           position: absolute;
           top: 50%;
           z-index: 1;
-          max-width: 1250px;
+          /* max-width: 1250px; */
           margin: 0 auto;
           left: 50%;
           width: 100%;
@@ -1285,15 +1324,15 @@ header #desktopheader .head-menuitems{
       background: transparent;
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-next::after, .home-banner-carousl-sec .homeswipernav .swiper-button-prev::after{
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 700;
       color: #969696;
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-next{
-      right: 20px;
+      right: 100px;
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-prev{
-      left: 20px;
+      left: 100px;
     }
 
     /* Optional: overlay background */
@@ -1387,7 +1426,8 @@ header #desktopheader .head-menuitems{
       display: flex;
       flex-direction: row-reverse;
       width: 60% !important;
-      padding: 85px 0 50px !important;
+      /* padding: 85px 0 50px !important; */
+      padding: 85px 0 70px !important;
       background: url(../images/home/bluebg.jpg) no-repeat;
       background-size: cover;
       background-position: top right -240px;
@@ -1412,7 +1452,7 @@ header #desktopheader .head-menuitems{
       position: absolute;
       width: 120px;
       bottom: 20px;
-      left: 22px;
+      left: 90px;
     }
     .solutionforbus-sec .solutionforbus-navbar.mobile{
       display: none;
@@ -1551,7 +1591,7 @@ header #desktopheader .head-menuitems{
       background: #fff;
       /* border-radius: 16px;
       overflow: hidden; */
-      width: 25%;
+      width: 26%;
       flex: 0 0 auto;
       position: relative;
       /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); */
@@ -1582,8 +1622,8 @@ header #desktopheader .head-menuitems{
 
     .news-icon>a {
       position: absolute;
-      bottom: 10px;
-      right: 10px;
+      bottom: 16px;
+      right: 16px;
       background: var(--greenclr);
       color: white;
       width: 40px;
@@ -1654,7 +1694,7 @@ header #desktopheader .head-menuitems{
       color: #fff;
     }
     .news-card:first-child{
-      width: 47.5%;
+      width: 45%;
       background-size: cover;
       background-repeat: no-repeat;
       position: relative;
@@ -1680,6 +1720,9 @@ header #desktopheader .head-menuitems{
     }
     .news-card:first-child .news-icon{
       width: 20%;
+      position: absolute;
+      right: 0;
+      bottom: 25px;
     }
     .news-card:first-child .news-content{
       display: flex;
@@ -1695,7 +1738,7 @@ header #desktopheader .head-menuitems{
     .news-card:first-child .news-icon>a{
       position: relative;
       bottom: 0;
-      left: 65px;
+      left: 40px;
     }
 
     .news-card:first-child .news-title>h4>a{
@@ -1730,7 +1773,7 @@ header #desktopheader .head-menuitems{
     /* enginerring section */
     .enginnering-green-section {
       /* background: linear-gradient(90deg, #E7FFD3, #CEF0B4); */
-      background: url(../images/home/homeeneggrenbg.jpg) no-repeat;
+      background: url(../images/home/homeeneggrenbg2.jpg) no-repeat;
       background-size: cover;
       padding: 40px 0px;
     }
@@ -1771,7 +1814,8 @@ header #desktopheader .head-menuitems{
     }
 
     .green-card {
-      flex: 1 1 200px;
+      /* flex: 1 1 200px; */
+      width: 48%;
       background-color: transparent;
       border: 2px solid var(--greenclr);
       border-radius: 20px;
@@ -1800,7 +1844,8 @@ header #desktopheader .head-menuitems{
     .green-card h4 {
       color: #7BC143;
       margin-bottom: 10px;
-      font-size: 18px;
+      /* font-size: 18px; */
+      font-size: 104%;
       font-weight: 700;
     }
     .green-card:hover h4, .green-card:hover a{
@@ -1810,7 +1855,7 @@ header #desktopheader .head-menuitems{
     .green-card a {
       text-decoration: none;
       color: #7BC143;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
     }
     .green-card a>img{
@@ -1858,11 +1903,11 @@ header #desktopheader .head-menuitems{
     .infinite-carousel-sec .infi-carousel{
       position: relative;
     }
-    .infinite-carousel-sec .infi-carousel::before{
+    /* .infinite-carousel-sec .infi-carousel::before{
       content: '';
       position: absolute;
       z-index: 2;
-      /* background:linear-gradient(45deg, white, transparent); */
+      background:linear-gradient(45deg, white, transparent);
       background: url(../images/home/infibgleft.png) no-repeat;
       background-size: cover;
       left: 0;
@@ -1874,14 +1919,14 @@ header #desktopheader .head-menuitems{
       content: '';
       position: absolute;
       z-index: 2;
-      /* background:linear-gradient(45deg, white, transparent); */
+      background:linear-gradient(45deg, white, transparent);
       background: url(../images/home/infibgright.png) no-repeat;
       background-size: cover;
       right: -4px;
       top: 0;
       width: 100px;
       height: 100%;
-    }
+    } */
     
 /* ==================End Home page css===================== */
 
@@ -2361,16 +2406,14 @@ header #desktopheader .head-menuitems{
         font-size: 16px;
         border: none;
         border-bottom: 4px solid transparent;
-        color: var(--comn-heading-color);
-        font-weight: 700;
+        color: #969696;
+        font-weight: 500;
         border-radius: 0;
         transition: .3s;
         margin-bottom: -5.5px;
         position: relative;
         flex: 1;
         text-align: center;
-        font-size: 16px;
-        color: var(--comn-heading-color);
         background: none;
         padding: 12px 16px;
         transition: color 0.3s ease;
@@ -2379,6 +2422,7 @@ header #desktopheader .head-menuitems{
         background-color: transparent;
         border-bottom-color: var(--greenclr);
         transition: .3s;
+        color: var(--comn-heading-color);
     }
 
     .ais-circuitbreaker-swiper .swiper-button-prev:after, .ais-circuitbreaker-swiper .swiper-button-next:after{

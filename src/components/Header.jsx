@@ -40,6 +40,7 @@ const Header = () => {
   const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
   const [activeAboutSubmenu, setActiveAboutSubmenu] = useState(null);
 
+  const searchRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -91,6 +92,24 @@ const Header = () => {
     e.preventDefault();
     setIsSearchBarOpen((prevState) => !prevState);
   };
+  useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                searchRef.current &&
+                !searchRef.current.contains(event.target) &&
+                !event.target.closest("#desk-searchToggle") &&
+                !event.target.closest("#mob-searchToggle") && 
+                !event.target.closest(".swiper")
+            ) {
+                setIsSearchBarOpen(false);
+            }
+            
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen((prevState) => !prevState);
@@ -451,7 +470,7 @@ const Header = () => {
                                 }}
                             >
                                 <a className={`nav-link dropdown-toggle ${activeSingleDropdown === 'solutions' ? 'active' : ''}`} href="#" id="solutionsDropdown" role="button">
-                                    Solutions
+                                    Business Solutions
                                 </a>
                                 <div className={`dropdown-menu megamenucustom p-0 ${activeSolutionCategory ? 'show' : ''}`} aria-labelledby="solutionsDropdown">
                                     <div className="mega-menu desktop-view">
@@ -876,8 +895,11 @@ const Header = () => {
                                                             <li><a href="/">Current Transformer</a></li>
                                                             <li><a href="/">Capacitive Voltage Transformer</a></li>
                                                             <li><a href="/">Inductive Voltage Transformer</a></li>
+                                                            <li><a href="/">Power Voltage Transformer</a></li>
                                                         </ul>
                                                     </li>
+                                                    <li className="thirdlevel-menu-item"><a href="/">SF6 Circuit Breaker</a></li>
+                                                    <li className="thirdlevel-menu-item"><a href="/">Surge Arrester</a></li>
                                                     <li className="thirdlevel-menu-item"><a href="/">Disconnector</a></li>
                                                     <li className="thirdlevel-menu-item"><a href="/">GIS & Dead Tank Breaker</a></li>
                                                     <li className="thirdlevel-menu-item">
@@ -1280,8 +1302,8 @@ const Header = () => {
 
                             {/* Search */}
                             <li className="nav-item desktopsrchtwh">
-                                <a className="nav-link" href="#" id="desk-searchToggle" onClick={toggleSearchBar}>
-                                    <span>
+                                <a className="nav-link" href="#" id="desk-searchToggle">
+                                    <span onClick={toggleSearchBar}>
                                         <i className="fas fa-search"></i>
                                     </span>
                                 </a>
@@ -1347,7 +1369,7 @@ const Header = () => {
                             </ul>
                         </li>
                         <li className="has-children">
-                            <a href="#" onClick={handleMobileMultiLevelToggle}>Solutions</a>
+                            <a href="#" onClick={handleMobileMultiLevelToggle}>Business Solutions</a>
                             <ul className="submenu">
                                 <li className="has-children">
                                     <a href="#" onClick={handleMobileMultiLevelToggle}>Transformers</a>
@@ -1402,16 +1424,18 @@ const Header = () => {
             </nav>
 
             {/* Search Bar */}
-            <div id="searchBarContainer" style={{ display: isSearchBarOpen ? 'block' : 'none',}}>
-                <div className="cust-container">
+            {isSearchBarOpen  && (
+            <div id="searchBarContainer" ref={searchRef} style={{ display: isSearchBarOpen ? 'block' : 'none',}}>
+                {/* <div className="cust-container"> */}
                     <form className="form-inline">
                         <input name="search" className="form-control mr-2" type="search" placeholder="Search..." aria-label="Search" />
                         <button className="headsearchbtn curvebtn" type="submit">
                             Search
                         </button>
                     </form>
-                </div>
+                {/* </div> */}
             </div>
+            )}
         </div>
     </header>
     );
