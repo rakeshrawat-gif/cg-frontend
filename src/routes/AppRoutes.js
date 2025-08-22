@@ -19,6 +19,7 @@ import ConsumerDurable from '../pages/ConsumerDurable';
 import ProductDisplay from '../pages/ProductDisplay';
 import Test from '../pages/test';
 import ProductListing from "../pages/ProductListing";
+import ProductCategorySwitchgear from "../pages/ProductCategorySwitchgear";
 
 const AppRoutes = () => {
   return (
@@ -40,7 +41,8 @@ const AppRoutes = () => {
         <Route path="/cg-in-the-news" element={<CgInTheNews />} />
         <Route path="/consumer-durable" element={<ConsumerDurable />} />
         <Route path="/product-detail" element={<ProductDisplay />} />
-        <Route path="/product_listing" element={<ProductListing />} />
+        <Route path="/product-listing" element={<ProductListing />} />
+        <Route path="/product-category-switchgear" element={<ProductCategorySwitchgear />} />
       </Routes>
     </>
   );

@@ -13,6 +13,8 @@ import journeyImg from '../components/assets/images/about/abt-slider-journey-1.p
 import abtSlideImg from '../components/assets/images/about/abt-slider-1.png';
 import abtSlideImg2 from '../components/assets/images/about/abt-slider-2.jpg';
 import upArrow from '../components/assets/images/about/upArrow.svg';
+import rightArrowSlide from '../components/assets/images/about/rightArrowSlide.svg';
+import leftArrowSlide from '../components/assets/images/about/leftArrowSlide.svg';
 import TimelineSlider from "../components/TimelineSlider";
 
 const journeyData = [
@@ -95,19 +97,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Breadcrumb */}
-            {/* <section className="commonfrst-sec">
-                <div className="cust-container">
-                    <div className="breadcr-inner">
-                        <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="#">Home</a></li>
-                            <li className="breadcrumb-item"><a href="#">About CG</a></li>
-                            <li className="breadcrumb-item active" aria-current="page">Company Overview  </li>
-                        </ol>
-                    </div>
-                </div>
-            </section> */}
-
             {/* Innovation Section */}
             <section className="sectionAbt aboutFirstSec">
                 <div className="cust-container">
@@ -124,20 +113,32 @@ const About = () => {
                         <div className='firstDiv'>
                             <h3 className="abt-title">The Force That <br />Inspires Tomorrow</h3>
                             <p className="abtPara-text">
-                                CG, headquartered in Mumbai, is a pioneering name in engineering with a legacy spanning over 88 years.
-                                CG has been the quiet force driving the growth and transformation of everyday lives with more efficient
-                                engineering solutions for the world.
+                                At CG, we don’t just manufacture products; we engineer progress.
+                                CG, headquartered in Mumbai, is a pioneering name in engineering with a legacy
+                                spanning over 88 years. CG has been the quiet force driving the growth and
+                                transformation of everyday lives with more efficient engineering solutions for
+                                the world.
                             </p>
                             <p className="abtPara-text">
-                                As a leading engineering conglomerate, we have evolved from a trailblazing Indian enterprise into a
-                                global force. With 18 world-class manufacturing units and a workforce of over 7,000 skilled
-                                professionals, we design and deliver high-performance engineering solutions that are built to thrive
-                                in the most demanding conditions globally.
+                                As a leading engineering conglomerate, we have evolved from a trailblazing Indian
+                                enterprise into a global force. With 18 world-class manufacturing units and a
+                                workforce of over 7,000 skilled professionals, we design and deliver
+                                high-performance engineering solutions that are built to thrive in the most
+                                demanding conditions globally.
                             </p>
                         </div>
                         <div className="secondDiv relative">
                             <div className="video-wrapper">
-                                <img src={videoPlCimg} alt="Video Placeholder" class="video-image" />
+                                {/* <img src={videoPlCimg} alt="Video Placeholder" class="video-image" /> */}
+                                <iframe
+                                    width="100%"
+                                    height="400"
+                                    src="https://www.youtube.com/embed/PFkBvBH31fQ?start=6"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
                             {/* <button className="absolute -top-4 -right-4 bg-blue-600 p-3 rounded-full shadow-lg text-white">
                                 <FaPlay />
@@ -167,62 +168,6 @@ const About = () => {
             </section>
 
             {/* Leadership Section */}
-            {/* <section className="abt-section">
-                <div className='cust-container'>
-                    <h2 className='abt-title'>Word From Our Leaders</h2>
-                    <div className="leaderPara-div">
-                        <div className="flex_div">
-                            <div className="firstDiv leaderFlexMob">
-                                <img
-                                    src={vellayanImg}
-                                    alt="Leader 1"
-                                    className="leader-img"
-                                />
-                                <div className='bgwhiteBox'>
-                                    <h3 className="abtMsgChairman mb-4">Message from the Chairman</h3>
-                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <div className="abtChairman-name">Vellayan Subbiah</div>
-                                    <div className="abtDesignation">Chairman</div>
-                                </div>
-                            </div>
-
-                            <div className="secondDiv leaderFlexMob">
-                                <img
-                                    src={amarImg}
-                                    alt="Leader 2"
-                                    className="leader-img"
-                                />
-                                <div className='bgwhiteBox'>
-                                    <h3 className="abtMsgChairman">Message from the Vice Chairman</h3>
-                                    <p className="abtPara-text">With a legacy spanning more than 86 years, we stand as a significant player in
-                                        the industrial machinery sector, dedicated to championing innovation and excellence.
-                                        Our diverse portfolio, with Industrial Motors, Drives & Automations, Railway Products,
-                                        Commercial Products, Transformers, and Switchgears, underscore our commitment to pioneering
-                                        solutions that drive India's growth story forward.At CG, we are steadfast in our dedication
-                                        to Environmental, Social, and Governance (ESG) principles and we continually strive for
-                                        sustainable practices and positive societal impact. Our commitment to Corporate Social
-                                        Responsibility (CSR) is integral to our operations, reflecting our broader mission to
-                                        contribute meaningfully to the communities we serve. Discover more about how we are
-                                        shaping a brighter future not only for India but also beyond.</p>
-                                    <div className="abtChairman-name">Amar Kaul</div>
-                                    <div className="abtDesignation">Managing Director & CEO,
-                                        CG Power and Industrial Solutions Limited</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-            {/* Leadership Section */}
             <section className="abt-section">
                 <div className='cust-container'>
                     <h2 className='abt-title'>Word From Our Leaders</h2>
@@ -239,32 +184,26 @@ const About = () => {
                                     {
                                         img: vellayanImg,
                                         heading: "Message from the Chairman",
-                                        text: `<p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`,
+                                        text: `<p className="abtPara-text">Post the acquisition by TII in 2020, we have undertaken a focused transformation, restoring CG’s legacy of engineering excellence while building a foundation for sustainable and scalable growth.
+                                        CG has always stood at the intersection of innovation, capability, and trust. With operations spanning three core sectors, Power, Industrial and Railways, the company is uniquely positioned to contribute to India's evolving economic ambitions. As the nation accelerates its journey toward self-reliance and global competitiveness, CG is ready to play a defining role in making India a manufacturing powerhouse for the world.
+                                        In a time of disruption and reinvention, our goal is not merely to grow, but to lead - responsibly, strategically, and with a long-term vision.</p>`,
                                         name: "Vellayan Subbiah",
                                         role: "Chairman"
                                     },
                                     {
                                         img: amarImg,
                                         heading: "Message from the Vice Chairman",
-                                        text: `<p className="abtPara-text">With a legacy spanning more than 86 years, we stand as a significant player in
-                                        the industrial machinery sector, dedicated to championing innovation and excellence.
-                                        Our diverse portfolio, with Industrial Motors, Drives & Automations, Railway Products,
-                                        Commercial Products, Transformers, and Switchgears, underscore our commitment to pioneering
-                                        solutions that drive India's growth story forward.At CG, we are steadfast in our dedication
-                                        to Environmental, Social, and Governance (ESG) principles and we continually strive for
-                                        sustainable practices and positive societal impact. Our commitment to Corporate Social
-                                        Responsibility (CSR) is integral to our operations, reflecting our broader mission to
-                                        contribute meaningfully to the communities we serve. Discover more about how we are
-                                        shaping a brighter future not only for India but also beyond.</p>`,
+                                        text: `<p className="abtPara-text">With a legacy spanning more than 86 years, 
+                                        we stand as a significant player in the industrial machinery sector, dedicated to 
+                                        championing innovation and excellence. Our diverse portfolio, with Industrial 
+                                        Motors, Drives & Automations, Railway Products, Commercial Products, Transformers, 
+                                        and Switchgears, underscore our commitment to pioneering solutions that drive 
+                                        India's growth story forward. At CG, we are steadfast in our dedication to Environmental, 
+                                        Social, and Governance (ESG) principles and we continually strive for sustainable 
+                                        practices and positive societal impact. Our commitment to Corporate Social Responsibility (CSR) 
+                                        is integral to our operations, reflecting our broader mission to contribute meaningfully to 
+                                        the communities we serve. Discover more about how we are shaping a brighter future not only 
+                                        for India but also beyond.</p>`,
                                         name: "Amar Kaul",
                                         role: "Managing Director & CEO, CG Power and Industrial Solutions Limited"
                                     }
@@ -297,16 +236,9 @@ const About = () => {
                                 />
                                 <div className='bgwhiteBox'>
                                     <h3 className="abtMsgChairman mb-4">Message from the Chairman</h3>
-                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p className="abtPara-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <p className="abtPara-text">Post the acquisition by TII in 2020, we have undertaken a focused transformation, restoring CG’s legacy of engineering excellence while building a foundation for sustainable and scalable growth.
+                                        CG has always stood at the intersection of innovation, capability, and trust. With operations spanning three core sectors, Power, Industrial and Railways, the company is uniquely positioned to contribute to India's evolving economic ambitions. As the nation accelerates its journey toward self-reliance and global competitiveness, CG is ready to play a defining role in making India a manufacturing powerhouse for the world.
+                                        In a time of disruption and reinvention, our goal is not merely to grow, but to lead - responsibly, strategically, and with a long-term vision.
                                     </p>
                                     <div className="leaderNameWrap">
                                         <div className="abtChairman-name">Vellayan Subbiah</div>
@@ -323,16 +255,19 @@ const About = () => {
                                 />
                                 <div className='bgwhiteBox'>
                                     <h3 className="abtMsgChairman">Message from the Vice Chairman</h3>
-                                    <p className="abtPara-text">With a legacy spanning more than 86 years, we stand as a significant player in
-                                        the industrial machinery sector, dedicated to championing innovation and excellence.
-                                        Our diverse portfolio, with Industrial Motors, Drives & Automations, Railway Products,
-                                        Commercial Products, Transformers, and Switchgears, underscore our commitment to pioneering
-                                        solutions that drive India's growth story forward.At CG, we are steadfast in our dedication
-                                        to Environmental, Social, and Governance (ESG) principles and we continually strive for
-                                        sustainable practices and positive societal impact. Our commitment to Corporate Social
-                                        Responsibility (CSR) is integral to our operations, reflecting our broader mission to
-                                        contribute meaningfully to the communities we serve. Discover more about how we are
-                                        shaping a brighter future not only for India but also beyond.
+                                    <p className="abtPara-text">With a legacy spanning more than 86 years, we stand
+                                        as a significant player in the industrial machinery sector, dedicated to
+                                        championing innovation and excellence. Our diverse portfolio, with Industrial
+                                        Motors, Drives & Automations, Railway Products, Commercial Products,
+                                        Transformers, and Switchgears, underscore our commitment to pioneering
+                                        solutions that drive India's growth story forward.
+                                        At CG, we are steadfast in our dedication to Environmental,
+                                        Social, and Governance (ESG) principles and we continually strive
+                                        for sustainable practices and positive societal impact. Our commitment
+                                        to Corporate Social Responsibility (CSR) is integral to our operations,
+                                        reflecting our broader mission to contribute meaningfully to the communities
+                                        we serve. Discover more about how we are shaping a brighter future not only
+                                        for India but also beyond.
                                     </p>
                                     <div className="leaderNameWrap">
                                         <div className="abtChairman-name">Amar Kaul</div>
@@ -364,48 +299,6 @@ const About = () => {
             {/* Financial Stats */}
             <section class="financial-stats-section finaSectionBg">
                 <div class="cust-container">
-                    {/* <h2 class="abtFinTitle">
-                        <span class="outlined-text">Impact</span> <span class="abtSpanTitle">numbers</span>
-                    </h2>
-
-                    <div class="financial-masonry">
-                        <div class="finance-tile active-tile wide">
-                            <p class="small">Standalone revenue</p>
-                            <p class="big-number">₹9,329 Cr</p>
-                        </div>
-                        <div class="finance-tile tall">
-                            <p class="small">Consolidated revenue</p>
-                            <p class="big-number">₹XXXX Cr</p>
-                        </div>
-                        <div class="finance-tile">
-                            <p class="small">Free cash flow</p>
-                            <p class="big-number">₹727 Cr</p>
-                        </div>
-                        <div class="finance-tile wide">
-                            <p class="small">Unexecuted order book</p>
-                            <p class="big-number">₹9,909 Cr</p>
-                        </div>
-                        <div class="finance-tile">
-                            <p class="small">Order intake reached</p>
-                            <p class="big-number">₹13,526 Cr</p>
-                        </div>
-                        <div class="finance-tile tall">
-                            <p class="small">(PBT) growth</p>
-                            <p class="big-number">17%</p>
-                        </div>
-                        <div class="finance-tile">
-                            <p class="small">Revenue growth YoY</p>
-                            <p class="big-number">23%</p>
-                        </div>
-                        <div class="finance-tile">
-                            <p class="small">Lorem Ipsum</p>
-                            <p class="big-number">XX</p>
-                        </div>
-                        <div class="finance-tile wide">
-                            <p class="small">ROCE</p>
-                            <p class="big-number">33%</p>
-                        </div>
-                    </div> */}
                     <div className="fBlockFin">
                         <div className="fLeftBlock">
                             <h2 class="abtFinTitle">
@@ -477,46 +370,47 @@ const About = () => {
             {/* Manufacturing Facilities */}
             <section className="section-manufacturing">
                 <div className="cust-containerz">
-                    <h2 className="manufacturing-title">World-class manufacturing facilities</h2>
-                    <p className="manufacturing-subtitle">
-                        CG's high-efficiency plants are setting new industry benchmarks across the world.
-                    </p>
+                    <div className="cust-container" style={{textAlign:'left'}}>
+                        <h2 className="manufacturing-title">World-class manufacturing facilities</h2>
+                        <p className="manufacturing-subtitle">
+                            CG's high-efficiency plants are setting new industry benchmarks across the world.
+                        </p>
+                    </div>
 
                     <div className="manufacturing-swiper-wrapper">
                         <div className="swiper-controls">
-                            <span className="swiper-custom-prev"><FaChevronLeft /></span>
-                            <span className="swiper-custom-next"><FaChevronRight /></span>
+                            <span className="swiper-custom-prev"><img src={leftArrowSlide} alt="" /></span>
+                            <span className="swiper-custom-next"><img src={rightArrowSlide} alt="" /></span>
                         </div>
                         <Swiper
                             className="swiper Manufacture-slider"
-                            modules={[Autoplay, Pagination, Navigation]}
+                            modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
                             effect="coverflow"
                             centeredSlides={true}
                             initialSlide={0}
-                            pagination={{
-                                clickable: true,
-                                el: ".swiper-custom-pagination",
-                            }}
                             loop={true}
-                            loopedSlides={3}
-                            slidesPerView={1}
-                            coverflowEffect={{
-                                rotate: 0,
-                                stretch: -100,
-                                depth: 200,
-                                modifier: 1.2,
-                                slideShadows: false,
-                            }}
-                            // direction="horizontal"
+                            slidesPerView={1.2}
                             grabCursor={false}
                             spaceBetween={10}
+                            loopedSlides={3}
+                            coverflowEffect={{
+                                rotate: 0,
+                                stretch: -150,
+                                depth: 250,
+                                modifier: 1.5,
+                                slideShadows: false,
+                            }}
                             navigation={{
                                 nextEl: ".swiper-custom-next",
                                 prevEl: ".swiper-custom-prev",
                             }}
+                            pagination={{
+                                clickable: true,
+                                el: ".swiper-custom-pagination",
+                            }}
                             breakpoints={{
                                 768: {
-                                    slidesPerView: 1.2,
+                                    slidesPerView: 1,
                                     coverflowEffect: {
                                         rotate: 0,
                                         stretch: 0,
@@ -526,11 +420,11 @@ const About = () => {
                                     },
                                 },
                                 1024: {
-                                    slidesPerView: 2.1,
+                                    slidesPerView: 1.2,
                                     spaceBetween: 40,
                                 },
                                 1280: {
-                                    slidesPerView: 2.1,
+                                    slidesPerView: 1.4,
                                     spaceBetween: 50,
                                 },
                             }}
@@ -561,7 +455,6 @@ const About = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-
                         <div className="swiper-custom-pagination" />
                     </div>
                 </div>
