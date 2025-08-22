@@ -6,8 +6,9 @@ import Germany from "../components/assets/images/technologyR&D/germany.jpg";
 import Italy from "../components/assets/images/technologyR&D/Italy.jpg";
 import Oman from "../components/assets/images/technologyR&D/omen.jpg";
 import arrow from "../components/assets/images/technologyR&D/Icon.png";
+import crossIcon from "../components/assets/images/technologyR&D/crossIcon.svg";
 import dropArrow from '../components/assets/images/technologyR&D/dropArr.svg';
-import LocationIcn from "../components/assets/images/technologyR&D/Address.png";
+import LocationIcn from "../components/assets/images/technologyR&D/MapIcon.svg";
 
 const projectData = [
   {
@@ -111,7 +112,7 @@ const InnovationGrid = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button className="modal-close" onClick={closeModal}>
-              ✖
+              <img src={crossIcon} alt="" />
             </button>
             <img src={selectedCard.image} alt={selectedCard.title} />
             <div className="modal-description">

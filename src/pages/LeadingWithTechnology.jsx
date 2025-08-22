@@ -95,7 +95,6 @@ const LeadingWithTechnology = () => {
       </section>
 
       {/* Case Studies */}
-      {/* Solutions for Business Section */}
       <section className="solutionforbus-sec comntbmargn techSection">
         <div className="solutionforbus-navbar mobile caseStudy-navbar">
           <div className="caseStudyTit">

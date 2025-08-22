@@ -86,7 +86,7 @@ const SectorWeServe = () => {
                     <img src={banner} alt="" />
                 </div>
             </section>
-            <section className="commonfrst-sec">
+            <section className="commonfrst-sec sectorsWeSect">
                 <div className="cust-container">
                     <div className="breadcr-inner">
                         <ol className="breadcrumb">

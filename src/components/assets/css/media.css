@@ -558,14 +558,17 @@
   .ais-circuitbreaker-swiper .thumbs-slider {
     width: 100%;
   }
- .commcntabui.awmanagmenttabs .nav-tabs .nav-item{
+
+  .commcntabui.awmanagmenttabs .nav-tabs .nav-item {
     width: fit-content;
     min-width: fit-content;
     text-align: center;
- }
- .commcntabui.awmanagmenttabs .nav-tabs .nav-link{
-  margin-bottom: 2px;
- }
+  }
+
+  .commcntabui.awmanagmenttabs .nav-tabs .nav-link {
+    margin-bottom: 2px;
+  }
+
   .wastemgmt-colone {
     width: 40%;
   }
@@ -803,23 +806,30 @@
     bottom: 20%;
     transform: translate(-20%, 0);
   }
- .wastemgmt-tab, .commcntabui.awmanagmenttabs .nav-tabs{
-  overflow: hidden;
-  overflow-x: scroll;
- }
+
+  .wastemgmt-tab,
+  .commcntabui.awmanagmenttabs .nav-tabs {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
   .wastemgmt-colone {
-        width: 80%;
-        margin-bottom: 25px;
-        margin-left: 18px;
-    }
-  .wastemgmt-title h5{
+    width: 80%;
+    margin-bottom: 25px;
+    margin-left: 18px;
+  }
+
+  .wastemgmt-title h5 {
     font-size: 16px;
   }
+
   .wastemgmt-img {
     width: 95%;
   }
-  .wastemgmt-navbar, .wastemgmt-coltwo .wastemgmt-navbar{
-        padding: 0 20px;
+
+  .wastemgmt-navbar,
+  .wastemgmt-coltwo .wastemgmt-navbar {
+    padding: 0 20px;
   }
 }
 
@@ -1236,7 +1246,9 @@
   .switchgr-newprodsec .swiper-slide {
     padding: 15px 0;
   }
-  .switchgr-newprodsec .card-slide, .switchgr-newprodsec .card-slide .new-prod-img{
+
+  .switchgr-newprodsec .card-slide,
+  .switchgr-newprodsec .card-slide .new-prod-img {
     border-radius: 20px;
   }
 
@@ -1314,6 +1326,11 @@
   }
 
   /* sector we serve */
+
+  .sectorsWeSect {
+    padding: 50px 0 0px 0;
+  }
+
   .sectorweserve-inner .grid {
     row-gap: 00px;
   }
@@ -1323,11 +1340,12 @@
   }
 
   .sectorweserve-inner .grid-item {
-    border-bottom: 1px solid #53535366;
+    border-bottom: 0px solid #53535366;
+    border-right: 0px solid #53535366;
   }
 
   .sectorweserve-inner .grid-item:nth-child(3n) {
-    border-right: 1px solid #53535366;
+    border-right: 0px solid #53535366;
   }
 
   .sectorweserve-inner .grid-item:nth-child(2n) {
@@ -1419,9 +1437,10 @@
   .news-card {
     width: 80%;
   }
-      .commcntabui.tabbotborder .nav-tabs .nav-link {
-        font-size: 13px;
-      }
+
+  .commcntabui.tabbotborder .nav-tabs .nav-link {
+    font-size: 13px;
+  }
 }
 
 @media only screen and (max-width: 376px) {
