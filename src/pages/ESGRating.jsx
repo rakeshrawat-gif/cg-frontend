@@ -36,6 +36,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const ESGRating = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // check on initial render
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const esgCards = [
     {
       title: "CDP Ratings",
@@ -117,7 +128,7 @@ const ESGRating = () => {
           <div className="comon-head-inner">
             <h2>CG’s ESG Ratings</h2>
           </div>
-          <div className="esg-card-grid">
+          {/* <div className="esg-card-grid">
             {esgCards.map((card, index) => (
               <div className={`esg-card ${card.className}`} key={index}>
                 <div className="img-wrapper">
@@ -132,7 +143,50 @@ const ESGRating = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          {isMobile ? (
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={16}
+              slidesPerView={1.2}
+              // pagination={{ clickable: true }}
+              className="esg-mobile-swiper"
+            >
+              {esgCards.map((card, index) => (
+                <SwiperSlide key={index}>
+                  <div className={`esg-card ${card.className}`}>
+                    <div className="img-wrapper">
+                      <img src={card.image} alt={card.title} className="esg-logo" />
+                    </div>
+                    <div className="card-content">
+                      <h3 className="esg-title">{card.title}</h3>
+                      <p className="esg-description">{card.description}</p>
+                      <a href={card.link} className="esg-link">
+                        Know more <img src={arrow} alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="esg-card-grid">
+              {esgCards.map((card, index) => (
+                <div className={`esg-card ${card.className}`} key={index}>
+                  <div className="img-wrapper">
+                    <img src={card.image} alt={card.title} className="esg-logo" />
+                  </div>
+                  <div className="card-content">
+                    <h3 className="esg-title">{card.title}</h3>
+                    <p className="esg-description">{card.description}</p>
+                    <a href={card.link} className="esg-link">
+                      Know more <img src={arrow} alt="" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, FreeMode, Controller } from "swiper/modules";
 import "swiper/css";
@@ -49,6 +49,16 @@ const Enviormental = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [mainSwiper, setMainSwiper] = useState(null);
   const [thumbSwiper, setThumbSwiper] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
 
   const tabList = [
@@ -392,7 +402,7 @@ const Enviormental = () => {
 
                     {/* Cards */}
 
-                    <div className="cards-container">
+                    {/* <div className="cards-container">
                       {tabContent[activeTab].map((card, idx) => (
                         <div className="env-card" key={idx}>
                           <img src={card.image} alt={card.title} />
@@ -404,20 +414,55 @@ const Enviormental = () => {
                           </ul>
                         </div>
                       ))}
+                    </div> */}
+                    <div className="cards-container">
+                      {isMobile ? (
+                        <Swiper
+                          modules={[Navigation]}
+                          slidesPerView={1.2}
+                          spaceBetween={16}
+                          pagination={{ clickable: true }}
+                        >
+                          {tabContent[activeTab].map((card, idx) => (
+                            <SwiperSlide key={idx}>
+                              <div className="env-card">
+                                <img src={card.image} alt={card.title} />
+                                <h3>{card.title}</h3>
+                                <ul>
+                                  {card.items.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </SwiperSlide>
+                          ))}
+                        </Swiper>
+                      ) : (
+                        tabContent[activeTab].map((card, idx) => (
+                          <div className="env-card" key={idx}>
+                            <img src={card.image} alt={card.title} />
+                            <h3>{card.title}</h3>
+                            <ul>
+                              {card.items.map((item, i) => (
+                                <li key={i}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      )}
                     </div>
 
                     <div className="materiality-footer">
                       <p>
-                        Materiality at CG is not just a compliance exercise, it’s a
-                        strategic imperative that helps us future-proof our business while
-                        creating long-term value for all stakeholders. We remain committed
-                        to evolving our ESG priorities in step with global standards and
-                        stakeholder expectations.
-                      </p>
-                      <p>
+                        Materiality at CG is not just a compliance exercise, it’s a strategic imperative that
+                        helps us future-proof our business while creating long-term value for all stakeholders.
+                        We remain committed to evolving our ESG priorities in step with global standards and
+                        stakeholder expectations.<br />
                         Our next step: a Double Materiality Assessment that will further
                         integrate sustainability into everything we do.
                       </p>
+                      <p>Explore our Sustainability Report to learn more about how we’re delivering impact
+                        through our ESG commitments.</p>
                       <a href="#" className="view-report">
                         View Report
                         <span>
@@ -488,7 +533,7 @@ const Enviormental = () => {
                         {swipdata.map((item, index) => (
                           <SwiperSlide key={index}>
                             <div className="image-card">
-                              <img src={item.image} alt={`slide-${index}`} />
+                              <img src={item.image[0]} alt={`slide-${index}`} />
                               <div className="caption">{item.caption}</div>
                             </div>
                           </SwiperSlide>

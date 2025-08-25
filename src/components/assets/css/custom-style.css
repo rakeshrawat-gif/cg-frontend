@@ -347,7 +347,7 @@
 .env-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 8px 10px 0px #00000040;
   overflow: hidden;
   transition: transform 0.3s ease;
   display: flex;
@@ -467,8 +467,8 @@
 .caption {
   position: absolute;
   bottom: 0;
-  left: 34px;
-  /* background: rgba(0, 0, 0, 0.6); */
+  left: 0;
+  background: rgb(0 0 0 / 31%);
   color: white;
   width: 100%;
   padding: 12px;

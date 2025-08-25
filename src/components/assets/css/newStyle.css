@@ -1266,7 +1266,7 @@
 .Invofilter-buttons {
   display: flex;
   gap: 15px;
-  margin: 20px 0;
+  margin: 30px 0;
   flex-wrap: wrap;
 }
 
@@ -1371,13 +1371,14 @@
 }
 
 .inner-nav button {
-  background: #fff;
+  background: #5c9132;
   border: none;
   border-radius: 50px;
   padding: 0px 15px;
   cursor: pointer;
   font-weight: bold;
   font-size: 25px;
+  color: #fff;
 }
 
 .image-card {
@@ -2123,6 +2124,22 @@
     flex-direction: column-reverse;
   }
 
+  .Invofilter-buttons {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 35px;
+  }
+
+  .Invofilter-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Invofilter-buttons .Invfilter-btn {
+    flex: 0 0 auto;
+  }
+
   /* END Technology and R&D Mobile */
 
   /* Product Category Switchgear Mobile */
@@ -2175,18 +2192,61 @@
   /* ESG MObile SLider of Tabs */
 
   .env-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .env-tabs::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 
   .env-tabs .env-tab-button {
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
+  }
+
+  .esg-description {
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .esg-bg-wrapper {
+    padding: 25px 0 !important;
+  }
+
+  .cards-wrapper {
+    padding: 0 15px !important;
+  }
+
+  .reports-wrapper {
+    padding: 0 0px 60px !important;
+  }
+
+  .esgEnvText p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .esgSwiperWrapper {
+    background-position: top right -680px;
+    background-size: cover;
+  }
+
+  .esg-navbar .rmbmob {
+    margin-bottom: 130px;
+  }
+
+  .esg-navbar .switchgear-swiper-nav {
+    top: 18px;
+    left: 45% !important;
   }
 
   .esgSolutionCust .contacttabs {
