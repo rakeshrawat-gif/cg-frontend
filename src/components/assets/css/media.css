@@ -178,7 +178,7 @@
 
   header {
     padding: 0;
-    overflow: scroll;
+    /* overflow: scroll; */
     box-shadow: 0 2px 15px rgb(0 0 0 / 6%);
   }
 
@@ -311,6 +311,25 @@
   .ourvalues-sec .values-section .values-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
+  section.stackcard-sec {
+    margin-top: 10px;
+  }
+  .stackcard-sec .stack-card-item{
+    padding-top: 0 !important;
+  }
+  .stackcard-sec .stack-card-item .card-content{
+    box-shadow: 1px 1px 1em 2px #0000001a, 0 1em 1em #e9e5e55e;
+  }
+   #stack-cards-ul {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+    .swiperslider-sec.switchgearslienttestisec{
+    margin-top: 30px;
+  }
+  .swiperslider-sec.comntbmargn {
+    margin-bottom: 0;
+  }
 
   /* consumer durable */
   .consumerproduct {
@@ -351,6 +370,36 @@
     background-position: top right 0px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+  }
+  
+  .switchgr-newprodsec .carousel-wrapper .newprodc-navbar {
+        bottom: -40px;
+        top: unset;
+        justify-content: center;
+        align-items: center;
+  }
+  .switchgr-newprodsec .custom-pagination{
+    display: none;
+  }
+  .switchgr-newprodsec .newprodc-navbar button {
+    color: #969696;
+    border: 1px solid #969696;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .switchgr-newprodsec .newprodc-navbar button picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .switchgr-newprodsec.comntbmargn{
+    margin-top: 20px;
+  }
+  .product-display-tabs {
+    padding-top: 40px;
   }
 
 }
@@ -435,7 +484,7 @@
     padding: 20px;
     background: none;
     background-color: transparent;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
 
@@ -474,8 +523,54 @@
     padding: 0;
   }
 
-  .switchgr-newprodsec .carousel-wrapper .newprodc-navbar {
+  .switchgearslienttestisec {
+    position: relative;
+  }
+  .switchgearslienttestisec::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/Qotes.svg);
+    top: 80px;
+    left: 55px;
+    width: 140px;
+    height: 140px;
+    background-size: 100%;
+  }
+  .switchgear-swiper::after {
+    content: none;
+  }
+  
+  .switchgear-swiper {
+    padding: 60px 30px 100px 20px  !important;
+    background-size: cover;
+    background-position: top -60px right 0px;
+  }
+   .swiper-item-slider{
+    width: 75%;
+    margin-left: auto;
+  }
+  .switchgear-swiper .switchgear-swiper-nav{
+    left: 25%;
+    width: 120px;
+    bottom: 25px;
+    transform: translate(-50%, -25%);
+  }
+  
+  .testimonial-header img{
     display: none;
+  }
+  .switchgr-newprodsec .card-slide{
+    border-radius: 20px;
+  }
+  .stack-card-item .card-content{
+    border-radius: 25px;
+    padding: 15px;
+  }
+  .switchgr-newprodsec .card-slide .new-prod-img{
+    border-radius: 12px;
+  }
+  .wastemgmt-colone{
+    border-radius: 12px;
   }
 
 }
@@ -499,23 +594,11 @@
   }
 
   .switchgear-swiper::after {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     left: 0px;
   }
-  
-
-  .switchgear-swiper {
-    padding: 100px 0 100px 150px !important;
-  }
-  .switchgear-swiper .switchgear-swiper-nav{
-    left: 0;
-  }
-
-  #stack-cards-ul {
-    margin-bottom: 150px;
-  }
-
+ 
   .contacttabs {
     justify-content: flex-start;
   }
@@ -697,7 +780,7 @@
   }
 
   .stack-card-item .card-content>figure {
-    height: 200px;
+    height: 235px;
   }
 
   .stack-card-item .card-content {
@@ -705,7 +788,7 @@
     grid-template-areas:
       "img"
       "text";
-    height: 480px;
+    height: 495px;
   }
 
   .card-content .card-contentdesc p {
@@ -722,17 +805,17 @@
 
   .acrossborder-inner>h4 {
     font-size: 42px;
-    line-height: 53px;
+    line-height: 100%;
   }
 
   .acrossborer-globdesc {
-    padding: 60px 0px 50px;
+    padding: 60px 0px 40px;
   }
 
   .acrossborder-icntxt {
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
     align-items: center;
   }
 
@@ -816,11 +899,15 @@
   .wastemgmt-colone {
     width: 80%;
     margin-bottom: 25px;
-    margin-left: 18px;
+    margin-left: 5px;
+  }
+  .wastemgmt-tab{
+    gap: 20px;
   }
 
   .wastemgmt-title h5 {
     font-size: 16px;
+    line-height: 120%;
   }
 
   .wastemgmt-img {
@@ -830,6 +917,9 @@
   .wastemgmt-navbar,
   .wastemgmt-coltwo .wastemgmt-navbar {
     padding: 0 20px;
+  }
+  .product-display-tabs.certificationtab-sec {
+    margin-bottom: 150px;
   }
 }
 
@@ -934,6 +1024,9 @@
 
 
 @media only screen and (max-width: 576px) {
+  .cust-container{
+    padding: 0 15px;
+  }
   .head-logo a>img {
     width: 85%;
   }
@@ -949,6 +1042,12 @@
   .breadcrumb-item+.breadcrumb-item::before {
     padding-right: .3rem;
   }
+  .breadcrumb .breadcrumb-item.truncate a{
+   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 18px;
+}
 
   .highlight-section-inner .diagonalbgarw {
     top: -12px;
@@ -973,7 +1072,7 @@
   }
 
   .commonfrst-sec ol.breadcrumb {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   .comon-head-inner h2 {
@@ -982,10 +1081,13 @@
 
   .comon-head-inner h2,
   .comonhead>h5 {
-    font-size: 35px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 120%;
   }
 
+  .cgnews-sec-head{
+    margin-bottom: 5px;
+  }
   .green-left {
     width: 90%;
   }
@@ -995,8 +1097,13 @@
   }
 
   .card-content .card-contentdesc h4 {
-    font-size: 20px;
+    font-size: 32px;
+    line-height: 120%;
     margin-bottom: 15px;
+  }
+  .card-content .card-contentdesc p{
+    line-height: 120%;
+    margin-bottom: 22px;
   }
 
   section.stackcard-sec,
@@ -1008,50 +1115,68 @@
     font-size: 18px;
   }
 
-  .stack-card-item {
-    top: 15px;
-  }
-
   .stack-card-item .card-content {
-    height: 650px;
+    height: 550px;
   }
 
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 650px);
+    grid-template-rows: repeat(var(--numcards), 600px);
   }
 
   .swiperslider-sec {
     padding-bottom: 50px;
   }
-
+  
   .swiper-innerslider {
-    padding: 0 15px;
+    padding: 0 0 0 15px;
   }
 
   .swiper-item-slider {
     padding: 0;
   }
-
+  
   .switchgear-swiper {
-    width: 100%;
-    padding: 10px 10px 80px 10px !important;
-    background-size: cover;
-    background-position: top -64px right 0px;
+      width: 100%;
+      padding: 35px 30px 120px 20px !important;
+      background-size: cover;
+      background-position: top -75px right 0px;
+  }
+      .switchgear-swiper .switchgear-swiper-nav {
+        left: 28%;
+        width: 120px;
+        bottom: 25px;
+        transform: translate(-50%, -28%);
+    }
+
+  .testimonial-name{
+    font-size: 16px;
+  }
+  .switchgear-swiper .swiper-slide{
+    padding: 20px;
   }
 
-  .switchgear-swiper .switchgear-swiper-nav {
-    width: 130px;
-    bottom: 18px;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  .switchgear-swiper::after {
-    content: none;
+  .switchgearslienttestisec::after{
+    top: 80px;
+    left: 15px;
+    width: 70px;
+    height: 70px;
   }
 
   .tabs-container.commcntabui {
     flex-direction: column-reverse;
+    padding-bottom: 0;
+  }
+  .product-display-tabs {
+    margin-bottom: 100px;
+  }
+  .switchgr-newprodsec .carousel-wrapper .newprodc-navbar{
+    bottom: -70px;
+  }
+  .product-display-tabs{
+    margin-top: 60px;
+  }
+  .product-display-tabs .commcntabui .nav-tabs .nav-item{
+    margin-right: 0;
   }
 
   .commcntabui .download-icncta>button {
@@ -1079,6 +1204,13 @@
     width: 100%;
   }
 
+  .ais-circuit-breaker-inner{
+    margin-top: 0;
+  }
+      .ais-circuit-breaker-inner .ais-circuit-desc-outer {
+        padding-left: 0;
+        margin-top: 20px;
+    }
   /* pdp page */
   /* .product-display-tabs table, .product-display-tabs thead, .product-display-tabs tbody, .product-display-tabs th, .product-display-tabs td, .product-display-tabs tr {
         display: block;
@@ -1145,9 +1277,9 @@
   .ais-circuit-desc-outer .ais-circuit-desc-inner::after {
     content: '';
     position: absolute;
-    left: -15px;
+    left: -20px;
     top: 0;
-    width: 15px;
+    width: 20px;
     height: 100%;
     background-color: #f2f9ff;
   }
@@ -1155,9 +1287,9 @@
   .ais-circuit-desc-outer .ais-circuit-desc-inner::before {
     content: '';
     position: absolute;
-    right: -15px;
+    right: -20px;
     top: 0;
-    width: 15px;
+    width: 20px;
     height: 100%;
     background-color: #f2f9ff;
   }
@@ -1170,6 +1302,7 @@
   .commcntabui.tabbotborder .nav-tabs .nav-link {
     font-size: 14px;
     padding: 8px 0px;
+    margin-bottom: -5.5px;
   }
 
   .pdpul ul li,
@@ -1184,6 +1317,8 @@
 
   .solutionforbusswiper {
     padding: 30px 0 !important;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
   }
 
   .solutionforbusswiper .swiper-wrapper {
@@ -1213,7 +1348,7 @@
   }
 
   .green-card {
-    width: 45%;
+    width: 46.5%;
   }
 
   .green-card .greencardimg>img {
@@ -1240,16 +1375,21 @@
 
   .switchgr-newprodsec .card-slide .slide-text {
     padding-left: 0;
-    padding-top: 30px;
+    padding-top: 10px;
   }
 
   .switchgr-newprodsec .swiper-slide {
     padding: 15px 0;
   }
 
-  .switchgr-newprodsec .card-slide,
+  .switchgr-newprodsec .card-slide{
+    border-radius: 14px;
+  }
   .switchgr-newprodsec .card-slide .new-prod-img {
-    border-radius: 20px;
+    border-radius: 12px;
+  }
+  .switchgr-newprodsec .card-slide{
+    padding: 10px 10px 30px 10px;
   }
 
   .switchgr-newprodsec .slide-text h3 {
@@ -1259,6 +1399,7 @@
   .switchgr-newprodsec .slide-text p {
     font-size: 14px;
     margin: 0;
+    line-height: 120%;
   }
 
   .highlight-text .mobileshowtxt {
@@ -1274,6 +1415,18 @@
   .swiperslider-sec.comntbmargn {
     margin-bottom: 65px;
   }
+   .commonfrst-sec.rdpadmob{
+    padding: 40px 0 35px 0;
+  }
+  .commonfrst-sec{
+    padding-top: 40px;
+  }
+      .comntbmargn {
+        margin: 100px 0;
+    }
+    .commonfrst-sec.mobotpad0{
+      padding-bottom: 0px;
+    }
 }
 
 @media only screen and (max-width: 426px) {
@@ -1303,12 +1456,12 @@
 
   .comon-head-inner h2,
   .comonhead>h5 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 32px;
+    line-height: 120%;
   }
 
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 650px);
+    grid-template-rows: repeat(var(--numcards), 620px);
   }
 
   .stack-card-item .card-content {
@@ -1323,6 +1476,9 @@
 
   .solution-sliditem .solutin-desc .solut-icn>img {
     width: 25px;
+  }
+  .highlight-section{
+    margin: 100px 0;
   }
 
   /* sector we serve */
@@ -1417,7 +1573,7 @@
   }
 
   .highlight-text {
-    font-size: 58px;
+    font-size: 56px;
     line-height: 62px;
   }
 }
@@ -1472,8 +1628,9 @@
 
   .commcntabui.tabbotborder .nav-tabs .nav-link {
     font-size: 12px;
+    margin-bottom: -6px;
   }
-
+ 
 }
 
 @media only screen and (max-width: 360px) {
@@ -1485,8 +1642,8 @@
 
 @media only screen and (max-width: 346px) {
   .highlight-text {
-    font-size: 45px;
-    line-height: 60px;
+    font-size: 44px;
+    line-height: 58px;
   }
 
   .green-card h4 {
@@ -1497,7 +1654,11 @@
     font-size: 12px;
   }
 }
-
+@media only screen and (max-width:326px) {
+      .green-card {
+        width: 46%;
+    }
+}
 @media only screen and (max-width:321px) {
   .highlight-text {
     font-size: 40px;

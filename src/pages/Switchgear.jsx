@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 import banner from "../components/assets/images/switchgear/swibaner.jpg";
+import mobbaner from "../components/assets/images/switchgear/mobbaner.jpg";
 import card1 from "../components/assets/images/switchgear/card1.jpg";
 import card2 from "../components/assets/images/switchgear/card2.jpg";
 import card3 from "../components/assets/images/switchgear/card3.jpg";
@@ -124,11 +125,14 @@ const Switchgear = () => {
         <>
             <section className="inner-comoonbanner">
                 <div className="comonban">
-                    <img src={banner} alt="" />
+                    <picture>
+                        <source media="(min-width:740px)" srcset={banner}/>
+                        <img src={mobbaner} alt="" />
+                    </picture>
                 </div>
             </section>
 
-            <section className="commonfrst-sec">
+            <section className="commonfrst-sec mobotpad0">
                 <div className="cust-container">
                     <div className="breadcr-inner">
                         <ol className="breadcrumb">
@@ -153,18 +157,20 @@ const Switchgear = () => {
                         <ul id="stack-cards-ul">
                             {switchGearCards.map((item, id) => (
                                 <li className="stack-card-item" id={`card-${id}`} data-total-cards={switchGearCards.length} style={{ '--index': `${id + 1}` }} key={id}>
-                                    <div className="card-content">
-                                        <div className="card-contentdesc">
-                                            <h4>{item.title}</h4>
-                                            {item.desc.map((data, idx) => (
-                                                <p key={idx}>{data.detail}</p>
-                                            ))}
-                                            <div className="card-contentcta">
-                                                <a href={item.slink}>Know More</a>
+                                    <a href={item.slink}>
+                                        <div className="card-content">
+                                            <div className="card-contentdesc">
+                                                <h4>{item.title}</h4>
+                                                {item.desc.map((data, idx) => (
+                                                    <p key={idx}>{data.detail}</p>
+                                                ))}
+                                                <div className="card-contentcta">
+                                                    <a href={item.slink}>Know More</a>
+                                                </div>
                                             </div>
+                                            <figure><img alt="" src={item.img} /></figure>
                                         </div>
-                                        <figure><img alt="" src={item.img} /></figure>
-                                    </div>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -173,7 +179,7 @@ const Switchgear = () => {
 
             </section>
 
-            <section className="swiperslider-sec addmarginbotm comntbmargn pb-0">
+            <section className="swiperslider-sec switchgearslienttestisec addmarginbotm comntbmargn pb-0">
                 <div className="cust-container">
                     <div className="common-heading-sec">
                         <div className="comon-head-inner">
@@ -211,7 +217,7 @@ const Switchgear = () => {
                                 991: {
                                     slidesPerView: 1
                                 },
-                                992: {
+                                993: {
                                     slidesPerView: 1.8
                                 }
                             }}
@@ -308,8 +314,18 @@ const Switchgear = () => {
 
 
                         <div className="newprodc-navbar">
-                            <button className="custom-nav prev" onClick={() => swiperRef.current?.slidePrev()}> <img src={newproLeftarw} alt="" /> </button>
-                            <button className="custom-nav next" onClick={() => swiperRef.current?.slideNext()}> <img src={righnewproRightarwtarow} alt="" /> </button>
+                            <button className="custom-nav prev" onClick={() => swiperRef.current?.slidePrev()}> 
+                                <picture>
+                                    <source media="(min-width:1025px)" srcset={newproLeftarw}/>
+                                    <img alt="" src={leftarow}/>  {/*mobile*/}
+                                </picture>
+                             </button>
+                            <button className="custom-nav next" onClick={() => swiperRef.current?.slideNext()}> 
+                                <picture>
+                                    <source media="(min-width:1025px)" srcset={righnewproRightarwtarow}/>
+                                    <img alt="" src={rightarow}/>  {/*mobile*/}
+                                </picture>
+                            </button>
                         </div>
 
                     </div>

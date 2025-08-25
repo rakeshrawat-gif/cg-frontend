@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs, Pagination, Autoplay } from "swiper/modules";
 
 import banner from "../components/assets/images/swibaner.jpg";
+import mobbaner from "../components/assets/images/switchgear/mobbaner.jpg";
 import proi1 from "../components/assets/images/productdetail/proi1.jpg";
 import proi2 from "../components/assets/images/productdetail/proi2.jpg";
 import downloadicn from "../components/assets/images/productdetail/downloadicn.svg";
@@ -40,16 +41,19 @@ const ProductDisplay = () => {
 
             <section className="inner-comoonbanner">
                 <div className="comonban">
-                    <img src={banner} alt="" />
+                    <picture>
+                        <source media="(min-width:740px)" srcset={banner}/>
+                        <img src={mobbaner} alt="" />  {/* Mobile*/}
+                    </picture>
                 </div>
             </section>
-            <section className="commonfrst-sec">
+            <section className="commonfrst-sec rdpadmob">
                 <div className="cust-container">
                     <div className="breadcr-inner">
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="#">Home</a></li>
-                            <li className="breadcrumb-item"><a href="#">Switchgears</a></li>
-                            <li className="breadcrumb-item"><a href="#">High Voltage & Extra High Voltage</a></li>
+                            <li className="breadcrumb-item truncate"><a href="#">Switchgears</a></li>
+                            <li className="breadcrumb-item truncate"><a href="#">High Voltage & Extra High Voltage</a></li>
                             <li className="breadcrumb-item active" aria-current="page">SF6 Circuit Breaker</li>
                         </ol>
                     </div>
