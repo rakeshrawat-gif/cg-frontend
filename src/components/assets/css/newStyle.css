@@ -1363,7 +1363,7 @@
 
 .inner-nav {
   position: absolute;
-  bottom: 15px;
+  bottom: 45%;
   left: 15px;
   display: flex;
   gap: 10px;
@@ -1371,7 +1371,8 @@
 }
 
 .inner-nav button {
-  background: #5c9132;
+  /* background: #ffffff; */
+  background: #7BC14399;
   border: none;
   border-radius: 50px;
   padding: 0px 15px;
@@ -1379,6 +1380,20 @@
   font-weight: bold;
   font-size: 25px;
   color: #fff;
+  position: relative;
+}
+
+.inner-nav .inner-prev {
+  left: 30%;
+}
+
+.inner-nav .inner-next {
+  left: 400%;
+}
+
+.inner-nav .swiper-button-disabled {
+  background: #ffffff;
+  color: #000;
 }
 
 .image-card {
@@ -1418,6 +1433,7 @@
 .esg-navbar {
   width: 100% !important;
   padding: 0px !important;
+  margin-bottom: 40px;
 }
 
 .esgSwiperSec .swiper-item-slider {
@@ -2273,6 +2289,36 @@
   .titleEsg p {
     font-size: 16px;
   }
+
+  .inner-nav {
+    bottom: 75%;
+  }
+
+  .inner-nav .inner-prev {
+    left: 8%;
+  }
+
+  .inner-nav .inner-next {
+    left: 260%;
+  }
+
+  .swiper-wrapper-sm .image-card {
+    display: none;
+  }
+
+  .inner-green-slider {
+    width: 100%;
+  }
+
+  .green-img {
+    max-width: 100% !important;
+    border-radius: 10px;
+  }
+
+  .inner-green-slider img {
+    height: 300px;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -2934,6 +2980,10 @@
 
   .caseStudy-navbar .switchgear-swiper-nav {
     left: 20px !important;
+  }
+
+  .esg-navbar {
+    margin-bottom: 0;
   }
 }
 

@@ -159,17 +159,17 @@ const Enviormental = () => {
 
   const swipdata = [
     {
-      image: [esgGreenSlide1, esgGreenSlide1, esgGreenSlide1],
+      image: [esgGreenSlide1, swip2Img, swip3Img],
       caption: "Herbal Garden",
       text: "CG’s Unit-1 Ahmednagar plant has developed a “Herbal Garden” using STP-treated water, promoting sustainability while enhancing the facility’s surroundings. The garden features herbs with culinary, medicinal, and ornamental uses, with each plant labeled and linked to a QR code for more information, reflecting the company’s commitment to a greener lifestyle.",
     },
     {
-      image: [esgGreenSlide1, esgGreenSlide1, esgGreenSlide1],
+      image: [swip2Img, esgGreenSlide1, esgGreenSlide1],
       caption: "Hazardous Waste Diverted from Disposal to Processing at LT Motors Unit-1",
       text: "To reduce its carbon footprint, LT Motors Unit-1 has diverted hazardous waste from disposal to pre-processing after successful trials at M/s Green Gene Enviro Protection & Infrastructure Pvt. Ltd. This initiative minimizes pollution while turning waste into a resource, reflecting CG’s commitment to sustainability.",
     },
     {
-      image: [esgGreenSlide1, esgGreenSlide1, esgGreenSlide1],
+      image: [esgGreenSlide1, swip2Img, esgGreenSlide1],
       caption: "Installation of Industrial Dish Washing Machine",
       text: "CG’s Switchgear facility in Nashik has installed a dishwashing machine in its canteen washing area, improving cleaning efficiency while supporting sustainability efforts. This initiative helps save approximately 250 cubic meters of water every month and reflects the company’s commitment to reducing environmental impact through responsible resource management.",
     }
@@ -486,15 +486,20 @@ const Enviormental = () => {
                     <div className="green-card-sm">
                       <div className="inner-green-slider">
                         <Swiper
-                          modules={[Navigation, Controller]}
-                          onSwiper={setMainSwiper}
-                          controller={{ control: thumbSwiper }}
+                          // modules={[Navigation, Controller]}
+                          modules={[Navigation]}
+                          // onSwiper={setMainSwiper}
+                          // controller={{ control: thumbSwiper }}
                           slidesPerView={1}
+                          breakpoints={{
+                            0: { slidesPerView: 1 },
+                            768: { slidesPerView: 1 },
+                          }}
                           navigation={{
                             nextEl: ".inner-next",
                             prevEl: ".inner-prev",
                           }}
-                          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                        // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                         >
                           {swipdata[activeIndex].image.map((img, idx) => (
                             <SwiperSlide key={idx}>
@@ -517,7 +522,7 @@ const Enviormental = () => {
                     <div className="swiper-wrapper-sm">
                       <Swiper
                         modules={[Navigation]}
-                        slidesPerView={1}   // 👈 only 2 slides
+                        slidesPerView={1}
                         spaceBetween={20}
                         loop={true}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

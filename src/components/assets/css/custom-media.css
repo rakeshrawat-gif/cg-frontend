@@ -18,9 +18,11 @@
   .tech-image {
     flex: 1 1 100%;
   }
+
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .green-card-sm {
     width: 100%;
     height: auto;
@@ -80,7 +82,7 @@
     font-size: 14px;
   }
 
-   .materiality-title {
+  .materiality-title {
     font-size: 28px;
     width: 100%;
   }
@@ -89,34 +91,50 @@
     width: 100%;
     font-size: 15px;
   }
-   .cards-container {
+
+  .cards-container {
     grid-template-columns: 1fr;
   }
-  .materiality-footer{
+
+  .materiality-footer {
     width: 100%;
   }
-   .green-card-sm {
-    padding: 16px;
+
+  .green-card-sm {
+    padding: 15px;
+    border-radius: 10px;
   }
 
   .green-card-text h3 {
     font-size: 20px;
+    font-weight: 600;
   }
 
   .green-card-text p {
     font-size: 14px;
   }
 
-  .swiper-nav-sm button {
-    padding: 8px;
+  .green-card-text {
+    text-align: left;
+    padding: 0;
+    display: block;
+    padding-top: 10px;
+    margin-bottom: -25px;
   }
-  .env-card{
+
+  .swiper-nav-sm button {
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+
+  .env-card {
     width: 99%;
   }
 
-  .reports-wrapper{
+  .reports-wrapper {
     margin-top: 20px;
   }
+
   .contact-table,
   .calendar-table table {
     font-size: 13px;
@@ -192,14 +210,21 @@
   .inv-card {
     height: 250px;
   }
-  .swiper-nav-sm{
-    display: none;
-  }
-  .view-report img{
-   width: 30px;
+
+  .swiper-nav-sm {
+    display: block;
+    position: relative;
+    z-index: 2;
+    bottom: 0;
+    left: 38%;
+    padding: 0px;
   }
 
-   .info-row {
+  .view-report img {
+    width: 30px;
+  }
+
+  .info-row {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -207,6 +232,7 @@
   .info-link {
     margin-top: 8px;
   }
+
   .scheme-row {
     flex-direction: column;
     align-items: flex-start;
@@ -228,7 +254,7 @@
   .item-title {
     font-size: 14px;
   }
-  
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -251,6 +277,7 @@
     width: 18px;
     height: 18px;
   }
+
   .info-title {
     font-size: 14px;
   }
@@ -264,7 +291,7 @@
     height: 8px;
   }
 
-   .scheme-title {
+  .scheme-title {
     font-size: 14px;
   }
 
