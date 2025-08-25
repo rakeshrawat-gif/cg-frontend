@@ -169,7 +169,7 @@ const ESGRating = () => {
       </section> */}
 
       <section className="product-display-tabs esgCertificateSec certificationtab-sec">
-        <div className="cust-container">
+        <div className="cust-containerNew">
           <div className="common-heading-sec">
             <div className="comon-head-inner">
               <h2>Certifications</h2>

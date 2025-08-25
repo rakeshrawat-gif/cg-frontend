@@ -4,7 +4,7 @@ import { Navigation, Autoplay, FreeMode, Controller } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import ClimateImg from "../components/assets/images/ESG/env1.jpg";
-import ProductImg from "../components/assets/images/ESG/env2.jpg";
+import ProductImg from "../components/assets/images/ESG/productStewardship.png";
 import InnovationImg from "../components/assets/images/ESG/env3.jpg";
 import HumanImg from "../components/assets/images/ESG/env4.jpg";
 import HumanRightImg from "../components/assets/images/ESG/env5.jpg";
@@ -355,7 +355,7 @@ const Enviormental = () => {
 
                 {/* Existing Design */}
                 <section className="common-heading-sec">
-                  <div className="cust-container">
+                  <div className="cust-containerNew">
                     <div className="comon-head-inner">
                       <h2>Materiality at CG</h2>
                       <p>
@@ -376,7 +376,7 @@ const Enviormental = () => {
                     </div>
                   </div>
 
-                  <div className="cust-container">
+                  <div className="cust-containerNew">
                     <div className="env-tabs">
                       {tabList.map((tab) => (
                         <button

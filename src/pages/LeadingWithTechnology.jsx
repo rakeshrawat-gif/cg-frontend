@@ -138,7 +138,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide1} alt="Krimpenerwaard pumping station" />
+                  <img src={caseStudySlide1} className='caseImgSlide' alt="Krimpenerwaard pumping station" />
                   <div className='caseStudyDesc'>
                     <h3>Krimpenerwaard pumping station</h3>
                     <p>The Krimpenerwaard pumping station
@@ -151,7 +151,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide2} alt="GMB BioEnergy" />
+                  <img src={caseStudySlide2} className='caseImgSlide' alt="GMB BioEnergy" />
                   <div className='caseStudyDesc'>
                     <h3>GMB BioEnergy</h3>
                     <p>GMB BioEnergy is a company with leading expertise
@@ -164,7 +164,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide1} alt="GMB BioEnergy" />
+                  <img src={caseStudySlide1} className='caseImgSlide' alt="GMB BioEnergy" />
                   <div className='caseStudyDesc'>
                     <h3>Krimpenerwaard pumping station</h3>
                     <p>The Krimpenerwaard pumping station
@@ -177,7 +177,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide2} alt="GMB BioEnergy" />
+                  <img src={caseStudySlide2} className='caseImgSlide' alt="GMB BioEnergy" />
                   <div className='caseStudyDesc'>
                     <h3>GMB BioEnergy</h3>
                     <p>GMB BioEnergy is a company with leading expertise
@@ -190,7 +190,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide1} alt="Krimpenerwaard pumping station" />
+                  <img src={caseStudySlide1} className='caseImgSlide' alt="Krimpenerwaard pumping station" />
                   <div className='caseStudyDesc'>
                     <h3>Krimpenerwaard pumping station</h3>
                     <p>The Krimpenerwaard pumping station
@@ -203,7 +203,7 @@ const LeadingWithTechnology = () => {
             <SwiperSlide>
               <div className="casestudy-sliditem">
                 <div className="soluitn-img caseStudy-img">
-                  <img src={caseStudySlide2} alt="Krimpenerwaard pumping station" />
+                  <img src={caseStudySlide2} className='caseImgSlide' alt="Krimpenerwaard pumping station" />
                   <div className='caseStudyDesc'>
                     <h3>GMB BioEnergy</h3>
                     <p>GMB BioEnergy is a company with leading expertise

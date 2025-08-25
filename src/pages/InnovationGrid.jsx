@@ -12,45 +12,42 @@ import LocationIcn from "../components/assets/images/technologyR&D/MapIcon.svg";
 
 const projectData = [
   {
-    title: "Netherlands",
-    image: Netherlands,
+    title: "Netherlands", image: Netherlands,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
   {
-    title: "Trinidad and Tobago, West Indies",
-    image: trinidad,
+    title: "Trinidad and Tobago, West Indies", image: trinidad,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
   {
-    title: "Utah, USA",
-    image: USA,
+    title: "Utah, USA", image: USA,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
   {
-    title: "Germany",
-    image: Germany,
+    title: "Germany", image: Germany,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
   {
-    title: "Marzanello, Italy",
-    image: Italy,
+    title: "Marzanello, Italy", image: Italy,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
   {
-    title: "Oman",
-    image: Oman,
+    title: "Oman", image: Oman,
     description:
       "CG Emotron-powered 24-ton lifting winch for windmill installations at sea",
   },
 ];
 
+const filterOptions = ["Transformers", "Switchgears", "Motors", "Drives and Automation"];
+
 const InnovationGrid = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedFilter, setSelectedFilter] = useState("All");
   const [selectedLocation, setSelectedLocation] = useState("All");
 
   const openModal = (item) => setSelectedCard(item);
@@ -61,17 +58,18 @@ const InnovationGrid = () => {
     selectedLocation === "All"
       ? projectData
       : projectData.filter((p) => p.title.includes(selectedLocation));
+
   return (
     // <section className="innovation-section">
     <section className="cust-container">
       <div className="innovation-header">
         <h2>Live Projects</h2>
-        <a href="#" className="view-all-link">
+        {/* <a href="#" className="view-all-link">
           View All{" "}
           <span className="arrow">
             <img src={arrow} alt="arrow" />
           </span>
-        </a>
+        </a> */}
       </div>
       <p className="subtitle">
         At CG, we transform problems into opportunities, developing future-ready
@@ -79,7 +77,7 @@ const InnovationGrid = () => {
       </p>
 
       {/* Dropdown Filter */}
-      <div className="dropdown-filter">
+      {/* <div className="dropdown-filter">
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
@@ -91,6 +89,18 @@ const InnovationGrid = () => {
             </option>
           ))}
         </select>
+      </div> */}
+      {/* Replaced dropdown with filter buttons */}
+      <div className="Invofilter-buttons">
+        {filterOptions.map((option, idx) => (
+          <button
+            key={idx}
+            onClick={() => setSelectedFilter(option)}
+            className={`Invfilter-btn ${selectedFilter === option ? "active" : ""}`}
+          >
+            {option}
+          </button>
+        ))}
       </div>
 
       <div className="inv-grid">

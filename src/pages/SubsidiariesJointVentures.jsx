@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation } from "swiper/modules";
+import { EffectFade, Navigation, Pagination  } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import diagonArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
 import bannerImage from "../components/assets/images/subjoinven/subjvban.jpg";
 import Indian from "../components/assets/images/subjoinven/indiaicn.svg";
@@ -23,18 +24,23 @@ const SubsidiariesJointVentures = () => {
   const tabData = [
     {
       label: 'Semiconductors', img: semiIcon, type: 'box', content: [
-        // {cimg: sjvic1, ctitle:'CG Adhesive Products Limited', cdesc:'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink:'', imgalt:'India' },
-        { cimg: sjvic3, ctitle: 'Axiro Semiconductor Private Limited', cdesc: 'Axiro is rapidly emerging as a key player in the global semiconductor ecosystem. They ship millions of production ICs every month, driven by a team built for speed, scale, and execution. Their portfolio spans RF, mmWave, wireless infrastructure, and Satcom — enabling the next wave of connectivity through technologies like 6G and AI-powered systems.', clink: '' },
-        { cimg: sjvic2, ctitle: 'CG Semi Private', cdesc: 'CG Semi Private Ltd. is a joint venture uniting CG Power and Industrial Solutions Limited, Renesas Electronics America Inc., and Stars Microelectronics (Thailand) Public Co., Ltd. They specialize in Outsourced Semiconductor Assembly and Testing (OSAT) services, offering comprehensive test services on a global scale.', clink: '' },
-        // { cimg: sjvic4, ctitle: 'CG Power Equipments Limited', cdesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ', clink: '' },
-        // { cimg: sjvic5, ctitle: 'G.G.Tronics India Private Limited', cdesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ', clink: '' },
+        {
+          cimg: sjvic3,
+          ctitle: 'Axiro Semiconductor Private Limited',
+          cdesc: 'Axiro is rapidly emerging as a key player in the global semiconductor ecosystem. They ship millions of production ICs every month, driven by a team built for speed, scale, and execution. Their portfolio spans RF, mmWave, wireless infrastructure, and Satcom — enabling the next wave of connectivity through technologies like 6G and AI-powered systems.',
+          clink: '#'
+        },
+        {
+          cimg: sjvic2,
+          ctitle: 'CG Semi Private',
+          cdesc: 'CG Semi Private Ltd. is a joint venture uniting CG Power and Industrial Solutions Limited, Renesas Electronics America Inc., and Stars Microelectronics (Thailand) Public Co., Ltd. They specialize in Outsourced Semiconductor Assembly and Testing (OSAT) services, offering comprehensive test services on a global scale.',
+          clink: '#'
+        },
+
       ]
     },
     {
       label: 'Drives & Automation', img: DriveAutoIcon, type: 'text', content: [
-        // { cimg: sjvic3, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
-        // { cimg: sjvic5, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
-        // { cimg: sjvic1, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
         { ctitle: 'CG Drives & Automation Germany GmbH Germany' },
         { ctitle: 'CG Drives & Automation Netherlands BV' },
         { ctitle: 'CG Drives & Automation Sweden AB' },
@@ -42,11 +48,12 @@ const SubsidiariesJointVentures = () => {
     },
     {
       label: 'Railways', img: RailwaysIcon, type: 'box', content: [
-        { cimg: sjvic5, ctitle: 'G.G.Tronics India Private Limited', cdesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ', clink: '' },
-
-        // { cimg: sjvic3, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
-        // { cimg: sjvic5, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
-        // { cimg: sjvic1, ctitle: 'CG Adhesive Products Limited', cdesc: 'CG Adhesive Products Limited  is a Joint Venture between CG Power and Industrial Solutions Ltd. and PPI Adhesive Products Limited, Republic of Ireland, for the manufacture of Pressure Sensitive Adhesive Tapes and Laminates (Paper and Mica based) for Electrical, Electronics and Specialty applications. The Company also offers complete solutions for printed and die cut components and labels.', clink: '', imgalt: 'India' },
+        {
+          cimg: sjvic5,
+          ctitle: 'G.G.Tronics India Private Limited',
+          cdesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ',
+          clink: '#'
+        },
       ]
     },
     {
@@ -114,9 +121,12 @@ const SubsidiariesJointVentures = () => {
                 </li>
               ))}
             </ul>
-            <div className="download-icncta">
-              <button href="javascript:;"><img src={downloadIcn} alt="" />Download Logos</button>
-            </div>
+            {(activeTab.label === 'Semiconductors' || activeTab.label === 'RailwaysTab') && (
+              <div className="download-icncta">
+                <button><img src={downloadIcn} alt="" />Download Logos</button>
+              </div>
+            )}
+
           </div>
 
           {/* <!-- Tab Content --> */}
@@ -187,7 +197,9 @@ const SubsidiariesJointVentures = () => {
 
                     {/* Mobile Swiper */}
                     <div className="d-block d-md-none w-100 mobSubjointSwiper">
-                      <Swiper spaceBetween={16} slidesPerView={1.2}>
+                      <Swiper spaceBetween={16} slidesPerView={1.2}
+                        modules={[Pagination]}
+                        pagination={{ clickable: true }}>
                         {activeTab.content.map((slideItem, slideId) => (
                           <SwiperSlide key={slideId}>
                             <div className="company-card">

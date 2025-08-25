@@ -179,14 +179,15 @@ const Leadership = () => {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="#">Home</a></li>
                             <li className="breadcrumb-item"><a href="#">About CG</a></li>
-                            <li className="breadcrumb-item active" aria-current="page">Leadership and Top Management  </li>
+                            <li className="breadcrumb-item active" aria-current="page">Leadership </li>
                         </ol>
                     </div>
                     <div className="common-heading-sec">
                         <div className="comon-head-inner">
-                            <h2>Leadership & Top Management</h2>
+                            <h2>Leadership</h2>
                             <p>At CG, our leadership team exemplifies the values, vision, and long-term commitment that define who we are. Rooted in a culture of excellence and guided by a forward-looking mindset, our leaders are deeply aligned with CG’s mission of transforming your needs into smart solutions for an enhanced quality of life.
-                                At CG, leadership is not just about direction; it’s about inspiration, stewardship, and building a legacy that is built to last.</p>
+                                At CG, leadership is not just about direction; it’s about inspiration, stewardship, and building a legacy that is built to last.
+                            </p>
                         </div>
                     </div>
                 </div>

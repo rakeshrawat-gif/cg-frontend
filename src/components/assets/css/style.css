@@ -2065,14 +2065,16 @@ header #desktopheader .head-menuitems{
 
 .tabs-container.commcntabui {
   margin-bottom: 20px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 4px;
+  flex-direction: column;
 }
 
 .commcntabui .nav-tabs {
   justify-content: center;
   border-bottom: none;
+  margin-bottom: 30px;
 }
 
 .commcntabui .nav-tabs .nav-link {
@@ -2152,7 +2154,7 @@ header #desktopheader .head-menuitems{
 
 
 .comccontabcontent .company-logo {
-  height: 160px;
+  height: 180px;
   object-fit: contain;
   margin-bottom: 15px;
 }
@@ -2173,7 +2175,7 @@ header #desktopheader .head-menuitems{
 .comccontabcontent .know-more {
   color: var(--card-bg-skyblu);
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 30px;
   text-decoration: none;
   font-size: 14px;
 }

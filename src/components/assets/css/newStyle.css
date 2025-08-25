@@ -1067,6 +1067,10 @@
   border-radius: 8px;
   padding: 8px 24px;
   border: 2px solid #969696;
+  height: 80px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .company-text-box:hover {
@@ -1259,6 +1263,30 @@
   background-size: 16px;
 }
 
+.Invofilter-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.Invfilter-btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid #969696;
+  color: #969696;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Invfilter-btn.active {
+  border: 2px solid #005CAB;
+  color: #005CAB;
+}
+
 /* --------- END About Page Technology R&D ---------- */
 
 /* --------- ESG Page CSS ---------- */
@@ -1374,6 +1402,16 @@
   font-size: 48px;
   letter-spacing: 0.5px;
   vertical-align: middle;
+  color: #4C4F54;
+}
+
+.titleEsg p {
+  color: #4C4F54;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }
 
 .esg-navbar {
@@ -1612,6 +1650,13 @@
 }
 
 @media (max-width: 768px) {
+
+  .comonban>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
   .aboutYears {
     font-size: 60px;
     line-height: 65px;
@@ -2043,7 +2088,11 @@
     vertical-align: middle;
   }
 
-  .casestudy-sliditem .soluitn-img>img {
+  /* .casestudy-sliditem .soluitn-img>img {
+    height: 400px;
+  } */
+
+  .caseImgSlide {
     height: 400px;
   }
 
@@ -2122,6 +2171,48 @@
   }
 
   /* END Product Category Switchgear Mobile */
+
+  /* ESG MObile SLider of Tabs */
+
+  .env-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .env-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .env-tabs .env-tab-button {
+    flex: 0 0 auto;
+  }
+
+  .esgSolutionCust .contacttabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .esgSolutionCust .contacttabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
+  .esgSolutionCust .contacttabs .tab {
+    flex: 0 0 auto;
+  }
+
+  .caseStudyTit h3 {
+    font-size: 32px;
+  }
+
+  .titleEsg p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2215,7 +2306,7 @@
   position: relative;
   width: 40%;
   padding: 50px 30px 50px 100px;
-  
+
   /* background-color: #fff; */
   z-index: 0;
 }
@@ -2352,11 +2443,12 @@
 /* Leader name */
 .leader-name {
   color: #005CAB;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.5px;
   font-family: Helvetica, sans-serif;
+  text-align: left;
 }
 
 /* Leader designation */
@@ -2367,6 +2459,8 @@
   line-height: 120%;
   letter-spacing: 0.5px;
   font-family: Helvetica, sans-serif;
+  text-align: left;
+  width: 80%;
 }
 
 .loadMoreLeader {
@@ -2393,6 +2487,12 @@
     height: 170px;
     width: 100%;
     max-width: 160px;
+    border-radius: 8.42px;
+  }
+
+  .leader-designation {
+    font-size: 14px;
+    width: 100%;
   }
 
   .leadershipSec .contacttabs {
@@ -2756,6 +2856,26 @@
 
 /* ===== Tablet (769px–1024px) ===== */
 @media (min-width: 769px) and (max-width: 1024px) {}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .cust-container {
+    max-width: 100%;
+    margin: 0 15px 0 15px !important;
+  }
+
+  .caseStudySwiper {
+    width: 65% !important;
+  }
+
+  .caseStudy-navbar {
+    width: 35%;
+    padding: 50px 30px 50px 20px !important;
+  }
+
+  .caseStudy-navbar .switchgear-swiper-nav {
+    left: 20px !important;
+  }
+}
 
 /* ==================================       END Media Queries CSS    ============================== */
 
