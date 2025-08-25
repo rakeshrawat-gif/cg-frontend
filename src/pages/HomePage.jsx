@@ -337,7 +337,7 @@ const Homepage = () => {
                 freeModeMomentumRatio={0}
                 spaceBetween={20}
                 centeredSlides={false}
-                speed={3000}
+                speed={2600}
                 autoplay={{
                   delay: 0,
                   disableOnInteraction: false,
@@ -361,7 +361,7 @@ const Homepage = () => {
                       <img src={transFgreen} alt="Transformer Icon" />
                     </div>
                     <h5>Transformers</h5>
-                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <p>As a global leader in engineering solutions, CG empowers ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ const Homepage = () => {
                       <img src={switchFgreen} alt="Switchgear Icon" />
                     </div>
                     <h5>Switchgears</h5>
-                    <p>CG offers one of the widest ranges of Medium to Ultra High Voltage</p>
+                    <p>CG offers one of the widest ranges of Medium to Ultra High Voltage ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -391,7 +391,7 @@ const Homepage = () => {
                       <img src={motoricn} alt="Motor Icon" />
                     </div>
                     <h5>Motors</h5>
-                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <p>As a global leader in engineering solutions, CG empowers ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -406,7 +406,7 @@ const Homepage = () => {
                       <img src={driveandautoicn} alt="Transformer Icon" />
                     </div>
                     <h5>Drives & Automation</h5>
-                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <p>As a global leader in engineering solutions, CG empowers ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ const Homepage = () => {
                       <img src={railwaygrenicn} alt="Switchgear Icon" />
                     </div>
                     <h5>Railways</h5>
-                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <p>As a global leader in engineering solutions, CG empowers ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -436,7 +436,7 @@ const Homepage = () => {
                       <img src={consuprgreen} alt="Switchgear Icon" />
                     </div>
                     <h5>Consumer Products</h5>
-                    <p>As a global leader in engineering solutions, CG empowers</p>
+                    <p>As a global leader in engineering solutions, CG empowers ...</p>
                     <a href="/">Know More <img src={diagolanArrow} alt="Arrow" /></a>
                   </div>
                 </div>
@@ -613,7 +613,7 @@ const Homepage = () => {
             freeModeMomentumRatio={0} 
             slidesPerView={5}
             spaceBetween={30}
-            speed={1500}
+            speed={1000}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
@@ -622,10 +622,10 @@ const Homepage = () => {
             allowTouchMove={false}
              breakpoints={{
                 0: {
-                    slidesPerView: 3
+                    slidesPerView: 2
                 },
                 991: {
-                    slidesPerView: 4
+                    slidesPerView: 3
                 },
                 992: {
                     slidesPerView: 4

@@ -79,12 +79,13 @@ input:focus {
   text-decoration: none;
 }
 
+
 .breadcrumb .breadcrumb-item.active {
   font-weight: 500;
   color: #4C4F54;
 }
 
-.comonban>img {
+.comonban img {
   width: 100%;
 }
 
@@ -336,7 +337,7 @@ section.stackcard-sec {
   line-height: 1;
 }
 
-.switchgr-newprodsec .custom-nav>img {
+.switchgr-newprodsec .custom-nav img {
   width: 20px;
 }
 
@@ -453,11 +454,12 @@ section.stackcard-sec {
 }
 
 .testimonial-text p {
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 120%;
   color: #4C4F54;
   margin: 0;
 }
+
 
 .switchgear-swiper .swiper-button-next,
 .switchgear-swiper .swiper-button-prev,
@@ -1399,21 +1401,21 @@ header #desktopheader .head-menuitems{
     }
     .home-banner-carousl-sec .homeswipernav{
           position: absolute;
-          top: 50%;
+          top: 53%;
           z-index: 1;
           /* max-width: 1250px; */
           margin: 0 auto;
           left: 50%;
           width: 100%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -53%);
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-next, .home-banner-carousl-sec .homeswipernav .swiper-button-prev{
       background: transparent;
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-next::after, .home-banner-carousl-sec .homeswipernav .swiper-button-prev::after{
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 700;
-      color: #969696;
+      color: #969696a6;
     }
     .home-banner-carousl-sec .homeswipernav .swiper-button-next{
       right: 100px;
@@ -1589,11 +1591,13 @@ header #desktopheader .head-menuitems{
     .solution-sliditem .solutin-desc p{
       color: var(--comn-heading-color);
       font-size: 16px;
-      overflow: hidden;
+      display: -moz-box;
       display: -webkit-box;
-      -webkit-line-clamp: 2; /* number of lines to show */
-      line-clamp: 2; 
+      overflow: hidden;
+      line-clamp: 2; /* fallback */
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
     }
     .solution-sliditem .solutin-desc a{
       color: var(--card-bg-skyblu);
@@ -2067,14 +2071,15 @@ header #desktopheader .head-menuitems{
   margin-bottom: 20px;
   align-items: flex-start;
   justify-content: space-between;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
   flex-direction: column;
 }
 
 .commcntabui .nav-tabs {
   justify-content: center;
   border-bottom: none;
-  margin-bottom: 30px;
+  margin-bottom: -4px;
+  padding-bottom: 8px;
 }
 
 .commcntabui .nav-tabs .nav-link {
@@ -2591,7 +2596,7 @@ header #desktopheader .head-menuitems{
         font-weight: 500;
         border-radius: 0;
         transition: .3s;
-        margin-bottom: -5.5px;
+        margin-bottom: -6px;
         position: relative;
         flex: 1;
         text-align: center;
