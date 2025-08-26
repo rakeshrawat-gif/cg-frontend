@@ -326,7 +326,7 @@ const Homepage = () => {
             <p>As a global leader in engineering solutions, CG empowers customers to efficiently harness power and enhance industrial productivity with a focus on sustainability.</p>
           </div>
         </div>
-        <div className="swiper-item-slider">
+        <div className="swiper-item-slider fullwdth">
             <Swiper
                 modules={[Autoplay, FreeMode, Navigation]}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}

@@ -324,8 +324,8 @@
     padding-bottom: 0;
     margin-bottom: 0;
   }
-    .swiperslider-sec.switchgearslienttestisec{
-    margin-top: 30px;
+  .swiperslider-sec.switchgearslienttestisec{
+    margin-top: 100px;
   }
   .swiperslider-sec.comntbmargn {
     margin-bottom: 0;
@@ -400,6 +400,11 @@
   }
   .product-display-tabs {
     padding-top: 40px;
+  }
+  .product-display-tabs.product-detail-multtab{
+    padding-top: 0;
+    margin-bottom: 100px;
+    margin-top: 0;
   }
 
 }
@@ -549,6 +554,9 @@
     width: 75%;
     margin-left: auto;
   }
+  .swiper-item-slider.fullwdth{
+    width: 100%;
+  }
   .switchgear-swiper .switchgear-swiper-nav{
     left: 25%;
     width: 120px;
@@ -641,7 +649,9 @@
   .ais-circuitbreaker-swiper .thumbs-slider {
     width: 100%;
   }
-
+  .ais-circuitbreaker-swiper .thumbs-slider{
+    padding-bottom: 0;
+  }
   .commcntabui.awmanagmenttabs .nav-tabs .nav-item {
     width: fit-content;
     min-width: fit-content;
@@ -781,6 +791,7 @@
 
   .stack-card-item .card-content>figure {
     height: 235px;
+    border-radius: 14px;
   }
 
   .stack-card-item .card-content {
@@ -1114,15 +1125,25 @@
   .card-content .card-contentdesc a {
     font-size: 18px;
   }
+  .stackcard-sec .card-content .card-contentdesc a{
+    font-size: 14px;
+  }
+  .card-content .card-contentdesc a::after{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -22px;
+    bottom: 2px;
+  }
 
   .stack-card-item .card-content {
-    height: 550px;
+    height: auto;
   }
 
   #stack-cards-ul {
-    grid-template-rows: repeat(var(--numcards), 600px);
+    grid-template-rows: repeat(var(--numcards), auto);
   }
-
+  
   .swiperslider-sec {
     padding-bottom: 50px;
   }
@@ -1427,6 +1448,9 @@
     .commonfrst-sec.mobotpad0{
       padding-bottom: 0px;
     }
+    .product-display-tabs.certificationtab-sec .wastemgmt-tab{
+      margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 426px) {
@@ -1460,13 +1484,13 @@
     line-height: 120%;
   }
 
-  #stack-cards-ul {
+  /* #stack-cards-ul {
     grid-template-rows: repeat(var(--numcards), 620px);
   }
 
   .stack-card-item .card-content {
     height: 570px;
-  }
+  } */
 
   .solution-sliditem .solutin-desc .solut-icn {
     right: 15px;
@@ -1618,13 +1642,13 @@
     line-height: 60px;
   }
 
-  #stack-cards-ul {
+  /* #stack-cards-ul {
     grid-template-rows: repeat(var(--numcards), 650px);
   }
 
   .stack-card-item .card-content {
     height: 590px;
-  }
+  } */
 
   .commcntabui.tabbotborder .nav-tabs .nav-link {
     font-size: 12px;
