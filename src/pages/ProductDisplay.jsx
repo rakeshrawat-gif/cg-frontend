@@ -125,7 +125,7 @@ const ProductDisplay = () => {
                 </div>
             </section>
 
-            <section className="product-display-tabs">
+            <section className="product-display-tabs product-detail-multtab">
                 <div className="cust-container">
                     {/* <!-- Tabs --> */}
                     <div className="tabs-container commcntabui tabbotborder d-flex">
