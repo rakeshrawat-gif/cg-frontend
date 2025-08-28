@@ -510,7 +510,7 @@ section.stackcard-sec {
 
 /* ====swiper slider of waste/water management== */
 .product-display-tabs.certificationtab-sec {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .tabs-container.commcntabui.awmanagmenttabs {
@@ -1619,6 +1619,7 @@ header #desktopheader .head-menuitems{
   background: url(../images/home/globebg.png) no-repeat;
   background-size: cover;
   padding: 50px 0 0;
+  background-position: top center;
 }
 
 .acrossborder-glob picture>img {
@@ -1801,6 +1802,7 @@ header #desktopheader .head-menuitems{
   /* number of lines to show */
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  color: var(--comn-heading-color);
 }
 
     .news-desc>p {
@@ -1818,6 +1820,12 @@ header #desktopheader .head-menuitems{
       border-radius: 16px;
       overflow: hidden;
       margin-bottom: 3.5px;
+    }
+    .news-card.homenews-card-desk{
+      display: block;
+    }
+    .news-card.homenews-card-mob{
+      display: none;
     }
     .news-section.cg-inthe-news-sec .news-card{
       width: 32%;
@@ -2000,6 +2008,9 @@ header #desktopheader .head-menuitems{
   margin-bottom: 15px;
 }
 
+.infinite-carousel-sec{
+  margin-bottom: 100px;
+}
 .infinite-carousel-sec .comonhead {
   padding: 0 0 40px 0;
 }
@@ -2531,7 +2542,9 @@ header #desktopheader .head-menuitems{
   padding-top: 20px;
   margin-bottom: 50px;
 }
-
+.product-display-tabs.product-detail-multtab{
+  margin-bottom: 100px;
+}
 .product-display-tabs .table-wrapper {
   max-width: 910px;
   margin-left: 0;
@@ -2586,7 +2599,7 @@ header #desktopheader .head-menuitems{
       padding-left: 15px;
     }
     .tabs-container.tabbotborder{
-      border-bottom: 2px solid #969696;
+      border-bottom: 2px solid #d5d5d5;
     }
      .commcntabui.tabbotborder .nav-tabs .nav-link {
         font-size: 16px;

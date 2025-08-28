@@ -37,6 +37,7 @@ import aboutIcon4 from '../components/assets/images/home/abic4.svg';
 import cgImg1 from '../components/assets/images/home/cgim1.jpg';
 import cgImg2 from '../components/assets/images/home/cgim2.jpg';
 import cgImg3 from '../components/assets/images/home/cgim3.jpg';
+import newsecmobcard from '../components/assets/images/home/newsecmobcard.jpg';
 import cgWithdigArrow from '../components/assets/images/home/whtdigarw.png';
 import cgWildEnv from '../components/assets/images/home/wldenv.png';
 import cggrIcon1 from '../components/assets/images/home/gricn1.svg';
@@ -238,10 +239,10 @@ const Homepage = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
           className="homebanercarousel"
         >
           <SwiperSlide>
@@ -518,7 +519,7 @@ const Homepage = () => {
             </div>
           </div>
           <div className="news-section">
-            <div className="news-card newscard-fstchild" style={{ backgroundImage: `url(${cgImg1})` }}>
+            <div className="news-card newscard-fstchild homenews-card-desk" style={{ backgroundImage: `url(${cgImg1})` }}>
               <div className="news-image">
                 <span className="news-badge">News</span>
               </div>
@@ -529,6 +530,20 @@ const Homepage = () => {
                 </div>
                 <div className="news-icon">
                   <a href="/"><img src={cgWithdigArrow} alt="" /></a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="news-card homenews-card-mob">
+              <div className="news-image" style={{ backgroundImage: `url(${newsecmobcard})` }}>
+                <span className="news-badge">News</span>
+                <div className="news-icon"><a href="/"><img src={cgWithdigArrow} alt="" /></a></div>
+              </div>
+              <div className="news-content">
+                <div className="news-date">18 June 2025</div>
+                <div className="news-title">
+                  <h4><a href="jacvascript:;">CG bags Rs 641 crore order from PGCIL</a></h4>
+                  <p>CG Power secures its largest-ever single order worth Rs 641 crore from Powergrid for 765k</p>
                 </div>
               </div>
             </div>
