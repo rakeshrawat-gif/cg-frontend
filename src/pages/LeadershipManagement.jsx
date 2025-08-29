@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import bannerImg from "../components/assets/images/leadership/leadership.png";
+import banner from "../components/assets/images/leadership/leadership.png";
+import mobbaner from "../components/assets/images/leadership/leaderMobImg.png";
 import boardIcons from "../components/assets/images/leadership/bordDirector.svg";
 import leaderIcons from "../components/assets/images/leadership/leadershipTeam.svg";
 import diagolanArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
@@ -168,17 +169,21 @@ const Leadership = () => {
             {/* Banner Section */}
             <section className="inner-comoonbanner">
                 <div className="comonban">
-                    <img src={bannerImg} alt="Leadership and Top Management" />
+                    {/* <img src={bannerImg} alt="Leadership and Top Management" /> */}
+                    <picture>
+                        <source media="(min-width:740px)" srcset={banner} />
+                        <img src={mobbaner} alt="" />  {/* Mobile*/}
+                    </picture>
                 </div>
             </section>
 
             {/* Breadcrumb */}
-            <section className="commonfrst-sec">
+            <section className="commonfrst-sec subsidiaryMobbg">
                 <div className="cust-container">
                     <div className="breadcr-inner">
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><a href="#">Home</a></li>
-                            <li className="breadcrumb-item"><a href="#">About CG</a></li>
+                            <li className="breadcrumb-item truncate"><a href="#">About CG</a></li>
                             <li className="breadcrumb-item active" aria-current="page">Leadership </li>
                         </ol>
                     </div>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation, Pagination  } from "swiper/modules";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import diagonArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
-import bannerImage from "../components/assets/images/subjoinven/subjvban.jpg";
+import banner from "../components/assets/images/subjoinven/subjvban.jpg";
+import mobbaner from "../components/assets/images/subjoinven/subsMobImg.png";
 import Indian from "../components/assets/images/subjoinven/indiaicn.svg";
 import nonIndian from "../components/assets/images/subjoinven/nonindiaicn.svg";
 import downloadIcn from "../components/assets/images/subjoinven/downloadicn.svg";
@@ -83,16 +84,20 @@ const SubsidiariesJointVentures = () => {
     <>
       <section className="inner-comoonbanner">
         <div className="comonban">
-          <img src={bannerImage} alt="" />
+          {/* <img src={bannerImage} alt="" /> */}
+          <picture>
+            <source media="(min-width:740px)" srcset={banner} />
+            <img src={mobbaner} alt="" />  {/* Mobile*/}
+          </picture>
         </div>
       </section>
 
-      <section className="commonfrst-sec">
+      <section className="commonfrst-sec subsidiaryMobbg">
         <div className="cust-container">
           <div className="breadcr-inner">
             <ol className="breadcrumb">
               <li className="breadcrumb-item"><a href="#">Home</a></li>
-              <li className="breadcrumb-item"><a href="#">About CG</a></li>
+              <li className="breadcrumb-item truncate"><a href="#">About CG</a></li>
               <li className="breadcrumb-item active" aria-current="page">Subsidiaries and Joint Ventures</li>
             </ol>
           </div>

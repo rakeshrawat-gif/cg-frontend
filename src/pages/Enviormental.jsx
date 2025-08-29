@@ -364,7 +364,7 @@ const Enviormental = () => {
                 </section>
 
                 {/* Existing Design */}
-                <section className="common-heading-sec">
+                <section className="common-heading-sec esg-material">
                   <div className="cust-containerNew">
                     <div className="comon-head-inner">
                       <h2>Materiality at CG</h2>

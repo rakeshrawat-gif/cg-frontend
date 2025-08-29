@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay, FreeMode } from 'swiper/modules';
-import bannerImg from "../components/assets/images/technologyR&D/R&D1.png";
+import banner from "../components/assets/images/technologyR&D/R&D1.png";
+import mobbaner from "../components/assets/images/technologyR&D/TechMobImg.png";
 import trainImg from "../components/assets/images/technologyR&D/train.png";
 import machineImg from "../components/assets/images/technologyR&D/machine.png";
 
@@ -40,7 +41,11 @@ const LeadingWithTechnology = () => {
       {/* Banner Section */}
       <section className="inner-comoonbanner">
         <div className="comonban">
-          <img src={bannerImg} alt="Leading with Technology Banner" />
+          {/* <img src={bannerImg} alt="Leading with Technology Banner" /> */}
+          <picture>
+            <source media="(min-width:740px)" srcset={banner} />
+            <img src={mobbaner} alt="" />  {/* Mobile*/}
+          </picture>
         </div>
       </section>
 
@@ -52,7 +57,7 @@ const LeadingWithTechnology = () => {
               <li className="breadcrumb-item">
                 <a href="#">Home</a>
               </li>
-              <li className="breadcrumb-item">
+              <li className="breadcrumb-item truncate">
                 <a href="#">About CG</a>
               </li>
               <li className="breadcrumb-item active" aria-current="page">

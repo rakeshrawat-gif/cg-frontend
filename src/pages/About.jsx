@@ -4,7 +4,9 @@ import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper/module
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { FaChevronLeft, FaChevronRight, FaPlay } from 'react-icons/fa';
-import bannerImg from "../components/assets/images/about/aboutBg.png";
+import banner from "../components/assets/images/about/aboutBg.png";
+import mobbaner from "../components/assets/images/about/aboutMobImg.png";
+import purposeArrow from "../components/assets/images/about/purposeArrow.png";
 import videoPlCimg from '../components/assets/images/about/abt-video-placeholder.png';
 import vellayanImg from '../components/assets/images/about/velleyan-subbiah.png';
 import amarImg from '../components/assets/images/about/amar-kaul.png';
@@ -93,7 +95,11 @@ const About = () => {
             {/* Banner Section */}
             <section className="inner-comoonbanner">
                 <div className="comonban">
-                    <img src={bannerImg} alt="About CG" />
+                    {/* <img src={bannerImg} alt="About CG" /> */}
+                    <picture>
+                        <source media="(min-width:740px)" srcset={banner} />
+                        <img src={mobbaner} alt="" />  {/* Mobile*/}
+                    </picture>
                 </div>
             </section>
 
@@ -149,21 +155,26 @@ const About = () => {
             </section>
 
             <section className="ourPurpose">
-                <div className='cust-container'>
-                    <h2 class="desktopView abtFinTitle">
-                        <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
-                    </h2>
-                    <h2 class="mobileView abtFinTitle">
-                        <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
-                    </h2>
-                    <p className="purposeSubtitle">Transforming your needs into smart solutions
-                        for an enhanced quality of life.
-                    </p>
-                    <p className="purposePara">
-                        At CG, our purpose is to transform your needs into smart solutions that enhance everyday life.
-                        Guided by our EDGE operating rhythm and core values, we drive performance, foster innovation,
-                        and build a culture rooted in respect, ownership, and customer centricity.
-                    </p>
+                <div className='cust-container purposeFlex'>
+                    <div className="leftPurpose">
+                        <h2 class="desktopView abtFinTitle">
+                            <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                        </h2>
+                        <h2 class="mobileView abtFinTitle">
+                            <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                        </h2>
+                        <p className="purposeSubtitle">Pioneering innovation for a sustainable future
+                        </p>
+                        <p className="purposePara">
+                            From innovation to sustainable impact, we craft solutions that empower industries, 
+                            support businesses, and enhance lives. Our aim is to balance performance with 
+                            responsible long-term value creation for our partners, customers, and communities 
+                            alike.
+                        </p>
+                    </div>
+                    <div className="rightPurpose">
+                        <img src={purposeArrow} alt="" />
+                    </div>
                 </div>
             </section>
 
@@ -370,7 +381,7 @@ const About = () => {
             {/* Manufacturing Facilities */}
             <section className="section-manufacturing">
                 <div className="cust-containerz">
-                    <div className="cust-container" style={{textAlign:'left'}}>
+                    <div className="cust-container" style={{ textAlign: 'left' }}>
                         <h2 className="manufacturing-title">World-class manufacturing facilities</h2>
                         <p className="manufacturing-subtitle">
                             CG's high-efficiency plants are setting new industry benchmarks across the world.
