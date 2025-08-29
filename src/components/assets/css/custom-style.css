@@ -425,6 +425,8 @@
   height: 439px;
   flex-grow: 1;
   display: flex;
+  box-shadow: 2px 4px 10px 4px #96969680;
+  margin-bottom: 10px;
 }
 
 .green-img {
