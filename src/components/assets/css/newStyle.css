@@ -733,6 +733,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* height: 450px; */
 }
 
 .video-image {
@@ -754,10 +755,10 @@
 
 .year-bg {
   position: absolute;
-  top: -20%;
+  top: -34%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 400px;
+  font-size: 500px;
   color: #f7f7f7;
   z-index: 0;
   pointer-events: none;
@@ -2544,6 +2545,7 @@
   background-position: center;
   margin: 0 auto 12px;
   border-radius: 20px;
+  border: 5px solid #ffffff;
 }
 
 /* Leader name */
