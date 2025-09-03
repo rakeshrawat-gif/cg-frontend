@@ -1123,14 +1123,17 @@ header .contactheadbtn {
   position: relative;
   z-index: 1;
 }
+
 #searchBarContainer form .headsearchclosebtn {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-#searchBarContainer form .headsearchclosebtn span{
+
+#searchBarContainer form .headsearchclosebtn span {
   cursor: pointer;
   color: var(--card-bg-skyblu);
   font-weight: 500;
 }
+
 #searchBarContainer form input {
   width: 88%;
   border-radius: 30px;
@@ -2772,6 +2775,19 @@ div#pdpdetailTabContent {
 /* ==================End Product display page===================== */
 
 /* ==================Consumer durable page===================== */
+
+.home-banner-carousl-sec.consumer-durable-sec .slide-content a {
+  margin-top: 20px;
+}
+
+.home-banner-carousl-sec.consumer-durable-sec .slide-content .slide-content-desc {
+  padding-top: 30px;
+}
+
+.home-banner-carousl-sec.consumer-durable-sec .homeswipernav {
+  top: 55%;
+  transform: translate(-50%, -55%);
+}
 .tabs-container.consumerproduct {
   justify-content: center;
   width: 80%;
@@ -2787,8 +2803,10 @@ div#pdpdetailTabContent {
   display: block;
   margin: 0 auto 10px auto;
 }
-
-.consumerproduct-cntnt {
+.stackcard-consumer .stack-card-item .card-content{
+  height: 400px;
+}
+.consumerproduct-cntnt  .tab-pane.active{
   background-color: #F0F0F0;
   padding: 50px 0;
 }
@@ -2846,7 +2864,7 @@ div#pdpdetailTabContent {
 }
 
 .stackcard-consumer .card-content .card-contentdesc h4 {
-  font-size: 45px;
+  font-size: 40px;
   padding-bottom: 0;
   margin-bottom: 15px;
 }
@@ -2857,10 +2875,10 @@ div#pdpdetailTabContent {
 
 .stackcard-consumer .card-content .card-contentdesc p {
   font-size: 28px;
-  line-height: 35px;
-  width: 50%;
+  line-height: 120%;
+  width: 60%;
   font-weight: 300;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .stackcard-consumer .card-content .card-contentdesc a {
@@ -2879,7 +2897,7 @@ div#pdpdetailTabContent {
 }
 
 .stackcard-consumer .stack-card-item .card-content .card-contentdesc {
-  width: 55%;
+  width: 70%;
 }
 
 /* ==================End onsumer durable page===================== */

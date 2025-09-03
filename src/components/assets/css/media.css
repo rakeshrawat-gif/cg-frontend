@@ -432,6 +432,9 @@
     margin-bottom: 100px;
     margin-top: 0;
   }
+  .stackcard-consumer #stack-cards-ul{
+    padding-bottom: 100px;
+  }
 
 }
 
@@ -542,7 +545,6 @@
 
   .stackcard-consumer .card-content .card-contentdesc p {
     font-size: 20px;
-    line-height: 28px;
     width: 100%;
   }
 
@@ -1349,12 +1351,12 @@
 
   .stackcard-consumer .card-content .card-contentdesc h4 {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
   }
 
   .stackcard-consumer .card-content .card-contentdesc p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .stackcard-consumer .card-content {
