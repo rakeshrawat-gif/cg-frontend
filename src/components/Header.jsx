@@ -1366,7 +1366,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="has-children">
-                                <a href="#" onClick={handleMobileMultiLevelToggle}>Solutions</a>
+                                <a href="#" onClick={handleMobileMultiLevelToggle}>Business Solutions</a>
                                 <ul className="submenu">
                                     <li className="has-children">
                                         <a href="#" onClick={handleMobileMultiLevelToggle}>Transformers</a>
@@ -1425,6 +1425,9 @@ const Header = () => {
                     <div id="searchBarContainer" ref={searchRef} style={{ display: isSearchBarOpen ? 'block' : 'none', }}>
                         {/* <div className="cust-container"> */}
                         <form className="form-inline">
+                            <div className="headsearchclosebtn">
+                                <span onClick={() => setIsSearchBarOpen(false)}>X</span>
+                            </div>
                             <input name="search" className="form-control mr-2" type="search" placeholder="Search..." aria-label="Search" />
                             <button className="headsearchbtn curvebtn" type="submit">
                                 Search

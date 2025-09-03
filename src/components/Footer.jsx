@@ -84,7 +84,7 @@ const Footer = () => {
 
               {/* Column 3: Solutions */}
               <div className="footer-col foot-col3">
-                <h4 className="footer-title">Solutions</h4>
+                <h4 className="footer-title">Business Solutions</h4>
                 <ul className="footer-links">
                     <li><a href="#">Transformers</a></li>
                     <li><a href="/switchgear">Switchgears</a></li>

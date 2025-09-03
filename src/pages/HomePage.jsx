@@ -10,6 +10,9 @@ import mobhomeban1 from '../components/assets/images/home/mobhomeban1.jpg';
 import mobhomeban2 from '../components/assets/images/home/mobhomeban2.jpg';
 import mobhomeban3 from '../components/assets/images/home/mobhomeban3.jpg';
 
+import banleftarw from '../components/assets/images/home/bannerleftarw.svg';
+import banrghtarw from '../components/assets/images/home/bannerrightarw.svg';
+
 import BannerHome from '../components/assets/images/home/banner.jpg';
 import diagonalbigarw from '../components/assets/images/home/diagonalbigarw.svg';
 import diagolanArrow from '../components/assets/images/headicn/solution/diagolanarw.svg';
@@ -239,10 +242,10 @@ const Homepage = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // }}
           className="homebanercarousel"
         >
           <SwiperSlide>
@@ -294,11 +297,15 @@ const Homepage = () => {
             </div>
           </SwiperSlide>
           <div className="swiper-pagination"></div>
-        </Swiper>
           <div className="homeswipernav">
-              <div className="swiper-button-next"></div>
-              <div className="swiper-button-prev"></div>
+              <div className="swiper-button-next">
+                <img src={banrghtarw} alt="" />
+              </div>
+              <div className="swiper-button-prev">
+                <img src={banleftarw} alt="" />
+              </div>
           </div>
+        </Swiper>
       </section>
 
       {/* Highlight Section */}
@@ -628,7 +635,7 @@ const Homepage = () => {
             freeModeMomentumRatio={0} 
             slidesPerView={5}
             spaceBetween={30}
-            speed={1000}
+            speed={1200}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,

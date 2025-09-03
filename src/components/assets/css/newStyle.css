@@ -3063,10 +3063,10 @@
 @media (min-width: 769px) and (max-width: 1024px) {}
 
 @media (min-width: 1024px) and (max-width: 1365px) {
-  .cust-container {
+  /* .cust-container {
     max-width: 100%;
     margin: 0 15px 0 15px !important;
-  }
+  } */
 
   .caseStudySwiper {
     width: 65% !important;
