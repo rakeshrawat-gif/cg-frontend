@@ -18,6 +18,14 @@ import upArrow from '../components/assets/images/about/upArrow.svg';
 import rightArrowSlide from '../components/assets/images/about/rightArrowSlide.svg';
 import leftArrowSlide from '../components/assets/images/about/leftArrowSlide.svg';
 import TimelineSlider from "../components/TimelineSlider";
+import manuFactSlide1 from '../components/assets/images/about/sliders-manu/Malanpur-Madhya-Pradesh-India.png';
+import manuFactSlide2 from '../components/assets/images/about/sliders-manu/Kundaim-Goa-India.png';
+import manuFactSlide3 from '../components/assets/images/about/sliders-manu/Mandideep-Madhya-Pradesh-India.png';
+import manuFactSlide4 from '../components/assets/images/about/sliders-manu/Ahmednagar-Maharashtra-India.png';
+import manuFactSlide5 from '../components/assets/images/about/sliders-manu/Colvale-Goa-India.png';
+import manuFactSlide6 from '../components/assets/images/about/sliders-manu/Mandideep-Madhya-Pradesh-India-2.png';
+import manuFactSlide7 from '../components/assets/images/about/sliders-manu/Aurangabad-Maharashtra-India.png';
+import manuFactSlide8 from '../components/assets/images/about/sliders-manu/Nashik-Maharashtra-India.png';
 
 const journeyData = [
     {
@@ -442,17 +450,45 @@ const About = () => {
                         >
                             {[
                                 {
-                                    title: 'Pithampur Motors Facility',
-                                    img: abtSlideImg
+                                    title: 'Distribution and Low Power Transformers’ Manufacturing Facility',
+                                    desc:'Malanpur, Madhya Pradesh, India',
+                                    img: manuFactSlide1
                                 },
                                 {
-                                    title: 'Climate Action Plant',
-                                    img: abtSlideImg2
+                                    title: 'FHP Motors’ Manufacturing Facility',
+                                    desc:'Kundaim, Goa, India',
+                                    img: manuFactSlide2
                                 },
                                 {
-                                    title: 'Hydro Plant',
-                                    img: abtSlideImg2
-                                }
+                                    title: 'Large Industrial Machines’ Manufacturing Facility',
+                                    desc:'Mandideep, Madhya Pradesh, India',
+                                    img: manuFactSlide3
+                                },
+                                {
+                                    title: 'LT Motors’ Manufacturing Facility',
+                                    desc:'Ahmednagar, Maharashtra, India',
+                                    img: manuFactSlide4
+                                },
+                                {
+                                    title: 'LT Motors’ Manufacturing Facility',
+                                    desc:'Colvale, Goa, India',
+                                    img: manuFactSlide5
+                                },
+                                {
+                                    title: 'Power Transformers’ Manufacturing Facility',
+                                    desc:'Mandideep, Madhya Pradesh, India',
+                                    img: manuFactSlide6
+                                },
+                                {
+                                    title: 'Switchgears’ Manufacturing Facility',
+                                    desc:'Aurangabad, Maharashtra, India',
+                                    img: manuFactSlide7
+                                },
+                                {
+                                    title: 'Switchgears’ Manufacturing Facility',
+                                    desc:'Nashik, Maharashtra, India.jpg',
+                                    img: manuFactSlide8
+                                },
                             ].map((item, idx) => (
                                 <SwiperSlide key={idx}>
                                     <div className="slide-card">
@@ -460,7 +496,8 @@ const About = () => {
                                         <div className="slide-overlay" />
                                         <div className="slide-text">
                                             <h3>{item.title}</h3>
-                                            <a href="#">EXPLORE →</a>
+                                            <p>{item.desc}</p>
+                                            {/* <a href="#">EXPLORE →</a> */}
                                         </div>
                                     </div>
                                 </SwiperSlide>
