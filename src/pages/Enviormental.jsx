@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, FreeMode, Controller } from "swiper/modules";
+import { Navigation, Autoplay, FreeMode, Controller, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import ClimateImg from "../components/assets/images/ESG/env1.jpg";
@@ -12,6 +12,7 @@ import InnovationmgtImg from "../components/assets/images/ESG/env6.jpg";
 import corporateImg from "../components/assets/images/ESG/env7.jpg";
 import ResponsibleImg from "../components/assets/images/ESG/env8.jpg";
 import CRMImg from "../components/assets/images/ESG/env9.jpg";
+import governanceImg from "../components/assets/images/ESG/governanceImg.png";
 import arrow from "../components/assets/images/ESG/Icon.png";
 import esgGreenSlide1 from "../components/assets/images/ESG/esgGreenSlide1.png";
 import swip1Img from "../components/assets/images/ESG/sw1.jpg";
@@ -154,6 +155,14 @@ const Enviormental = () => {
           "Stakeholder engagement and feedback mechanisms",
         ],
       },
+      {
+        title: "Responsible Investment Practices",
+        image: governanceImg,
+        items: [
+          "Incorporating sustainability into investment decisions",
+          "Funding innovation and sustainable financing",
+        ],
+      },
     ],
   };
 
@@ -183,7 +192,7 @@ const Enviormental = () => {
         </div>
       </section>
       <section className="commonfrst-sec">
-        <div className="cust-container">
+        <div className="cust-container fullWidth">
           <div className="breadcr-inner">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
@@ -267,7 +276,7 @@ const Enviormental = () => {
                         0: { slidesPerView: 1.2 },
                         676: { slidesPerView: 2.2 },
                         991: { slidesPerView: 2.2 },
-                        992: { slidesPerView: 2.2 },
+                        992: { slidesPerView: 2.3 },
                       }}
                       className="esgSwiperWrapper"
                     >
@@ -402,21 +411,9 @@ const Enviormental = () => {
 
                     {/* Cards */}
 
-                    {/* <div className="cards-container">
-                      {tabContent[activeTab].map((card, idx) => (
-                        <div className="env-card" key={idx}>
-                          <img src={card.image} alt={card.title} />
-                          <h3>{card.title}</h3>
-                          <ul>
-                            {card.items.map((item, i) => (
-                              <li key={i}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div> */}
+
                     <div className="cards-container">
-                      {isMobile ? (
+                      {/* {isMobile ? (
                         <Swiper
                           modules={[Navigation]}
                           slidesPerView={1.2}
@@ -449,7 +446,33 @@ const Enviormental = () => {
                             </ul>
                           </div>
                         ))
-                      )}
+                      )} */}
+                      <Swiper
+                        modules={[Navigation, Pagination]}
+                        slidesPerView={3}
+                        spaceBetween={24}
+                        pagination={{ clickable: true }}
+                        navigation={false}
+                        breakpoints={{
+                          0: { slidesPerView: 1.2, spaceBetween: 16 },
+                          768: { slidesPerView: 2, spaceBetween: 20 },
+                          1024: { slidesPerView: 3, spaceBetween: 24 },
+                        }}
+                      >
+                        {tabContent[activeTab].map((card, idx) => (
+                          <SwiperSlide key={idx}>
+                            <div className="env-card">
+                              <img src={card.image} alt={card.title} />
+                              <h3>{card.title}</h3>
+                              <ul>
+                                {card.items.map((item, i) => (
+                                  <li key={i}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     </div>
 
                     <div className="materiality-footer">
@@ -554,74 +577,25 @@ const Enviormental = () => {
                         </button>
                       </div>
                     </div>
-
-                    {/* New slider */}
-                    {/* <div className="green-card-sm">
-                      <Swiper
-                        modules={[Navigation]}
-                        slidesPerView={1}
-                        loop={true}
-                        navigation={{
-                          nextEl: ".swiper-nav-sm .next-btn",
-                          prevEl: ".swiper-nav-sm .prev-btn",
-                        }}
-                        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                      >
-                        {swipdata.map((item, i) => (
-                          <SwiperSlide key={i}>
-                            <div className="green-card-inner">
-                              <Swiper
-                                modules={[Navigation]}
-                                slidesPerView={1}
-                                navigation={{
-                                  nextEl: `.inner-nav-${i} .inner-next`,
-                                  prevEl: `.inner-nav-${i} .inner-prev`,
-                                }}
-                              >
-                                {swipdata[activeIndex].image.map((img, idx) => (
-                                  <SwiperSlide key={idx}>
-                                    <img src={img} alt={`inner-${activeIndex}-${idx}`} className="green-img" />
-                                  </SwiperSlide>
-                                ))}
-                              </Swiper>
-                              <div className={`inner-nav inner-nav-${i}`}>
-                                <button className="inner-prev">‹</button>
-                                <button className="inner-next">›</button>
-                              </div>
-
-                              <div className="green-card-text">
-                                <h3>{item.caption}</h3>
-                                <p>{item.text}</p>
-                              </div>
-                            </div>
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-
-                      <div className="swiper-nav-sm">
-                        <button className="prev-btn">
-                          <img src={leftIcn} alt="prev" />
-                        </button>
-                        <button className="next-btn">
-                          <img src={rightIcn} alt="next" />
-                        </button>
-                      </div>
-                    </div> */}
-
                   </div>
                 </section>
 
               </>
             )}
 
-            {selectedTab === "Ratings and Reports" && (
+            {/* {selectedTab === "Ratings and Reports" && (
               <>
                 <ESGRating />
               </>
-            )}
+            )} */}
           </div>
         </div>
       </section>
+      {selectedTab === "Ratings and Reports" && (
+        <section className="esg-rating-section">
+          <ESGRating />
+        </section>
+      )}
     </>
   );
 };

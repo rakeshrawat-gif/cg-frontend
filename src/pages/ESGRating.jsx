@@ -124,7 +124,7 @@ const ESGRating = () => {
     <>
 
       <section className="esg-bg-wrapper">
-        <div className="cards-wrapper">
+        <div className="cards-wrapper cust-container">
           <div className="comon-head-inner">
             <h2>CG’s ESG Ratings</h2>
           </div>
@@ -223,7 +223,7 @@ const ESGRating = () => {
       </section> */}
 
       <section className="product-display-tabs esgCertificateSec certificationtab-sec">
-        <div className="cust-containerNew">
+        <div className="cust-containerNew cust-container">
           <div className="common-heading-sec">
             <div className="comon-head-inner">
               <h2>Certifications</h2>

@@ -188,7 +188,7 @@
   align-content: stretch;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .leftPurpose {
@@ -689,6 +689,8 @@
   padding: 20px;
   color: white;
   z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 94, 177, 0) 14.92%, rgb(0 94 177 / 52%) 89.51% 93.51%);
+  width: 100%;
 }
 
 .manufacturing-swiper-wrapper .slide-text h3 {
@@ -851,6 +853,7 @@
   font-style: Bold;
   font-size: 40px;
   letter-spacing: 0.5px;
+  color: #4C4F54;
 }
 
 .timeline-right p {
@@ -921,7 +924,7 @@
   border-radius: 50%;
   border: 1px dotted #005CAB;
   box-sizing: border-box;
-  z-index: -1;
+  z-index: 9999;
 }
 
 .connector-line {
@@ -989,7 +992,7 @@
 .journey-section .swiper-button-prev,
 .journey-section .swiper-button-next {
   background: #ffffff;
-  color: #2c2c2c;
+  color: #cbcbcb;
   width: 40px;
   height: 40px;
   font-size: 18px;
@@ -1477,6 +1480,12 @@
   margin-bottom: 40px;
 }
 
+.cust-container .esgSwiperSec {
+  width: 91vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
 .esgSwiperSec .swiper-item-slider {
   flex-direction: column-reverse;
   width: 100%;
@@ -1509,6 +1518,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .esgSwiperSec {
@@ -1542,7 +1552,7 @@
 }
 
 .esgCertificateSec {
-  margin-bottom: 0px !important;
+  margin-bottom: 100px !important;
 }
 
 /* --------- END ESG Page CSS ---------- */
@@ -1725,6 +1735,16 @@
     line-height: 65px;
   }
 
+  .abt-section {
+    background-size: auto;
+    padding-bottom: 20px;
+  }
+
+  .fLeftBlock {
+    position: relative;
+    top: 0px;
+  }
+
   .purposeSubtitle {
     font-size: 30px;
     line-height: 35px;
@@ -1741,6 +1761,14 @@
     line-height: 65px;
     -webkit-text-stroke: 1px #ffffff;
     text-stroke: 1px #fff;
+  }
+
+  .fLeftBlock .outlined-text {
+    display: inline-block;
+    font-size: 60px;
+    line-height: 65px;
+    -webkit-text-stroke: 2px #4C4F54;
+    text-stroke: 2px #4C4F54;
   }
 
   .abtSpanTitle {
@@ -1868,8 +1896,12 @@
     right: 1%;
   }
 
+  .manufacturing-swiper-wrapper .slide-text {
+    background: linear-gradient(180deg, rgba(0, 94, 177, 0) -40.08%, rgb(0 94 177 / 68%) 89.51% 89.51%);
+  }
+
   .manufacturing-swiper-wrapper .swiper-custom-pagination {
-    left: 40% !important;
+    left: 25% !important;
     margin-top: 35px;
   }
 
@@ -1896,7 +1928,7 @@
 
   .mobileLeadView .swiper-pagination {
     position: relative;
-    margin-top: 15px;
+    margin-top: -20px;
   }
 
   .mobileLeadView .swiper-pagination-bullet {
@@ -2019,7 +2051,7 @@
   }
 
   .manufacturing-swiper-wrapper .swiper-controls {
-    top: 92.5%;
+    top: 93.5%;
     padding: 0 8%;
     bottom: 0;
   }
@@ -2380,7 +2412,7 @@
   }
 
   .esg-material {
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
   .caseStudyTit h3 {
@@ -3095,6 +3127,10 @@
     width: 65% !important;
   }
 
+  .inner-nav .inner-next {
+    left: 335%;
+  }
+
   .caseStudy-navbar {
     width: 35%;
     padding: 50px 30px 50px 20px !important;
@@ -3535,4 +3571,33 @@
     right: auto !important;
     width: 200px;
   }
+}
+
+
+
+.cards-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.env-card {
+  background: #fff;
+  border-radius: 8px;
+  /* padding: 20px; */
+  height: 100%;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #666;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+  opacity: 1;
 }

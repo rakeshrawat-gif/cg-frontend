@@ -163,25 +163,27 @@ const About = () => {
             </section>
 
             <section className="ourPurpose">
-                <div className='cust-container purposeFlex'>
-                    <div className="leftPurpose">
-                        <h2 class="desktopView abtFinTitle">
-                            <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
-                        </h2>
-                        <h2 class="mobileView abtFinTitle">
-                            <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
-                        </h2>
-                        <p className="purposeSubtitle">Pioneering innovation for a sustainable future
-                        </p>
-                        <p className="purposePara">
-                            From innovation to sustainable impact, we craft solutions that empower industries, 
-                            support businesses, and enhance lives. Our aim is to balance performance with 
-                            responsible long-term value creation for our partners, customers, and communities 
-                            alike.
-                        </p>
-                    </div>
-                    <div className="rightPurpose">
-                        <img src={purposeArrow} alt="" />
+                <div className="cust-container">
+                    <div className='purposeFlex'>
+                        <div className="leftPurpose">
+                            <h2 class="desktopView abtFinTitle">
+                                <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                            </h2>
+                            <h2 class="mobileView abtFinTitle">
+                                <span class="outlined-text">our</span> <span class="abtSpanTitle">purpose</span>
+                            </h2>
+                            <p className="purposeSubtitle">Pioneering innovation for a sustainable future
+                            </p>
+                            <p className="purposePara">
+                                From innovation to sustainable impact, we craft solutions that empower industries,
+                                support businesses, and enhance lives. Our aim is to balance performance with
+                                responsible long-term value creation for our partners, customers, and communities
+                                alike.
+                            </p>
+                        </div>
+                        <div className="rightPurpose">
+                            <img src={purposeArrow} alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -451,42 +453,42 @@ const About = () => {
                             {[
                                 {
                                     title: 'Distribution and Low Power Transformers’ Manufacturing Facility',
-                                    desc:'Malanpur, Madhya Pradesh, India',
+                                    desc: 'Malanpur, Madhya Pradesh, India',
                                     img: manuFactSlide1
                                 },
                                 {
                                     title: 'FHP Motors’ Manufacturing Facility',
-                                    desc:'Kundaim, Goa, India',
+                                    desc: 'Kundaim, Goa, India',
                                     img: manuFactSlide2
                                 },
                                 {
                                     title: 'Large Industrial Machines’ Manufacturing Facility',
-                                    desc:'Mandideep, Madhya Pradesh, India',
+                                    desc: 'Mandideep, Madhya Pradesh, India',
                                     img: manuFactSlide3
                                 },
                                 {
                                     title: 'LT Motors’ Manufacturing Facility',
-                                    desc:'Ahmednagar, Maharashtra, India',
+                                    desc: 'Ahmednagar, Maharashtra, India',
                                     img: manuFactSlide4
                                 },
                                 {
                                     title: 'LT Motors’ Manufacturing Facility',
-                                    desc:'Colvale, Goa, India',
+                                    desc: 'Colvale, Goa, India',
                                     img: manuFactSlide5
                                 },
                                 {
                                     title: 'Power Transformers’ Manufacturing Facility',
-                                    desc:'Mandideep, Madhya Pradesh, India',
+                                    desc: 'Mandideep, Madhya Pradesh, India',
                                     img: manuFactSlide6
                                 },
                                 {
                                     title: 'Switchgears’ Manufacturing Facility',
-                                    desc:'Aurangabad, Maharashtra, India',
+                                    desc: 'Aurangabad, Maharashtra, India',
                                     img: manuFactSlide7
                                 },
                                 {
                                     title: 'Switchgears’ Manufacturing Facility',
-                                    desc:'Nashik, Maharashtra, India.jpg',
+                                    desc: 'Nashik, Maharashtra, India.jpg',
                                     img: manuFactSlide8
                                 },
                             ].map((item, idx) => (
