@@ -20,6 +20,7 @@ import ProductDisplay from '../pages/ProductDisplay';
 import Test from '../pages/test';
 import ProductListing from "../pages/ProductListing";
 import ProductCategorySwitchgear from "../pages/ProductCategorySwitchgear";
+import DriveAndAutomation from "../pages/DrivesAndAutomation";
 
 const AppRoutes = () => {
   return (
@@ -44,6 +45,7 @@ const AppRoutes = () => {
         <Route path="/product-listing" element={<ProductListing />} />
         <Route path="/product-display" element={<ProductDisplay />} />
         <Route path="/product-category-switchgear" element={<ProductCategorySwitchgear />} />
+        <Route path="/drives-and-automation" element={<DriveAndAutomation /> }/>
       </Routes>
     </>
   );
