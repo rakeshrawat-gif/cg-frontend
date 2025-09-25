@@ -58,6 +58,7 @@
 /* Second row - reversed layout (image right, text left) */
 .tech-row.reverse .tech-image {
   order: 2;
+  flex: 0;
 }
 
 .tech-row.reverse .tech-text {
