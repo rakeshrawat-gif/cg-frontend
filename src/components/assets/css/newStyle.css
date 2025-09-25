@@ -2805,7 +2805,7 @@
   color: #4C4F54;
   font-size: 16px;
   font-weight: 700;
-  padding: 5px 15px;
+  padding: 16px 24px 0;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -2813,10 +2813,7 @@
 }
 
 .placementTabs button.active {
-  color: #4C4F54;
   border-color: var(--greenclr);
-  background: #18181805;
-  padding: 10px;
 }
 
 

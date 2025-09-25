@@ -5,15 +5,19 @@ import downArrow from "../assets/images/Investors/greydnwarw.svg";
 import UpArrow from "../assets/images/Investors/greyuparw.svg";
 import checkArrow from "../assets/images/Investors/Check.png";
 
-const AnalystsInteractions = () => {
+const BuybackOfShares = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("2021- 2022");
   const dropdownRef = useRef(null);
 
 
   const documents = [
-    { title: "Investor call Audio Recording-Q1-FY 2025-26", viewLink: "#", downloadLink: "#" },
-    { title: "Transcript-Q1-FY 2025-26-Financial Results", viewLink: "#", downloadLink: "#" },
+    { title: "Public Advertisement regarding completion of Buy-back offer", viewLink: "#", downloadLink: "#" },
+    { title: "Corrigendum to Public Announcement & Letter to BSE", viewLink: "#", downloadLink: "#" },
+    { title: "Press Release - Update on buy-back of Equity Shares of Crompton<br/> Greaves Limited", viewLink: "#", downloadLink: "#" },
+    { title: "Buy Back of CG Shares - Letter to BSE", viewLink: "#", downloadLink: "#" },
+    { title: "Public Announcement & Letter to BSE", viewLink: "#", downloadLink: "#" },
+    { title: "Buy - Back of Shares & Amalgamation of CG - ZIV Power<br/> Automation Solutions Limited", viewLink: "#", downloadLink: "#" },
   ];
 
   const options = [
@@ -104,4 +108,4 @@ const AnalystsInteractions = () => {
   )
 }
 
-export default AnalystsInteractions
+export default BuybackOfShares

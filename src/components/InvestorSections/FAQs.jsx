@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import closeIcn from "../assets/images/Investors/close.png";
-import openIcn from "../assets/images/Investors/plus.png";
+import closeIcn from "../assets/images/Investors/closeicn.svg";
+import openIcn from "../assets/images/Investors/plusicn.svg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import leftArrow from "../assets/images/Investors/leftarrow.png";
 import rightArrow from "../assets/images/Investors/rightarrow.png";
@@ -176,7 +176,7 @@ const FAQs = () => {
   const current = faqData[activeTab];
 
   return (
-    <div className="cust-container">
+    // <div className="cust-container">
       <div className="faqSect">
 
 
@@ -253,7 +253,7 @@ const FAQs = () => {
           ))}
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

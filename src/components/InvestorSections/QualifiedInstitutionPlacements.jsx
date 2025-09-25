@@ -8,7 +8,7 @@ const QualifiedInstitutionPlacements = () => {
 
     return (
         <div className="placement-doc-section">
-            <div className="cust-container">
+            {/* <div className="cust-container"> */}
                 {/* <div className="placement-tabs">
                 <button
                     className={activeTab === "Preliminary Placement Document" ? "active" : ""}
@@ -202,7 +202,7 @@ const QualifiedInstitutionPlacements = () => {
                             <button className="popup-close" onClick={() => setShowDisclaimerPopup(false)}>
                                 &times;
                             </button>
-                            <p className="titlePopup">DISCLAIMER</p>
+                            <p className="titlePopup">DISCLAIMER2</p>
                             <p className="popupPara">
                                 To access this information, you must confirm by pressing on the button marked "I Confirm" that,
                                 at the time of access, you (a) are located and resident in India and (b) are not a resident of
@@ -289,7 +289,7 @@ const QualifiedInstitutionPlacements = () => {
                         </div>
                     </div>
                 )}
-            </div>
+            {/* </div> */}
         </div>
     );
 };

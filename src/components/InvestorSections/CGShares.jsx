@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import viewIcon from "../assets/images/Investors/viewIcon.png";
-import downloadIcon from "../assets/images/Investors/download.png";
+import viewIcon from "../assets/images/Investors/viewicn.svg";
+import downloadIcon from "../assets/images/Investors/dwnld.svg";
 import downArrow from "../assets/images/Investors/down.png";
 
 const Shares = () => {

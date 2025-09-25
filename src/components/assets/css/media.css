@@ -437,6 +437,19 @@
     padding-bottom: 100px;
   }
 
+  .investor-heading-row .common-heading-sec {
+    width: 100%;
+  }
+
+  .investor-heading-row {
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+  }
+
+  .dropdown-container {
+    margin-left: 0;
+  }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -1591,9 +1604,11 @@
   .driveauto-combg {
     margin-bottom: 45px;
   }
-  .esgSolution-sliditem{
+
+  .esgSolution-sliditem {
     border-radius: 16px;
   }
+
   .varfreq-cta {
     margin-top: 40px;
   }
@@ -1607,10 +1622,12 @@
     padding: 22px;
     border-radius: 10px;
   }
+
   .var-freq-right .varfreq-img {
     border-radius: 10px;
   }
-  .varfreq-cta a{
+
+  .varfreq-cta a {
     border-radius: 8px;
   }
 
@@ -1830,6 +1847,7 @@
   .varfreq-items .var-freq-item {
     min-width: 45%;
   }
+
   .varfreq-items .var-freq-item {
     height: 140px;
     padding: 22px;

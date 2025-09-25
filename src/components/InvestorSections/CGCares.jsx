@@ -32,7 +32,7 @@ const CGCares = () => {
     const paragraph = `Focussing on improving education and skill development in underserved communities, we establish Skill Development Centres to provide vocational training, improving employment opportunities for local youth and women. Our initiatives also include upgrading school facilities, constructing toilets, and setting up Anganwadis to support early childhood care and education, directly benefiting children and families in rural areas of districts like Raisen, Chhindwara, and Ahmednagar.`;
 
     return (
-        <div className="cust-container">
+        // <div className="cust-container">
             <div className="cg-cares-wrapper">
                 <p className="cgcares-intro">
                     At CG, we are committed to upholding the Group’s enduring legacy of social responsibility by
@@ -222,7 +222,7 @@ const CGCares = () => {
                     </section>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
-import viewIcon from "../assets/images/Investors/viewIcon.png";
-import downloadIcon from "../assets/images/Investors/download.png";
+import viewIcon from "../assets/images/Investors/viewicn.svg";
+import downloadIcon from "../assets/images/Investors/dwnld.svg";
 
 const documents = [
   { title: "Complaint Report BSE", viewLink: "#", downloadLink: "#" },

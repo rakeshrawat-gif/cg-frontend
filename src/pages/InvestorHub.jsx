@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import downArrow from "../components/assets/images/Investors/down.png";
-import UpArrow from "../components/assets/images/Investors/up.png";
+import downArrow from "../components/assets/images/Investors/greydnwarw.svg";
+import UpArrow from "../components/assets/images/Investors/greyuparw.svg";
 import checkArrow from "../components/assets/images/Investors/Check.png";
 import bannerImg from "../components/assets/images/Investors/inv.png";
+import mobbannerImg from "../components/assets/images/Investors/mobbaner.webp";
 import InvestorRelationsHome from "../components/InvestorSections/InvestorRelationsHome.jsx";
 import InfoUnderRegulation46 from "../components/InvestorSections/InfoUnderRegulation46.jsx";
 import QualifiedInstitutionPlacements from "../components/InvestorSections/QualifiedInstitutionPlacements.jsx";
@@ -15,6 +16,12 @@ import Policies from "../components/InvestorSections/Policies.jsx";
 import CGCares from "../components/InvestorSections/CGCares.jsx";
 import Dividend from "../components/InvestorSections/Dividend.jsx";
 import UnclaimedDividendShares from "../components/InvestorSections/UnclaimedDividendShares.jsx";
+import Archives from "../components/InvestorSections/Archives.jsx";
+import MergeAndDemerger from "../components/InvestorSections/MergeAndDemergers.jsx";
+import SmartODR from "../components/InvestorSections/SmartOdr.jsx";
+
+import BuybackOfShares from "../components/InvestorSections/BuybackOfShares.jsx";
+
 import FAQs from "../components/InvestorSections/FAQs.jsx";
 
 const InvestorHub = () => {
@@ -24,35 +31,46 @@ const InvestorHub = () => {
   const dropdownRef = useRef(null);
 
   const options = [
-    "Investor Realtions Home",
+    "Analysts Interactions",
+    "Archives",
+    "Buyback of shares",
+    "CG Cares (CSR)",
+    "CG Shares",
+    "Dividend",
+    "FAQs",
+    "Financials",
     "Info Under Regulation 46",
+    "Investor Realtions Home",
+    "Mergers and De-Mergers",
+    "Other Governance Disclosures",
+    "Policies",
     "Qualified Institution Placements",
     "Scheme of Arrangement",
-    "Financials",
-    "CG Shares",
+    "Smart ODR",
     "Stock Exchange Disclosures",
-    "Analysts Interactions",
-    "Policies",
-    "CG Cares (CSR)",
-    "Dividend",
     "Unclaimed Dividend and Shares",
-    "FAQs",
   ];
 
   const sectionComponentMap = {
-    "Investor Realtions Home": InvestorRelationsHome,
+    "Analysts Interactions": AnalystsInteractions,
+    "Archives": Archives,
+    "Buyback of shares": BuybackOfShares,
+    "CG Cares (CSR)": CGCares,
+    "CG Shares": CGShares,
+    "Dividend": Dividend,
+    FAQs: FAQs,
+    Financials: Financials,
     "Info Under Regulation 46": InfoUnderRegulation46,
+    "Investor Realtions Home": InvestorRelationsHome,
+    "Mergers and De-Mergers": MergeAndDemerger,
+    // Other government disclouser
+    "Policies": Policies,
     "Qualified Institution Placements": QualifiedInstitutionPlacements,
     "Scheme of Arrangement": SchemeOfArrangement,
-    Financials: Financials,
-    "CG Shares": CGShares,
-    // "Stock Exchange Disclosures": StockExchangeDisclosures,
-    // "Analysts Interactions": AnalystsInteractions,
-    // Policies: Policies,
-    "CG Cares (CSR)": CGCares,
-    // Dividend: Dividend,
+    "Smart ODR":SmartODR,
+    "Stock Exchange Disclosures": StockExchangeDisclosures,
+    // corporate social responsibility/shared related information ??
     "Unclaimed Dividend and Shares": UnclaimedDividendShares,
-    FAQs: FAQs,
   };
 
   const tabOptions = [
@@ -62,21 +80,6 @@ const InvestorHub = () => {
     "Calender of Events",
   ];
 
-  // const headingMap = {
-  //   "Investor Realtions Home": "CG Investor Information Hub",
-  //   "Info Under Regulation 46":
-  //     "Information under Regulation 46 SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-  //   "Qualified Institution Placements": "Qualified Institution Placements",
-  //   "Scheme of Arrangement": "Scheme of Arrangement",
-  //   Financials: "Financials",
-  //   "CG Shares": "CG Shares",
-  //   "Stock Exchange Disclosures": "Stock Exchange Disclosures",
-  //   "Analysts Interactions": "Analysts Interactions",
-  //   Policies: "Policies",
-  //   "CG Cares (CSR)": "CG Cares (CSR)",
-  //   Dividend: "Dividend",
-  //   "Unclaimed Dividend and Shares": "Unclaimed Dividend and Shares",
-  // };
   const headingMap = {
     "Investor Realtions Home": {
       title: "CG Investor Information Hub",
@@ -112,7 +115,15 @@ const InvestorHub = () => {
       title: "Analysts Interactions",
       description: "",
     },
-    Policies: {
+    "Archives": {
+      title: "Archives",
+      description: "",
+    },
+    "Buyback of shares": {
+      title: "Buyback of shares",
+      description: "",
+    },
+    "Policies": {
       title: "Policies",
       description: "",
     },
@@ -130,6 +141,16 @@ const InvestorHub = () => {
     },
     FAQs: {
       title: "FAQ's",
+      description: "",
+    },
+    "Mergers and De-Mergers":
+    {
+      title: "Merger and demerger",
+      description: "",
+    },
+    "Smart ODR":
+    {
+      title: "Smart ODR",
       description: "",
     },
   };
@@ -157,7 +178,10 @@ const InvestorHub = () => {
     <>
       <section className="inner-comoonbanner">
         <div className="comonban">
-          <img src={bannerImg} alt="Leadership and Top Management" />
+          <picture>
+            <source media="(min-width:740px)" srcset={bannerImg} />
+            <img src={mobbannerImg} alt="" />  {/* Mobile*/}
+          </picture>
         </div>
       </section>
 
@@ -177,63 +201,69 @@ const InvestorHub = () => {
             </ol>
           </div>
 
-          <div className="common-heading-sec">
-            <div className="comon-head-inner">
-              {/* <h2>CG Investor Information Hub</h2> */}
-              <h2>{headingMap[selected]?.title}</h2>
-              {headingMap[selected]?.description && (
-                <p>{headingMap[selected].description}</p>
-              )}
+          <div className="investor-heading-row">
+            <div className="common-heading-sec">
+              <div className="comon-head-inner">
+                {/* <h2>CG Investor Information Hub</h2> */}
+                <h2>{headingMap[selected]?.title}</h2>
+                {headingMap[selected]?.description && (
+                  <p>{headingMap[selected].description}</p>
+                )}
+              </div>
+            </div>
+            <div className="dropdown-container">
+              <div className="custom-dropdown-wrapper" ref={dropdownRef}>
+                <div
+                  className="dropdown-toggle-sm"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  <span>{selected}</span>
+                  <img src={isOpen ? UpArrow : downArrow} alt="toggle" />
+                </div>
+                {isOpen && (
+                  <ul className="dropdown-list">
+                    {options.map((option, idx) => (
+                      <li
+                        key={idx}
+                        className={`dropdown-item-sm ${selected === option ? "selected" : ""
+                          }`}
+                        onClick={() => handleSelect(option)}
+                      >
+                        {option}
+                        {selected === option && (
+                          <img
+                            src={checkArrow}
+                            alt="selected"
+                            className="check-icon"
+                          />
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <section className="tech-wrapper-invs cust-container">
-        <div className="dropdown-container">
-          <div className="custom-dropdown-wrapper" ref={dropdownRef}>
-            <div
-              className="dropdown-toggle-sm"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <span>{selected}</span>
-              <img src={isOpen ? UpArrow : downArrow} alt="toggle" />
+      <section className="tech-wrapper-invs">
+        <div className="cust-container">
+
+          {/* Dynamic Content Rendering */}
+          {selected === "Investor Realtions Home" ? (
+            <InvestorRelationsHome />
+          ) : (
+            <div className="tab-content">
+              {sectionComponentMap[selected] ? (
+                React.createElement(sectionComponentMap[selected])
+              ) : (
+                <p>Please select a valid section.</p>
+              )}
             </div>
-            {isOpen && (
-              <ul className="dropdown-list">
-                {options.map((option, idx) => (
-                  <li
-                    key={idx}
-                    className={`dropdown-item-sm ${selected === option ? "selected" : ""
-                      }`}
-                    onClick={() => handleSelect(option)}
-                  >
-                    {option}
-                    {selected === option && (
-                      <img
-                        src={checkArrow}
-                        alt="selected"
-                        className="check-icon"
-                      />
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          )}
         </div>
-        {/* Dynamic Content Rendering */}
-        {selected === "Investor Realtions Home" ? (
-          <InvestorRelationsHome />
-        ) : (
-          <div className="tab-content">
-            {sectionComponentMap[selected] ? (
-              React.createElement(sectionComponentMap[selected])
-            ) : (
-              <p>Please select a valid section.</p>
-            )}
-          </div>
-        )}
       </section>
     </>
   );
