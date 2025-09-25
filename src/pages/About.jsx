@@ -146,7 +146,7 @@ const About = () => {
                                 {/* <img src={videoPlCimg} alt="Video Placeholder" class="video-image" /> */}
                                 <iframe
                                     width="100%"
-                                    height="400"
+                                    height="100%s"
                                     src="https://www.youtube.com/embed/PFkBvBH31fQ?start=6"
                                     title="YouTube video player"
                                     frameBorder="0"
@@ -192,9 +192,65 @@ const About = () => {
             <section className="abt-section">
                 <div className='cust-container'>
                     <h2 className='abt-title'>Word From Our Leaders</h2>
-                    <div className="leaderPara-div">
-                        {/* Mobile slider */}
-                        <div className="leader-slider mobileLeadView">
+                    <div className="leader-slider mobileLeadView">
+                        <Swiper
+                            modules={[Pagination]}
+                            pagination={{ clickable: true }}
+                            slidesPerView={1}
+                            spaceBetween={20}
+                            breakpoints={{
+                                768: { slidesPerView: 1 }, 
+                                1024: { slidesPerView: 2 } 
+                            }}
+                        >
+                            {[
+                                {
+                                    img: vellayanImg,
+                                    heading: "Message from the Chairman",
+                                    text: `<p className="abtPara-text">Post the acquisition by TII in 2020, we have undertaken a focused transformation, restoring CG’s legacy of engineering excellence while building a foundation for sustainable and scalable growth.
+                                        CG has always stood at the intersection of innovation, capability, and trust. With operations spanning three core sectors, Power, Industrial and Railways, the company is uniquely positioned to contribute to India's evolving economic ambitions. As the nation accelerates its journey toward self-reliance and global competitiveness, CG is ready to play a defining role in making India a manufacturing powerhouse for the world.
+                                        In a time of disruption and reinvention, our goal is not merely to grow, but to lead - responsibly, strategically, and with a long-term vision.</p>`,
+                                    name: "Vellayan Subbiah",
+                                    role: "Chairman"
+                                },
+                                {
+                                    img: amarImg,
+                                    heading: "Message from the Vice Chairman",
+                                    text: `<p className="abtPara-text">With a legacy spanning more than 86 years, 
+                                        we stand as a significant player in the industrial machinery sector, dedicated to 
+                                        championing innovation and excellence. Our diverse portfolio, with Industrial 
+                                        Motors, Drives & Automations, Railway Products, Commercial Products, Transformers, 
+                                        and Switchgears, underscore our commitment to pioneering solutions that drive 
+                                        India's growth story forward. At CG, we are steadfast in our dedication to Environmental, 
+                                        Social, and Governance (ESG) principles and we continually strive for sustainable 
+                                        practices and positive societal impact. Our commitment to Corporate Social Responsibility (CSR) 
+                                        is integral to our operations, reflecting our broader mission to contribute meaningfully to 
+                                        the communities we serve. Discover more about how we are shaping a brighter future not only 
+                                        for India but also beyond.</p>`,
+                                    name: "Amar Kaul",
+                                    role: "Managing Director & CEO, CG Power and Industrial Solutions Limited"
+                                }
+                            ].map((leader, i) => (
+                                <SwiperSlide key={i}>
+                                    <div className="leaderFlexMob">
+                                        <img src={leader.img} className="leader-img" alt={leader.name} />
+                                        <div className="bgwhiteBox">
+                                            <h3 className="abtMsgChairman">{leader.heading}</h3>
+                                            <div
+                                                className="abtPara-text"
+                                                dangerouslySetInnerHTML={{ __html: leader.text }}
+                                            />
+                                            <div className="abtChairman-name">{leader.name}</div>
+                                            <div className="abtDesignation">{leader.role}</div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                    {/* <div className="leaderPara-div"> */}
+                    {/* Mobile slider */}
+                    {/* <div className="leader-slider mobileLeadView">
                             <Swiper
                                 modules={[Pagination]}
                                 pagination={{ clickable: true }}
@@ -245,10 +301,10 @@ const About = () => {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                        </div>
+                        </div> */}
 
-                        {/* Desktop layout */}
-                        <div className="flex_div deskLeadView">
+                    {/* Desktop layout */}
+                    {/* <div className="flex_div deskLeadView">
                             <div className="firstDiv leaderFlexMob">
                                 <img
                                     src={vellayanImg}
@@ -297,8 +353,8 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                 </div>
             </section>
 
@@ -446,7 +502,7 @@ const About = () => {
                                 },
                                 1280: {
                                     slidesPerView: 1.4,
-                                    spaceBetween: 50,
+                                    spaceBetween: 150,
                                 },
                             }}
                         >

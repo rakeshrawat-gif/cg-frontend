@@ -2242,7 +2242,7 @@ header .contactheadbtn {
 
 .commcntabui .nav-item.show .nav-link,
 .commcntabui .nav-link.active {
-  background-color: #fff;
+  background-color: #f2f9ec;
   border-top-color: var(--greenclr);
 }
 
