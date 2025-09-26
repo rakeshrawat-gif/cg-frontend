@@ -2749,7 +2749,7 @@
 
   .custom-flex-wrapper {
     /* gap: 20px; */
-        grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
   }
 
   .leader-image {
@@ -2803,7 +2803,7 @@
 
 .placementTabs {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0;
   gap: 10px;
   background: transparent;
@@ -2925,23 +2925,28 @@
   color: #4C4F54;
 }
 
+.popup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .popup-actions button {
   background: transparent;
   color: #005CAB;
   font-weight: 600;
-  margin: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  width: 176;
-  height: 50;
+  width: 176px;
   opacity: 1;
   border-width: 1px;
   gap: 10px;
   border-radius: 8px;
-  padding-top: 8px;
-  padding-right: 24px;
-  padding-bottom: 8px;
-  padding-left: 24px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #000;
 }
 
 .popTitle {
@@ -3021,13 +3026,25 @@
   align-content: center;
 }
 
-.cgcares-intro {
+.cg-cares-wrapper ul {
+  padding-left: 20px;
+}
+
+.cgcares-intro,
+.cg-cares-wrapper ul li {
   font-family: Helvetica;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
   letter-spacing: 0.5px;
+  color: #4C4F54;
+}
 
+.cg-cares-wrapper ul li {
+  margin-bottom: 8px;
+}
+
+.cgcsr-schemawrpr {
+  margin-top: 50px;
 }
 
 .cgcares-intro ul,
@@ -3076,12 +3093,12 @@
   border: 2px solid #969696;
 }
 
-.cgcares-tabs .tab:active {
+.cgcares-tabs .tab.active {
   color: #005CAB;
-  border: 2px solid #005CAB;
+  border-color: #005CAB;
 }
 
-/* ==================================       END Investor CGCares Page CSS    =========================== */
+/* ==================================END Investor CGCares Page CSS=========================== */
 
 .scroll-btn {
   background: transparent;

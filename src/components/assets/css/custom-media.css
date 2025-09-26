@@ -1,4 +1,16 @@
 /* =================== INNOVATION SECTION =================== */
+@media only screen and (max-width: 1920px) {
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-controls {
+    padding: 0 calc(12vw + 5px);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-controls {
+    padding: 0 calc(10vw + 5px);
+  }
+}
+
 @media only screen and (max-width: 1240px) {
   .subtitle {
     width: 100%;
@@ -74,6 +86,8 @@
     justify-content: center;
     width: 100%;
   }
+
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -83,12 +97,23 @@
     padding: 25px;
   }
 
+  .registrarpopupinner.qualitydisclampopup {
+    height: auto;
+  }
+
   .popup-datamaric {
     margin-top: 20px;
   }
 
   .topoup-dramticinrow .popup-datamaric {
     width: 48%;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 40px;
+    /* overflow: hidden !important; */
   }
 }
 
@@ -106,6 +131,83 @@
     flex-direction: row;
     align-items: flex-start;
     font-size: 14px;
+  }
+
+  .scheme-wrapper.cgcsr-schemawrpr {
+    margin-bottom: 80px;
+  }
+
+  .cg-cares-wrapper ul li {
+    font-size: 14px;
+  }
+
+  .cgcares-tabs {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .cgcares-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cgcares-tabs .tab {
+    min-width: fit-content;
+    font-size: 15px;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-controls {
+    top: unset;
+    padding: 0 4%;
+    bottom: -20px;
+    align-items: center;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-prev,
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-next {
+    width: 25px;
+    height: 20px;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-prev img,
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-next img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-pagination {
+    display: flex;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-pagination {
+    left: 0 !important;
+    margin-top: 16px;
+    justify-content: center;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper {
+    border-radius: 0;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .slide-card {
+    border-radius: 0;
+    width: 100%;
+    /* height: 200px; */
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .slide-card .slide-overlay {
+    display: none;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-slide-active {
+    transform: unset !important;
+    /* border-radius: 10px;*/
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .slide-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
   }
 }
 
@@ -410,8 +512,41 @@
   .scheme-wrapper .scheme-row .scheme-title>br {
     display: none;
   }
-  .info-row .info-title>br{
+
+  .info-row .info-title>br {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .placementTabs {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .placementTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .placementTabs button {
+    min-width: fit-content;
+    padding: 10px 15px 0;
+  }
+
+  .disclaimer-button {
+    width: 100%;
+    height: auto;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .popup-actions{
+    gap: 12px;
+  }
+  .popup-actions button {
+    width: 46%;
+    padding: 12px 10px;
+    font-size: 12px;
   }
 }
 
@@ -504,5 +639,28 @@
 
   .dropdown-container {
     margin-top: 20px;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .slide-card {
+    height: 200px;
+  }
+
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-prev,
+  .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-next {
+    width: 10px;
+    height: 20px;
+  }
+
+  .tech-wrapper-invs {
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .comon-head-inner h2,
+  .comonhead>h5 {
+    font-size: 28px;
+    line-height: 120%;
   }
 }

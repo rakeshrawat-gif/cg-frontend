@@ -19,7 +19,7 @@ import UnclaimedDividendShares from "../components/InvestorSections/UnclaimedDiv
 import Archives from "../components/InvestorSections/Archives.jsx";
 import MergeAndDemerger from "../components/InvestorSections/MergeAndDemergers.jsx";
 import SmartODR from "../components/InvestorSections/SmartOdr.jsx";
-
+import SharedRelatedInformation from "../components/InvestorSections/SharedRelatedInformation.jsx";
 import BuybackOfShares from "../components/InvestorSections/BuybackOfShares.jsx";
 
 import FAQs from "../components/InvestorSections/FAQs.jsx";
@@ -42,7 +42,8 @@ const InvestorHub = () => {
     "Info Under Regulation 46",
     "Investor Realtions Home",
     "Mergers and De-Mergers",
-    "Other Governance Disclosures",
+    // "Other Governance Disclosures",
+    "Shared Related Information",
     "Policies",
     "Qualified Institution Placements",
     "Scheme of Arrangement",
@@ -58,6 +59,7 @@ const InvestorHub = () => {
     "CG Cares (CSR)": CGCares,
     "CG Shares": CGShares,
     "Dividend": Dividend,
+    "Shared Related Information":SharedRelatedInformation,
     FAQs: FAQs,
     Financials: Financials,
     "Info Under Regulation 46": InfoUnderRegulation46,
@@ -128,7 +130,7 @@ const InvestorHub = () => {
       description: "",
     },
     "CG Cares (CSR)": {
-      title: "CG Cares (CSR)",
+      title: "Corporate Social Responsibility",
       description: "",
     },
     Dividend: {
@@ -152,6 +154,10 @@ const InvestorHub = () => {
     {
       title: "Smart ODR",
       description: "",
+    },
+    "Shared Related Information":{
+      title: "Shared Related Information",
+      description: "Find information related to our shares and stock codes.",
     },
   };
 
