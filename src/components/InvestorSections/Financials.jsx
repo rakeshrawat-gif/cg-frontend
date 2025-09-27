@@ -39,11 +39,115 @@ const Financials = () => {
         },
       ],
     },
-    "Annual Report": { items: [] },
-    "10 Years Financial Highlights": { items: [] },
-    "Unaudited Financial Results": { items: [] },
-    "Subsidiaries Financial Statements": { items: [] },
-    "Restated Financial Statements": { items: [] },
+    "Annual Report": { 
+      hasYearDropdown: true,
+      items: [
+        {
+          title:
+            "88th Annual Report",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "Notice of 88th Annual General Meeting",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "Annual Return",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+
+      ] },
+    "10 Years Financial Highlights": { items: [
+      {
+          title:
+            "10 Years Financial Highlights",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+    ] },
+    "Unaudited Financial Results": { 
+      hasYearDropdown: true,
+      items: [
+        {
+          title:
+            "Standalone Financial Results for the quarter ended 30th June 2025",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "Consolidated Financial Results for the quarter ended 30th June 2025",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+      ] },
+    "Subsidiaries Financial Statements": { 
+      hasYearDropdown: true,
+      items: [
+          {
+          title:
+            "CG PPI-Adhesive Products Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG Power Solutions Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG Power Equipments Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "Crompton Greaves Consumer Electricals Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+      ] },
+    "Restated Financial Statements": { 
+      hasYearDropdown: true,
+      items: [
+      {
+          title:
+            "CG Power and Industrial Solutions Limited - Standalone Financials",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG Power and Industrial Solutions Limited - Consolidated Financials",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG PPI-Adhesive Products Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG Power Solutions Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+        {
+          title:
+            "CG Power Equipments Limited",
+          viewLink: "#",
+          downloadLink: "#",
+        },
+    ] },
   };
 
   return (

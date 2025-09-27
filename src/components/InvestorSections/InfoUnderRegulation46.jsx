@@ -1,29 +1,29 @@
 import arrowIcon from "../assets/images/headicn/solution/diagolanarw.svg";
 
 const infoList = [
-  "Analysts Interaction",
-  "Annual Return under Section 92 of the Companies Act, 2013",
-  "CG Code of Conduct and Business Practices- Board and Senior Management",
-
-  "CG Dividend Distribution Policy",
-  "CG Remuneration Policy",
-  "CG Whistleblower Policy",
-  "Composition of various committees of the Board of Directors",
-  "Contact details for Investor Grievances",
-  "Credit Rating",
   "Details of Business",
-  "Disclosure of contact details of Key Managerial Personnel authorized for the<br/> purpose of determining materiality of events",
-  "Familiarisation Programme for Directors",
-  "Financial Information",
   "Memorandum and Articles of Association of the Company",
-  "Newspaper Disclosures",
-  "Policy on Related Party Transactions",
-  "Policy for Determination of Materiality for Disclosure of Information/ Events to Stock<br/> Exchanges",
-  "Secretarial Compliance Report",
-  "Shareholding Pattern",
-  "Statement of Deviation or Variations",
-  "Stock Exchange Disclosures",
   "Terms & Conditions of Appointment of Independent Directors",
+  "Composition of various committees of the Board of Directors",
+  "CG Code of Conduct and Business Practices- Board and Senior Management",
+  "CG Whistleblower Policy",
+  "CG Remuneration Policy",
+  "Policy on Related Party Transactions",
+  "Policy on Material Subsidiaries",
+  "Familiarisation Programme for Directors",
+  "Contact details for Investor Grievances",
+  "Financial Information",
+  "Shareholding Pattern",
+  "Analysts Interaction",
+  "Newspaper Disclosures",
+  "Credit Rating",
+  "Secretarial Compliance Report",
+  "Policy for Determination of Materiality for Disclosure of Information/ Events to Stock<br/> Exchanges",
+  "Disclosure of contact details of Key Managerial Personnel authorized for the<br/> purpose of determining materiality of events",
+  "Stock Exchange Disclosures",
+  "Statement of Deviation or Variations",
+  "CG Dividend Distribution Policy",
+  "Annual Return under Section 92 of the Companies Act, 2013",
 ];
 
 const InfoUnderRegulation46 = () => {
@@ -39,8 +39,8 @@ const InfoUnderRegulation46 = () => {
             </a>
           </div>
         </div>
-  ))
-}
+      ))
+      }
     </div >
   );
 };

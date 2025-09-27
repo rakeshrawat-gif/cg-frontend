@@ -256,7 +256,6 @@
   max-width: 1250px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: "Segoe UI", sans-serif;
   color: #333;
 }
 
@@ -561,6 +560,24 @@
   margin-bottom: 20px;
 }
 
+.accoritem h3 {
+  color: #4C4F54;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.accordian-inner-row {
+  display: flex;
+  gap: 45px;
+}
+.tounsderline{
+  text-decoration: underline;
+}
+.accoritem table td{
+  padding: 18px 30px;
+}
 /* .registrarpopupinner .popup-content p {
   font-size: 16px;
   font-weight: 400;
@@ -1342,7 +1359,7 @@
   padding-top: 0;
 }
 
- .manufacturing-swiper-wrapper.cgcsrmarginLR {
+.manufacturing-swiper-wrapper.cgcsrmarginLR {
   margin-left: -100px;
   margin-right: -100px;
 }
@@ -1350,9 +1367,11 @@
 .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-controls {
   padding: 0 calc(5vw + 5px);
 }
+
 .manufacturing-swiper-wrapper.cgcsrmarginLR .swiper-custom-pagination {
   display: none;
 }
+
 /* .year-select {
   padding: 6px 10px;
   border-radius: 6px;
@@ -1634,7 +1653,7 @@ shares .shares-links-heading {
 }
 
 /* ====FAQ's END===== */
-.placement-content h3{
+.placement-content h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 100%;
@@ -1642,15 +1661,18 @@ shares .shares-links-heading {
   color: #4C4F54;
   margin-bottom: 20px;
 }
-.placement-content p{
+
+.placement-content p {
   letter-spacing: 0.5px;
   color: #4C4F54;
   text-transform: uppercase;
 }
-p.tonormaltxt{
+
+p.tonormaltxt {
   text-transform: none;
 }
-.registrarpopupinner.qualitydisclampopup{
+
+.registrarpopupinner.qualitydisclampopup {
   height: auto;
 }
 

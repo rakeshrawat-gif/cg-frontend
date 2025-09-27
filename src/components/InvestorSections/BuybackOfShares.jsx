@@ -7,7 +7,7 @@ import checkArrow from "../assets/images/Investors/Check.png";
 
 const BuybackOfShares = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("2021- 2022");
+  const [selected, setSelected] = useState("2013- 2014");
   const dropdownRef = useRef(null);
 
 
@@ -21,9 +21,7 @@ const BuybackOfShares = () => {
   ];
 
   const options = [
-    "2021- 2022",
-    "2023- 2024",
-    "2024- 2025"
+    "2013- 2014",
   ];
 
   const handleSelect = (option) => {

@@ -57,7 +57,7 @@ const InvestorHub = () => {
     "Archives": Archives,
     "Buyback of shares": BuybackOfShares,
     "CG Cares (CSR)": CGCares,
-    "CG Shares": CGShares,
+    "CG Shares": SharedRelatedInformation,
     "Dividend": Dividend,
     "Shared Related Information":SharedRelatedInformation,
     FAQs: FAQs,
