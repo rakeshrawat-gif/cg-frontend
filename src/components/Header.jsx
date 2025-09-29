@@ -39,6 +39,7 @@ const Header = () => {
     const headerRef = useRef(null);
     const [headerDynamicHeight, setHeaderDynamicHeight] = useState(0);
     const [activeAboutSubmenu, setActiveAboutSubmenu] = useState(null);
+    const [isHoverActive, setIsHoverActive] = useState(false);
 
     const searchRef = useRef(null);
     const location = useLocation();
@@ -560,7 +561,7 @@ const Header = () => {
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#megatransformarSub1')}
                                                     >
                                                         <div className="magamenu-inner">
-                                                            <span>Transformer 1</span>
+                                                            <span>Power Transformers & Reactors</span>
                                                             <i className="fas fa-angle-right"></i>
                                                         </div>
                                                     </a>
@@ -571,8 +572,16 @@ const Header = () => {
                                                         onMouseEnter={() => handleMegaMenuSubCategoryHover('#megatransformarSub2')}
                                                     >
                                                         <div className="magamenu-inner">
-                                                            <span>Transformer 2</span>
+                                                            <span>Distribution Transformers, Low<br /> Power Transformers & Cast Resin<br /> Transformers</span>
                                                             <i className="fas fa-angle-right"></i>
+                                                        </div>
+                                                    </a>
+                                                    <a
+                                                        className="submenu-item"
+                                                        href="/"
+                                                    >
+                                                        <div className="magamenu-inner">
+                                                            <span>Turnkey Solutions</span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -740,7 +749,7 @@ const Header = () => {
                                                         <a href="/">Transformer 1 <img src={diagonArrow} alt="" /></a>
                                                     </div>
                                                     <ul className="thirdlevel-drop-menu list-unstyled">
-                                                        <li className="thirdlevel-menu-item">
+                                                        {/* <li className="thirdlevel-menu-item">
                                                             <a href="/" onClick={handleThirdLevelToggle}>Instrument Transformer
                                                                 <i className="fa fa-chevron-down arrow-icon ml-2"></i>
                                                             </a>
@@ -750,11 +759,14 @@ const Header = () => {
                                                                 <li><a href="/">Inductive Voltage Transformer</a></li>
                                                                 <li><a href="/">Power Voltage Transformer</a></li>
                                                             </ul>
-                                                        </li>
-                                                        <li className="thirdlevel-menu-item"><a href="/">Surge Arrester</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="/">Disconnector</a></li>
-                                                        <li className="thirdlevel-menu-item"><a href="/">GIS & Dead Tank Breaker</a></li>
-                                                        <li className="thirdlevel-menu-item">
+                                                        </li> */}
+                                                        <li className="thirdlevel-menu-item"><a href="/">Generator Transformers</a></li>
+                                                        <li className="thirdlevel-menu-item"><a href="/">Shunt Reactors</a></li>
+                                                        <li className="thirdlevel-menu-item"><a href="/">Auto Transformers</a></li>
+                                                        <li className="thirdlevel-menu-item"><a href="/">Furnace Transformers</a></li>
+                                                        <li className="thirdlevel-menu-item"><a href="/">Locomotive and Trackside<br />
+                                                            Power Transformers </a></li>
+                                                        {/* <li className="thirdlevel-menu-item">
                                                             <a href="/" onClick={handleThirdLevelToggle}>Condenser Bushings
                                                                 <i className="fa fa-chevron-down arrow-icon ml-2"></i>
                                                             </a>
@@ -762,7 +774,7 @@ const Header = () => {
                                                                 <li><a href="/">Condenser Bushings</a></li>
                                                                 <li><a href="/">Bushings Condenser</a></li>
                                                             </ul>
-                                                        </li>
+                                                        </li> */}
                                                     </ul>
                                                 </div>
                                                 <div id="megatransformarSub2" className={`level3-content ${activeSolutionSubCategory === '#megatransformarSub2' ? 'active' : ''}`}>

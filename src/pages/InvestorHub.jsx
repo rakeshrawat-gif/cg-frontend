@@ -43,7 +43,7 @@ const InvestorHub = () => {
     "Investor Realtions Home",
     "Mergers and De-Mergers",
     // "Other Governance Disclosures",
-    "Shared Related Information",
+    // "Shared Related Information",
     "Policies",
     "Qualified Institution Placements",
     "Scheme of Arrangement",
